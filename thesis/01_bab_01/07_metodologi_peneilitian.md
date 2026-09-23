@@ -1,0 +1,17 @@
+## **1.7	Metodologi Penelitian**  {#1.7-metodologi-penelitian}
+
+Metodologi penelitian yang akan dilakukan  dalam pembuatan tugas akhir ini adalah sebagai berikut:
+
+1. Persiapan  
+   Persiapan dimulai dengan melakukan studi terhadap literatur-literatur serupa sebelumnya. Literatur tersebut akan digunakan sebagai tolak ukur dan dasar teori dari penelitian. Persiapan mencakup tahap pengumpulan data dari CSE-CIC-IDS2018 dan memastikan data yang digunakan layak untuk keperluan penelitian. Mempersiapkan sistem untuk untuk pemngembangan serta pustaka pendukung seperti Python, Jupyter Notebook dan lain lain.  
+2. Analisis  
+   Tahap analisis meliputi analisis kebutuhan sistem deteksi intrusi berbasis pembelajaran mesin, melakukan analisis terhadap dataset CSE-CIC-IDS2018 seperti fitur, *class imbalance*, dan jenis serangan yang tersedia, serta identifikasi metrik evaluasi yang relevan untuk pengujian ketahanan model pada data tidak ideal.  
+3. Desain  
+   Tahap desain meliputi perancangan model pembelajaran mesin mulai dari seleksi fitur, pemilihan algoritma klasifikasi, hingga perancangan skema pengujian ketahanan. Skema pengujian ketahanan dirancang untuk mensimulasikan kondisi data dunia nyata, seperti *gaussian noise, uniform noise* dan *multiplicative noise* pada dataset uji.  
+4. Implementasi  
+   Tahap implementasi meliputi mengembangkan model ML-IDS menggunakan dataset CSE-CIC-IDS2018 yang terdiri dari sekitar 80 fitur jaringan *flow-based features*. Pengembangan dimulai dengan tahap *pre-processing*, yang meliputi *handling missing values, outlier detection,* normalisasi fitur, mengkodekan label, *feature selection*, dan *dimensionality reduction.* Distribusi dataset yang timpang antar kelas serangan dan lalu lintas normal (*benign*), memerlukan metode *Synthetic Minority Over-sampiling Technique (SMOTE)* pada data latih, sehingga diperoleh dataset latih yang seimbang antar kelas*.* Selanjutnya*,*  dilakukan pelatihan model dengan algoritma *Random Forest*, *XGBoost*, *Logistic Regression*, *Support Vector Machine*, dan *K-Nearest Neighbor* pada dataset latih tersebut, serta *hyperparameter tuning* pada setiap model untuk memperoleh hasil yang optimal.   
+   Untuk menguji ketahanan model terhadap kondisi data yang tidak ideal dilakukan injeksi *noise* pada seluruh fitur numerik. Noise yang diberikan berupa *gaussian noise, uniform noise,* dan *multiplicative noise* yang akan ditambahkan secara bertahap tanpa mengubah distribusi secara ekstrem.   
+5. Uji Coba dan Evaluasi  
+   Tahap uji coba dilakukan dengan menguji model ML-IDS pada berbagai tingkat simulasi *feature noise* yang dibuat. Seperti *gaussian noise, uniform noise,* dan *multiplicative noise*. Evaluasi dilakukan menggunakan metrik evaluasi pembelajaran mesin seperti *accuracy*, *precision*, *recall*, F1-*score*, serta degradasi performa untuk mengukur sejauh mana setiap model mampu mempertahankan performa klasifikasi pada data dunia nyata.  
+6. Penyusunan Laporan  
+   Tahap penyusunan laporan meliputi mendokumentasi seluruh proses penelitian mulai dari studi literatur, analisis, desain, implementasi, hingga hasil pengujian ketahanan. Laporan disusun sesuai dengan format tugas akhir yang telah ditentukan.

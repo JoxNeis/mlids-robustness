@@ -1,0 +1,12 @@
+{
+  "model": "XGBoost",
+  "noise": "uniform",
+  "intensity": 0.2,
+  "scenario": "uniform-20",
+  "accuracy": 0.8365203656508945,
+  "precision_macro": 0.4313985347467922,
+  "recall_macro": 0.21651238054348051,
+  "f1_macro": 0.21749671222043493,
+  "rows": 3246594,
+  "scored_at": "2026-09-23 18:32:22"
+}

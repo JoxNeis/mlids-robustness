@@ -1,0 +1,12 @@
+{
+  "model": "Random Forest",
+  "noise": "multiplicative",
+  "intensity": 0.2,
+  "scenario": "multiplicative-20",
+  "accuracy": 0.8309942666067885,
+  "precision_macro": 0.42889573016443444,
+  "recall_macro": 0.09924986860075123,
+  "f1_macro": 0.10250435121342857,
+  "rows": 3246594,
+  "scored_at": "2026-09-23 18:32:45"
+}

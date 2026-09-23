@@ -1,0 +1,12 @@
+{
+  "model": "XGBoost",
+  "noise": "gaussian",
+  "intensity": 0.1,
+  "scenario": "gaussian-10",
+  "accuracy": 0.8409788843323187,
+  "precision_macro": 0.4662789402937321,
+  "recall_macro": 0.2264180063796718,
+  "f1_macro": 0.23518675948340842,
+  "rows": 3246594,
+  "scored_at": "2026-09-23 18:31:46"
+}

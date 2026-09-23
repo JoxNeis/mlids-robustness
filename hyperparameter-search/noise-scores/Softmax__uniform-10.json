@@ -1,0 +1,12 @@
+{
+  "model": "Softmax",
+  "noise": "uniform",
+  "intensity": 0.1,
+  "scenario": "uniform-10",
+  "accuracy": 0.850416159211777,
+  "precision_macro": 0.3683910946657351,
+  "recall_macro": 0.4108565509910148,
+  "f1_macro": 0.35609161766234804,
+  "rows": 3246594,
+  "scored_at": "2026-09-23 18:32:13"
+}
