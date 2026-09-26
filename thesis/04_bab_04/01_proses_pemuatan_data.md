@@ -20,27 +20,29 @@ Baris yang memiliki label kosong, tidak sesuai skema kelas, atau gagal dipetakan
 
 ```mermaid
 flowchart TD
-    Start([Mulai]) --> Init[Inisialisasi: baca skema CSV<br/>tetapkan chunk size = 100.000 baris]
-    Init --> LoopStart((Masuk loop per chunk))
+    mulai([Mulai])
+    mulai --> muat_folder[Memuat daftar folder]
+    muat_folder --> daftar_csv[Membaca daftar file CSV]
+    daftar_csv --> cek_file{Masih ada file CSV?}
 
-    CSV[(CSV Dataset ~7 GB<br/>Storage Disk)] --> Read
+    cek_file -->|Tidak| selesai([Selesai])
+    cek_file -->|Ya| init_i[Inisialisasi i = 0]
 
-    subgraph LoopPerChunk [Loop transformasi tiap chunk]
-        direction TD
-        LoopStart --> Read[Ambil chunk 100.000 baris dari CSV]
-        Read --> Norm[Normalisasi nama kolom]
-        Norm --> Drop[Hapus kolom id dan timestamp]
-        Drop --> Cast[Konversi fitur numerik ke float32]
-        Cast --> Clean[Hapus baris dengan label tidak valid]
-        Clean --> Write[Tulis chunk ke Parquet]
-        Write --> Check{Apakah masih ada baris CSV?}
-        Check -- Ya --> Read
-    end
+    init_i --> baca_chunk[Membaca chunk ke-i<br>maks. 100.000 baris]
+    baca_chunk --> ke_dataframe[Memuat chunk ke pandas.DataFrame]
+    ke_dataframe --> normalisasi_kolom[Menormalisasi nama kolom]
+    normalisasi_kolom --> bersihkan_kolom[Menghapus kolom yang tidak diperlukan]
+    bersihkan_kolom --> normalisasi_fitur[Menyeragamkan tipe fitur numerik menjadi float32]
+    normalisasi_fitur --> hapus_label[Menghapus baris dengan label tidak valid]
+    hapus_label --> ke_parquet[Mengonversi data menjadi format Parquet]
+    ke_parquet --> simpan_file[Menyimpan file]
+    simpan_file --> penyimpanan[(Penyimpanan)]
 
-    Write --> PQ[(Parquet Dataset ~1.6 GB<br/>Storage Disk)]
-    Check -- Tidak --> End([Selesai])
+    simpan_file --> cek_chunk{Masih ada chunk berikutnya?}
+    cek_chunk -->|Ya| tambah_i[i += 1]
+    tambah_i --> baca_chunk
+    cek_chunk -->|Tidak| daftar_csv
 ```
-
 
 Untuk menjaga efisiensi memori, proses transformasi tidak dilakukan pada seluruh 7 GB data sekaligus. Data CSV dibaca dan diproses secara bertahap (chunking) sebanyak 100.000 baris per iterasi. Setiap potongan data yang telah melalui normalisasi nama kolom, seleksi kolom, penyeragaman tipe data, dan pembersihan label kemudian ditulis ke dalam berkas Parquet. Dengan pendekatan ini, setiap berkas Parquet yang dihasilkan maksimum berisi 100.000 baris.
 

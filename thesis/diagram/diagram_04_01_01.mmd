@@ -1,0 +1,23 @@
+flowchart TD
+    mulai([Mulai])
+    mulai --> muat_folder[Memuat daftar folder]
+    muat_folder --> daftar_csv[Membaca daftar file CSV]
+    daftar_csv --> cek_file{Masih ada file CSV?}
+
+    cek_file -->|Tidak| selesai([Selesai])
+    cek_file -->|Ya| init_i[Inisialisasi i = 0]
+
+    init_i --> baca_chunk[Membaca chunk ke-i<br>maks. 100.000 baris]
+    baca_chunk --> ke_dataframe[Memuat chunk ke pandas.DataFrame]
+    ke_dataframe --> normalisasi_kolom[Menormalisasi nama kolom]
+    normalisasi_kolom --> bersihkan_kolom[Menghapus kolom yang tidak diperlukan]
+    bersihkan_kolom --> normalisasi_fitur[Menyeragamkan tipe fitur numerik menjadi float32]
+    normalisasi_fitur --> hapus_label[Menghapus baris dengan label tidak valid]
+    hapus_label --> ke_parquet[Mengonversi data menjadi format Parquet]
+    ke_parquet --> simpan_file[Menyimpan file]
+    simpan_file --> penyimpanan[(Penyimpanan)]
+
+    simpan_file --> cek_chunk{Masih ada chunk berikutnya?}
+    cek_chunk -->|Ya| tambah_i[i += 1]
+    tambah_i --> baca_chunk
+    cek_chunk -->|Tidak| daftar_csv
