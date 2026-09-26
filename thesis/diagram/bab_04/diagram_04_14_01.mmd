@@ -1,0 +1,17 @@
+flowchart TD
+    mulai(["Mulai"])
+    mulai --> grid["Menyusun grid kombinasi:<br>3 kedalaman × 2 laju pembelajaran ×<br>2 colsample_bytree = 12 kombinasi"]
+    grid --> subsampel[["Mengambil subsampel berstrata:<br>1.000.000 baris latih dan<br>200.000 baris validasi"]]
+    subsampel --> init_i["Inisialisasi i = 1"]
+    init_i --> cek_i{"i ≤ 12?"}
+
+    cek_i -->|"Ya"| latih_i[["Melatih maksimum 400 putaran dengan<br>early stopping (20 putaran) pada<br>mlogloss subsampel validasi"]]
+    latih_i --> nilai["Memprediksi subsampel validasi dan<br>mencatat metrik serta jumlah<br>pohon yang digunakan"]
+    nilai --> inc_i["i = i + 1"]
+    inc_i --> cek_i
+
+    cek_i -->|"Tidak"| pilih["Memilih kombinasi dengan<br>F1-score makro tertinggi"]
+    pilih --> latih[["Melatih XGBoost akhir pada seluruh<br>data latih dengan jumlah pohon<br>hasil pencarian"]]
+    latih --> simpan_model[/"Menulis model ke<br>trained-model/XGB"/]
+    simpan_model --> prediksi[["Memprediksi data validasi dan uji<br>per potongan 10.000 baris"]]
+    prediksi --> selesai(["Selesai"])

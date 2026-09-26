@@ -1,0 +1,19 @@
+flowchart TD
+    mulai(["Mulai"])
+    mulai --> input_train[/"Membaca daftar berkas fitur<br>data latih (split train)"/]
+    input_train --> hitung[["Menghitung median M<br>setiap fitur numerik"]]
+    hitung --> cek_kosong{"Ada fitur tanpa<br>nilai valid?"}
+    cek_kosong -->|"Ya"| fallback["Menetapkan median fitur<br>tersebut sebesar 0,0"]
+    cek_kosong -->|"Tidak"| simpan_m[/"Menulis M ke<br>median-imputer.json"/]
+    fallback --> simpan_m
+    simpan_m --> input_semua[/"Membaca daftar berkas fitur<br>split train, dev, dan test<br>(n = jumlah berkas)"/]
+    input_semua --> init_j["Inisialisasi j = 1"]
+    init_j --> cek_j{"j ≤ n?"}
+
+    cek_j -->|"Tidak"| selesai(["Selesai"])
+    cek_j -->|"Ya"| baca_df[/"Membaca berkas ke-j<br>ke pandas.DataFrame"/]
+    baca_df --> isi[["Mengganti setiap NaN<br>dengan median M fitur"]]
+    isi --> tulis[/"Menulis DataFrame<br>ke format Parquet"/]
+    tulis --> simpan[("Penyimpanan<br>data-imputed")]
+    simpan --> inc_j["j = j + 1"]
+    inc_j --> cek_j

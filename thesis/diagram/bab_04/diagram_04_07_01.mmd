@@ -1,0 +1,26 @@
+flowchart TD
+    mulai(["Mulai"])
+    mulai --> input_train[/"Membaca daftar berkas fitur<br>data latih (split train)<br>(n = jumlah berkas)"/]
+    input_train --> init_ipca["Inisialisasi IncrementalPCA<br>(40 komponen) dan i = 1"]
+    init_ipca --> cek_i{"i ≤ n?"}
+
+    cek_i -->|"Ya"| baca_latih[/"Membaca berkas ke-i<br>ke pandas.DataFrame"/]
+    baca_latih --> cek_baris{"Jumlah baris ≥ 40?"}
+    cek_baris -->|"Ya"| partial[["Memperbarui komponen<br>dengan partial_fit"]]
+    partial --> inc_i["i = i + 1"]
+    cek_baris -->|"Tidak"| inc_i
+    inc_i --> cek_i
+
+    cek_i -->|"Tidak"| simpan_ipca[/"Menulis komponen dan rata-rata<br>ke ipca.npz"/]
+    simpan_ipca --> pilih_n["Menetapkan N = jumlah komponen terkecil<br>dengan varians kumulatif ≥ 95%"]
+    pilih_n --> input_semua[/"Membaca daftar berkas fitur<br>split train, dev, dan test<br>(m = jumlah berkas)"/]
+    input_semua --> init_j["Inisialisasi j = 1"]
+    init_j --> cek_j{"j ≤ m?"}
+
+    cek_j -->|"Tidak"| selesai(["Selesai"])
+    cek_j -->|"Ya"| baca_df[/"Membaca berkas ke-j<br>ke pandas.DataFrame"/]
+    baca_df --> proyeksi[["Memproyeksikan fitur ke N komponen<br>utama (pc1 hingga pcN)"]]
+    proyeksi --> tulis[/"Menulis DataFrame<br>ke format Parquet"/]
+    tulis --> simpan[("Penyimpanan<br>data-ipca")]
+    simpan --> inc_j["j = j + 1"]
+    inc_j --> cek_j

@@ -1,0 +1,22 @@
+flowchart TD
+    mulai(["Mulai"])
+    mulai --> subsampel[["Mengambil subsampel berstrata:<br>500.000 baris latih dan<br>200.000 baris validasi"]]
+    subsampel --> init_d["Inisialisasi d = 1"]
+    init_d --> cek_d{"d ≤ 3?<br>(manhattan, euclidean, cosine)"}
+
+    cek_d -->|"Ya"| indeks[["Membentuk indeks tetangga terdekat<br>dengan ukuran jarak ke-d"]]
+    indeks --> cari[["Mencari 13 tetangga terdekat setiap<br>sampel validasi (per 20.000 baris)"]]
+    cari --> init_i["Inisialisasi i = 1"]
+    init_i --> cek_i{"i ≤ 14?<br>(7 nilai k × 2 pembobotan)"}
+    cek_i -->|"Ya"| suara[["Pemungutan suara dari k tetangga<br>pertama sesuai kombinasi ke-i"]]
+    suara --> nilai["Menghitung metrik dan<br>mencatat hasil kombinasi"]
+    nilai --> inc_i["i = i + 1"]
+    inc_i --> cek_i
+    cek_i -->|"Tidak"| inc_d["d = d + 1"]
+    inc_d --> cek_d
+
+    cek_d -->|"Tidak"| pilih["Memilih kombinasi dengan<br>F1-score makro tertinggi"]
+    pilih --> latih[["Melatih KNN akhir pada<br>seluruh data latih"]]
+    latih --> simpan_model[/"Menulis model ke<br>trained-model/KNN"/]
+    simpan_model --> prediksi[["Memprediksi data validasi dan uji<br>per potongan 10.000 baris"]]
+    prediksi --> selesai(["Selesai"])

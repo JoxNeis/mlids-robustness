@@ -1,0 +1,24 @@
+flowchart TD
+    mulai(["Mulai"])
+    mulai --> input_hari[/"Membaca daftar berkas Parquet<br>untuk sepuluh hari pengambilan data"/]
+    input_hari --> init_i["Inisialisasi i = 1"]
+    init_i --> cek_i{"i ≤ 10?"}
+
+    cek_i -->|"Tidak"| selesai(["Selesai"])
+    cek_i -->|"Ya"| daftar_berkas[/"Membaca daftar berkas Parquet<br>pada hari ke-i (n = jumlah berkas)"/]
+
+    daftar_berkas --> buat_folder["Membuat folder fitur dan label<br>(subfolder train, dev, test)"]
+    buat_folder --> init_j["Inisialisasi j = 1"]
+    init_j --> cek_j{"j ≤ n?"}
+
+    cek_j -->|"Tidak"| inc_i["i = i + 1"]
+    inc_i --> cek_i
+
+    cek_j -->|"Ya"| baca_df[/"Membaca berkas ke-j<br>ke pandas.DataFrame"/]
+    baca_df --> split1[["train_test_split berstrata:<br>60% train, 40% held-out"]]
+    split1 --> split2[["train_test_split berstrata:<br>50% dev, 50% test<br>dari held-out"]]
+    split2 --> pisah["Memisahkan kolom label (y)<br>dari kolom fitur (X)<br>pada setiap himpunan"]
+    pisah --> tulis[/"Menulis X dan y setiap himpunan<br>ke format Parquet"/]
+    tulis --> simpan[("Penyimpanan<br>data-split-feature<br>data-split-label")]
+    simpan --> inc_j["j = j + 1"]
+    inc_j --> cek_j

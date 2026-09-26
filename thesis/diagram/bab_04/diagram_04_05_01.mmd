@@ -1,0 +1,17 @@
+flowchart TD
+    mulai(["Mulai"])
+    mulai --> input_train[/"Membaca daftar berkas label<br>data latih (split train)"/]
+    input_train --> unik[["Mengambil nilai unik<br>pada kolom label"]]
+    unik --> fit[["Membentuk LabelEncoder:<br>nama kelas diurutkan dan<br>diberi kode 0 hingga 14"]]
+    fit --> simpan_kelas[/"Menulis daftar nama kelas ke<br>label-encoder.json"/]
+    simpan_kelas --> input_semua[/"Membaca daftar berkas label<br>split train, dev, dan test<br>(n = jumlah berkas)"/]
+    input_semua --> init_j["Inisialisasi j = 1"]
+    init_j --> cek_j{"j ≤ n?"}
+
+    cek_j -->|"Tidak"| selesai(["Selesai"])
+    cek_j -->|"Ya"| baca_df[/"Membaca berkas ke-j<br>ke pandas.DataFrame"/]
+    baca_df --> transform[["Mengubah nama kelas menjadi<br>kode dengan LabelEncoder"]]
+    transform --> tulis[/"Menulis DataFrame<br>ke format Parquet"/]
+    tulis --> simpan[("Penyimpanan<br>data-encoded-label")]
+    simpan --> inc_j["j = j + 1"]
+    inc_j --> cek_j

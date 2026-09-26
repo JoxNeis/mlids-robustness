@@ -1,0 +1,24 @@
+flowchart TD
+    mulai(["Mulai"])
+    mulai --> input_berkas[/"Membaca daftar berkas Parquet<br>dari folder<br>data-raw<br>(n = jumlah berkas)"/]
+    input_berkas --> buat_folder["Membuat folder tujuan<br>data-no-inf"]
+    buat_folder --> init_i["Inisialisasi i = 1"]
+    init_i --> cek_i{"i ≤ n?"}
+
+    cek_i -->|"Tidak"| selesai(["Selesai"])
+    cek_i -->|"Ya"| baca_df[/"Membaca berkas ke-i<br>ke pandas.DataFrame"/]
+
+    baca_df --> pilih_kolom["Memilih kolom bertipe numerik<br>(m = jumlah seluruh nilai<br>pada kolom tersebut)"]
+    pilih_kolom --> init_j["Inisialisasi j = 1"]
+    init_j --> cek_j{"j ≤ m?"}
+
+    cek_j -->|"Tidak"| tulis[/"Menulis DataFrame<br>ke format Parquet"/]
+    cek_j -->|"Ya"| cek_inf{"Nilai ke-j = +∞<br>atau −∞?"}
+    cek_inf -->|"Ya"| ganti_nan["Mengganti nilai ke-j<br>dengan NaN"]
+    ganti_nan --> inc_j["j = j + 1"]
+    cek_inf -->|"Tidak"| inc_j
+    inc_j --> cek_j
+
+    tulis --> simpan[("Penyimpanan<br>data-no-inf")]
+    simpan --> inc_i["i = i + 1"]
+    inc_i --> cek_i

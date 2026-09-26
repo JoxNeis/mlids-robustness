@@ -1,0 +1,20 @@
+flowchart TD
+    mulai(["Mulai"])
+    mulai --> input_data[/"Membaca data latih, validasi,<br>dan uji beserta label"/]
+    input_data --> cek_baris{"Jumlah baris fitur<br>sama dengan label?"}
+    cek_baris -->|"Tidak"| galat(["Galat: proses dihentikan"])
+    cek_baris -->|"Ya"| init_a["Inisialisasi a = 1"]
+    init_a --> cek_a{"a ≤ 5?<br>(KNN, SVM, Random Forest,<br>Logistic Regression, XGBoost)"}
+
+    cek_a -->|"Tidak"| banding[["Membandingkan kelima model:<br>metrik keseluruhan, F1-score<br>per kelas, dan biaya komputasi"]]
+    banding --> selesai(["Selesai"])
+    cek_a -->|"Ya"| subsampel[["Mengambil subsampel berstrata<br>data latih dan data validasi"]]
+    subsampel --> cari[["Mencari hiperparameter algoritma ke-a<br>pada grid (Subbab 4.10 hingga 4.14)"]]
+    cari --> pilih["Memilih kombinasi dengan<br>F1-score makro tertinggi"]
+    pilih --> latih[["Melatih model akhir<br>pada data latih"]]
+    latih --> simpan_model[/"Menulis model ke<br>trained-model"/]
+    simpan_model --> prediksi[["Memprediksi data validasi dan uji<br>per potongan 10.000 baris"]]
+    prediksi --> simpan_pred[("Penyimpanan<br>prediction-result")]
+    simpan_pred --> hitung[["Menghitung akurasi, presisi,<br>recall, dan F1-score makro"]]
+    hitung --> inc_a["a = a + 1"]
+    inc_a --> cek_a

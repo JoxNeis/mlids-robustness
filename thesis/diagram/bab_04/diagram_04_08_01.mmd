@@ -1,0 +1,16 @@
+flowchart TD
+    mulai(["Mulai"])
+    mulai --> input_berkas[/"Membaca daftar berkas fitur<br>data latih (split train)<br>(n = jumlah berkas)"/]
+    input_berkas --> init_j["Inisialisasi j = 1"]
+    init_j --> cek_j{"j ≤ n?"}
+
+    cek_j -->|"Tidak"| selesai(["Selesai"])
+    cek_j -->|"Ya"| baca_df[/"Membaca fitur dan label<br>berkas ke-j"/]
+    baca_df --> cek_kelas{"Berkas memuat<br>lebih dari satu kelas?"}
+    cek_kelas -->|"Tidak"| tulis
+    cek_kelas -->|"Ya"| hitung_k["Menetapkan k = max(1, min(5, nmin − 1))<br>dengan nmin = jumlah sampel<br>kelas terkecil pada berkas"]
+    hitung_k --> smote[["SMOTE dengan k tetangga:<br>kelas minoritas ditambah hingga<br>sama dengan kelas mayoritas"]]
+    smote --> tulis[/"Menulis fitur (float32) dan label<br>ke format Parquet"/]
+    tulis --> simpan[("Penyimpanan<br>data-smote")]
+    simpan --> inc_j["j = j + 1"]
+    inc_j --> cek_j

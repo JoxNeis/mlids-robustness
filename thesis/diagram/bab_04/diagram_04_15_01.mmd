@@ -1,0 +1,23 @@
+flowchart TD
+    mulai(["Mulai"])
+    mulai --> input_skenario[/"Menetapkan 12 skenario:<br>4 jenis gangguan × 3 intensitas"/]
+    input_skenario --> init_i["Inisialisasi i = 1"]
+    init_i --> cek_i{"i ≤ 12?"}
+
+    cek_i -->|"Tidak"| selesai(["Selesai"])
+    cek_i -->|"Ya"| input_berkas[/"Membaca daftar berkas<br>data-imputed/test<br>(n = jumlah berkas)"/]
+    input_berkas --> init_j["Inisialisasi j = 1"]
+    init_j --> cek_j{"j ≤ n?"}
+
+    cek_j -->|"Ya"| baca_df[/"Membaca berkas ke-j<br>ke pandas.DataFrame"/]
+    baca_df --> rng[["Membentuk generator acak dari<br>seed, skenario ke-i, dan nama berkas"]]
+    rng --> bangkit[["Membangkitkan nilai terganggu<br>sesuai jenis gangguan"]]
+    bangkit --> pilih[["Memilih round(p × N) baris secara acak<br>dan mengganti seluruh fitur<br>pada baris terpilih"]]
+    pilih --> tulis[/"Menulis DataFrame<br>ke data-noise"/]
+    tulis --> inc_j["j = j + 1"]
+    inc_j --> cek_j
+
+    cek_j -->|"Tidak"| praproses[["Meneruskan skenario ke-i melalui imputasi,<br>penskalaan, dan proyeksi IPCA"]]
+    praproses --> simpan[("Penyimpanan<br>data-noise-ipca")]
+    simpan --> inc_i["i = i + 1"]
+    inc_i --> cek_i

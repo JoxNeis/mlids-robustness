@@ -1,0 +1,24 @@
+flowchart TD
+    mulai(["Mulai"])
+    mulai --> input_skenario[/"Menetapkan 12 skenario dan 5 model"/]
+    input_skenario --> init_i["Inisialisasi i = 1"]
+    init_i --> cek_i{"i ≤ 12?"}
+
+    cek_i -->|"Ya"| pulih[["Memulihkan penanda baris terganggu skenario ke-i<br>(selisih pada 4 komponen utama pertama)"]]
+    pulih --> cek_cakupan{"Proporsi baris terganggu sama<br>dengan intensitas<br>(selisih kurang dari 10⁻⁴)?"}
+    cek_cakupan -->|"Tidak"| galat(["Galat: proses dihentikan"])
+    cek_cakupan -->|"Ya"| simpan_mask[/"Menulis penanda ke<br>coverage-masks.npz"/]
+    simpan_mask --> init_m["Inisialisasi m = 1"]
+    init_m --> cek_m{"m ≤ 5?"}
+    cek_m -->|"Ya"| baca_pred[/"Membaca prediksi data bersih dan<br>prediksi skenario ke-i model ke-m"/]
+    baca_pred --> audit[["Menghitung disagreement<br>pada baris utuh"]]
+    audit --> skor_pop[["Menghitung metrik pada baris utuh<br>dan baris terganggu"]]
+    skor_pop --> inc_m["m = m + 1"]
+    inc_m --> cek_m
+    cek_m -->|"Tidak"| inc_i["i = i + 1"]
+    inc_i --> cek_i
+
+    cek_i -->|"Tidak"| campuran[["Memverifikasi identitas campuran<br>akurasi gabungan"]]
+    campuran --> komposisi[["Menghitung F1-score per kelas dan komposisi<br>kesalahan pada baris terganggu"]]
+    komposisi --> simpan[("Penyimpanan<br>noise-populations.csv dan<br>noise-error-composition.csv")]
+    simpan --> selesai(["Selesai"])

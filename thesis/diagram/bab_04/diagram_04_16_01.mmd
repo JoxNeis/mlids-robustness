@@ -1,0 +1,21 @@
+flowchart TD
+    mulai(["Mulai"])
+    mulai --> input_skenario[/"Menetapkan 12 skenario, 5 model,<br>dan himpunan kelas (15 kelas)"/]
+    input_skenario --> init_i["Inisialisasi i = 1"]
+    init_i --> cek_i{"i ≤ 12?"}
+
+    cek_i -->|"Ya"| muat_data[/"Membaca data uji skenario ke-i<br>dari data-noise-ipca"/]
+    muat_data --> init_m["Inisialisasi m = 1"]
+    init_m --> cek_m{"m ≤ 5?"}
+    cek_m -->|"Ya"| muat_model[["Memuat model ke-m<br>dari trained-model"]]
+    muat_model --> prediksi[["Memprediksi per potongan<br>10.000 baris"]]
+    prediksi --> skor[["Menghitung akurasi, presisi,<br>recall, dan F1-score makro"]]
+    skor --> simpan[/"Menulis skor ke berkas JSON<br>noise-scores"/]
+    simpan --> inc_m["m = m + 1"]
+    inc_m --> cek_m
+    cek_m -->|"Tidak"| inc_i["i = i + 1"]
+    inc_i --> cek_i
+
+    cek_i -->|"Tidak"| degradasi[["Menghitung penurunan dan retensi<br>terhadap skor acuan (clean)"]]
+    degradasi --> peringkat[["Menyusun peringkat model menurut<br>rata-rata retensi"]]
+    peringkat --> selesai(["Selesai"])

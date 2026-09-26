@@ -1,0 +1,23 @@
+flowchart TD
+    mulai(["Mulai"])
+    mulai --> input_train[/"Membaca daftar berkas fitur<br>data latih (split train)<br>(n = jumlah berkas)"/]
+    input_train --> init_scaler["Inisialisasi StandardScaler<br>dan i = 1"]
+    init_scaler --> cek_i{"i ≤ n?"}
+
+    cek_i -->|"Ya"| baca_latih[/"Membaca berkas ke-i<br>ke pandas.DataFrame"/]
+    baca_latih --> partial[["Memperbarui μ dan σ<br>dengan partial_fit"]]
+    partial --> inc_i["i = i + 1"]
+    inc_i --> cek_i
+
+    cek_i -->|"Tidak"| simpan_stat[/"Menulis μ dan σ ke<br>standard-scaler.json"/]
+    simpan_stat --> input_semua[/"Membaca daftar berkas fitur<br>split train, dev, dan test<br>(m = jumlah berkas)"/]
+    input_semua --> init_j["Inisialisasi j = 1"]
+    init_j --> cek_j{"j ≤ m?"}
+
+    cek_j -->|"Tidak"| selesai(["Selesai"])
+    cek_j -->|"Ya"| baca_df[/"Membaca berkas ke-j<br>ke pandas.DataFrame"/]
+    baca_df --> standar[["Menghitung z = (x − μ) / σ<br>dan mengonversi ke float32"]]
+    standar --> tulis[/"Menulis DataFrame<br>ke format Parquet"/]
+    tulis --> simpan[("Penyimpanan<br>data-scaled")]
+    simpan --> inc_j["j = j + 1"]
+    inc_j --> cek_j
