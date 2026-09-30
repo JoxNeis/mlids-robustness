@@ -6,3 +6,4 @@ Pak Joko:
 -> Shuffle sample 5 kali
 -> Coba kurangin kelas
 -> Coba tanpa smote
+-> coba parameter tuning dengan sklearn
