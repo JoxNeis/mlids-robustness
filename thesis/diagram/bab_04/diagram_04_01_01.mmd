@@ -1,24 +1,58 @@
+%%{init: {"flowchart": {"defaultRenderer": "elk"}}}%%
 flowchart TD
-    mulai(["Mulai"])
-    mulai --> input_csv[/"Membaca daftar berkas CSV<br>dari folder sumber<br>(n = jumlah berkas)"/]
-    input_csv --> skema[["Membangun skema kolom S<br>dari header seluruh berkas CSV"]]
-    skema --> buat_folder["Membuat folder tujuan<br>data-raw"]
-    buat_folder --> init_i["Inisialisasi i = 1"]
-    init_i --> cek_i{"i ≤ n?"}
+    subgraph r1[" "]
+        direction TD
+        mulai(["Mulai"])
+        input_csv[/"Membaca daftar berkas CSV<br>dari folder sumber<br>(n = jumlah berkas)"/]
+        skema[["Membangun skema kolom S<br>dari header seluruh berkas CSV"]]
+        buat_folder["Membuat folder tujuan<br>data-raw"]
+        init_i["Inisialisasi i = 1"]
+    end
 
-    cek_i -->|"Tidak"| selesai(["Selesai"])
-    cek_i -->|"Ya"| init_j["Inisialisasi j = 1"]
-    init_j --> cek_j{"Chunk ke-j pada<br>berkas ke-i tersedia?"}
+    subgraph r2[" "]
+        direction TD
+        cek_i{"i ≤ n?"}
+        selesai(["Selesai"])
+        init_j["Inisialisasi j = 1"]
+        cek_j{"Chunk ke-j pada<br>berkas ke-i tersedia?"}
+        inc_i["i = i + 1"]
+        baca_chunk[/"Membaca chunk ke-j<br>(maks. 100.000 baris)<br>ke pandas.DataFrame"/]
+        norm_kolom["Menormalisasi nama kolom"]
+    end
 
-    cek_j -->|"Tidak"| inc_i["i = i + 1"]
+    subgraph r3[" "]
+        direction TD
+        selaras["Menyelaraskan kolom dengan skema S<br>(menghapus kolom yang tidak diperlukan)"]
+        cast_float[["Mengonversi seluruh fitur menjadi float32<br>(nilai tidak valid menjadi NaN)"]]
+        hapus_label["Menghapus baris dengan label kosong<br>atau berupa header berulang"]
+        tulis[/"Menulis chunk ke format Parquet"/]
+        simpan[("Penyimpanan<br>data-raw")]
+        inc_j["j = j + 1"]
+    end
+
+    mulai --> input_csv
+    input_csv --> skema
+    skema --> buat_folder
+    buat_folder --> init_i
+    init_i --> cek_i
+
+    cek_i -->|"Tidak"| selesai
+    cek_i -->|"Ya"| init_j
+    init_j --> cek_j
+
+    cek_j -->|"Tidak"| inc_i
     inc_i --> cek_i
 
-    cek_j -->|"Ya"| baca_chunk[/"Membaca chunk ke-j<br>(maks. 100.000 baris)<br>ke pandas.DataFrame"/]
-    baca_chunk --> norm_kolom["Menormalisasi nama kolom"]
-    norm_kolom --> selaras["Menyelaraskan kolom dengan skema S<br>(menghapus kolom yang tidak diperlukan)"]
-    selaras --> cast_float[["Mengonversi seluruh fitur menjadi float32<br>(nilai tidak valid menjadi NaN)"]]
-    cast_float --> hapus_label["Menghapus baris dengan label kosong<br>atau berupa header berulang"]
-    hapus_label --> tulis[/"Menulis chunk ke format Parquet"/]
-    tulis --> simpan[("Penyimpanan<br>data-raw")]
-    simpan --> inc_j["j = j + 1"]
+    cek_j -->|"Ya"| baca_chunk
+    baca_chunk --> norm_kolom
+    norm_kolom --> selaras
+    selaras --> cast_float
+    cast_float --> hapus_label
+    hapus_label --> tulis
+    tulis --> simpan
+    simpan --> inc_j
     inc_j --> cek_j
+
+    style r1 fill:none,stroke:none
+    style r2 fill:none,stroke:none
+    style r3 fill:none,stroke:none
