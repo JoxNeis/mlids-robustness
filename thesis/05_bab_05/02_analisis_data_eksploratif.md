@@ -2,7 +2,7 @@
 
 Subbab ini menyajikan implementasi dari rancangan pada Subbab 4.2, yaitu analisis data eksploratif pada data di folder *data-pipeline/01-raw-parquet*. Kode program disusun mengikuti Langkah 1 hingga 7 pada algoritma di Subbab 4.2, didahului oleh pengaturan serta fungsi bantu pengelompokan dan visualisasi yang juga digunakan pada tahap-tahap berikutnya.
 
-Kode Program 5.18 menetapkan pengaturan tahap EDA, yaitu nama kolom pada tabel hasil analisis, pola ekspresi reguler *DAY_REGEX* untuk mengambil tanggal pengambilan data dari awal nama berkas, ambang korelasi tinggi sebesar 0,95 (*CORRELATION_THRESHOLD*), dan jumlah proses paralel sebanyak delapan (*EDA_N_JOBS*).
+Kode Program 5.18 menetapkan pengaturan tahap EDA, yaitu nama kolom pada tabel hasil analisis, pola ekspresi reguler *DAY_REGEX* untuk mengambil tanggal pengambilan data dari awal nama file, ambang korelasi tinggi sebesar 0,95 (*CORRELATION_THRESHOLD*), dan jumlah proses paralel sebanyak delapan (*EDA_N_JOBS*).
 
 ```python
 FILE_COLUMN = "file"
@@ -22,7 +22,7 @@ EDA_N_JOBS = 8
 
 Kode Program 5.18 Pengaturan tahap analisis data eksploratif
 
-Kode Program 5.19 memuat fungsi bantu pengelompokan per hari. Fungsi *extract_column* mengambil bagian teks dari sebuah kolom menggunakan ekspresi reguler dan menyimpannya sebagai kolom baru, sedangkan *group_and_sum* menggunakan fungsi tersebut untuk mengambil tanggal dari nama berkas, kemudian menjumlahkan kolom numerik per tanggal. Fungsi ini digunakan untuk merangkum hasil per berkas menjadi hasil per hari pada tahap EDA, pembersihan data, dan penghapusan duplikat.
+Kode Program 5.19 memuat fungsi bantu pengelompokan per hari. Fungsi *extract_column* mengambil bagian teks dari sebuah kolom menggunakan ekspresi reguler dan menyimpannya sebagai kolom baru, sedangkan *group_and_sum* menggunakan fungsi tersebut untuk mengambil tanggal dari nama file, kemudian menjumlahkan kolom numerik per tanggal. Fungsi ini digunakan untuk merangkum hasil per file menjadi hasil per hari pada tahap EDA, pembersihan data, dan penghapusan duplikat.
 
 ```python
 def extract_column(
@@ -81,7 +81,7 @@ FIGURE_DPI = 300  # resolution of the saved figures
 
 Kode Program 5.20 Warna dan penanda visualisasi
 
-Kode Program 5.21 memuat dua fungsi visualisasi umum. Fungsi *plot_bar* menggambar diagram batang dengan pilihan skala logaritmik pada sumbu tegak. Fungsi *plot_heatmap* menggambar peta panas dari sebuah tabel, dengan pilihan skala warna logaritmik yang menyembunyikan sel bernilai nol atau negatif, rentang nilai warna, anotasi nilai pada setiap sel dengan warna teks yang menyesuaikan kegelapan sel, serta penyimpanan gambar ke berkas.
+Kode Program 5.21 memuat dua fungsi visualisasi umum. Fungsi *plot_bar* menggambar diagram batang dengan pilihan skala logaritmik pada sumbu tegak. Fungsi *plot_heatmap* menggambar peta panas dari sebuah tabel, dengan pilihan skala warna logaritmik yang menyembunyikan sel bernilai nol atau negatif, rentang nilai warna, anotasi nilai pada setiap sel dengan warna teks yang menyesuaikan kegelapan sel, serta penyimpanan gambar ke file.
 
 ```python
 def plot_bar(
@@ -175,7 +175,7 @@ def plot_heatmap(
 
 Kode Program 5.21 Fungsi diagram batang dan peta panas
 
-Kode Program 5.22 mengimplementasikan Langkah 1. Fungsi *count_rows_in_a_single_file* membaca jumlah baris dari metadata berkas Parquet menggunakan *PyArrow* tanpa membaca isi data, dan *count_rows_in_all_files* menyusun jumlah baris setiap berkas menjadi tabel. Sel ketiga menjumlahkan tabel tersebut per hari dengan *group_and_sum*, dan sel terakhir menggambarkan hasilnya sebagai diagram batang.
+Kode Program 5.22 mengimplementasikan Langkah 1. Fungsi *count_rows_in_a_single_file* membaca jumlah baris dari metadata file Parquet menggunakan *PyArrow* tanpa membaca isi data, dan *count_rows_in_all_files* menyusun jumlah baris setiap file menjadi tabel. Sel ketiga menjumlahkan tabel tersebut per hari dengan *group_and_sum*, dan sel terakhir menggambarkan hasilnya sebagai diagram batang.
 
 ```python
 def count_rows_in_a_single_file(file_path: str) -> int:
@@ -204,7 +204,7 @@ del results
 
 Kode Program 5.22 Penghitungan baris per hari
 
-Kode Program 5.23 mengimplementasikan Langkah 2. Fungsi *get_classes_list_from_a_folder* membaca hanya kolom label dari setiap berkas, baik berkas Parquet maupun berkas CSV, mengumpulkan nilai uniknya, dan mengembalikan daftar kelas yang telah diurutkan. Pada berkas CSV, kolom label dicari setelah nama kolom dinormalisasi dan baris judul yang berulang dibuang. Fungsi *create_classes_list_from_a_folder* memilih jenis berkas yang tersedia pada folder dan menyimpan daftar kelas ke berkas *cache/original-classes.json*, sedangkan *load_classes_list* memuat kembali daftar tersebut. Sel terakhir menyusun daftar kelas dari data hasil konversi.
+Kode Program 5.23 mengimplementasikan Langkah 2. Fungsi *get_classes_list_from_a_folder* membaca hanya kolom label dari setiap file, baik file Parquet maupun file CSV, mengumpulkan nilai uniknya, dan mengembalikan daftar kelas yang telah diurutkan. Pada file CSV, kolom label dicari setelah nama kolom dinormalisasi dan baris judul yang berulang dibuang. Fungsi *create_classes_list_from_a_folder* memilih jenis file yang tersedia pada folder dan menyimpan daftar kelas ke file *cache/original-classes.json*, sedangkan *load_classes_list* memuat kembali daftar tersebut. Sel terakhir menyusun daftar kelas dari data hasil konversi.
 
 ```python
 def get_classes_list_from_a_folder(
@@ -265,7 +265,7 @@ del results
 
 Kode Program 5.23 Penyusunan dan penyimpanan daftar kelas
 
-Kode Program 5.24 mengimplementasikan Langkah 3. Fungsi *count_classes_in_a_single_file* membaca kolom label satu berkas dan menghitung jumlah baris setiap kelas, dengan kelas yang tidak muncul pada berkas tersebut diberi jumlah nol agar seluruh berkas memiliki kolom yang sama. Fungsi *count_classes_in_all_files* menjalankannya pada seluruh berkas secara paralel dengan delapan proses dan menggabungkan hasilnya. Sel terakhir menjumlahkan hasil tersebut per hari.
+Kode Program 5.24 mengimplementasikan Langkah 3. Fungsi *count_classes_in_a_single_file* membaca kolom label satu file dan menghitung jumlah baris setiap kelas, dengan kelas yang tidak muncul pada file tersebut diberi jumlah nol agar seluruh file memiliki kolom yang sama. Fungsi *count_classes_in_all_files* menjalankannya pada seluruh file secara paralel dengan delapan proses dan menggabungkan hasilnya. Sel terakhir menjumlahkan hasil tersebut per hari.
 
 ```python
 def count_classes_in_a_single_file(
@@ -304,7 +304,7 @@ results = group_and_sum(count_classes_in_all_files(), FILE_COLUMN, DAY_COLUMN, D
 display(results)
 ```
 
-Kode Program 5.24 Penghitungan distribusi kelas per berkas dan per hari
+Kode Program 5.24 Penghitungan distribusi kelas per file dan per hari
 
 Kode Program 5.25 menggambarkan jumlah baris setiap kelas pada setiap hari sebagai peta panas berskala logaritmik dengan anotasi nilai, sehingga hari kemunculan setiap kelas serangan dapat diamati.
 
@@ -354,7 +354,7 @@ del results
 
 Kode Program 5.26 Distribusi kelas pada seluruh dataset
 
-Kode Program 5.27 mengimplementasikan Langkah 4. Fungsi *get_feature_columns* mengambil nama seluruh kolom selain label dari skema berkas Parquet pertama. Fungsi *describe_a_single_feature* membaca seluruh berkas secara *lazy* dengan *polars.scan_parquet*, tetapi hanya kolom satu fitur yang benar-benar dimuat, kemudian menghitung jumlah baris, jumlah nilai hilang (*null*), jumlah NaN, jumlah nilai tak hingga, jumlah nilai negatif, jumlah nilai nol, dan jumlah nilai unik, serta nilai minimum, maksimum, rata-rata, median, dan simpangan baku yang hanya dihitung dari nilai terhingga. Fungsi *describe_all_features* mengulang perhitungan tersebut untuk setiap fitur sambil menampilkan bilah kemajuan, dan sel terakhir menampilkan seluruh statistik.
+Kode Program 5.27 mengimplementasikan Langkah 4. Fungsi *get_feature_columns* mengambil nama seluruh kolom selain label dari skema file Parquet pertama. Fungsi *describe_a_single_feature* membaca seluruh file secara *lazy* dengan *polars.scan_parquet*, tetapi hanya kolom satu fitur yang benar-benar dimuat, kemudian menghitung jumlah baris, jumlah nilai hilang (*null*), jumlah NaN, jumlah nilai tak hingga, jumlah nilai negatif, jumlah nilai nol, dan jumlah nilai unik, serta nilai minimum, maksimum, rata-rata, median, dan simpangan baku yang hanya dihitung dari nilai terhingga. Fungsi *describe_all_features* mengulang perhitungan tersebut untuk setiap fitur sambil menampilkan bilah kemajuan, dan sel terakhir menampilkan seluruh statistik.
 
 ```python
 def get_feature_columns(
@@ -462,7 +462,7 @@ del results
 
 Kode Program 5.29 Identifikasi fitur konstan
 
-Kode Program 5.30 mengimplementasikan bagian pertama Langkah 6. Fungsi *get_varying_features* mengambil fitur yang tidak konstan. Fungsi *compute_covariance_in_a_single_file* membaca fitur tersebut dari satu berkas dalam tipe *float64*, membuang baris yang memuat nilai tidak terhingga, kemudian mengembalikan jumlah baris, vektor rata-rata, dan matriks *cross-product* dari data yang telah dikurangi rata-ratanya. Fungsi *merge_covariance_statistics* menggabungkan statistik dua kelompok data sesuai Persamaan 4.1.
+Kode Program 5.30 mengimplementasikan bagian pertama Langkah 6. Fungsi *get_varying_features* mengambil fitur yang tidak konstan. Fungsi *compute_covariance_in_a_single_file* membaca fitur tersebut dari satu file dalam tipe *float64*, membuang baris yang memuat nilai tidak terhingga, kemudian mengembalikan jumlah baris, vektor rata-rata, dan matriks *cross-product* dari data yang telah dikurangi rata-ratanya. Fungsi *merge_covariance_statistics* menggabungkan statistik dua kelompok data sesuai Persamaan 4.1.
 
 ```python
 def get_varying_features(
@@ -504,9 +504,9 @@ def merge_covariance_statistics(first: tuple, second: tuple) -> tuple:
     return row_count, mean, cross_products
 ```
 
-Kode Program 5.30 Statistik kovarians per berkas dan penggabungannya
+Kode Program 5.30 Statistik kovarians per file dan penggabungannya
 
-Kode Program 5.31 mengimplementasikan bagian kedua Langkah 6. Fungsi *compute_correlation_in_all_files* menghitung statistik kovarians setiap berkas secara paralel dengan delapan proses, menggabungkannya secara berurutan, kemudian mengubah matriks *cross-product* gabungan menjadi matriks korelasi Pearson sesuai Persamaan 4.2. Fungsi *find_highly_correlated_pairs* menelusuri setengah bagian atas matriks korelasi dan mendaftar pasangan fitur yang nilai mutlak korelasinya sedikitnya 0,95, diurutkan dari korelasi mutlak terbesar.
+Kode Program 5.31 mengimplementasikan bagian kedua Langkah 6. Fungsi *compute_correlation_in_all_files* menghitung statistik kovarians setiap file secara paralel dengan delapan proses, menggabungkannya secara berurutan, kemudian mengubah matriks *cross-product* gabungan menjadi matriks korelasi Pearson sesuai Persamaan 4.2. Fungsi *find_highly_correlated_pairs* menelusuri setengah bagian atas matriks korelasi dan mendaftar pasangan fitur yang nilai mutlak korelasinya sedikitnya 0,95, diurutkan dari korelasi mutlak terbesar.
 
 ```python
 def compute_correlation_in_all_files(

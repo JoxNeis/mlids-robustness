@@ -13,7 +13,7 @@ DEDUPLICATION_N_JOBS = 8
 
 Kode Program 5.37 Pengaturan tahap penghapusan duplikat
 
-Kode Program 5.38 mengimplementasikan Langkah 2. Fungsi *hash_rows_in_a_single_file* membaca satu berkas dengan *Polars*, menggabungkan seluruh kolom setiap baris menjadi satu nilai *struct*, kemudian menghitung *hash* *struct* tersebut dengan setiap *seed*. Hasilnya adalah matriks dengan satu baris untuk setiap baris data dan dua kolom *hash* 64-bit. Fungsi *hash_rows_in_all_files* menjalankannya pada seluruh berkas secara paralel dan mengembalikan matriks *hash* setiap berkas sesuai urutan berkas.
+Kode Program 5.38 mengimplementasikan Langkah 2. Fungsi *hash_rows_in_a_single_file* membaca satu file dengan *Polars*, menggabungkan seluruh kolom setiap baris menjadi satu nilai *struct*, kemudian menghitung *hash* *struct* tersebut dengan setiap *seed*. Hasilnya adalah matriks dengan satu baris untuk setiap baris data dan dua kolom *hash* 64-bit. Fungsi *hash_rows_in_all_files* menjalankannya pada seluruh file secara paralel dan mengembalikan matriks *hash* setiap file sesuai urutan file.
 
 ```python
 def hash_rows_in_a_single_file(
@@ -36,7 +36,7 @@ def hash_rows_in_all_files(
 
 Kode Program 5.38 Pembentukan sidik jari setiap baris
 
-Kode Program 5.39 mengimplementasikan Langkah 3 dan 4. Fungsi *find_duplicate_rows* menggabungkan matriks *hash* seluruh berkas sesuai urutannya, kemudian menandai setiap baris yang pasangan *hash*-nya telah muncul pada baris sebelumnya menggunakan *DataFrame.duplicated* dengan parameter *keep="first"*, sehingga kemunculan pertama tidak ditandai. Fungsi *get_row_offsets* menghitung posisi awal baris setiap berkas di dalam urutan gabungan, yaitu jumlah kumulatif baris pada berkas-berkas sebelumnya.
+Kode Program 5.39 mengimplementasikan Langkah 3 dan 4. Fungsi *find_duplicate_rows* menggabungkan matriks *hash* seluruh file sesuai urutannya, kemudian menandai setiap baris yang pasangan *hash*-nya telah muncul pada baris sebelumnya menggunakan *DataFrame.duplicated* dengan parameter *keep="first"*, sehingga kemunculan pertama tidak ditandai. Fungsi *get_row_offsets* menghitung posisi awal baris setiap file di dalam urutan gabungan, yaitu jumlah kumulatif baris pada file-file sebelumnya.
 
 ```python
 def find_duplicate_rows(row_hashes: list[np.ndarray]) -> np.ndarray:
@@ -52,9 +52,9 @@ def get_row_offsets(file_paths: list[str], per_file_rows: list[np.ndarray]) -> d
     return row_offsets
 ```
 
-Kode Program 5.39 Penandaan baris duplikat dan posisi awal setiap berkas
+Kode Program 5.39 Penandaan baris duplikat dan posisi awal setiap file
 
-Fungsi *remove_duplicate_rows_in_a_single_file* pada Kode Program 5.40 mengimplementasikan Langkah 5 dan 6 untuk satu berkas. Fungsi ini membaca berkas, memotong penanda duplikat sesuai posisi awal dan jumlah baris berkas tersebut, menghapus baris yang ditandai, dan menulis hasilnya ke folder *data-pipeline/03-deduplicated-parquet* dengan nama berkas yang sama. Jumlah baris sebelum dan sesudah penghapusan dikembalikan sebagai catatan.
+Fungsi *remove_duplicate_rows_in_a_single_file* pada Kode Program 5.40 mengimplementasikan Langkah 5 dan 6 untuk satu file. Fungsi ini membaca file, memotong penanda duplikat sesuai posisi awal dan jumlah baris file tersebut, menghapus baris yang ditandai, dan menulis hasilnya ke folder *data-pipeline/03-deduplicated-parquet* dengan nama file yang sama. Jumlah baris sebelum dan sesudah penghapusan dikembalikan sebagai catatan.
 
 ```python
 def remove_duplicate_rows_in_a_single_file(
@@ -84,9 +84,9 @@ def remove_duplicate_rows_in_a_single_file(
     }
 ```
 
-Kode Program 5.40 Penghapusan baris duplikat pada satu berkas
+Kode Program 5.40 Penghapusan baris duplikat pada satu file
 
-Fungsi *remove_duplicate_rows_in_all_files* pada Kode Program 5.41 menyatukan seluruh langkah. Fungsi ini mendaftar berkas pada folder *data-pipeline/02-cleaned-parquet* (Langkah 1), membentuk sidik jari, menandai duplikat, dan menghitung posisi awal setiap berkas. Matriks *hash* dihapus dari memori setelah penanda terbentuk, kemudian penghapusan pada setiap berkas dijalankan secara paralel, dan jumlah baris sebelum dan sesudah penghapusan ditampilkan di akhir.
+Fungsi *remove_duplicate_rows_in_all_files* pada Kode Program 5.41 menyatukan seluruh langkah. Fungsi ini mendaftar file pada folder *data-pipeline/02-cleaned-parquet* (Langkah 1), membentuk sidik jari, menandai duplikat, dan menghitung posisi awal setiap file. Matriks *hash* dihapus dari memori setelah penanda terbentuk, kemudian penghapusan pada setiap file dijalankan secara paralel, dan jumlah baris sebelum dan sesudah penghapusan ditampilkan di akhir.
 
 ```python
 def remove_duplicate_rows_in_all_files(
@@ -118,7 +118,7 @@ def remove_duplicate_rows_in_all_files(
     return summary
 ```
 
-Kode Program 5.41 Penghapusan baris duplikat pada seluruh berkas
+Kode Program 5.41 Penghapusan baris duplikat pada seluruh file
 
 Kode Program 5.42 mengimplementasikan Langkah 7. Sel pertama menjalankan penghapusan duplikat dan menjumlahkan tabel ringkasan per hari, sedangkan sel kedua menghitung ulang distribusi kelas pada data hasil penghapusan duplikat menggunakan fungsi dari Subbab 5.2.
 

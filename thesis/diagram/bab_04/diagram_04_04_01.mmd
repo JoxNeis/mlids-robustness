@@ -1,16 +1,16 @@
 flowchart TD
     mulai(["Mulai"])
-    mulai --> daftar[/"Membaca daftar berkas Parquet<br>dari 02-cleaned-parquet<br>(n = jumlah berkas)"/]
-    daftar --> hash[["Membentuk pasangan hash setiap baris<br>(seed 0 dan 1) per berkas secara paralel"]]
-    hash --> gabung["Menggabungkan pasangan hash<br>sesuai urutan berkas"]
+    mulai --> daftar[/"Membaca daftar file Parquet<br>dari 02-cleaned-parquet<br>(n = jumlah file)"/]
+    daftar --> hash[["Membentuk pasangan hash setiap baris<br>(seed 0 dan 1) per file secara paralel"]]
+    hash --> gabung["Menggabungkan pasangan hash<br>sesuai urutan file"]
     gabung --> tandai[["Menandai baris yang hash-nya<br>telah muncul sebelumnya"]]
-    tandai --> offset["Menghitung offset baris<br>setiap berkas"]
+    tandai --> offset["Menghitung offset baris<br>setiap file"]
     offset --> init_i["Inisialisasi i = 1"]
     init_i --> cek_i{"i ≤ n?"}
 
-    cek_i -->|"Ya"| baca[/"Membaca berkas ke-i"/]
+    cek_i -->|"Ya"| baca[/"Membaca file ke-i"/]
     baca --> hapus["Menghapus baris yang<br>ditandai duplikat"]
-    hapus --> tulis[/"Menulis berkas ke format Parquet"/]
+    hapus --> tulis[/"Menulis file ke format Parquet"/]
     tulis --> simpan[("Penyimpanan<br>03-deduplicated-parquet")]
     simpan --> inc_i["i = i + 1"]
     inc_i --> cek_i

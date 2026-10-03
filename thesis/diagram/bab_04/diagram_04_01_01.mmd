@@ -3,8 +3,8 @@ flowchart TD
     subgraph r1[" "]
         direction TD
         mulai(["Mulai"])
-        input_csv[/"Membaca daftar berkas CSV<br>dari folder sumber<br>(n = jumlah berkas)"/]
-        skema[["Membangun skema kolom S<br>dari header seluruh berkas CSV"]]
+        input_csv[/"Membaca daftar file CSV<br>dari folder sumber<br>(n = jumlah file)"/]
+        skema[["Membangun skema kolom S<br>dari header seluruh file CSV"]]
         buat_folder["Membuat folder tujuan<br>data-raw"]
         init_i["Inisialisasi i = 1"]
     end
@@ -14,7 +14,7 @@ flowchart TD
         cek_i{"i ≤ n?"}
         selesai(["Selesai"])
         init_j["Inisialisasi j = 1"]
-        cek_j{"Chunk ke-j pada<br>berkas ke-i tersedia?"}
+        cek_j{"Chunk ke-j pada<br>file ke-i tersedia?"}
         inc_i["i = i + 1"]
         baca_chunk[/"Membaca chunk ke-j<br>(maks. 100.000 baris)<br>ke pandas.DataFrame"/]
         norm_kolom["Menormalisasi nama kolom"]

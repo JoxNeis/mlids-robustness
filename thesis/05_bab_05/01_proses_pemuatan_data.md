@@ -1,8 +1,8 @@
 ## **5.1 Implementasi Pemuatan dan Transformasi Data ke Format Parquet**
 
-Subbab ini menyajikan implementasi dari rancangan pada Subbab 4.1, yaitu konversi dataset CSE-CIC-IDS2018 dari format CSV ke format Parquet. Kode program disusun mengikuti langkah pada algoritma di Subbab 4.1, dimulai dari pengaturan, normalisasi nama kolom, penyusunan skema acuan, penerapan skema dan konversi tipe data, pembersihan baris tidak valid, penulisan berkas Parquet, hingga konversi seluruh berkas secara paralel.
+Subbab ini menyajikan implementasi dari rancangan pada Subbab 4.1, yaitu konversi dataset CSE-CIC-IDS2018 dari format CSV ke format Parquet. Kode program disusun mengikuti langkah pada algoritma di Subbab 4.1, dimulai dari pengaturan, normalisasi nama kolom, penyusunan skema acuan, penerapan skema dan konversi tipe data, pembersihan baris tidak valid, penulisan file Parquet, hingga konversi seluruh file secara paralel.
 
-Kode Program 5.9 menetapkan pengaturan tahap konversi. Konstanta *CHUNK_SIZE* menetapkan ukuran *chunk* sebesar 100.000 baris. Himpunan *COLUMNS_TO_DROP* memuat nama kolom yang tidak digunakan, yaitu *Flow ID*, alamat IP sumber dan tujuan, port sumber, dan *Timestamp*. Nama kolom tersebut ditulis dalam dua ragam penulisan, misalnya *src ip* dan *source ip*, untuk mengantisipasi perbedaan penamaan kolom antarberkas.
+Kode Program 5.9 menetapkan pengaturan tahap konversi. Konstanta *CHUNK_SIZE* menetapkan ukuran *chunk* sebesar 100.000 baris. Himpunan *COLUMNS_TO_DROP* memuat nama kolom yang tidak digunakan, yaitu *Flow ID*, alamat IP sumber dan tujuan, port sumber, dan *Timestamp*. Nama kolom tersebut ditulis dalam dua ragam penulisan, misalnya *src ip* dan *source ip*, untuk mengantisipasi perbedaan penamaan kolom antarfile.
 
 ```python
 CHUNK_SIZE = 100_000
@@ -38,7 +38,7 @@ def normalize_column_names(column_names: list) -> list[str]:
 
 Kode Program 5.10 Normalisasi nama kolom
 
-Kode Program 5.11 mengimplementasikan Langkah 2 dan Langkah 4, yaitu penyusunan skema acuan dan penghapusan kolom yang tidak relevan. Fungsi *create_schema_columns* hanya membaca baris judul setiap berkas CSV (*nrows=0*) sehingga biayanya rendah, menormalisasi nama kolomnya, menggabungkan seluruh nama kolom dari semua berkas, kemudian mengurangkan nama kolom pada *COLUMNS_TO_DROP* yang juga telah dinormalisasi. Fungsi *create_schema* menyusun skema berupa tabel nama kolom dan tipe datanya, yaitu teks untuk kolom label dan *float32* untuk seluruh kolom lainnya.
+Kode Program 5.11 mengimplementasikan Langkah 2 dan Langkah 4, yaitu penyusunan skema acuan dan penghapusan kolom yang tidak relevan. Fungsi *create_schema_columns* hanya membaca baris judul setiap file CSV (*nrows=0*) sehingga biayanya rendah, menormalisasi nama kolomnya, menggabungkan seluruh nama kolom dari semua file, kemudian mengurangkan nama kolom pada *COLUMNS_TO_DROP* yang juga telah dinormalisasi. Fungsi *create_schema* menyusun skema berupa tabel nama kolom dan tipe datanya, yaitu teks untuk kolom label dan *float32* untuk seluruh kolom lainnya.
 
 ```python
 def create_schema_columns(folder_path: str, columns_to_drop: set[str] = COLUMNS_TO_DROP) -> list[str]:
@@ -93,7 +93,7 @@ def apply_schema_to_dataframe(
 
 Kode Program 5.12 Penerapan skema dan konversi tipe data
 
-Kode Program 5.13 mengimplementasikan Langkah 6. Fungsi *remove_duplicate_header* menghapus baris yang seluruh nilainya sama dengan nama kolom, yaitu baris judul yang tersisip berulang di tengah berkas CSV. Fungsi *clean_chunk* merangkai penghapusan baris judul tersebut dan penerapan skema pada satu *chunk*. Baris judul dihapus sebelum skema diterapkan karena pemeriksaannya membandingkan nilai dengan nama kolom asli pada berkas.
+Kode Program 5.13 mengimplementasikan Langkah 6. Fungsi *remove_duplicate_header* menghapus baris yang seluruh nilainya sama dengan nama kolom, yaitu baris judul yang tersisip berulang di tengah file CSV. Fungsi *clean_chunk* merangkai penghapusan baris judul tersebut dan penerapan skema pada satu *chunk*. Baris judul dihapus sebelum skema diterapkan karena pemeriksaannya membandingkan nilai dengan nama kolom asli pada file.
 
 ```python
 def remove_duplicate_header(dataframe: pd.DataFrame) -> pd.DataFrame:
@@ -108,7 +108,7 @@ def clean_chunk(dataframe: pd.DataFrame, schema: pd.DataFrame) -> pd.DataFrame:
 
 Kode Program 5.13 Pembersihan satu chunk
 
-Fungsi *write_chunk_to_parquet* pada Kode Program 5.14 menulis satu *chunk* ke folder tujuan sebagai berkas Parquet. Nama berkas terdiri atas nama berkas CSV asal yang diikuti nomor *chunk* empat digit, misalnya *2018-02-14-Wednesday_TrafficForML_CICFlowMeter_part0001.parquet*, sehingga tanggal pengambilan data tetap dapat ditelusuri dari nama berkas. Penulisan menggunakan *DataFrame.to_parquet* dengan mesin *PyArrow* dan kompresi Snappy bawaan, tanpa indeks baris.
+Fungsi *write_chunk_to_parquet* pada Kode Program 5.14 menulis satu *chunk* ke folder tujuan sebagai file Parquet. Nama file terdiri atas nama file CSV asal yang diikuti nomor *chunk* empat digit, misalnya *2018-02-14-Wednesday_TrafficForML_CICFlowMeter_part0001.parquet*, sehingga tanggal pengambilan data tetap dapat ditelusuri dari nama file. Penulisan menggunakan *DataFrame.to_parquet* dengan mesin *PyArrow* dan kompresi Snappy bawaan, tanpa indeks baris.
 
 ```python
 def write_chunk_to_parquet(
@@ -124,9 +124,9 @@ def write_chunk_to_parquet(
     return output_path
 ```
 
-Kode Program 5.14 Penulisan satu chunk ke berkas Parquet
+Kode Program 5.14 Penulisan satu chunk ke file Parquet
 
-Kode Program 5.15 mengimplementasikan Langkah 1 untuk satu berkas CSV. Fungsi *convert_csv_to_parquet* membaca berkas menggunakan *pandas.read_csv* dengan parameter *chunksize* dan *low_memory=False*, sehingga berkas dibaca per 100.000 baris dan tipe data setiap *chunk* ditentukan dari seluruh baris pada *chunk* tersebut. Setiap *chunk* dibersihkan dengan *clean_chunk* kemudian ditulis dengan *write_chunk_to_parquet*, dengan nomor *chunk* yang dimulai dari satu. Status penulisan setiap *chunk* ditampilkan, dan daftar berkas Parquet yang dihasilkan dikembalikan.
+Kode Program 5.15 mengimplementasikan Langkah 1 untuk satu file CSV. Fungsi *convert_csv_to_parquet* membaca file menggunakan *pandas.read_csv* dengan parameter *chunksize* dan *low_memory=False*, sehingga file dibaca per 100.000 baris dan tipe data setiap *chunk* ditentukan dari seluruh baris pada *chunk* tersebut. Setiap *chunk* dibersihkan dengan *clean_chunk* kemudian ditulis dengan *write_chunk_to_parquet*, dengan nomor *chunk* yang dimulai dari satu. Status penulisan setiap *chunk* ditampilkan, dan daftar file Parquet yang dihasilkan dikembalikan.
 
 ```python
 def convert_csv_to_parquet(
@@ -150,9 +150,9 @@ def convert_csv_to_parquet(
     return parquet_file_paths
 ```
 
-Kode Program 5.15 Konversi satu berkas CSV
+Kode Program 5.15 Konversi satu file CSV
 
-Fungsi *convert_all_csv_to_parquet* pada Kode Program 5.16 menyatukan seluruh langkah. Fungsi ini mendaftar berkas CSV pada folder *cse-cic-ids2018*, membentuk skema satu kali sebelum pemrosesan paralel dimulai sehingga seluruh berkas Parquet memiliki susunan kolom yang identik, kemudian menjalankan *convert_csv_to_parquet* untuk setiap berkas CSV secara paralel dengan seluruh inti CPU (*n_jobs=-1*). Setiap berkas CSV ditangani oleh satu proses, sedangkan *chunk* di dalam satu berkas diproses secara berurutan. Jumlah berkas CSV dan berkas Parquet yang dihasilkan ditampilkan di akhir.
+Fungsi *convert_all_csv_to_parquet* pada Kode Program 5.16 menyatukan seluruh langkah. Fungsi ini mendaftar file CSV pada folder *cse-cic-ids2018*, membentuk skema satu kali sebelum pemrosesan paralel dimulai sehingga seluruh file Parquet memiliki susunan kolom yang identik, kemudian menjalankan *convert_csv_to_parquet* untuk setiap file CSV secara paralel dengan seluruh inti CPU (*n_jobs=-1*). Setiap file CSV ditangani oleh satu proses, sedangkan *chunk* di dalam satu file diproses secara berurutan. Jumlah file CSV dan file Parquet yang dihasilkan ditampilkan di akhir.
 
 ```python
 def convert_all_csv_to_parquet(
@@ -172,7 +172,7 @@ def convert_all_csv_to_parquet(
     end_status(f"Finished converting {len(csv_file_paths)} CSV files into {len(parquet_file_paths)} parquet files")
 ```
 
-Kode Program 5.16 Konversi seluruh berkas CSV secara paralel
+Kode Program 5.16 Konversi seluruh file CSV secara paralel
 
 Kode Program 5.17 menjalankan seluruh tahap konversi dari folder *cse-cic-ids2018* ke folder *data-pipeline/01-raw-parquet*.
 

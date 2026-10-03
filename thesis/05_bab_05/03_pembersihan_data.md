@@ -2,7 +2,7 @@
 
 Subbab ini menyajikan implementasi dari rancangan pada Subbab 4.3, yaitu penghapusan fitur konstan serta penghapusan baris yang memuat nilai hilang atau nilai tak hingga. Kode program disusun mengikuti Langkah 1 hingga 6 pada algoritma di Subbab 4.3.
 
-Kode Program 5.33 menetapkan pengaturan tahap pembersihan. Daftar *CONSTANT_FEATURES* memuat delapan fitur konstan hasil EDA (Subbab 5.2), yang ditetapkan sebagai konstanta agar seluruh berkas kehilangan kolom yang sama. Konstanta berikutnya menetapkan nama kolom pada tabel ringkasan pembersihan, dan *CLEANING_N_JOBS* menetapkan jumlah proses paralel sebanyak delapan.
+Kode Program 5.33 menetapkan pengaturan tahap pembersihan. Daftar *CONSTANT_FEATURES* memuat delapan fitur konstan hasil EDA (Subbab 5.2), yang ditetapkan sebagai konstanta agar seluruh file kehilangan kolom yang sama. Konstanta berikutnya menetapkan nama kolom pada tabel ringkasan pembersihan, dan *CLEANING_N_JOBS* menetapkan jumlah proses paralel sebanyak delapan.
 
 ```python
 CONSTANT_FEATURES = [
@@ -46,7 +46,7 @@ def remove_infinite_value_rows(dataframe: pd.DataFrame) -> pd.DataFrame:
 
 Kode Program 5.34 Penghapusan fitur konstan, nilai hilang, dan nilai tak hingga
 
-Fungsi *clean_a_single_file* pada Kode Program 5.35 menerapkan ketiga langkah tersebut secara berurutan pada satu berkas, kemudian menulis hasilnya ke folder *data-pipeline/02-cleaned-parquet* dengan nama berkas yang sama (Langkah 5). Jumlah baris dicatat sebelum pembersihan, setelah penghapusan nilai hilang, dan setelah penghapusan nilai tak hingga, sehingga fungsi ini mengembalikan jumlah baris yang dihapus oleh setiap langkah.
+Fungsi *clean_a_single_file* pada Kode Program 5.35 menerapkan ketiga langkah tersebut secara berurutan pada satu file, kemudian menulis hasilnya ke folder *data-pipeline/02-cleaned-parquet* dengan nama file yang sama (Langkah 5). Jumlah baris dicatat sebelum pembersihan, setelah penghapusan nilai hilang, dan setelah penghapusan nilai tak hingga, sehingga fungsi ini mengembalikan jumlah baris yang dihapus oleh setiap langkah.
 
 ```python
 def clean_a_single_file(
@@ -77,9 +77,9 @@ def clean_a_single_file(
     }
 ```
 
-Kode Program 5.35 Pembersihan satu berkas
+Kode Program 5.35 Pembersihan satu file
 
-Fungsi *clean_all_files* pada Kode Program 5.36 mendaftar seluruh berkas pada folder *data-pipeline/01-raw-parquet* (Langkah 1), menjalankan *clean_a_single_file* pada setiap berkas secara paralel dengan delapan proses, dan menyusun catatan setiap berkas menjadi tabel ringkasan. Jumlah baris sebelum dan sesudah pembersihan pada seluruh berkas ditampilkan di akhir. Sel kedua menjalankan pembersihan dan menjumlahkan tabel ringkasan per hari dengan *group_and_sum* (Langkah 6).
+Fungsi *clean_all_files* pada Kode Program 5.36 mendaftar seluruh file pada folder *data-pipeline/01-raw-parquet* (Langkah 1), menjalankan *clean_a_single_file* pada setiap file secara paralel dengan delapan proses, dan menyusun catatan setiap file menjadi tabel ringkasan. Jumlah baris sebelum dan sesudah pembersihan pada seluruh file ditampilkan di akhir. Sel kedua menjalankan pembersihan dan menjumlahkan tabel ringkasan per hari dengan *group_and_sum* (Langkah 6).
 
 ```python
 def clean_all_files(
@@ -103,4 +103,4 @@ display(results)
 del results
 ```
 
-Kode Program 5.36 Pembersihan seluruh berkas secara paralel
+Kode Program 5.36 Pembersihan seluruh file secara paralel

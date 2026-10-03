@@ -20,7 +20,7 @@ display(
 
 Kode Program 5.106 Pemeriksaan laju perubahan prediksi pada baris utuh
 
-Fungsi *check_mixture_identity* pada Kode Program 5.107 mengimplementasikan bagian kedua Langkah 1. Fungsi ini menyusun akurasi dan jumlah baris ketiga populasi pada setiap pengujian skenario gangguan, menghitung proporsi baris terganggu, menghitung campuran akurasi baris utuh dan baris terganggu sesuai ruas kanan Persamaan 4.18, dan menghitung residunya terhadap akurasi seluruh baris. Sel kedua menyimpan hasilnya pada berkas *mixture-check.csv* dan menampilkan residu mutlak terbesar.
+Fungsi *check_mixture_identity* pada Kode Program 5.107 mengimplementasikan bagian kedua Langkah 1. Fungsi ini menyusun akurasi dan jumlah baris ketiga populasi pada setiap pengujian skenario gangguan, menghitung proporsi baris terganggu, menghitung campuran akurasi baris utuh dan baris terganggu sesuai ruas kanan Persamaan 4.18, dan menghitung residunya terhadap akurasi seluruh baris. Sel kedua menyimpan hasilnya pada file *mixture-check.csv* dan menampilkan residu mutlak terbesar.
 
 ```python
 def check_mixture_identity(metrics: pd.DataFrame) -> pd.DataFrame:
@@ -52,7 +52,7 @@ display(mixture_check.round(6))
 
 Kode Program 5.107 Pemeriksaan identitas campuran akurasi
 
-Fungsi *measure_smote_effect* pada Kode Program 5.108 mengimplementasikan Langkah 2. Fungsi ini memisahkan tabel penurunan kinerja menurut pengaturan SMOTE, memasangkan kedua pengaturan berdasarkan model, skenario, jenis gangguan, intensitas, populasi, dan metrik, kemudian menghitung selisih nilai dan selisih retensi dengan SMOTE dikurangi tanpa SMOTE. Sel kedua menyimpan hasilnya pada berkas *smote-effect.csv* dan, apabila kedua pengaturan telah diuji, menggambar selisih F1-*score* makro pada seluruh baris sebagai peta panas dengan skala warna divergen yang simetris terhadap nol.
+Fungsi *measure_smote_effect* pada Kode Program 5.108 mengimplementasikan Langkah 2. Fungsi ini memisahkan tabel penurunan kinerja menurut pengaturan SMOTE, memasangkan kedua pengaturan berdasarkan model, skenario, jenis gangguan, intensitas, populasi, dan metrik, kemudian menghitung selisih nilai dan selisih retensi dengan SMOTE dikurangi tanpa SMOTE. Sel kedua menyimpan hasilnya pada file *smote-effect.csv* dan, apabila kedua pengaturan telah diuji, menggambar selisih F1-*score* makro pada seluruh baris sebagai peta panas dengan skala warna divergen yang simetris terhadap nol.
 
 ```python
 def measure_smote_effect(degradation: pd.DataFrame) -> pd.DataFrame:
@@ -94,7 +94,7 @@ else:
 
 Kode Program 5.108 Pengukuran efek SMOTE
 
-Kode Program 5.109 mengimplementasikan Langkah 3. Fungsi *score_classes* menghitung presisi, *recall*, dan F1-*score* setiap kelas untuk prediksi pada skenario dan prediksi bersih menggunakan jumlah baris sebagai bobot sampel, dengan *zero_division=np.nan* sehingga kelas yang tidak pernah diprediksi tidak diberi skor nol. Untuk setiap kelas dihitung pula jumlah baris, jumlah prediksi, laju perubahan prediksi, proporsi yang diprediksi *Benign* pada skenario dan pada data bersih, serta rata-rata tingkat kepercayaan. Fungsi *measure_every_class* menjalankan *score_classes* pada setiap pengujian dan populasi, kemudian menghitung penurunan F1-*score* setiap kelas. Sel terakhir menyimpan hasilnya pada berkas *class-metrics.csv*.
+Kode Program 5.109 mengimplementasikan Langkah 3. Fungsi *score_classes* menghitung presisi, *recall*, dan F1-*score* setiap kelas untuk prediksi pada skenario dan prediksi bersih menggunakan jumlah baris sebagai bobot sampel, dengan *zero_division=np.nan* sehingga kelas yang tidak pernah diprediksi tidak diberi skor nol. Untuk setiap kelas dihitung pula jumlah baris, jumlah prediksi, laju perubahan prediksi, proporsi yang diprediksi *Benign* pada skenario dan pada data bersih, serta rata-rata tingkat kepercayaan. Fungsi *measure_every_class* menjalankan *score_classes* pada setiap pengujian dan populasi, kemudian menghitung penurunan F1-*score* setiap kelas. Sel terakhir menyimpan hasilnya pada file *class-metrics.csv*.
 
 ```python
 def score_classes(outcomes: pd.DataFrame, class_names: list[str], benign: int) -> pd.DataFrame:
@@ -512,7 +512,7 @@ if SAVE_MATRIX_PLOTS:
 
 Kode Program 5.114 Matriks konfusi dan matriks transisi prediksi
 
-Kode Program 5.115 mengimplementasikan Langkah 7. Fungsi *load_prediction_summaries* membaca ringkasan setiap pengujian dari metadata berkas prediksi dan menghitung jumlah baris yang diprediksi per detik. Sel kedua menyimpan ringkasan tersebut pada berkas *prediction-summaries.csv*, menampilkan ringkasan pada data uji bersih, dan menampilkan waktu prediksi setiap model pada setiap data uji.
+Kode Program 5.115 mengimplementasikan Langkah 7. Fungsi *load_prediction_summaries* membaca ringkasan setiap pengujian dari metadata file prediksi dan menghitung jumlah baris yang diprediksi per detik. Sel kedua menyimpan ringkasan tersebut pada file *prediction-summaries.csv*, menampilkan ringkasan pada data uji bersih, dan menampilkan waktu prediksi setiap model pada setiap data uji.
 
 ```python
 def load_prediction_summaries() -> pd.DataFrame:
@@ -537,7 +537,7 @@ display(
 
 Kode Program 5.115 Perbandingan biaya prediksi
 
-Fungsi *find_key_findings* pada Kode Program 5.116 mengimplementasikan Langkah 8. Untuk setiap pengaturan SMOTE, fungsi ini menentukan model dengan F1-*score* makro bersih tertinggi, model dengan rata-rata retensi tertinggi dan terendah, skenario dan jenis gangguan dengan rata-rata retensi terendah pada populasi seluruh baris dan baris terganggu, model dengan laju perubahan prediksi, laju lolos serangan, laju alarm palsu, dan proporsi kesalahan yakin tertinggi pada baris terganggu, serta kelas serangan yang paling sering diprediksi *Benign* dan yang penurunan F1-*score*-nya terbesar pada baris terganggu. Fungsi ini juga menghitung selisih rata-rata retensi akibat SMOTE untuk setiap model, laju perubahan prediksi terbesar pada baris utuh, dan residu identitas campuran terbesar. Sel kedua menyimpan tabel temuan utama pada berkas *key-findings.csv* dan menampilkannya.
+Fungsi *find_key_findings* pada Kode Program 5.116 mengimplementasikan Langkah 8. Untuk setiap pengaturan SMOTE, fungsi ini menentukan model dengan F1-*score* makro bersih tertinggi, model dengan rata-rata retensi tertinggi dan terendah, skenario dan jenis gangguan dengan rata-rata retensi terendah pada populasi seluruh baris dan baris terganggu, model dengan laju perubahan prediksi, laju lolos serangan, laju alarm palsu, dan proporsi kesalahan yakin tertinggi pada baris terganggu, serta kelas serangan yang paling sering diprediksi *Benign* dan yang penurunan F1-*score*-nya terbesar pada baris terganggu. Fungsi ini juga menghitung selisih rata-rata retensi akibat SMOTE untuk setiap model, laju perubahan prediksi terbesar pada baris utuh, dan residu identitas campuran terbesar. Sel kedua menyimpan tabel temuan utama pada file *key-findings.csv* dan menampilkannya.
 
 ```python
 def find_key_findings(

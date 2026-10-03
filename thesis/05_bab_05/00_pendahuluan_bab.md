@@ -1,6 +1,6 @@
 # **BAB 5 IMPLEMENTASI**
 
-Bab ini menyajikan implementasi dari rancangan yang telah diuraikan pada Bab 4. Implementasi diwujudkan dalam bentuk kode program berbahasa Python yang dijalankan pada *Jupyter Notebook* (*mlids-scikit.ipynb*). Setiap tahap pada *pipeline*, mulai dari konversi dataset ke format Parquet hingga analisis hasil pengujian ketahanan, ditulis sebagai fungsi yang dapat dijalankan ulang secara berurutan. Pemecahan pekerjaan menjadi fungsi-fungsi kecil, yang masing-masing menangani satu berkas, satu kelompok baris, satu skenario, atau satu model, memudahkan pemrosesan paralel, pemeriksaan hasil antara pada setiap tahap, dan pengulangan tahap tertentu tanpa mengulang tahap lainnya. Setiap tahap juga menampilkan status dan bilah kemajuan (*progress bar*) sehingga pelaksanaan tahap yang membutuhkan waktu lama dapat dipantau.
+Bab ini menyajikan implementasi dari rancangan yang telah diuraikan pada Bab 4. Implementasi diwujudkan dalam bentuk kode program berbahasa Python yang dijalankan pada *Jupyter Notebook* (*mlids-scikit.ipynb*). Setiap tahap pada *pipeline*, mulai dari konversi dataset ke format Parquet hingga analisis hasil pengujian ketahanan, ditulis sebagai fungsi yang dapat dijalankan ulang secara berurutan. Pemecahan pekerjaan menjadi fungsi-fungsi kecil, yang masing-masing menangani satu file, satu kelompok baris, satu skenario, atau satu model, memudahkan pemrosesan paralel, pemeriksaan hasil antara pada setiap tahap, dan pengulangan tahap tertentu tanpa mengulang tahap lainnya. Setiap tahap juga menampilkan status dan bilah kemajuan (*progress bar*) sehingga pelaksanaan tahap yang membutuhkan waktu lama dapat dipantau.
 
 Bab ini disusun sejajar dengan Bab 4. Setiap subbab pada bab ini memuat kode program dari rancangan pada subbab dengan nomor yang sama pada Bab 4, misalnya Subbab 5.7 memuat implementasi dari rancangan pada Subbab 4.7. Di dalam setiap subbab, kode program disusun mengikuti urutan langkah pada algoritma di Bab 4, dan setiap kode program didahului penjelasan mengenai langkah yang diimplementasikannya. Kode program disajikan sebagaimana pada *notebook*, termasuk nama variabel dan fungsi yang berbahasa Inggris. Kode yang berasal dari beberapa sel *notebook* digabung dalam satu kode program dengan sel-selnya dipisahkan oleh satu baris kosong. Konstanta pengaturan, seperti lokasi folder, ukuran kelompok baris, dan ruang pencarian hiperparameter, dikumpulkan pada awal setiap tahap dan digunakan sebagai nilai bawaan (*default*) parameter fungsi, sehingga pengaturan dapat diubah tanpa mengubah logika fungsi. Fungsi bantu yang digunakan oleh banyak tahap disajikan pada bagian awal bab ini, sedangkan fungsi bantu yang digunakan oleh satu tahap disajikan pada subbab tahap tersebut.
 
@@ -11,18 +11,18 @@ Tabel 5.1 Library yang Digunakan pada Implementasi
 | Kelompok | Library | Kegunaan pada implementasi |
 | :--- | :--- | :--- |
 | Pengolahan data | *pandas* dan *NumPy* | Struktur data tabular, pembacaan CSV per *chunk*, dan operasi numerik |
-| Pengolahan data | *Polars* | Pembacaan berkas Parquet secara *lazy*, pembacaan per kelompok baris, dan agregasi dengan mesin *streaming* |
-| Pengolahan data | *PyArrow* | Penulisan berkas Parquet per kelompok baris serta pembacaan skema dan metadata berkas |
-| Komputasi paralel | *joblib* | Pemrosesan berkas secara paralel dengan *backend* *loky* serta penyimpanan dan pemuatan objek |
+| Pengolahan data | *Polars* | Pembacaan file Parquet secara *lazy*, pembacaan per kelompok baris, dan agregasi dengan mesin *streaming* |
+| Pengolahan data | *PyArrow* | Penulisan file Parquet per kelompok baris serta pembacaan skema dan metadata file |
+| Komputasi paralel | *joblib* | Pemrosesan file secara paralel dengan *backend* *loky* serta penyimpanan dan pemuatan objek |
 | Praproses | *scikit-learn* | *train_test_split*, *LabelEncoder*, *FunctionTransformer*, *StandardScaler*, *PCA*, *StratifiedShuffleSplit*, dan *GridSearchCV* |
 | Praproses | *imbalanced-learn* | *Pipeline* dan SMOTE |
 | Model | *scikit-learn* | *KNeighborsClassifier*, *SVC*, *LinearSVC*, *RandomForestClassifier*, dan *LogisticRegression* |
 | Model | *xgboost* | *XGBClassifier* |
 | Evaluasi | *scikit-learn* (*sklearn.metrics*) | Akurasi, akurasi seimbang, presisi, *recall*, F1-*score*, MCC, *Cohen's kappa*, dan *confusion matrix* |
 | Visualisasi | *Matplotlib* | Diagram batang, grafik garis, dan peta panas (*heatmap*) |
-| Pendukung | *hashlib*, *re*, *json*, dan *shutil* | *Hash* BLAKE2b, ekstraksi tanggal dari nama berkas, berkas JSON, dan penyalinan berkas |
+| Pendukung | *hashlib*, *re*, *json*, dan *shutil* | *Hash* BLAKE2b, ekstraksi tanggal dari nama file, file JSON, dan penyalinan file |
 
-Kode Program 5.1 memuat seluruh perintah impor yang dikelompokkan menurut kegunaannya, yaitu pustaka standar Python, sistem dan berkas, pengolahan data, visualisasi, praproses, model, dan evaluasi. Sel pertama menetapkan variabel *USE_CUDA*, yang hanya menentukan perangkat komputasi *XGBoost* (Subbab 5.13). Apabila *USE_CUDA* bernilai *True* dan direktori *include* CUDA tersedia pada lingkungan Python yang digunakan, variabel lingkungan *CUDA_PATH* diatur agar library berbasis GPU dapat menemukan berkas CUDA, dan ukuran *cache* kompilasi CUDA diperbesar menjadi 4 GB. Kelas *Pipeline* diimpor dari *imbalanced-learn*, bukan dari *scikit-learn*, karena hanya *Pipeline* dari *imbalanced-learn* yang dapat memuat tahap SMOTE (Subbab 5.7).
+Kode Program 5.1 memuat seluruh perintah impor yang dikelompokkan menurut kegunaannya, yaitu pustaka standar Python, sistem dan file, pengolahan data, visualisasi, praproses, model, dan evaluasi. Sel pertama menetapkan variabel *USE_CUDA*, yang hanya menentukan perangkat komputasi *XGBoost* (Subbab 5.13). Apabila *USE_CUDA* bernilai *True* dan direktori *include* CUDA tersedia pada lingkungan Python yang digunakan, variabel lingkungan *CUDA_PATH* diatur agar library berbasis GPU dapat menemukan file CUDA, dan ukuran *cache* kompilasi CUDA diperbesar menjadi 4 GB. Kelas *Pipeline* diimpor dari *imbalanced-learn*, bukan dari *scikit-learn*, karena hanya *Pipeline* dari *imbalanced-learn* yang dapat memuat tahap SMOTE (Subbab 5.7).
 
 ```python
 USE_CUDA = True
@@ -139,7 +139,7 @@ class FitProgress:
 
 Kode Program 5.2 Fungsi penampil status dan bilah kemajuan
 
-Kode Program 5.3 memuat fungsi bantu pengelolaan berkas. Konstanta *ROW_INDEX_COLUMN* menetapkan nama kolom nomor baris yang digunakan pada pembagian dataset (Subbab 5.5). Fungsi *get_file_paths_in_folder* mengembalikan lokasi seluruh berkas dengan ekstensi tertentu yang telah diurutkan secara alfabetis, sehingga urutan pemrosesan bersifat deterministik. Fungsi *load* dan *dump* memuat dan menyimpan objek Python, misalnya *LabelEncoder* dan *pipeline* yang telah dilatih, menggunakan *joblib*.
+Kode Program 5.3 memuat fungsi bantu pengelolaan file. Konstanta *ROW_INDEX_COLUMN* menetapkan nama kolom nomor baris yang digunakan pada pembagian dataset (Subbab 5.5). Fungsi *get_file_paths_in_folder* mengembalikan lokasi seluruh file dengan ekstensi tertentu yang telah diurutkan secara alfabetis, sehingga urutan pemrosesan bersifat deterministik. Fungsi *load* dan *dump* memuat dan menyimpan objek Python, misalnya *LabelEncoder* dan *pipeline* yang telah dilatih, menggunakan *joblib*.
 
 ```python
 ROW_INDEX_COLUMN = "row_index"
@@ -158,9 +158,9 @@ def dump(obj: Any, dump_path: str) -> None:
     joblib.dump(obj, dump_path)
 ```
 
-Kode Program 5.3 Fungsi bantu pengelolaan berkas
+Kode Program 5.3 Fungsi bantu pengelolaan file
 
-Kode Program 5.4 menetapkan lokasi folder dan berkas yang digunakan pada seluruh tahap. Folder *cache* menyimpan daftar kelas dan pengode label. Folder *scikit-learn* menyimpan hasil yang bergantung pada model, yaitu hasil pencarian hiperparameter, model terlatih, prediksi, dan evaluasi, dengan subfolder *wout-smote* dan *with-smote* untuk kedua pengaturan SMOTE. Folder *data-pipeline* menyimpan data hasil setiap tahap praproses dengan awalan nomor sesuai urutan tahapnya, yaitu *01-raw-parquet* (Subbab 5.1), *02-cleaned-parquet* (Subbab 5.3), *03-deduplicated-parquet* (Subbab 5.4), *04-splitted-parquet* (Subbab 5.5), dan *06-noisy-parquet* (Subbab 5.14).
+Kode Program 5.4 menetapkan lokasi folder dan file yang digunakan pada seluruh tahap. Folder *cache* menyimpan daftar kelas dan pengode label. Folder *scikit-learn* menyimpan hasil yang bergantung pada model, yaitu hasil pencarian hiperparameter, model terlatih, prediksi, dan evaluasi, dengan subfolder *wout-smote* dan *with-smote* untuk kedua pengaturan SMOTE. Folder *data-pipeline* menyimpan data hasil setiap tahap praproses dengan awalan nomor sesuai urutan tahapnya, yaitu *01-raw-parquet* (Subbab 5.1), *02-cleaned-parquet* (Subbab 5.3), *03-deduplicated-parquet* (Subbab 5.4), *04-splitted-parquet* (Subbab 5.5), dan *06-noisy-parquet* (Subbab 5.14).
 
 ```python
 # cached path
@@ -200,9 +200,9 @@ PATH_FOLDER_NOISY_DATASET = os.path.join(PATH_FOLDER_DATA_PIPELINE, "06-noisy-pa
 PATH_FOLDER_NOISY_DATASET_TEST = os.path.join(PATH_FOLDER_NOISY_DATASET, "test")
 ```
 
-Kode Program 5.4 Lokasi folder dan berkas
+Kode Program 5.4 Lokasi folder dan file
 
-Kode Program 5.5 menetapkan nama berkas yang digunakan pada beberapa tahap, yaitu berkas fitur, label, dan label terkode pada setiap himpunan data, berkas pemeriksaan gangguan, berkas prediksi, serta berkas tabel dan gambar hasil evaluasi.
+Kode Program 5.5 menetapkan nama file yang digunakan pada beberapa tahap, yaitu file fitur, label, dan label terkode pada setiap himpunan data, file pemeriksaan gangguan, file prediksi, serta file tabel dan gambar hasil evaluasi.
 
 ```python
 FEATURES_FILE_NAME = "features.parquet"
@@ -234,7 +234,7 @@ CONFUSION_MATRIX_PLOT_FILE_NAME = "confusion-matrix.png"
 PREDICTION_TRANSITIONS_PLOT_FILE_NAME = "prediction-transitions.png"
 ```
 
-Kode Program 5.5 Nama berkas data, prediksi, dan hasil evaluasi
+Kode Program 5.5 Nama file data, prediksi, dan hasil evaluasi
 
 Kode Program 5.6 menetapkan konstanta pengolahan data, yaitu tipe data fitur *float32* (*NUMERIC_DATA_TYPE*), nama kolom label dan kolom kelas, nama kolom jumlah baris, ukuran kelompok baris sebanyak 500.000 baris (*BATCH_SIZE*), dan *random state* 42 yang digunakan pada seluruh proses acak.
 

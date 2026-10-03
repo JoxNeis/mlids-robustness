@@ -4,7 +4,7 @@ Subbab ini menyajikan implementasi dari rancangan pada Subbab 4.15, yaitu predik
 
 ### **5.15.1 Prediksi pada Setiap Skenario**
 
-Kode Program 5.82 menetapkan pengaturan pengujian. Kamus *SMOTE_SETTINGS* dan *EVALUATED_MODELS* menetapkan dua pengaturan SMOTE dan lima algoritma yang diuji beserta nama tampilannya. Konstanta *CLEAN_SCENARIO* menetapkan nama data uji bersih, *PREDICTION_BATCH_SIZE* menetapkan ukuran kelompok prediksi sebanyak 250.000 baris, *SAVE_CONFIDENCE* menentukan apakah tingkat kepercayaan dicatat, dan *OVERWRITE_PREDICTIONS* menentukan apakah prediksi yang telah tersimpan dihitung ulang. Konstanta berikutnya menetapkan kunci ringkasan pengujian pada metadata berkas prediksi dan nama kolom pada berkas prediksi.
+Kode Program 5.82 menetapkan pengaturan pengujian. Kamus *SMOTE_SETTINGS* dan *EVALUATED_MODELS* menetapkan dua pengaturan SMOTE dan lima algoritma yang diuji beserta nama tampilannya. Konstanta *CLEAN_SCENARIO* menetapkan nama data uji bersih, *PREDICTION_BATCH_SIZE* menetapkan ukuran kelompok prediksi sebanyak 250.000 baris, *SAVE_CONFIDENCE* menentukan apakah tingkat kepercayaan dicatat, dan *OVERWRITE_PREDICTIONS* menentukan apakah prediksi yang telah tersimpan dihitung ulang. Konstanta berikutnya menetapkan kunci ringkasan pengujian pada metadata file prediksi dan nama kolom pada file prediksi.
 
 ```python
 SMOTE_SETTINGS = {
@@ -77,7 +77,7 @@ def get_scenario_folder_path(scenario: str) -> str:
 
 Kode Program 5.84 Daftar dan lokasi data uji
 
-Fungsi *scan_scenario_split* pada Kode Program 5.85 membaca fitur sebuah data uji secara *lazy* dan memuat labelnya. Apabila berkas fitur memiliki kolom *is_noise*, kolom tersebut dimuat sebagai penanda baris terganggu dan dibuang dari fitur, sedangkan pada data uji bersih seluruh baris ditandai tidak terganggu. Proses dihentikan dengan galat apabila jumlah baris fitur dan label berbeda.
+Fungsi *scan_scenario_split* pada Kode Program 5.85 membaca fitur sebuah data uji secara *lazy* dan memuat labelnya. Apabila file fitur memiliki kolom *is_noise*, kolom tersebut dimuat sebagai penanda baris terganggu dan dibuang dari fitur, sedangkan pada data uji bersih seluruh baris ditandai tidak terganggu. Proses dihentikan dengan galat apabila jumlah baris fitur dan label berbeda.
 
 ```python
 def scan_scenario_split(scenario: str) -> tuple[pl.LazyFrame, np.ndarray, np.ndarray]:
@@ -96,7 +96,7 @@ def scan_scenario_split(scenario: str) -> tuple[pl.LazyFrame, np.ndarray, np.nda
 
 Kode Program 5.85 Pembacaan data uji sebuah skenario
 
-Kode Program 5.86 mengimplementasikan Langkah 3. Fungsi *get_trained_model_path* membentuk lokasi berkas model, dan *load_trained_pipeline* memuat *pipeline* tersebut atau melewatinya dengan pemberitahuan apabila model belum dilatih. Fungsi *split_trained_pipeline* memisahkan *pipeline* menjadi tahap praproses dan model klasifikasi, dengan membuang tahap yang memiliki fungsi *fit_resample*, yaitu SMOTE, karena tahap tersebut hanya berlaku pada pelatihan. Fungsi *summarize_pipeline_settings* mencatat nama kelas model, jumlah komponen utama, persentase varians yang dipertahankan, dan jumlah tetangga SMOTE.
+Kode Program 5.86 mengimplementasikan Langkah 3. Fungsi *get_trained_model_path* membentuk lokasi file model, dan *load_trained_pipeline* memuat *pipeline* tersebut atau melewatinya dengan pemberitahuan apabila model belum dilatih. Fungsi *split_trained_pipeline* memisahkan *pipeline* menjadi tahap praproses dan model klasifikasi, dengan membuang tahap yang memiliki fungsi *fit_resample*, yaitu SMOTE, karena tahap tersebut hanya berlaku pada pelatihan. Fungsi *summarize_pipeline_settings* mencatat nama kelas model, jumlah komponen utama, persentase varians yang dipertahankan, dan jumlah tetangga SMOTE.
 
 ```python
 def get_trained_model_path(smote_setting: str, model_name: str) -> str:
@@ -131,7 +131,7 @@ def summarize_pipeline_settings(pipeline: Pipeline) -> dict:
 
 Kode Program 5.86 Pemuatan dan pemisahan pipeline terlatih
 
-Kode Program 5.87 memuat fungsi pengelolaan berkas prediksi. Fungsi *get_predictions_path* membentuk lokasi berkas prediksi dengan subfolder bernama *smote_setting=…*, *model=…*, dan *scenario=…*. Fungsi *save_predictions* menyimpan tabel prediksi sebagai berkas Parquet dengan ringkasan pengujian dalam bentuk JSON pada metadata skema berkas, ditulis ke berkas sementara terlebih dahulu kemudian diganti namanya dengan *os.replace*. Fungsi *scan_predictions* membaca berkas prediksi secara *lazy*, sedangkan *read_prediction_summary* membaca ringkasan pengujian dari metadata tanpa membaca isi berkas.
+Kode Program 5.87 memuat fungsi pengelolaan file prediksi. Fungsi *get_predictions_path* membentuk lokasi file prediksi dengan subfolder bernama *smote_setting=…*, *model=…*, dan *scenario=…*. Fungsi *save_predictions* menyimpan tabel prediksi sebagai file Parquet dengan ringkasan pengujian dalam bentuk JSON pada metadata skema file, ditulis ke file sementara terlebih dahulu kemudian diganti namanya dengan *os.replace*. Fungsi *scan_predictions* membaca file prediksi secara *lazy*, sedangkan *read_prediction_summary* membaca ringkasan pengujian dari metadata tanpa membaca isi file.
 
 ```python
 def get_predictions_path(smote_setting: str, model_name: str, scenario: str) -> str:
@@ -160,9 +160,9 @@ def read_prediction_summary(smote_setting: str, model_name: str, scenario: str) 
     return json.loads(metadata.get(PREDICTION_SUMMARY_KEY.encode(), b"{}"))
 ```
 
-Kode Program 5.87 Penyimpanan dan pembacaan berkas prediksi
+Kode Program 5.87 Penyimpanan dan pembacaan file prediksi
 
-Kode Program 5.88 mengimplementasikan Langkah 2. Fungsi *fingerprint_file* menghitung sidik jari BLAKE2b dari isi sebuah berkas dan menyimpannya pada kamus *file_fingerprints* berdasarkan lokasi, ukuran, dan waktu perubahan berkas, sehingga berkas yang sama tidak di-*hash* berulang kali. Fungsi *is_scenario_predicted* menyatakan sebuah pengujian telah selesai apabila berkas prediksinya ada, model tidak lebih baru daripada berkas prediksi, ukuran kelompok pada ringkasan sama dengan *PREDICTION_BATCH_SIZE*, dan sidik jari data uji pada ringkasan sama dengan sidik jari berkas data uji saat ini. Fungsi *list_pending_scenarios* mengembalikan seluruh data uji apabila data uji bersih belum selesai, dan hanya data uji yang belum selesai apabila sebaliknya.
+Kode Program 5.88 mengimplementasikan Langkah 2. Fungsi *fingerprint_file* menghitung sidik jari BLAKE2b dari isi sebuah file dan menyimpannya pada kamus *file_fingerprints* berdasarkan lokasi, ukuran, dan waktu perubahan file, sehingga file yang sama tidak di-*hash* berulang kali. Fungsi *is_scenario_predicted* menyatakan sebuah pengujian telah selesai apabila file prediksinya ada, model tidak lebih baru daripada file prediksi, ukuran kelompok pada ringkasan sama dengan *PREDICTION_BATCH_SIZE*, dan sidik jari data uji pada ringkasan sama dengan sidik jari file data uji saat ini. Fungsi *list_pending_scenarios* mengembalikan seluruh data uji apabila data uji bersih belum selesai, dan hanya data uji yang belum selesai apabila sebaliknya.
 
 ```python
 file_fingerprints = {}
@@ -452,7 +452,7 @@ INTENSITY_PLOTS = [
 
 Kode Program 5.92 Pengaturan perbandingan model
 
-Kode Program 5.93 mengimplementasikan Langkah 6. Fungsi *add_combination_columns* menambahkan kolom pengaturan SMOTE, model, skenario, jenis gangguan, dan intensitas pada sebuah tabel. Fungsi *count_outcomes* membaca berkas prediksi secara *lazy* dan mengelompokkannya menurut penanda baris terganggu, label, prediksi bersih, dan prediksi pada skenario. Untuk setiap kelompok dihitung jumlah baris, jumlah tingkat kepercayaan, jumlah baris dengan tingkat kepercayaan sedikitnya 0,9, jumlah *log loss* dari peluang kelas sebenarnya yang dibatasi minimum 10⁻⁷, dan jumlah perpindahan. Agregasi dijalankan dengan mesin *streaming* *Polars*. Perbandingan tingkat kepercayaan dengan ambang dilakukan dalam tipe *float32* sesuai tipe yang tersimpan, sehingga tingkat kepercayaan yang tepat bernilai 0,9 tetap terhitung sebagai kesalahan yakin. Apabila model tidak menyediakan tingkat kepercayaan, kolom yang berkaitan diisi NaN.
+Kode Program 5.93 mengimplementasikan Langkah 6. Fungsi *add_combination_columns* menambahkan kolom pengaturan SMOTE, model, skenario, jenis gangguan, dan intensitas pada sebuah tabel. Fungsi *count_outcomes* membaca file prediksi secara *lazy* dan mengelompokkannya menurut penanda baris terganggu, label, prediksi bersih, dan prediksi pada skenario. Untuk setiap kelompok dihitung jumlah baris, jumlah tingkat kepercayaan, jumlah baris dengan tingkat kepercayaan sedikitnya 0,9, jumlah *log loss* dari peluang kelas sebenarnya yang dibatasi minimum 10⁻⁷, dan jumlah perpindahan. Agregasi dijalankan dengan mesin *streaming* *Polars*. Perbandingan tingkat kepercayaan dengan ambang dilakukan dalam tipe *float32* sesuai tipe yang tersimpan, sehingga tingkat kepercayaan yang tepat bernilai 0,9 tetap terhitung sebagai kesalahan yakin. Apabila model tidak menyediakan tingkat kepercayaan, kolom yang berkaitan diisi NaN.
 
 ```python
 def add_combination_columns(table: pd.DataFrame, smote_setting: str, model_name: str, scenario: str) -> pd.DataFrame:
@@ -490,9 +490,9 @@ def count_outcomes(
     return outcomes
 ```
 
-Kode Program 5.93 Peringkasan berkas prediksi menjadi tabel hasil
+Kode Program 5.93 Peringkasan file prediksi menjadi tabel hasil
 
-Fungsi *bin_displacement* pada Kode Program 5.94 membaca hanya baris terganggu dari berkas prediksi, membagi baris tersebut menjadi sepuluh desil menurut perpindahannya menggunakan *pandas.qcut*, dan menghitung jumlah baris, rata-rata perpindahan, laju perubahan prediksi, dan laju kesalahan pada setiap desil. Desil dengan batas yang sama digabungkan, dan data uji bersih yang tidak memiliki baris terganggu menghasilkan tabel kosong.
+Fungsi *bin_displacement* pada Kode Program 5.94 membaca hanya baris terganggu dari file prediksi, membagi baris tersebut menjadi sepuluh desil menurut perpindahannya menggunakan *pandas.qcut*, dan menghitung jumlah baris, rata-rata perpindahan, laju perubahan prediksi, dan laju kesalahan pada setiap desil. Desil dengan batas yang sama digabungkan, dan data uji bersih yang tidak memiliki baris terganggu menghasilkan tabel kosong.
 
 ```python
 def bin_displacement(predictions: pl.LazyFrame, bin_count: int = DISPLACEMENT_BIN_COUNT) -> pd.DataFrame:
@@ -517,7 +517,7 @@ def bin_displacement(predictions: pl.LazyFrame, bin_count: int = DISPLACEMENT_BI
 
 Kode Program 5.94 Desil perpindahan pada baris terganggu
 
-Kode Program 5.95 menjalankan peringkasan pada seluruh berkas prediksi. Fungsi *list_predicted_combinations* mendaftar pasangan pengaturan SMOTE, model, dan data uji yang telah memiliki berkas prediksi. Fungsi *count_every_outcome* meringkas setiap berkas menjadi tabel hasil dan desil perpindahan, menggabungkan seluruhnya, dan menyimpannya pada berkas *outcome-counts.parquet* dan *displacement-bins.csv*. Sel terakhir menjalankan peringkasan.
+Kode Program 5.95 menjalankan peringkasan pada seluruh file prediksi. Fungsi *list_predicted_combinations* mendaftar pasangan pengaturan SMOTE, model, dan data uji yang telah memiliki file prediksi. Fungsi *count_every_outcome* meringkas setiap file menjadi tabel hasil dan desil perpindahan, menggabungkan seluruhnya, dan menyimpannya pada file *outcome-counts.parquet* dan *displacement-bins.csv*. Sel terakhir menjalankan peringkasan.
 
 ```python
 def list_predicted_combinations() -> list[tuple[str, str, str]]:
@@ -560,7 +560,7 @@ outcomes, displacement_bins = count_every_outcome()
 display(outcomes.head(10))
 ```
 
-Kode Program 5.95 Peringkasan seluruh berkas prediksi
+Kode Program 5.95 Peringkasan seluruh file prediksi
 
 Kode Program 5.96 memuat dua fungsi bantu penghitungan metrik. Fungsi *mean_per_row* menghitung rata-rata per baris dari jumlah yang tersimpan pada tabel hasil, yaitu jumlah nilai pada kelompok terpilih dibagi jumlah baris kelompok tersebut, dan mengembalikan NaN apabila tidak ada baris yang terpilih. Fungsi *select_population* memilih kelompok pada tabel hasil yang termasuk populasi *noisy*, *intact*, atau seluruhnya.
 
@@ -666,7 +666,7 @@ def score_confidence(outcomes: pd.DataFrame) -> dict:
 
 Kode Program 5.98 Metrik stabilitas prediksi dan tingkat kepercayaan
 
-Kode Program 5.99 mengimplementasikan Langkah 7. Fungsi *score_population* menggabungkan seluruh metrik sebuah populasi, menghitung kesenjangan kepercayaan, dan menambahkan metrik prediksi bersih pada baris yang sama dengan awalan *clean_*. Fungsi *measure_every_population* mengelompokkan tabel hasil menurut pengujian, menilai setiap populasi yang tidak kosong, dan menyusun hasilnya menjadi satu tabel. Sel terakhir menjalankannya dan menyimpan hasilnya pada berkas *metrics.csv*.
+Kode Program 5.99 mengimplementasikan Langkah 7. Fungsi *score_population* menggabungkan seluruh metrik sebuah populasi, menghitung kesenjangan kepercayaan, dan menambahkan metrik prediksi bersih pada baris yang sama dengan awalan *clean_*. Fungsi *measure_every_population* mengelompokkan tabel hasil menurut pengujian, menilai setiap populasi yang tidak kosong, dan menyusun hasilnya menjadi satu tabel. Sel terakhir menjalankannya dan menyimpan hasilnya pada file *metrics.csv*.
 
 ```python
 def score_population(outcomes: pd.DataFrame, benign: int) -> dict:
@@ -708,7 +708,7 @@ Kode Program 5.99 Penghitungan metrik pada setiap populasi
 
 ### **5.15.3 Penurunan Kinerja dan Peringkat Ketahanan**
 
-Fungsi *measure_degradation* pada Kode Program 5.100 mengimplementasikan Langkah 8. Untuk setiap metrik ketahanan, fungsi ini menyusun tabel yang memuat nilai metrik dan nilai bersihnya pada setiap pengujian dan populasi, kemudian menghitung penurunan mutlak sesuai Persamaan 4.15 dan retensi sesuai Persamaan 4.16. Retensi yang tidak terhingga akibat nilai bersih nol diganti NaN. Sel kedua menjalankannya, menyimpan hasilnya pada berkas *degradation.csv*, dan menampilkan F1-*score* makro setiap model pada setiap data uji untuk populasi seluruh baris dan baris terganggu.
+Fungsi *measure_degradation* pada Kode Program 5.100 mengimplementasikan Langkah 8. Untuk setiap metrik ketahanan, fungsi ini menyusun tabel yang memuat nilai metrik dan nilai bersihnya pada setiap pengujian dan populasi, kemudian menghitung penurunan mutlak sesuai Persamaan 4.15 dan retensi sesuai Persamaan 4.16. Retensi yang tidak terhingga akibat nilai bersih nol diganti NaN. Sel kedua menjalankannya, menyimpan hasilnya pada file *degradation.csv*, dan menampilkan F1-*score* makro setiap model pada setiap data uji untuk populasi seluruh baris dan baris terganggu.
 
 ```python
 def measure_degradation(metrics: pd.DataFrame, robustness_metrics: list[str] = ROBUSTNESS_METRICS) -> pd.DataFrame:
@@ -937,7 +937,7 @@ for population in ["all", "noisy"]:
 
 Kode Program 5.104 Peta panas retensi
 
-Fungsi *rank_robustness* pada Kode Program 5.105 mengimplementasikan Langkah 9. Fungsi ini mengelompokkan retensi pada skenario gangguan menurut metrik, populasi, pengaturan SMOTE, dan model, kemudian menghitung jumlah skenario, rata-rata nilai bersih dan nilai pada skenario, rata-rata retensi sesuai Persamaan 4.17, retensi terburuk beserta skenarionya, rata-rata dan nilai terbesar penurunan mutlak, serta rata-rata retensi untuk setiap jenis gangguan. Peringkat disusun menurut rata-rata retensi di dalam setiap pengaturan SMOTE (*rank*) dan pada gabungan kedua pengaturan (*overall_rank*). Sel kedua menyimpan peringkat pada berkas *robustness-ranking.csv*, kemudian menampilkan dan menggambar rata-rata serta retensi terburuk F1-*score* makro untuk populasi seluruh baris dan baris terganggu.
+Fungsi *rank_robustness* pada Kode Program 5.105 mengimplementasikan Langkah 9. Fungsi ini mengelompokkan retensi pada skenario gangguan menurut metrik, populasi, pengaturan SMOTE, dan model, kemudian menghitung jumlah skenario, rata-rata nilai bersih dan nilai pada skenario, rata-rata retensi sesuai Persamaan 4.17, retensi terburuk beserta skenarionya, rata-rata dan nilai terbesar penurunan mutlak, serta rata-rata retensi untuk setiap jenis gangguan. Peringkat disusun menurut rata-rata retensi di dalam setiap pengaturan SMOTE (*rank*) dan pada gabungan kedua pengaturan (*overall_rank*). Sel kedua menyimpan peringkat pada file *robustness-ranking.csv*, kemudian menampilkan dan menggambar rata-rata serta retensi terburuk F1-*score* makro untuk populasi seluruh baris dan baris terganggu.
 
 ```python
 def rank_robustness(degradation: pd.DataFrame) -> pd.DataFrame:

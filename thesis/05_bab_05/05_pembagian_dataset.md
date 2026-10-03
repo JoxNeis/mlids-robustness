@@ -14,7 +14,7 @@ TEST_PERCENTAGE_COLUMN = "test_percentage"
 
 Kode Program 5.43 Pengaturan tahap pembagian dataset
 
-Fungsi *load_all_files* pada Kode Program 5.44 mengimplementasikan Langkah 1. Fungsi ini membaca seluruh berkas Parquet pada sebuah folder secara *lazy* sebagai satu tabel menggunakan *polars.scan_parquet*, dengan urutan berkas yang telah diurutkan, dan menambahkan kolom nomor baris. Tidak ada data yang dimuat ke memori pada tahap ini.
+Fungsi *load_all_files* pada Kode Program 5.44 mengimplementasikan Langkah 1. Fungsi ini membaca seluruh file Parquet pada sebuah folder secara *lazy* sebagai satu tabel menggunakan *polars.scan_parquet*, dengan urutan file yang telah diurutkan, dan menambahkan kolom nomor baris. Tidak ada data yang dimuat ke memori pada tahap ini.
 
 ```python
 def load_all_files(folder_path: str, row_index_column: str = ROW_INDEX_COLUMN) -> pl.LazyFrame:
@@ -22,7 +22,7 @@ def load_all_files(folder_path: str, row_index_column: str = ROW_INDEX_COLUMN) -
     return pl.scan_parquet(file_paths).with_row_index(row_index_column)
 ```
 
-Kode Program 5.44 Pembacaan seluruh berkas sebagai satu tabel secara lazy
+Kode Program 5.44 Pembacaan seluruh file sebagai satu tabel secara lazy
 
 Fungsi *assign_test_rows* pada Kode Program 5.45 mengimplementasikan Langkah 2 dan 3. Kolom label diubah menjadi kode kategori dengan tipe *Enum* yang urutan kategorinya sama dengan daftar kelas hasil EDA, kemudian hanya kode tersebut yang dimuat ke memori. Fungsi *train_test_split* dari *scikit-learn* membagi nomor baris dengan ukuran data uji 20%, stratifikasi berdasarkan kode label, dan *random state* 42. Nomor baris data uji dikembalikan sebagai *Series* dengan tipe yang sama dengan kolom nomor baris.
 
@@ -48,7 +48,7 @@ def assign_test_rows(
 
 Kode Program 5.45 Penentuan baris data uji secara berstrata
 
-Fungsi *write_features_and_labels* pada Kode Program 5.46 mengimplementasikan Langkah 5. Fungsi ini membuat folder himpunan, membuang kolom nomor baris, memisahkan fitur dan label, kemudian menulis keduanya ke berkas *features.parquet* dan *labels.parquet* menggunakan *sink_parquet*, yang mengalirkan data dari berkas sumber ke berkas tujuan tanpa memuat seluruh data ke memori.
+Fungsi *write_features_and_labels* pada Kode Program 5.46 mengimplementasikan Langkah 5. Fungsi ini membuat folder himpunan, membuang kolom nomor baris, memisahkan fitur dan label, kemudian menulis keduanya ke file *features.parquet* dan *labels.parquet* menggunakan *sink_parquet*, yang mengalirkan data dari file sumber ke file tujuan tanpa memuat seluruh data ke memori.
 
 ```python
 def write_features_and_labels(
@@ -97,7 +97,7 @@ split_dataset()
 
 Kode Program 5.47 Pembagian dataset
 
-Kode Program 5.48 mengimplementasikan Langkah 6. Fungsi *count_classes_in_split* menghitung jumlah baris setiap kelas dari berkas label sebuah himpunan menggunakan agregasi *group_by* pada *Polars*. Fungsi *summarize_split_classes* menyusun jumlah tersebut untuk data latih dan data uji dalam satu tabel, menghitung persentase data uji terhadap jumlah keduanya pada setiap kelas, dan mengurutkannya menurut jumlah baris data latih. Sel terakhir menampilkan tabel tersebut.
+Kode Program 5.48 mengimplementasikan Langkah 6. Fungsi *count_classes_in_split* menghitung jumlah baris setiap kelas dari file label sebuah himpunan menggunakan agregasi *group_by* pada *Polars*. Fungsi *summarize_split_classes* menyusun jumlah tersebut untuk data latih dan data uji dalam satu tabel, menghitung persentase data uji terhadap jumlah keduanya pada setiap kelas, dan mengurutkannya menurut jumlah baris data latih. Sel terakhir menampilkan tabel tersebut.
 
 ```python
 def count_classes_in_split(

@@ -1,11 +1,11 @@
 flowchart TD
     mulai(["Mulai"])
-    mulai --> daftar[/"Membaca daftar berkas Parquet<br>dari 01-raw-parquet<br>(n = jumlah berkas)"/]
-    daftar --> baris[["Menghitung jumlah baris setiap berkas<br>dari metadata Parquet"]]
+    mulai --> daftar[/"Membaca daftar file Parquet<br>dari 01-raw-parquet<br>(n = jumlah file)"/]
+    daftar --> baris[["Menghitung jumlah baris setiap file<br>dari metadata Parquet"]]
     baris --> per_hari["Menjumlahkan baris<br>per hari pengambilan data"]
-    per_hari --> kelas[["Mengumpulkan nilai unik label<br>dari seluruh berkas"]]
+    per_hari --> kelas[["Mengumpulkan nilai unik label<br>dari seluruh file"]]
     kelas --> simpan_kelas[/"Menulis daftar kelas ke<br>original-classes.json"/]
-    simpan_kelas --> distribusi[["Menghitung jumlah baris setiap kelas<br>per berkas secara paralel"]]
+    simpan_kelas --> distribusi[["Menghitung jumlah baris setiap kelas<br>per file secara paralel"]]
     distribusi --> init_j["Inisialisasi j = 1<br>(m = jumlah fitur)"]
     init_j --> cek_j{"j ≤ m?"}
 
@@ -16,7 +16,7 @@ flowchart TD
     cek_j -->|"Tidak"| masalah["Mengidentifikasi fitur dengan nilai<br>tak hingga, nilai hilang, NaN,<br>dan fitur konstan"]
     masalah --> init_i["Inisialisasi i = 1"]
     init_i --> cek_i{"i ≤ n?"}
-    cek_i -->|"Ya"| kovarians[["Menghitung n, rata-rata, dan<br>cross-product berkas ke-i"]]
+    cek_i -->|"Ya"| kovarians[["Menghitung n, rata-rata, dan<br>cross-product file ke-i"]]
     kovarians --> gabung["Menggabungkan statistik<br>dengan Persamaan 4.1"]
     gabung --> inc_i["i = i + 1"]
     inc_i --> cek_i

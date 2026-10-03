@@ -23,7 +23,7 @@ SMOTE_K_NEIGHBORS_GRID = [3, 5, 7]
 
 Kode Program 5.55 Pengaturan pencarian hiperparameter
 
-Kode Program 5.56 mengimplementasikan Langkah 1. Fungsi *load_labels* membaca kolom label dari berkas *encoded-labels.parquet* sebuah himpunan. Fungsi *load_split* membaca fitur secara *lazy*, memuatnya per kelompok 500.000 baris ke satu matriks *float32* menggunakan *load_features* (pendahuluan Bab 5), memuat labelnya, dan menghentikan proses dengan galat apabila jumlah baris keduanya berbeda. Sel terakhir memuat data latih dan menampilkan jumlah baris dan fiturnya.
+Kode Program 5.56 mengimplementasikan Langkah 1. Fungsi *load_labels* membaca kolom label dari file *encoded-labels.parquet* sebuah himpunan. Fungsi *load_split* membaca fitur secara *lazy*, memuatnya per kelompok 500.000 baris ke satu matriks *float32* menggunakan *load_features* (pendahuluan Bab 5), memuat labelnya, dan menghentikan proses dengan galat apabila jumlah baris keduanya berbeda. Sel terakhir memuat data latih dan menampilkan jumlah baris dan fiturnya.
 
 ```python
 def load_labels(
@@ -167,7 +167,7 @@ def run_grid_search(
 
 Kode Program 5.60 Pencarian hiperparameter dengan GridSearchCV
 
-Kode Program 5.61 memuat fungsi penyimpanan dan peringkasan hasil pencarian. Fungsi *save_grid_search_results* menyimpan seluruh hasil pencarian sebagai berkas CSV dan kombinasi terbaik sebagai berkas JSON pada folder *grid-search* sesuai pengaturan SMOTE. Fungsi *summarize_grid_search* memilih kolom hiperparameter, rata-rata dan simpangan baku skor setiap metrik, serta rata-rata waktu pelatihan untuk ditampilkan. Fungsi *search_model* menyatukan penyusunan *pipeline*, penyusunan grid, pencarian, dan penyimpanan hasil untuk satu algoritma.
+Kode Program 5.61 memuat fungsi penyimpanan dan peringkasan hasil pencarian. Fungsi *save_grid_search_results* menyimpan seluruh hasil pencarian sebagai file CSV dan kombinasi terbaik sebagai file JSON pada folder *grid-search* sesuai pengaturan SMOTE. Fungsi *summarize_grid_search* memilih kolom hiperparameter, rata-rata dan simpangan baku skor setiap metrik, serta rata-rata waktu pelatihan untuk ditampilkan. Fungsi *search_model* menyatukan penyusunan *pipeline*, penyusunan grid, pencarian, dan penyimpanan hasil untuk satu algoritma.
 
 ```python
 def save_grid_search_results(results: pd.DataFrame, model_name: str, use_smote: bool) -> None:

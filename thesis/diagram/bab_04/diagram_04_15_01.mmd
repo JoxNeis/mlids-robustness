@@ -15,7 +15,7 @@ flowchart TD
     cek_s -->|"Tidak"| inc_m["m = m + 1"]
     inc_m --> cek_m
 
-    cek_m -->|"Tidak"| ringkas[["Meringkas setiap berkas prediksi<br>menjadi tabel hasil dan<br>desil perpindahan"]]
+    cek_m -->|"Tidak"| ringkas[["Meringkas setiap file prediksi<br>menjadi tabel hasil dan<br>desil perpindahan"]]
     ringkas --> metrik[["Menghitung metrik pada populasi<br>all, intact, dan noisy"]]
     metrik --> degradasi[["Menghitung penurunan dan retensi<br>terhadap prediksi bersih berpasangan"]]
     degradasi --> peringkat[["Menyusun peringkat model<br>menurut rata-rata retensi"]]

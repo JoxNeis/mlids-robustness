@@ -1,14 +1,14 @@
 flowchart TD
     mulai(["Mulai"])
-    mulai --> daftar[/"Membaca daftar berkas Parquet<br>dari 01-raw-parquet<br>(n = jumlah berkas)"/]
+    mulai --> daftar[/"Membaca daftar file Parquet<br>dari 01-raw-parquet<br>(n = jumlah file)"/]
     daftar --> init_i["Inisialisasi i = 1"]
     init_i --> cek_i{"i ≤ n?"}
 
-    cek_i -->|"Ya"| baca[/"Membaca berkas ke-i"/]
+    cek_i -->|"Ya"| baca[/"Membaca file ke-i"/]
     baca --> konstan["Menghapus 8 fitur konstan"]
     konstan --> hilang["Menghapus baris dengan<br>nilai hilang"]
     hilang --> tak_hingga["Menghapus baris dengan<br>nilai +∞ atau −∞"]
-    tak_hingga --> tulis[/"Menulis berkas ke format Parquet<br>dan mencatat jumlah baris"/]
+    tak_hingga --> tulis[/"Menulis file ke format Parquet<br>dan mencatat jumlah baris"/]
     tulis --> simpan[("Penyimpanan<br>02-cleaned-parquet")]
     simpan --> inc_i["i = i + 1"]
     inc_i --> cek_i

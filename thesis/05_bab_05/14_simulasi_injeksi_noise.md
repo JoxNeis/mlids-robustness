@@ -152,7 +152,7 @@ def add_noise_to_features(
 
 Kode Program 5.78 Pemilihan baris terganggu dan pemberian gangguan pada satu kelompok
 
-Fungsi *make_noisy_dataset* pada Kode Program 5.79 menyatukan Langkah 3 hingga 6 untuk satu skenario. Fungsi ini memeriksa bahwa kolom data uji sama dengan kolom statistik data latih, membentuk generator bilangan acak skenario, dan memilih baris terganggu pada seluruh data uji. Data uji kemudian dibaca per kelompok 500.000 baris dengan *read_in_batches* (pendahuluan Bab 5), dan setiap kelompok diberi gangguan dengan potongan penanda yang sesuai lalu ditulis ke satu berkas *features.parquet* menggunakan *ParquetWriter* dari *PyArrow*. Karena setiap kelompok menggunakan generator yang sama secara berurutan, hasilnya identik dengan pembangkitan gangguan pada seluruh data uji sekaligus. Berkas label data uji disalin ke folder skenario, dan berkas fitur yang baru ditulis dikembalikan sebagai *LazyFrame*.
+Fungsi *make_noisy_dataset* pada Kode Program 5.79 menyatukan Langkah 3 hingga 6 untuk satu skenario. Fungsi ini memeriksa bahwa kolom data uji sama dengan kolom statistik data latih, membentuk generator bilangan acak skenario, dan memilih baris terganggu pada seluruh data uji. Data uji kemudian dibaca per kelompok 500.000 baris dengan *read_in_batches* (pendahuluan Bab 5), dan setiap kelompok diberi gangguan dengan potongan penanda yang sesuai lalu ditulis ke satu file *features.parquet* menggunakan *ParquetWriter* dari *PyArrow*. Karena setiap kelompok menggunakan generator yang sama secara berurutan, hasilnya identik dengan pembangkitan gangguan pada seluruh data uji sekaligus. file label data uji disalin ke folder skenario, dan file fitur yang baru ditulis dikembalikan sebagai *LazyFrame*.
 
 ```python
 def make_noisy_dataset(
@@ -251,7 +251,7 @@ def measure_noise(
 
 Kode Program 5.80 Pemeriksaan hasil gangguan
 
-Kode Program 5.81 menjalankan pembentukan dan pemeriksaan untuk kedua belas skenario secara berurutan, menyusun hasil pemeriksaannya bersama nama skenario, jenis gangguan, intensitas, dan parameter besarannya, kemudian menyimpan tabel tersebut pada berkas *noise-evaluation/noise-check.csv*.
+Kode Program 5.81 menjalankan pembentukan dan pemeriksaan untuk kedua belas skenario secara berurutan, menyusun hasil pemeriksaannya bersama nama skenario, jenis gangguan, intensitas, dan parameter besarannya, kemudian menyimpan tabel tersebut pada file *noise-evaluation/noise-check.csv*.
 
 ```python
 noise_check = []
