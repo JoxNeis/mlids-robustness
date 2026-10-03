@@ -2,7 +2,7 @@
 
 Subbab ini menyajikan implementasi dari rancangan pada Subbab 4.7, yaitu penyusunan *pipeline* yang terdiri atas konversi tipe data, standardisasi, PCA, SMOTE yang bersifat opsional, dan algoritma klasifikasi. Seluruh tahap disusun menggunakan kelas yang telah tersedia pada *scikit-learn* dan *imbalanced-learn*, sehingga statistik setiap tahap dipelajari pada saat *pipeline* dilatih dan diterapkan pada saat *pipeline* digunakan untuk prediksi.
 
-Kode Program 5.52 menetapkan pengaturan *pipeline*. Konstanta *PCA_VARIANCE_THRESHOLD* menetapkan ambang varians kumulatif PCA sebesar 0,95 sesuai Persamaan 4.4, dan *MODEL_N_JOBS* menetapkan jumlah proses paralel algoritma klasifikasi sebanyak delapan. Fungsi *_to_float32* mengonversi seluruh fitur menjadi *float32* (Subbab 4.7.1). Fungsi ini didefinisikan sebagai fungsi bernama, bukan fungsi anonim, agar *pipeline* yang memuatnya dapat disimpan dan dimuat kembali dengan *joblib*.
+Kode Program 5.52 menetapkan pengaturan *pipeline*. Konstanta *PCA_VARIANCE_THRESHOLD* menetapkan ambang varians kumulatif PCA sebesar 0,95 sesuai Persamaan 4.7, dan *MODEL_N_JOBS* menetapkan jumlah proses paralel algoritma klasifikasi sebanyak delapan. Fungsi *_to_float32* mengonversi seluruh fitur menjadi *float32* (Subbab 4.7.1). Fungsi ini didefinisikan sebagai fungsi bernama, bukan fungsi anonim, agar *pipeline* yang memuatnya dapat disimpan dan dimuat kembali dengan *joblib*.
 
 ```python
 PCA_VARIANCE_THRESHOLD = 0.95
@@ -32,7 +32,7 @@ class ProgressPipeline(Pipeline):
 
 Kode Program 5.53 Pipeline dengan pelaporan kemajuan pelatihan
 
-Kode Program 5.54 menyusun tahap-tahap *pipeline*. Fungsi *make_preprocessing_steps* mengembalikan tiga tahap praproses, yaitu *cast* berupa *FunctionTransformer* yang menjalankan *_to_float32*, *scaler* berupa *StandardScaler* yang menerapkan Persamaan 4.3, dan *pca* berupa *PCA* dengan jumlah komponen 0,95, yang berarti *scikit-learn* memilih jumlah komponen terkecil yang varians kumulatifnya melebihi 95% sesuai Persamaan 4.4, dengan *random state* 42. Fungsi *make_model_pipeline* menyusun tahap praproses tersebut, menambahkan tahap *smote* berupa *SMOTE* dengan *random state* 42 apabila pengaturan dengan SMOTE digunakan, kemudian menambahkan algoritma klasifikasi sebagai tahap terakhir. Tahap SMOTE ditempatkan setelah PCA sesuai Subbab 4.7.4, dan karena *SMOTE* merupakan *sampler*, *Pipeline* dari *imbalanced-learn* hanya menjalankannya pada saat pelatihan.
+Kode Program 5.54 menyusun tahap-tahap *pipeline*. Fungsi *make_preprocessing_steps* mengembalikan tiga tahap praproses, yaitu *cast* berupa *FunctionTransformer* yang menjalankan *_to_float32*, *scaler* berupa *StandardScaler* yang menerapkan Persamaan 4.6, dan *pca* berupa *PCA* dengan jumlah komponen 0,95, yang berarti *scikit-learn* memilih jumlah komponen terkecil yang varians kumulatifnya melebihi 95% sesuai Persamaan 4.7, dengan *random state* 42. Fungsi *make_model_pipeline* menyusun tahap praproses tersebut, menambahkan tahap *smote* berupa *SMOTE* dengan *random state* 42 apabila pengaturan dengan SMOTE digunakan, kemudian menambahkan algoritma klasifikasi sebagai tahap terakhir. Tahap SMOTE ditempatkan setelah PCA sesuai Subbab 4.7.4, dan karena *SMOTE* merupakan *sampler*, *Pipeline* dari *imbalanced-learn* hanya menjalankannya pada saat pelatihan.
 
 ```python
 def make_preprocessing_steps(pca_variance_threshold: float = PCA_VARIANCE_THRESHOLD) -> list[tuple[str, Any]]:

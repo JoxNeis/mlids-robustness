@@ -247,7 +247,7 @@ def predict_batch(
 
 Kode Program 5.89 Prediksi satu kelompok baris
 
-Fungsi *predict_scenario* pada Kode Program 5.90 mengimplementasikan Langkah 4 dan 5 untuk satu data uji. Fungsi ini menghitung sidik jari data uji, membaca data uji tersebut beserta data uji bersih, kemudian memproses keduanya per kelompok 250.000 baris dengan batas yang sama. Pada setiap kelompok, data uji dan data uji bersih ditransformasikan dengan tahap praproses yang sama, data uji diprediksi dengan *predict_batch*, dan perpindahan setiap baris dihitung sebagai norma Euclidean selisih komponen utama keduanya sesuai Persamaan 4.14. Waktu praproses dan waktu prediksi dijumlahkan dari seluruh kelompok. Hasil seluruh kelompok digabung, kemudian ditambah label, prediksi bersih, dan penanda baris terganggu. Prediksi bersih diambil dari prediksi data uji bersih yang diberikan, atau dari prediksi itu sendiri apabila data uji yang diprediksi adalah data uji bersih. Ringkasan pengujian disimpan bersama prediksi, dan F1-*score* makro serta laju perubahan prediksi ditampilkan sebagai pemeriksaan cepat.
+Fungsi *predict_scenario* pada Kode Program 5.90 mengimplementasikan Langkah 4 dan 5 untuk satu data uji. Fungsi ini menghitung sidik jari data uji, membaca data uji tersebut beserta data uji bersih, kemudian memproses keduanya per kelompok 250.000 baris dengan batas yang sama. Pada setiap kelompok, data uji dan data uji bersih ditransformasikan dengan tahap praproses yang sama, data uji diprediksi dengan *predict_batch*, dan perpindahan setiap baris dihitung sebagai norma Euclidean selisih komponen utama keduanya sesuai Persamaan 4.15. Waktu praproses dan waktu prediksi dijumlahkan dari seluruh kelompok. Hasil seluruh kelompok digabung, kemudian ditambah label, prediksi bersih, dan penanda baris terganggu. Prediksi bersih diambil dari prediksi data uji bersih yang diberikan, atau dari prediksi itu sendiri apabila data uji yang diprediksi adalah data uji bersih. Ringkasan pengujian disimpan bersama prediksi, dan F1-*score* makro serta laju perubahan prediksi ditampilkan sebagai pemeriksaan cepat.
 
 ```python
 def predict_scenario(
@@ -581,7 +581,7 @@ def select_population(outcomes: pd.DataFrame, population: str) -> pd.DataFrame:
 
 Kode Program 5.96 Fungsi bantu penghitungan metrik
 
-Fungsi *score_predictions* pada Kode Program 5.97 mengimplementasikan metrik kinerja klasifikasi dan deteksi serangan pada Tabel 4.8. Seluruh metrik dihitung dengan fungsi *sklearn.metrics* menggunakan jumlah baris setiap kelompok sebagai bobot sampel (*sample_weight*). Rata-rata makro dihitung pada kelas yang muncul pada label maupun prediksi di populasi tersebut, sebagaimana ditunjukkan oleh komentar pada fungsi. Metrik deteksi serangan dihitung dengan mengubah label dan prediksi menjadi dua kelas, yaitu serangan dan bukan serangan. Fungsi ini juga menghitung laju alarm palsu serta proporsi tiga kelompok kesalahan, yaitu serangan yang diprediksi *Benign*, serangan yang tertukar dengan serangan lain, dan *Benign* yang diprediksi serangan, yang digunakan pada Subbab 5.16. Parameter *prediction_column* memungkinkan fungsi yang sama digunakan untuk prediksi bersih.
+Fungsi *score_predictions* pada Kode Program 5.97 mengimplementasikan metrik kinerja klasifikasi dan deteksi serangan pada Tabel 4.4. Seluruh metrik dihitung dengan fungsi *sklearn.metrics* menggunakan jumlah baris setiap kelompok sebagai bobot sampel (*sample_weight*). Rata-rata makro dihitung pada kelas yang muncul pada label maupun prediksi di populasi tersebut, sebagaimana ditunjukkan oleh komentar pada fungsi. Metrik deteksi serangan dihitung dengan mengubah label dan prediksi menjadi dua kelas, yaitu serangan dan bukan serangan. Fungsi ini juga menghitung laju alarm palsu serta proporsi tiga kelompok kesalahan, yaitu serangan yang diprediksi *Benign*, serangan yang tertukar dengan serangan lain, dan *Benign* yang diprediksi serangan, yang digunakan pada Subbab 5.16. Parameter *prediction_column* memungkinkan fungsi yang sama digunakan untuk prediksi bersih.
 
 ```python
 def score_predictions(outcomes: pd.DataFrame, benign: int, prediction_column: str = PREDICTION_COLUMN) -> dict:
@@ -628,7 +628,7 @@ def score_predictions(outcomes: pd.DataFrame, benign: int, prediction_column: st
 
 Kode Program 5.97 Metrik kinerja klasifikasi dan deteksi serangan
 
-Kode Program 5.98 mengimplementasikan metrik stabilitas prediksi dan kepercayaan pada Tabel 4.8. Fungsi *score_stability* menghitung laju perubahan prediksi, laju rusak, laju pulih, laju lolos serangan pada serangan yang terdeteksi pada data bersih, dan laju alarm palsu baru pada lalu lintas *Benign* yang diprediksi *Benign* pada data bersih. Fungsi *score_confidence* menghitung rata-rata tingkat kepercayaan pada seluruh baris dan pada kesalahan, proporsi kesalahan yakin, *log loss*, dan rata-rata perpindahan dari jumlah yang tersimpan pada tabel hasil.
+Kode Program 5.98 mengimplementasikan metrik stabilitas prediksi dan kepercayaan pada Tabel 4.4. Fungsi *score_stability* menghitung laju perubahan prediksi, laju rusak, laju pulih, laju lolos serangan pada serangan yang terdeteksi pada data bersih, dan laju alarm palsu baru pada lalu lintas *Benign* yang diprediksi *Benign* pada data bersih. Fungsi *score_confidence* menghitung rata-rata tingkat kepercayaan pada seluruh baris dan pada kesalahan, proporsi kesalahan yakin, *log loss*, dan rata-rata perpindahan dari jumlah yang tersimpan pada tabel hasil.
 
 ```python
 def score_stability(outcomes: pd.DataFrame, benign: int) -> dict:
@@ -708,7 +708,7 @@ Kode Program 5.99 Penghitungan metrik pada setiap populasi
 
 ### **5.15.3 Penurunan Kinerja dan Peringkat Ketahanan**
 
-Fungsi *measure_degradation* pada Kode Program 5.100 mengimplementasikan Langkah 8. Untuk setiap metrik ketahanan, fungsi ini menyusun tabel yang memuat nilai metrik dan nilai bersihnya pada setiap pengujian dan populasi, kemudian menghitung penurunan mutlak sesuai Persamaan 4.15 dan retensi sesuai Persamaan 4.16. Retensi yang tidak terhingga akibat nilai bersih nol diganti NaN. Sel kedua menjalankannya, menyimpan hasilnya pada file *degradation.csv*, dan menampilkan F1-*score* makro setiap model pada setiap data uji untuk populasi seluruh baris dan baris terganggu.
+Fungsi *measure_degradation* pada Kode Program 5.100 mengimplementasikan Langkah 8. Untuk setiap metrik ketahanan, fungsi ini menyusun tabel yang memuat nilai metrik dan nilai bersihnya pada setiap pengujian dan populasi, kemudian menghitung penurunan mutlak sesuai Persamaan 4.16 dan retensi sesuai Persamaan 4.17. Retensi yang tidak terhingga akibat nilai bersih nol diganti NaN. Sel kedua menjalankannya, menyimpan hasilnya pada file *degradation.csv*, dan menampilkan F1-*score* makro setiap model pada setiap data uji untuk populasi seluruh baris dan baris terganggu.
 
 ```python
 def measure_degradation(metrics: pd.DataFrame, robustness_metrics: list[str] = ROBUSTNESS_METRICS) -> pd.DataFrame:
@@ -937,7 +937,7 @@ for population in ["all", "noisy"]:
 
 Kode Program 5.104 Peta panas retensi
 
-Fungsi *rank_robustness* pada Kode Program 5.105 mengimplementasikan Langkah 9. Fungsi ini mengelompokkan retensi pada skenario gangguan menurut metrik, populasi, pengaturan SMOTE, dan model, kemudian menghitung jumlah skenario, rata-rata nilai bersih dan nilai pada skenario, rata-rata retensi sesuai Persamaan 4.17, retensi terburuk beserta skenarionya, rata-rata dan nilai terbesar penurunan mutlak, serta rata-rata retensi untuk setiap jenis gangguan. Peringkat disusun menurut rata-rata retensi di dalam setiap pengaturan SMOTE (*rank*) dan pada gabungan kedua pengaturan (*overall_rank*). Sel kedua menyimpan peringkat pada file *robustness-ranking.csv*, kemudian menampilkan dan menggambar rata-rata serta retensi terburuk F1-*score* makro untuk populasi seluruh baris dan baris terganggu.
+Fungsi *rank_robustness* pada Kode Program 5.105 mengimplementasikan Langkah 9. Fungsi ini mengelompokkan retensi pada skenario gangguan menurut metrik, populasi, pengaturan SMOTE, dan model, kemudian menghitung jumlah skenario, rata-rata nilai bersih dan nilai pada skenario, rata-rata retensi sesuai Persamaan 4.18, retensi terburuk beserta skenarionya, rata-rata dan nilai terbesar penurunan mutlak, serta rata-rata retensi untuk setiap jenis gangguan. Peringkat disusun menurut rata-rata retensi di dalam setiap pengaturan SMOTE (*rank*) dan pada gabungan kedua pengaturan (*overall_rank*). Sel kedua menyimpan peringkat pada file *robustness-ranking.csv*, kemudian menampilkan dan menggambar rata-rata serta retensi terburuk F1-*score* makro untuk populasi seluruh baris dan baris terganggu.
 
 ```python
 def rank_robustness(degradation: pd.DataFrame) -> pd.DataFrame:

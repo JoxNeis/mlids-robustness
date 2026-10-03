@@ -1,6 +1,8 @@
 ## **4.8 Rancangan Pelatihan dan Pemilihan Model**
 
-Kelima algoritma klasifikasi, yaitu *K Nearest-Neighbor*, *Support Vector Machine, *Random Forest*, *Logistic Regression*, dan *XGBoost*, dilatih dan dipilih hyperparamaternya menggunakan protokol yang sama. Setiap algoritma ditempatkan sebagai tahap terakhir pada *pipeline* praproses, sehingga kelima algoritma menerima data latih, praproses, dan prosedur pemilihan yang identik. Keseragaman protokol ini diperlukan agar perbedaan kinerja yang teramati dapat dikaitkan dengan karakteristik algoritma, bukan dengan perbedaan data atau prosedur pengujian (Subbab 3.3.3).
+### **4.8.1 Protokol dan Implementasi**
+
+Kelima algoritma klasifikasi, yaitu *K Nearest-Neighbor*, *Support Vector Machine*, *Random Forest*, *Logistic Regression*, dan *XGBoost*, dilatih dan dipilih hyperparamaternya menggunakan protokol yang sama. Setiap algoritma ditempatkan sebagai tahap terakhir pada *pipeline* praproses, sehingga kelima algoritma menerima data latih, praproses, dan prosedur pemilihan yang identik. Keseragaman protokol ini diperlukan agar perbedaan kinerja yang teramati dapat dikaitkan dengan karakteristik algoritma, bukan dengan perbedaan data atau prosedur pengujian (Subbab 3.3.3).
 
 Algoritma *K Nearest-Neighbor*, *Support Vector Machine*, *Random Forest*, dan *Logistic Regression* menggunakan implementasi dari library `scikit-learn`, sedangkan *XGBoost* menggunakan library `xgboost`. Seluruh pelatihan dijalankan pada CPU dengan proses paralel pada algoritma yang mendukungnya, sehingga pelatihan tidak bergantung pada ketersediaan maupun kapasitas memori GPU. Satu-satunya pengecualian adalah *XGBoost*, yang dijalankan pada GPU apabila tersedia dan pada CPU apabila tidak.
 
@@ -10,13 +12,13 @@ Hyperparamater setiap algoritma ditentukan melalui pencarian grid (*grid search*
 
 Pada setiap pembagian, *pipeline* dilatih pada bagian latih, kemudian dinilai pada bagian validasi menggunakan empat metrik, yaitu F1-*score*, presisi, dan *recall* rata-rata makro, serta akurasi. Kelas yang tidak pernah diprediksi diberi nilai presisi dan F1-*score* nol (*zero_division* = 0). F1-*score* rata-rata makro digunakan sebagai kriteria pemilihan.
 
-$F{1}_{makro}=\frac{1}{K}\sum _{k=1}^{K}F{1}_{k}$ (4.7)
+$F{1}_{makro}=\frac{1}{K}\sum _{k=1}^{K}F{1}_{k}$ (4.10)
 
-Persamaan 4.7 adalah F1-*score* rata-rata makro, dengan $F{1}_{k}$ adalah F1-*score* kelas ke-$k$ sesuai Persamaan 2.11 dan $K$ adalah jumlah kelas. Rata-rata makro memberikan bobot yang sama kepada setiap kelas, sehingga kelas yang hanya memiliki belasan baris berkontribusi sama besar dengan kelas *Benign*. Akurasi tidak digunakan sebagai kriteria karena menyesatkan pada data yang tidak seimbang, yaitu model yang selalu memprediksi *Benign* sudah memperoleh akurasi sekitar 88% (Subbab 2.8.1). Kombinasi hyperparamater terbaik adalah kombinasi dengan rata-rata F1-*score* makro tertinggi pada kelima bagian validasi. Kombinasi yang gagal dilatih tidak memperoleh skor dan dicatat sebagai kegagalan, sehingga satu kegagalan tidak menghentikan seluruh pencarian dan kombinasi tersebut tidak ikut terpilih.
+Persamaan 4.10 adalah F1-*score* rata-rata makro, dengan $F{1}_{k}$ adalah F1-*score* kelas ke-$k$ sesuai Persamaan 2.11 dan $K$ adalah jumlah kelas. Rata-rata makro memberikan bobot yang sama kepada setiap kelas, sehingga kelas yang hanya memiliki belasan baris berkontribusi sama besar dengan kelas *Benign*. Akurasi tidak digunakan sebagai kriteria karena menyesatkan pada data yang tidak seimbang, yaitu model yang selalu memprediksi *Benign* sudah memperoleh akurasi sekitar 88% (Subbab 2.8.1). Kombinasi hyperparamater terbaik adalah kombinasi dengan rata-rata F1-*score* makro tertinggi pada kelima bagian validasi. Kombinasi yang gagal dilatih tidak memperoleh skor dan dicatat sebagai kegagalan, sehingga satu kegagalan tidak menghentikan seluruh pencarian dan kombinasi tersebut tidak ikut terpilih.
 
-Pada pengaturan dengan SMOTE (Subbab 4.7.4), grid hyperparamater setiap algoritma ditambah dengan jumlah tetangga SMOTE, yaitu 3, 5, dan 7, sehingga jumlah kombinasi menjadi tiga kali lipat. Ruang pencarian setiap algoritma diuraikan pada Subbab 4.9 hingga 4.13 dan jumlah pelatihan yang dibutuhkan dirangkum pada Tabel 4.6.
+Pada pengaturan dengan SMOTE (Subbab 4.7.4), grid hyperparamater setiap algoritma ditambah dengan jumlah tetangga SMOTE, yaitu 3, 5, dan 7, sehingga jumlah kombinasi menjadi tiga kali lipat. Jumlah kombinasi hyperparamater setiap algoritma dan jumlah pelatihan yang dibutuhkan dirangkum pada Tabel 4.2.
 
-Tabel 4.6 Jumlah Kombinasi Hyperparamater dan Pelatihan pada Pencarian Grid
+Tabel 4.2 Jumlah Kombinasi Hyperparamater dan Pelatihan pada Pencarian Grid
 
 | Algoritma | Jumlah kombinasi | Pelatihan tanpa SMOTE | Pelatihan dengan SMOTE |
 | :--- | :---: | :---: | :---: |
@@ -66,4 +68,4 @@ flowchart TD
     cek_a -->|"Tidak"| selesai(["Selesai"])
 ```
 
-Setiap pelatihan pada pencarian grid dijalankan secara berurutan, sedangkan paralelisme dimanfaatkan di dalam algoritma dengan delapan proses. Menjalankan beberapa pelatihan secara bersamaan tidak dipilih karena setiap pelatihan membutuhkan salinan bagian latih sendiri yang berukuran jutaan baris, dan jumlah proses aktif akan melebihi jumlah inti CPU. Kemajuan pencarian ditampilkan sebagai jumlah pelatihan yang telah selesai, jumlah pelatihan yang gagal, dan perkiraan sisa waktu. Pengaturan tanpa SMOTE dan dengan SMOTE dijalankan secara terpisah, dan kesepuluh model akhir yang dihasilkan, yaitu lima algoritma pada dua pengaturan, menjadi model yang diuji ketahanannya pada Subbab 4.15.
+Setiap pelatihan pada pencarian grid dijalankan secara berurutan, sedangkan paralelisme dimanfaatkan di dalam algoritma dengan delapan proses. Menjalankan beberapa pelatihan secara bersamaan tidak dipilih karena setiap pelatihan membutuhkan salinan bagian latih sendiri yang berukuran jutaan baris, dan jumlah proses aktif akan melebihi jumlah inti CPU. Kemajuan pencarian ditampilkan sebagai jumlah pelatihan yang telah selesai, jumlah pelatihan yang gagal, dan perkiraan sisa waktu. Pengaturan tanpa SMOTE dan dengan SMOTE dijalankan secara terpisah, dan kesepuluh model akhir yang dihasilkan, yaitu lima algoritma pada dua pengaturan, menjadi model yang diuji ketahanannya pada Subbab 4.10.

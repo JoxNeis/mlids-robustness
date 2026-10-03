@@ -2,7 +2,7 @@
 
 Subbab ini menyajikan implementasi dari rancangan pada Subbab 4.14, yaitu pembentukan dua belas skenario gangguan pada data uji beserta pemeriksaannya. Kode program disusun mengikuti Langkah 1 hingga 7 pada algoritma di Subbab 4.14.
 
-Kode Program 5.73 menetapkan pengaturan simulasi gangguan. Kamus *NOISE_MAGNITUDES* menetapkan jenis gangguan beserta parameter besarannya, yaitu 1,0 untuk *gaussian* dan *uniform*, 0,5 untuk *multiplicative*, dan tanpa parameter untuk *missing*, sesuai Tabel 4.7. Daftar *NOISE_INTENSITIES* menetapkan tiga intensitas, yaitu 10%, 20%, dan 30%, dan *NOISE_SEED* menggunakan *random state* 42 sebagai *seed* dasar. Konstanta berikutnya menetapkan nama kolom penanda baris terganggu (*is_noise*) dan nama kolom pada tabel hasil.
+Kode Program 5.73 menetapkan pengaturan simulasi gangguan. Kamus *NOISE_MAGNITUDES* menetapkan jenis gangguan beserta parameter besarannya, yaitu 1,0 untuk *gaussian* dan *uniform*, 0,5 untuk *multiplicative*, dan tanpa parameter untuk *missing*, sesuai Tabel 4.3. Daftar *NOISE_INTENSITIES* menetapkan tiga intensitas, yaitu 10%, 20%, dan 30%, dan *NOISE_SEED* menggunakan *random state* 42 sebagai *seed* dasar. Konstanta berikutnya menetapkan nama kolom penanda baris terganggu (*is_noise*) dan nama kolom pada tabel hasil.
 
 ```python
 NOISE_MAGNITUDES = {
@@ -79,7 +79,7 @@ def make_scenario_rng(scenario: str, seed: int = NOISE_SEED) -> np.random.Genera
 
 Kode Program 5.76 Penamaan skenario dan generator bilangan acak
 
-Kode Program 5.77 memuat fungsi pembangkit gangguan untuk setiap jenis gangguan, yang menerima nilai pada baris terganggu dan mengembalikan nilai penggantinya. Fungsi *add_gaussian_noise* menambahkan bilangan acak berdistribusi normal dengan simpangan baku sebesar parameter besaran dikalikan simpangan baku setiap fitur (Persamaan 4.10). Fungsi *add_uniform_noise* menambahkan bilangan acak berdistribusi seragam pada rentang simetris dengan setengah lebar sebesar parameter besaran dikalikan simpangan baku dan $\sqrt{3}$ (Persamaan 4.11). Fungsi *add_multiplicative_noise* mengalikan nilai dengan bilangan acak berdistribusi normal dengan rata-rata satu dan simpangan baku sebesar parameter besaran (Persamaan 4.12). Fungsi *add_missing_values* mengganti seluruh nilai dengan median data latih setiap fitur (Persamaan 4.13). Kamus *NOISE_INJECTORS* memetakan nama jenis gangguan ke fungsi pembangkitnya.
+Kode Program 5.77 memuat fungsi pembangkit gangguan untuk setiap jenis gangguan, yang menerima nilai pada baris terganggu dan mengembalikan nilai penggantinya. Fungsi *add_gaussian_noise* menambahkan bilangan acak berdistribusi normal dengan simpangan baku sebesar parameter besaran dikalikan simpangan baku setiap fitur (Persamaan 4.11). Fungsi *add_uniform_noise* menambahkan bilangan acak berdistribusi seragam pada rentang simetris dengan setengah lebar sebesar parameter besaran dikalikan simpangan baku dan $\sqrt{3}$ (Persamaan 4.12). Fungsi *add_multiplicative_noise* mengalikan nilai dengan bilangan acak berdistribusi normal dengan rata-rata satu dan simpangan baku sebesar parameter besaran (Persamaan 4.13). Fungsi *add_missing_values* mengganti seluruh nilai dengan median data latih setiap fitur (Persamaan 4.14). Kamus *NOISE_INJECTORS* memetakan nama jenis gangguan ke fungsi pembangkitnya.
 
 ```python
 def add_gaussian_noise(

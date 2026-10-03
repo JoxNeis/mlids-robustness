@@ -20,7 +20,7 @@ display(
 
 Kode Program 5.106 Pemeriksaan laju perubahan prediksi pada baris utuh
 
-Fungsi *check_mixture_identity* pada Kode Program 5.107 mengimplementasikan bagian kedua Langkah 1. Fungsi ini menyusun akurasi dan jumlah baris ketiga populasi pada setiap pengujian skenario gangguan, menghitung proporsi baris terganggu, menghitung campuran akurasi baris utuh dan baris terganggu sesuai ruas kanan Persamaan 4.18, dan menghitung residunya terhadap akurasi seluruh baris. Sel kedua menyimpan hasilnya pada file *mixture-check.csv* dan menampilkan residu mutlak terbesar.
+Fungsi *check_mixture_identity* pada Kode Program 5.107 mengimplementasikan bagian kedua Langkah 1. Fungsi ini menyusun akurasi dan jumlah baris ketiga populasi pada setiap pengujian skenario gangguan, menghitung proporsi baris terganggu, menghitung campuran akurasi baris utuh dan baris terganggu sesuai ruas kanan Persamaan 4.19, dan menghitung residunya terhadap akurasi seluruh baris. Sel kedua menyimpan hasilnya pada file *mixture-check.csv* dan menampilkan residu mutlak terbesar.
 
 ```python
 def check_mixture_identity(metrics: pd.DataFrame) -> pd.DataFrame:

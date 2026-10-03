@@ -1,8 +1,8 @@
 ## **4.6 Pengodean Label (*Label Encoding*)**
 
-Kolom label pada dataset berisi nama kelas dalam bentuk teks, yaitu satu kelas lalu lintas normal (*Benign*) dan empat belas kelas serangan. Algoritma klasifikasi dan metrik evaluasi yang digunakan pada penelitian ini memiliki syarat bahwa label tersaji dalam bentuk bilangan bulat atau integer. Oleh karena itu, setiap nama kelas dipetakan ke sebuah bilangan bulat menggunakan `LabelEncoder` dari library `scikit-learn`. `LabelEncoder` mengurutkan nama kelas secara leksikografis (alfabetis) dan memberikan kode 0 hingga 14 sesuai posisi setiap nama pada urutan tersebut, sebagaimana disajikan pada Tabel 4.5.
+Kolom label pada dataset berisi nama kelas dalam bentuk teks, yaitu satu kelas lalu lintas normal (*Benign*) dan empat belas kelas serangan. Algoritma klasifikasi dan metrik evaluasi yang digunakan pada penelitian ini memiliki syarat bahwa label tersaji dalam bentuk bilangan bulat atau integer. Oleh karena itu, setiap nama kelas dipetakan ke sebuah bilangan bulat menggunakan `LabelEncoder` dari library `scikit-learn`. `LabelEncoder` mengurutkan nama kelas secara leksikografis (alfabetis) dan memberikan kode 0 hingga 14 sesuai posisi setiap nama pada urutan tersebut, sebagaimana disajikan pada Tabel 4.1.
 
-Tabel 4.5 Pemetaan Nama Kelas ke Kode Label
+Tabel 4.1 Pemetaan Nama Kelas ke Kode Label
 
 | Kode | Kelas | Kode | Kelas |
 | :---: | :--- | :---: | :--- |
@@ -17,7 +17,7 @@ Tabel 4.5 Pemetaan Nama Kelas ke Kode Label
 
 Pengodean bilangan bulat dipilih dibandingkan pengodean *one-hot* karena label cukup direpresentasikan dalam satu kolom, sehingga kebutuhan memorinya jauh lebih kecil untuk lebih dari 11 juta baris, dan karena seluruh algoritma yang digunakan menerima label bilangan bulat secara langsung. Kode label hanya berfungsi sebagai pengenal kelas dan tidak mengandung makna urutan maupun besaran, karena seluruh algoritma memperlakukan label sebagai kategori nominal.
 
-`LabelEncoder` dibentuk dari daftar kelas yang disusun pada tahap EDA (Subbab 4.2), yaitu daftar seluruh nama kelas yang terdapat pada dataset. Pembentukan dari daftar kelas tidak menimbulkan kebocoran data, karena daftar tersebut hanya memuat nama kelas yang telah diketahui dari dokumentasi dataset dan tidak memuat statistik apa pun yang dipelajari dari nilai fitur. Pembagian berstrata pada Subbab 4.5 juga menjamin bahwa kelima belas kelas terdapat pada data latih maupun data uji. Objek `LabelEncoder` yang telah dibentuk disimpan pada file menggunakan `joblib`, sehingga pemetaan yang sama dapat dimuat kembali pada setiap tahap, termasuk untuk menerjemahkan kode hasil prediksi menjadi nama kelas pada tahap evaluasi (Subbab 4.15 dan Subbab 4.16).
+`LabelEncoder` dibentuk dari daftar kelas yang disusun pada tahap EDA (Subbab 4.2), yaitu daftar seluruh nama kelas yang terdapat pada dataset. Pembentukan dari daftar kelas tidak menimbulkan kebocoran data, karena daftar tersebut hanya memuat nama kelas yang telah diketahui dari dokumentasi dataset dan tidak memuat statistik apa pun yang dipelajari dari nilai fitur. Pembagian berstrata pada Subbab 4.5 juga menjamin bahwa kelima belas kelas terdapat pada data latih maupun data uji. Objek `LabelEncoder` yang telah dibentuk disimpan pada file menggunakan `joblib`, sehingga pemetaan yang sama dapat dimuat kembali pada setiap tahap, termasuk untuk menerjemahkan kode hasil prediksi menjadi nama kelas pada tahap evaluasi (Subbab 4.10 dan Subbab 4.11).
 
 Prosedur pengodean label dilaksanakan melalui algoritma berikut:
 
