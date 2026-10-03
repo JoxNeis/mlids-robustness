@@ -1,16 +1,20 @@
 flowchart TD
     mulai(["Mulai"])
-    mulai --> input_berkas[/"Membaca daftar berkas fitur<br>data latih (split train)<br>(n = jumlah berkas)"/]
-    input_berkas --> init_j["Inisialisasi j = 1"]
-    init_j --> cek_j{"j ≤ n?"}
+    mulai --> muat[/"Membaca data latih per 500.000 baris<br>ke satu matriks float32"/]
+    muat --> cek_baris{"Jumlah baris fitur<br>sama dengan label?"}
+    cek_baris -->|"Tidak"| galat(["Galat: proses dihentikan"])
+    cek_baris -->|"Ya"| periksa_pca[["Memeriksa jumlah komponen PCA<br>pada seluruh data latih"]]
+    periksa_pca --> init_a["Inisialisasi a = 1"]
+    init_a --> cek_a{"a ≤ 5?<br>(KNN, SVM, Random Forest,<br>Logistic Regression, XGBoost)"}
 
-    cek_j -->|"Tidak"| selesai(["Selesai"])
-    cek_j -->|"Ya"| baca_df[/"Membaca fitur dan label<br>berkas ke-j"/]
-    baca_df --> cek_kelas{"Berkas memuat<br>lebih dari satu kelas?"}
-    cek_kelas -->|"Tidak"| tulis
-    cek_kelas -->|"Ya"| hitung_k["Menetapkan k = max(1, min(5, nmin − 1))<br>dengan nmin = jumlah sampel<br>kelas terkecil pada berkas"]
-    hitung_k --> smote[["SMOTE dengan k tetangga:<br>kelas minoritas ditambah hingga<br>sama dengan kelas mayoritas"]]
-    smote --> tulis[/"Menulis fitur (float32) dan label<br>ke format Parquet"/]
-    tulis --> simpan[("Penyimpanan<br>data-smote")]
-    simpan --> inc_j["j = j + 1"]
-    inc_j --> cek_j
+    cek_a -->|"Ya"| grid["Menyusun grid hiperparameter<br>(ditambah k SMOTE apabila<br>pengaturan dengan SMOTE)"]
+    grid --> cari[["GridSearchCV: melatih dan menilai<br>setiap kombinasi pada 5 pembagian<br>berstrata (80% latih, 20% validasi)"]]
+    cari --> simpan_cari[/"Menyimpan hasil pencarian<br>ke grid-search"/]
+    simpan_cari --> pilih["Memilih kombinasi dengan rata-rata<br>F1-score makro tertinggi dan<br>pembagian terbaiknya"]
+    pilih --> latih[["Melatih pipeline akhir pada<br>bagian latih pembagian terbaik"]]
+    latih --> nilai["Menilai pipeline akhir pada<br>bagian validasi pembagian terbaik"]
+    nilai --> simpan_model[/"Menyimpan pipeline ke<br>trained-models"/]
+    simpan_model --> inc_a["a = a + 1"]
+    inc_a --> cek_a
+
+    cek_a -->|"Tidak"| selesai(["Selesai"])

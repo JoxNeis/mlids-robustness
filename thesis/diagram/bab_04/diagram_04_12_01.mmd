@@ -1,17 +1,15 @@
 flowchart TD
     mulai(["Mulai"])
-    mulai --> grid["Menyusun grid kombinasi:<br>2 jumlah pohon × 3 kedalaman ×<br>2 max_features = 12 kombinasi"]
-    grid --> subsampel[["Mengambil subsampel berstrata:<br>1.000.000 baris latih dan<br>200.000 baris validasi"]]
-    subsampel --> init_i["Inisialisasi i = 1"]
-    init_i --> cek_i{"i ≤ 12?"}
+    mulai --> pipeline["Menyusun pipeline praproses<br>dengan LogisticRegression<br>(saga, random state 42)"]
+    pipeline --> grid["Menyusun grid:<br>C ∈ {0,01 / 0,1 / 1,0 / 10,0} ×<br>penalti ∈ {L1, L2}"]
+    grid --> init_i["Inisialisasi i = 1<br>(m = jumlah kombinasi)"]
+    init_i --> cek_i{"i ≤ m?"}
 
-    cek_i -->|"Ya"| latih_i[["Melatih Random Forest kombinasi ke-i<br>pada subsampel latih"]]
-    latih_i --> nilai["Memprediksi subsampel validasi dan<br>mencatat metrik, waktu pelatihan,<br>dan waktu prediksi"]
-    nilai --> inc_i["i = i + 1"]
+    cek_i -->|"Ya"| cv[["Meminimalkan Persamaan 4.9 dengan saga<br>dan menilai kombinasi ke-i pada<br>5 pembagian validasi silang"]]
+    cv --> inc_i["i = i + 1"]
     inc_i --> cek_i
 
-    cek_i -->|"Tidak"| pilih["Memilih kombinasi dengan<br>F1-score makro tertinggi"]
-    pilih --> latih[["Melatih Random Forest akhir<br>pada seluruh data latih"]]
-    latih --> simpan_model[/"Menulis model ke<br>trained-model/RF"/]
-    simpan_model --> prediksi[["Memprediksi data validasi dan uji<br>per potongan 10.000 baris"]]
-    prediksi --> selesai(["Selesai"])
+    cek_i -->|"Tidak"| pilih["Memilih kombinasi dengan rata-rata<br>F1-score makro tertinggi"]
+    pilih --> latih[["Melatih pipeline akhir pada<br>pembagian terbaik"]]
+    latih --> simpan[/"Menyimpan logreg.pkl ke<br>trained-models"/]
+    simpan --> selesai(["Selesai"])

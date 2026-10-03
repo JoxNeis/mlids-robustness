@@ -1,24 +1,26 @@
 flowchart TD
     mulai(["Mulai"])
-    mulai --> input_berkas[/"Membaca daftar berkas Parquet<br>dari folder<br>data-raw<br>(n = jumlah berkas)"/]
-    input_berkas --> buat_folder["Membuat folder tujuan<br>data-no-inf"]
-    buat_folder --> init_i["Inisialisasi i = 1"]
-    init_i --> cek_i{"i ≤ n?"}
-
-    cek_i -->|"Tidak"| selesai(["Selesai"])
-    cek_i -->|"Ya"| baca_df[/"Membaca berkas ke-i<br>ke pandas.DataFrame"/]
-
-    baca_df --> pilih_kolom["Memilih kolom bertipe numerik<br>(m = jumlah seluruh nilai<br>pada kolom tersebut)"]
-    pilih_kolom --> init_j["Inisialisasi j = 1"]
+    mulai --> daftar[/"Membaca daftar berkas Parquet<br>dari 01-raw-parquet<br>(n = jumlah berkas)"/]
+    daftar --> baris[["Menghitung jumlah baris setiap berkas<br>dari metadata Parquet"]]
+    baris --> per_hari["Menjumlahkan baris<br>per hari pengambilan data"]
+    per_hari --> kelas[["Mengumpulkan nilai unik label<br>dari seluruh berkas"]]
+    kelas --> simpan_kelas[/"Menulis daftar kelas ke<br>original-classes.json"/]
+    simpan_kelas --> distribusi[["Menghitung jumlah baris setiap kelas<br>per berkas secara paralel"]]
+    distribusi --> init_j["Inisialisasi j = 1<br>(m = jumlah fitur)"]
     init_j --> cek_j{"j ≤ m?"}
 
-    cek_j -->|"Tidak"| tulis[/"Menulis DataFrame<br>ke format Parquet"/]
-    cek_j -->|"Ya"| cek_inf{"Nilai ke-j = +∞<br>atau −∞?"}
-    cek_inf -->|"Ya"| ganti_nan["Mengganti nilai ke-j<br>dengan NaN"]
-    ganti_nan --> inc_j["j = j + 1"]
-    cek_inf -->|"Tidak"| inc_j
+    cek_j -->|"Ya"| statistik[["Membaca kolom fitur ke-j dan<br>menghitung statistik deskriptif"]]
+    statistik --> inc_j["j = j + 1"]
     inc_j --> cek_j
 
-    tulis --> simpan[("Penyimpanan<br>data-no-inf")]
-    simpan --> inc_i["i = i + 1"]
+    cek_j -->|"Tidak"| masalah["Mengidentifikasi fitur dengan nilai<br>tak hingga, nilai hilang, NaN,<br>dan fitur konstan"]
+    masalah --> init_i["Inisialisasi i = 1"]
+    init_i --> cek_i{"i ≤ n?"}
+    cek_i -->|"Ya"| kovarians[["Menghitung n, rata-rata, dan<br>cross-product berkas ke-i"]]
+    kovarians --> gabung["Menggabungkan statistik<br>dengan Persamaan 4.1"]
+    gabung --> inc_i["i = i + 1"]
     inc_i --> cek_i
+
+    cek_i -->|"Tidak"| korelasi[["Menghitung korelasi Pearson<br>dan mendaftar pasangan korelasi mutlak ≥ 0,95"]]
+    korelasi --> visual[/"Menyajikan diagram batang<br>dan peta panas"/]
+    visual --> selesai(["Selesai"])

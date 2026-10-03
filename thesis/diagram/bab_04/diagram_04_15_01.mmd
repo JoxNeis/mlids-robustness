@@ -1,23 +1,22 @@
 flowchart TD
     mulai(["Mulai"])
-    mulai --> input_skenario[/"Menetapkan 12 skenario:<br>4 jenis gangguan × 3 intensitas"/]
-    input_skenario --> init_i["Inisialisasi i = 1"]
-    init_i --> cek_i{"i ≤ 12?"}
+    mulai --> tetap[/"Menetapkan 13 data uji<br>(clean dan 12 skenario),<br>5 algoritma, dan 2 pengaturan SMOTE"/]
+    tetap --> init_m["Inisialisasi m = 1"]
+    init_m --> cek_m{"m ≤ 10?"}
 
-    cek_i -->|"Tidak"| selesai(["Selesai"])
-    cek_i -->|"Ya"| input_berkas[/"Membaca daftar berkas<br>data-imputed/test<br>(n = jumlah berkas)"/]
-    input_berkas --> init_j["Inisialisasi j = 1"]
-    init_j --> cek_j{"j ≤ n?"}
+    cek_m -->|"Ya"| pending[["Menentukan skenario yang<br>belum memiliki prediksi sah"]]
+    pending --> muat[["Memuat pipeline model ke-m dan<br>memisahkan praproses dan model"]]
+    muat --> init_s["Inisialisasi s = 1<br>(clean lebih dahulu)"]
+    init_s --> cek_s{"Skenario ke-s<br>tersedia?"}
+    cek_s -->|"Ya"| prediksi[["Memprediksi per 250.000 baris dan<br>menghitung perpindahan terhadap<br>data uji bersih"]]
+    prediksi --> simpan_pred[/"Menyimpan prediksi dan<br>ringkasan pengujian"/]
+    simpan_pred --> inc_s["s = s + 1"]
+    inc_s --> cek_s
+    cek_s -->|"Tidak"| inc_m["m = m + 1"]
+    inc_m --> cek_m
 
-    cek_j -->|"Ya"| baca_df[/"Membaca berkas ke-j<br>ke pandas.DataFrame"/]
-    baca_df --> rng[["Membentuk generator acak dari<br>seed, skenario ke-i, dan nama berkas"]]
-    rng --> bangkit[["Membangkitkan nilai terganggu<br>sesuai jenis gangguan"]]
-    bangkit --> pilih[["Memilih round(p × N) baris secara acak<br>dan mengganti seluruh fitur<br>pada baris terpilih"]]
-    pilih --> tulis[/"Menulis DataFrame<br>ke data-noise"/]
-    tulis --> inc_j["j = j + 1"]
-    inc_j --> cek_j
-
-    cek_j -->|"Tidak"| praproses[["Meneruskan skenario ke-i melalui imputasi,<br>penskalaan, dan proyeksi IPCA"]]
-    praproses --> simpan[("Penyimpanan<br>data-noise-ipca")]
-    simpan --> inc_i["i = i + 1"]
-    inc_i --> cek_i
+    cek_m -->|"Tidak"| ringkas[["Meringkas setiap berkas prediksi<br>menjadi tabel hasil dan<br>desil perpindahan"]]
+    ringkas --> metrik[["Menghitung metrik pada populasi<br>all, intact, dan noisy"]]
+    metrik --> degradasi[["Menghitung penurunan dan retensi<br>terhadap prediksi bersih berpasangan"]]
+    degradasi --> peringkat[["Menyusun peringkat model<br>menurut rata-rata retensi"]]
+    peringkat --> selesai(["Selesai"])

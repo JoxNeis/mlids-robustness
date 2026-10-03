@@ -1,17 +1,25 @@
 flowchart TD
     mulai(["Mulai"])
-    mulai --> grid["Menyusun grid kombinasi:<br>3 kedalaman × 2 laju pembelajaran ×<br>2 colsample_bytree = 12 kombinasi"]
-    grid --> subsampel[["Mengambil subsampel berstrata:<br>1.000.000 baris latih dan<br>200.000 baris validasi"]]
-    subsampel --> init_i["Inisialisasi i = 1"]
+    mulai --> statistik[["Menghitung simpangan baku σ dan<br>median setiap fitur pada data latih"]]
+    statistik --> skenario[/"Menetapkan 12 skenario:<br>4 jenis gangguan × 3 intensitas"/]
+    skenario --> init_i["Inisialisasi i = 1"]
     init_i --> cek_i{"i ≤ 12?"}
 
-    cek_i -->|"Ya"| latih_i[["Melatih maksimum 400 putaran dengan<br>early stopping (20 putaran) pada<br>mlogloss subsampel validasi"]]
-    latih_i --> nilai["Memprediksi subsampel validasi dan<br>mencatat metrik serta jumlah<br>pohon yang digunakan"]
-    nilai --> inc_i["i = i + 1"]
+    cek_i -->|"Ya"| rng[["Membentuk generator acak dari<br>hash BLAKE2b seed dan nama skenario"]]
+    rng --> pilih[["Memilih round(p × N) baris<br>secara acak tanpa pengembalian"]]
+    pilih --> init_b["Inisialisasi b = 1<br>(B = jumlah kelompok 500.000 baris)"]
+    init_b --> cek_b{"b ≤ B?"}
+    cek_b -->|"Ya"| baca[/"Membaca kelompok ke-b<br>data uji"/]
+    baca --> ganggu[["Mengganggu seluruh fitur pada<br>baris terpilih sesuai jenis gangguan<br>dan menambahkan kolom is_noise"]]
+    ganggu --> tulis[/"Menulis kelompok ke-b ke<br>features.parquet skenario"/]
+    tulis --> inc_b["b = b + 1"]
+    inc_b --> cek_b
+
+    cek_b -->|"Tidak"| salin["Menyalin label data uji<br>ke folder skenario"]
+    salin --> ukur[["Mengukur hasil gangguan<br>terhadap data uji bersih"]]
+    ukur --> simpan[("Penyimpanan<br>06-noisy-parquet/test")]
+    simpan --> inc_i["i = i + 1"]
     inc_i --> cek_i
 
-    cek_i -->|"Tidak"| pilih["Memilih kombinasi dengan<br>F1-score makro tertinggi"]
-    pilih --> latih[["Melatih XGBoost akhir pada seluruh<br>data latih dengan jumlah pohon<br>hasil pencarian"]]
-    latih --> simpan_model[/"Menulis model ke<br>trained-model/XGB"/]
-    simpan_model --> prediksi[["Memprediksi data validasi dan uji<br>per potongan 10.000 baris"]]
-    prediksi --> selesai(["Selesai"])
+    cek_i -->|"Tidak"| laporan[/"Menyimpan hasil pemeriksaan<br>ke noise-check.csv"/]
+    laporan --> selesai(["Selesai"])
