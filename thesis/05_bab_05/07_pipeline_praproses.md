@@ -14,7 +14,7 @@ def _to_float32(x:pd.DataFrame):
 
 Kode Program 5.52 Pengaturan pipeline dan fungsi konversi tipe data
 
-Kelas *ProgressPipeline* pada Kode Program 5.53 merupakan turunan dari kelas *Pipeline* pada *imbalanced-learn* yang menambahkan pelaporan kemajuan. Fungsi *fit* menerima objek *FitProgress* (pendahuluan Bab 5) sebagai parameter tambahan, menjalankan pelatihan *pipeline* seperti biasa, kemudian memperbarui jumlah pelatihan yang selesai atau yang gagal. Galat pada pelatihan tetap diteruskan setelah dicatat, sehingga pencarian hiperparameter dapat mencatat kombinasi tersebut sebagai kombinasi yang gagal (Subbab 5.8).
+Kelas *ProgressPipeline* pada Kode Program 5.53 merupakan turunan dari kelas *Pipeline* pada *imbalanced-learn* yang menambahkan pelaporan kemajuan. Fungsi *fit* menerima objek *FitProgress* (pendahuluan Bab 5) sebagai parameter tambahan, menjalankan pelatihan *pipeline* seperti biasa, kemudian memperbarui jumlah pelatihan yang selesai atau yang gagal. Galat pada pelatihan tetap diteruskan setelah dicatat, sehingga pencarian hyperparamater dapat mencatat kombinasi tersebut sebagai kombinasi yang gagal (Subbab 5.8).
 
 ```python
 class ProgressPipeline(Pipeline):
@@ -52,4 +52,4 @@ def make_model_pipeline(model_name: str, model: Any, use_smote: bool = True) -> 
 
 Kode Program 5.54 Penyusunan tahap praproses dan pipeline model
 
-Setiap algoritma klasifikasi memiliki fungsi pembentuk *pipeline* tersendiri yang memanggil *make_model_pipeline* dengan nama tahap dan objek modelnya, yaitu *make_knn_pipeline*, *make_svm_pipeline*, *make_rf_pipeline*, *make_logreg_pipeline*, dan *make_xgb_pipeline*, yang disajikan pada Subbab 5.9 hingga 5.13. Nama tahap tersebut, misalnya *knn* atau *svm*, digunakan sebagai awalan nama hiperparameter pada grid, misalnya *knn__n_neighbors*.
+Setiap algoritma klasifikasi memiliki fungsi pembentuk *pipeline* tersendiri yang memanggil *make_model_pipeline* dengan nama tahap dan objek modelnya, yaitu *make_knn_pipeline*, *make_svm_pipeline*, *make_rf_pipeline*, *make_logreg_pipeline*, dan *make_xgb_pipeline*, yang disajikan pada Subbab 5.9 hingga 5.13. Nama tahap tersebut, misalnya *knn* atau *svm*, digunakan sebagai awalan nama hyperparamater pada grid, misalnya *knn__n_neighbors*.

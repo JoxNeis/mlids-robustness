@@ -1,8 +1,8 @@
 ## **5.8 Implementasi Pelatihan dan Pemilihan Model**
 
-Subbab ini menyajikan implementasi dari rancangan pada Subbab 4.8, yaitu pemuatan data latih, pemeriksaan komponen utama, pencarian hiperparameter dengan validasi silang, dan pembentukan model akhir dari pembagian terbaik. Kode program disusun mengikuti Langkah 1 hingga 7 pada algoritma di Subbab 4.8, sedangkan grid dan pemanggilan untuk setiap algoritma disajikan pada Subbab 5.9 hingga 5.13.
+Subbab ini menyajikan implementasi dari rancangan pada Subbab 4.8, yaitu pemuatan data latih, pemeriksaan komponen utama, pencarian hyperparamater dengan validasi silang, dan pembentukan model akhir dari pembagian terbaik. Kode program disusun mengikuti Langkah 1 hingga 7 pada algoritma di Subbab 4.8, sedangkan grid dan pemanggilan untuk setiap algoritma disajikan pada Subbab 5.9 hingga 5.13.
 
-Kode Program 5.55 menetapkan pengaturan pencarian hiperparameter. Konstanta *N_SPLITS* dan *VALIDATION_SIZE* menetapkan lima pembagian dengan bagian validasi 20%. Kamus *GRID_SEARCH_SCORING* menetapkan empat metrik penilaian, yaitu F1-*score*, presisi, dan *recall* rata-rata makro dengan *zero_division=0*, serta akurasi, sedangkan *GRID_SEARCH_RANK_METRIC* menetapkan F1-*score* rata-rata makro sebagai kriteria pemilihan. Konstanta *GRID_SEARCH_N_JOBS* bernilai satu sehingga pelatihan pada pencarian dijalankan secara berurutan. Konstanta *USE_SMOTE* menentukan pengaturan yang sedang dijalankan, yaitu *False* untuk pengaturan tanpa SMOTE dan *True* untuk pengaturan dengan SMOTE, sedangkan *SMOTE_K_NEIGHBORS_GRID* menetapkan nilai jumlah tetangga SMOTE yang dicari.
+Kode Program 5.55 menetapkan pengaturan pencarian hyperparamater. Konstanta *N_SPLITS* dan *VALIDATION_SIZE* menetapkan lima pembagian dengan bagian validasi 20%. Kamus *GRID_SEARCH_SCORING* menetapkan empat metrik penilaian, yaitu F1-*score*, presisi, dan *recall* rata-rata makro dengan *zero_division=0*, serta akurasi, sedangkan *GRID_SEARCH_RANK_METRIC* menetapkan F1-*score* rata-rata makro sebagai kriteria pemilihan. Konstanta *GRID_SEARCH_N_JOBS* bernilai satu sehingga pelatihan pada pencarian dijalankan secara berurutan. Konstanta *USE_SMOTE* menentukan pengaturan yang sedang dijalankan, yaitu *False* untuk pengaturan tanpa SMOTE dan *True* untuk pengaturan dengan SMOTE, sedangkan *SMOTE_K_NEIGHBORS_GRID* menetapkan nilai jumlah tetangga SMOTE yang dicari.
 
 ```python
 N_SPLITS = 5
@@ -21,7 +21,7 @@ USE_SMOTE = False
 SMOTE_K_NEIGHBORS_GRID = [3, 5, 7]
 ```
 
-Kode Program 5.55 Pengaturan pencarian hiperparameter
+Kode Program 5.55 Pengaturan pencarian hyperparamater
 
 Kode Program 5.56 mengimplementasikan Langkah 1. Fungsi *load_labels* membaca kolom label dari file *encoded-labels.parquet* sebuah himpunan. Fungsi *load_split* membaca fitur secara *lazy*, memuatnya per kelompok 500.000 baris ke satu matriks *float32* menggunakan *load_features* (pendahuluan Bab 5), memuat labelnya, dan menghentikan proses dengan galat apabila jumlah baris keduanya berbeda. Sel terakhir memuat data latih dan menampilkan jumlah baris dan fiturnya.
 
@@ -87,7 +87,7 @@ del pca, results, kept_variance
 
 Kode Program 5.57 Pemeriksaan jumlah komponen utama pada data latih
 
-Fungsi *make_param_grid* pada Kode Program 5.58 mengimplementasikan Langkah 3. Fungsi ini menerima grid hiperparameter sebuah algoritma, baik berupa satu kamus maupun daftar kamus, kemudian menambahkan jumlah tetangga SMOTE (*smote__k_neighbors*) ke setiap kamus apabila pengaturan dengan SMOTE digunakan. Daftar kamus digunakan ketika grid terdiri atas beberapa bagian dengan hiperparameter yang berbeda, seperti pada SVM (Subbab 5.10).
+Fungsi *make_param_grid* pada Kode Program 5.58 mengimplementasikan Langkah 3. Fungsi ini menerima grid hyperparamater sebuah algoritma, baik berupa satu kamus maupun daftar kamus, kemudian menambahkan jumlah tetangga SMOTE (*smote__k_neighbors*) ke setiap kamus apabila pengaturan dengan SMOTE digunakan. Daftar kamus digunakan ketika grid terdiri atas beberapa bagian dengan hyperparamater yang berbeda, seperti pada SVM (Subbab 5.10).
 
 ```python
 def make_param_grid(
@@ -108,7 +108,7 @@ def make_param_grid(
     return param_grid
 ```
 
-Kode Program 5.58 Penyusunan grid hiperparameter
+Kode Program 5.58 Penyusunan grid hyperparamater
 
 Kode Program 5.59 memuat dua fungsi bantu validasi silang. Fungsi *make_splitter* membentuk *StratifiedShuffleSplit* dengan lima pembagian, bagian validasi 20%, dan *random state* 42. Karena *random state*-nya tetap, setiap pemanggilan menghasilkan lima pembagian yang sama, sehingga pembagian dapat dibentuk ulang pada saat model akhir dilatih. Fungsi *get_split_score_columns* menyusun nama kolom skor setiap pembagian pada hasil *GridSearchCV*, misalnya *split0_test_f1_macro*.
 
@@ -165,9 +165,9 @@ def run_grid_search(
     return results
 ```
 
-Kode Program 5.60 Pencarian hiperparameter dengan GridSearchCV
+Kode Program 5.60 Pencarian hyperparamater dengan GridSearchCV
 
-Kode Program 5.61 memuat fungsi penyimpanan dan peringkasan hasil pencarian. Fungsi *save_grid_search_results* menyimpan seluruh hasil pencarian sebagai file CSV dan kombinasi terbaik sebagai file JSON pada folder *grid-search* sesuai pengaturan SMOTE. Fungsi *summarize_grid_search* memilih kolom hiperparameter, rata-rata dan simpangan baku skor setiap metrik, serta rata-rata waktu pelatihan untuk ditampilkan. Fungsi *search_model* menyatukan penyusunan *pipeline*, penyusunan grid, pencarian, dan penyimpanan hasil untuk satu algoritma.
+Kode Program 5.61 memuat fungsi penyimpanan dan peringkasan hasil pencarian. Fungsi *save_grid_search_results* menyimpan seluruh hasil pencarian sebagai file CSV dan kombinasi terbaik sebagai file JSON pada folder *grid-search* sesuai pengaturan SMOTE. Fungsi *summarize_grid_search* memilih kolom hyperparamater, rata-rata dan simpangan baku skor setiap metrik, serta rata-rata waktu pelatihan untuk ditampilkan. Fungsi *search_model* menyatukan penyusunan *pipeline*, penyusunan grid, pencarian, dan penyimpanan hasil untuk satu algoritma.
 
 ```python
 def save_grid_search_results(results: pd.DataFrame, model_name: str, use_smote: bool) -> None:
@@ -210,7 +210,7 @@ def search_model(
 
 Kode Program 5.61 Penyimpanan dan peringkasan hasil pencarian
 
-Fungsi *save_best_fold_model* pada Kode Program 5.62 mengimplementasikan Langkah 5 hingga 7. Fungsi ini mengambil skor F1-*score* makro kombinasi terbaik pada kelima pembagian dan memilih pembagian dengan skor tertinggi. Pembagian tersebut dibentuk ulang dengan *make_splitter*, kemudian *pipeline* baru disusun dengan hiperparameter terbaik, dilatih pada bagian latih pembagian tersebut, dan dinilai pada bagian validasinya. Hiperparameter disalin dengan *clone* sebelum diterapkan, karena hiperparameter dapat berupa objek model, misalnya *LinearSVC* pada SVM, yang tidak boleh berbagi keadaan dengan objek pada hasil pencarian. *Pipeline* yang telah dilatih disimpan pada folder *trained-models* sesuai pengaturan SMOTE, dan jumlah komponen utama serta skor validasinya ditampilkan bersama skor pembagian yang sama pada pencarian sebagai pemeriksaan konsistensi.
+Fungsi *save_best_fold_model* pada Kode Program 5.62 mengimplementasikan Langkah 5 hingga 7. Fungsi ini mengambil skor F1-*score* makro kombinasi terbaik pada kelima pembagian dan memilih pembagian dengan skor tertinggi. Pembagian tersebut dibentuk ulang dengan *make_splitter*, kemudian *pipeline* baru disusun dengan hyperparamater terbaik, dilatih pada bagian latih pembagian tersebut, dan dinilai pada bagian validasinya. Hyperparamater disalin dengan *clone* sebelum diterapkan, karena hyperparamater dapat berupa objek model, misalnya *LinearSVC* pada SVM, yang tidak boleh berbagi keadaan dengan objek pada hasil pencarian. *Pipeline* yang telah dilatih disimpan pada folder *trained-models* sesuai pengaturan SMOTE, dan jumlah komponen utama serta skor validasinya ditampilkan bersama skor pembagian yang sama pada pencarian sebagai pemeriksaan konsistensi.
 
 ```python
 def save_best_fold_model(

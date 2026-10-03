@@ -1,8 +1,8 @@
 ## **4.5 Pembagian Dataset (*Data Splitting*)**
 
-Data hasil penghapusan duplikat dibagi menjadi dua himpunan, yaitu data latih (*train set*) dan data uji (*test set*). Data latih digunakan untuk mempelajari parameter model sekaligus untuk memilih hiperparameter, sedangkan data uji digunakan sebagai instrumen penilaian akhir yang sama sekali tidak dilibatkan dalam proses pelatihan maupun pemilihan hiperparameter. Data uji juga menjadi dasar pembentukan skenario gangguan pada pengujian ketahanan (Subbab 4.14), sehingga data uji harus tetap terpisah dari seluruh proses yang mempelajari statistik dari data.
+Data hasil penghapusan duplikat perlu dibagi menjadi dua himpunan, yaitu data latih (*train set*) dan data uji (*test set*). Data latih digunakan untuk mempelajari parameter model sekaligus untuk memilih hyperparamater, sedangkan data uji digunakan sebagai instrumen penilaian akhir yang sama sekali tidak dilibatkan dalam proses pelatihan maupun pemilihan hyperparamater. Data uji juga menjadi dasar pembentukan skenario gangguan pada pengujian ketahanan (Subbab 4.14), sehingga data uji harus tetap terpisah dari seluruh proses yang mempelajari statistik dari data.
 
-Proporsi pembagian yang diterapkan adalah 80% untuk data latih dan 20% untuk data uji. Himpunan data validasi tidak dipisahkan secara tetap, melainkan dibentuk berulang kali dari data latih melalui validasi silang (*cross-validation*) pada tahap pemilihan hiperparameter (Subbab 4.8). Dengan rancangan ini, setiap kombinasi hiperparameter dinilai pada beberapa himpunan validasi yang berbeda sehingga hasil pemilihannya lebih stabil daripada penilaian pada satu himpunan validasi tetap, dan jumlah data yang tersedia untuk pelatihan menjadi lebih besar. Pembagian dilaksanakan sebelum seluruh tahap yang mempelajari statistik dari data, yaitu penskalaan fitur, reduksi dimensi, dan SMOTE (Subbab 4.7), serta perhitungan statistik untuk simulasi gangguan (Subbab 4.14), sehingga tidak terjadi kebocoran data (*data leakage*) dari data uji ke dalam proses pembelajaran.
+Proporsi pembagian yang diterapkan adalah 80% untuk data latih dan 20% untuk data uji. Himpunan data validasi tidak dipisahkan secara tetap, melainkan dibentuk berulang kali dari data latih melalui validasi silang (*cross-validation*) pada tahap pemilihan hyperparamater (Subbab 4.8). Dengan rancangan ini, setiap kombinasi hyperparamater dinilai pada beberapa himpunan validasi yang berbeda sehingga hasil pemilihannya lebih stabil daripada penilaian pada satu himpunan validasi tetap, dan jumlah data yang tersedia untuk pelatihan menjadi lebih besar. Pembagian dilaksanakan sebelum seluruh tahap yang mempelajari statistik dari data, yaitu penskalaan fitur, reduksi dimensi, dan SMOTE (Subbab 4.7), serta perhitungan statistik untuk simulasi gangguan (Subbab 4.14), sehingga tidak terjadi kebocoran data (*data leakage*) dari data uji ke dalam proses pembelajaran.
 
 Mengingat distribusi kelas yang sangat tidak seimbang (Subbab 4.4), pembagian dilaksanakan secara berstrata (*stratified*) berdasarkan label. Pendekatan ini menjaga agar proporsi setiap kelas, termasuk kelas yang hanya memiliki puluhan baris, tetap sama pada data latih dan data uji. Baris data diacak sebelum dibagi tanpa memperhatikan urutan waktu, karena model dalam penelitian ini memperlakukan setiap aliran jaringan sebagai observasi yang independen (Subbab 4.1). Nilai *random state* ditetapkan sebesar 42 agar hasil pembagian dapat direproduksi.
 
@@ -34,27 +34,4 @@ flowchart TD
     periksa --> selesai(["Selesai"])
 ```
 
-Fitur dan label disimpan pada file terpisah agar keduanya dapat dimuat secara independen, misalnya label saja pada perhitungan distribusi kelas dan pengodean label (Subbab 4.6). Kedua file pada satu himpunan memiliki urutan baris yang sama, sehingga baris ke-*i* pada file fitur berpasangan dengan baris ke-*i* pada file label. Hasil pembagian terdiri atas 9.156.764 baris data latih dan 2.289.191 baris data uji, dengan distribusi kelas yang disajikan pada Tabel 4.4.
-
-Tabel 4.4 Distribusi Kelas pada Data Latih dan Data Uji
-
-| Kelas | Data latih | Data uji | Persentase data uji |
-| :--- | ---: | ---: | ---: |
-| *Benign* | 8.076.122 | 2.019.030 | 20,00% |
-| *DDoS attacks-LOIC-HTTP* | 460.010 | 115.002 | 20,00% |
-| *DDOS attack-HOIC* | 159.089 | 39.772 | 20,00% |
-| *DoS attacks-Hulk* | 116.159 | 29.040 | 20,00% |
-| *Bot* | 115.628 | 28.907 | 20,00% |
-| *Infilteration* | 111.473 | 27.868 | 20,00% |
-| *SSH-Bruteforce* | 75.238 | 18.810 | 20,00% |
-| *DoS attacks-GoldenEye* | 33.114 | 8.278 | 20,00% |
-| *DoS attacks-Slowloris* | 7.770 | 1.942 | 20,00% |
-| *DDOS attack-LOIC-UDP* | 1.384 | 346 | 20,00% |
-| *Brute Force -Web* | 442 | 111 | 20,07% |
-| *Brute Force -XSS* | 182 | 46 | 20,18% |
-| *SQL Injection* | 67 | 17 | 20,24% |
-| *DoS attacks-SlowHTTPTest* | 44 | 11 | 20,00% |
-| *FTP-BruteForce* | 42 | 11 | 20,75% |
-| **Total** | **9.156.764** | **2.289.191** | **20,00%** |
-
-Persentase data uji pada seluruh kelas berada di antara 20,00% dan 20,75%, sehingga stratifikasi berhasil menjaga proporsi kelas pada kedua himpunan. Penyimpangan kecil pada kelas yang sangat langka disebabkan oleh pembulatan jumlah baris menjadi bilangan bulat. Keempat kelas terkecil hanya memiliki 11 hingga 17 baris pada data uji, sehingga perubahan prediksi pada beberapa baris saja sudah dapat mengubah skor kelas tersebut secara berarti. Hal ini perlu diperhatikan ketika menafsirkan skor per kelas pada pengujian ketahanan (Subbab 4.16).
+Fitur dan label disimpan pada file terpisah agar keduanya dapat dimuat secara independen, misalnya label saja pada perhitungan distribusi kelas dan pengodean label (Subbab 4.6). Kedua file pada satu himpunan memiliki urutan baris yang sama, sehingga baris ke-*i* pada file fitur berpasangan dengan baris ke-*i* pada file label.

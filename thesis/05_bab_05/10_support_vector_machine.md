@@ -1,6 +1,6 @@
 ## **5.10 Implementasi *Support Vector Machine* (SVM)**
 
-Subbab ini menyajikan implementasi dari rancangan pada Subbab 4.10, yaitu pembentukan *pipeline* SVM, pencarian hiperparameter pada SVM berkernel *rbf* dan SVM linear, serta pembentukan model akhir. Kode program disusun mengikuti Langkah 1 hingga 4 pada algoritma di Subbab 4.10.
+Subbab ini menyajikan implementasi dari rancangan pada Subbab 4.10, yaitu pembentukan *pipeline* SVM, pencarian hyperparamater pada SVM berkernel *rbf* dan SVM linear, serta pembentukan model akhir. Kode program disusun mengikuti Langkah 1 hingga 4 pada algoritma di Subbab 4.10.
 
 Fungsi *make_svm_pipeline* pada Kode Program 5.65 mengimplementasikan Langkah 1. Fungsi ini menyusun *pipeline* praproses dengan *SVC* sebagai tahap terakhir bernama *svm*. *SVC* menggunakan pengaturan bawaan *scikit-learn*, yaitu kernel *rbf*, toleransi konvergensi 10⁻³, iterasi yang tidak dibatasi, dan tanpa estimasi peluang. Fungsi ini tidak menerima parameter jumlah proses paralel karena *SVC* tidak mendukung pelatihan paralel.
 
@@ -40,4 +40,4 @@ save_best_fold_model(
 )
 ```
 
-Kode Program 5.66 Pencarian hiperparameter dan pembentukan model akhir SVM
+Kode Program 5.66 Pencarian hyperparamater dan pembentukan model akhir SVM

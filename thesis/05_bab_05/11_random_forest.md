@@ -1,6 +1,6 @@
 ## **5.11 Implementasi *Random Forest* (RF)**
 
-Subbab ini menyajikan implementasi dari rancangan pada Subbab 4.11, yaitu pembentukan *pipeline* *Random Forest*, pencarian hiperparameter, dan pembentukan model akhir. Kode program disusun mengikuti Langkah 1 hingga 4 pada algoritma di Subbab 4.11.
+Subbab ini menyajikan implementasi dari rancangan pada Subbab 4.11, yaitu pembentukan *pipeline* *Random Forest*, pencarian hyperparamater, dan pembentukan model akhir. Kode program disusun mengikuti Langkah 1 hingga 4 pada algoritma di Subbab 4.11.
 
 Fungsi *make_rf_pipeline* pada Kode Program 5.67 mengimplementasikan Langkah 1. Fungsi ini menyusun *pipeline* praproses dengan *RandomForestClassifier* sebagai tahap terakhir bernama *rf*, dengan *random state* 42 dan delapan proses paralel. Pengaturan lainnya menggunakan nilai bawaan *scikit-learn*, yaitu kriteria pemisahan *gini* dan pengambilan sampel *bootstrap* untuk setiap pohon.
 
@@ -42,4 +42,4 @@ save_best_fold_model(
 )
 ```
 
-Kode Program 5.68 Pencarian hiperparameter dan pembentukan model akhir Random Forest
+Kode Program 5.68 Pencarian hyperparamater dan pembentukan model akhir Random Forest

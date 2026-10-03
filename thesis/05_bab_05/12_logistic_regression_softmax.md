@@ -1,6 +1,6 @@
 ## **5.12 Implementasi *Logistic Regression* (*Softmax Regression*)**
 
-Subbab ini menyajikan implementasi dari rancangan pada Subbab 4.12, yaitu pembentukan *pipeline* *Logistic Regression*, pencarian hiperparameter, dan pembentukan model akhir. Kode program disusun mengikuti Langkah 1 hingga 4 pada algoritma di Subbab 4.12.
+Subbab ini menyajikan implementasi dari rancangan pada Subbab 4.12, yaitu pembentukan *pipeline* *Logistic Regression*, pencarian hyperparamater, dan pembentukan model akhir. Kode program disusun mengikuti Langkah 1 hingga 4 pada algoritma di Subbab 4.12.
 
 Fungsi *make_logreg_pipeline* pada Kode Program 5.69 mengimplementasikan Langkah 1. Fungsi ini menyusun *pipeline* praproses dengan *LogisticRegression* sebagai tahap terakhir bernama *logreg*, dengan optimasi *saga* karena hanya *saga* yang mendukung penalti L1 maupun L2 pada model multinomial, serta *random state* 42. Parameter *n_jobs* diteruskan agar seragam dengan algoritma lainnya, meskipun pelatihan multinomial tidak menggunakannya. Pengaturan lainnya menggunakan nilai bawaan *scikit-learn*, yaitu jumlah iterasi maksimum 100 dan toleransi konvergensi 10⁻⁴.
 
@@ -41,4 +41,4 @@ save_best_fold_model(
 )
 ```
 
-Kode Program 5.70 Pencarian hiperparameter dan pembentukan model akhir Logistic Regression
+Kode Program 5.70 Pencarian hyperparamater dan pembentukan model akhir Logistic Regression
