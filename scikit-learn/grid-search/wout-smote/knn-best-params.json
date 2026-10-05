@@ -1,0 +1,7 @@
+{
+    "sample_size": 250077,
+    "params": {
+        "knn__metric": "cosine",
+        "knn__n_neighbors": 1
+    }
+}
