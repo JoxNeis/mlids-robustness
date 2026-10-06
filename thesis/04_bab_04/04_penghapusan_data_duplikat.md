@@ -1,4 +1,4 @@
-## **4.4 Penghapusan Data Duplikat (*Deduplication*)**
+## **4.4 Penghapusan Data Kembar (*Deduplication*)**
 
 Dataset CSE-CIC-IDS2018 memiliki banyak baris yang sama, yaitu baris dengan nilai yang sama persis pada seluruh fitur dan label. Duplikasi muncul akibat lalu lintas serangan yang dibuat oleh penyerang melalui serangkaian algoritma, karena perangkat tersebut mengirimkan permintaan yang sama berulang kali sehingga *CICFlowMeter* mencatat aliran dengan karakteristik yang identik. Baris duplikat menimbulkan tiga permasalahan. Pertama, duplikat menggelembungkan jumlah sampel kelas tertentu sehingga distribusi kelas tidak mencerminkan keragaman aliran yang sebenarnya. Kedua, setelah pembagian dataset secara acak (Subbab 4.5), salinan dari baris yang sama dapat berada pada data latih dan data uji sekaligus, sehingga model dinilai pada baris yang sudah pernah dilihatnya dan kinerja yang dilaporkan menjadi terlalu optimis. Ketiga, duplikat menambah biaya komputasi pelatihan tanpa menambah informasi. Oleh karena itu, setiap baris duplikat dihapus dan hanya kemunculan pertamanya yang dipertahankan.
 
