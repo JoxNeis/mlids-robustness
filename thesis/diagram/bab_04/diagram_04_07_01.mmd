@@ -1,19 +1,21 @@
 flowchart TD
     mulai(["Mulai"])
-    mulai --> masukan[/"Data masukan<br>(70 fitur)"/]
-    masukan --> cast["Mengonversi fitur<br>menjadi float32"]
-    cast --> mode{"Pelatihan?"}
+    mulai --> mode{"Pelatihan?"}
 
-    mode -->|"Ya"| fit_scaler[["Mempelajari μ dan σ<br>lalu menstandarkan fitur"]]
-    fit_scaler --> fit_pca[["Mempelajari komponen utama,<br>menetapkan N (varians ≥ 95%),<br>lalu memproyeksikan data"]]
-    fit_pca --> cek_smote{"Pengaturan<br>dengan SMOTE?"}
+    mode -->|"Ya"| cek_pca{"PCA transformer<br>sudah tersedia?"}
+    cek_pca -->|"Tidak"| muat[/"Memuat seluruh data latih<br>(70 fitur) sebagai float32"/]
+    muat --> fit_pca[["Mempelajari μ dan σ, komponen utama,<br>dan N (varians ≥ 95%)"]]
+    fit_pca --> simpan_pca[("Penyimpanan<br>cache/pca-transformer.pkl")]
+    simpan_pca --> transform
+    cek_pca -->|"Ya"| transform[["Memproyeksikan data latih<br>per 500.000 baris ke N komponen"]]
+    transform --> cek_smote{"Pengaturan<br>dengan SMOTE?"}
     cek_smote -->|"Ya"| smote[["Membangkitkan sampel sintetis<br>hingga seluruh kelas seimbang"]]
     cek_smote -->|"Tidak"| latih
     smote --> latih[["Melatih algoritma klasifikasi"]]
-    latih --> simpan[/"Menyimpan pipeline<br>beserta seluruh statistiknya"/]
+    latih --> simpan[/"Menyimpan pipeline:<br>PCA transformer, SMOTE, dan model"/]
     simpan --> selesai(["Selesai"])
 
-    mode -->|"Tidak"| scaler["Menstandarkan fitur dengan<br>μ dan σ yang tersimpan"]
-    scaler --> pca["Memproyeksikan data dengan<br>komponen utama yang tersimpan"]
-    pca --> prediksi[["Menghasilkan prediksi<br>(SMOTE dilewati)"]]
+    mode -->|"Tidak"| masukan[/"Data uji atau data skenario<br>(70 fitur)"/]
+    masukan --> proyeksi["Mengonversi, menstandarkan, dan<br>memproyeksikan dengan statistik<br>PCA transformer yang tersimpan"]
+    proyeksi --> prediksi[["Menghasilkan prediksi<br>(SMOTE dilewati)"]]
     prediksi --> selesai

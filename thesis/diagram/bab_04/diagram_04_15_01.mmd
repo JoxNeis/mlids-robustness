@@ -5,8 +5,10 @@ flowchart TD
     init_m --> cek_m{"m ≤ 10?"}
 
     cek_m -->|"Ya"| pending[["Menentukan skenario yang<br>belum memiliki prediksi sah"]]
-    pending --> muat[["Memuat pipeline model ke-m dan<br>memisahkan praproses dan model"]]
-    muat --> init_s["Inisialisasi s = 1<br>(clean lebih dahulu)"]
+    pending --> muat[["Memuat pipeline model ke-m"]]
+    muat --> cek_pca{"Praproses identik dengan<br>PCA transformer?"}
+    cek_pca -->|"Tidak"| inc_m
+    cek_pca -->|"Ya"| init_s["Inisialisasi s = 1<br>(clean lebih dahulu)"]
     init_s --> cek_s{"Skenario ke-s<br>tersedia?"}
     cek_s -->|"Ya"| prediksi[["Memprediksi per 250.000 baris dan<br>menghitung perpindahan terhadap<br>data uji bersih"]]
     prediksi --> simpan_pred[/"Menyimpan prediksi dan<br>ringkasan pengujian"/]

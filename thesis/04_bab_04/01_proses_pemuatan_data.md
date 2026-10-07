@@ -7,18 +7,18 @@ Dataset CSE-CIC-IDS2018 merupakan salah satu dataset benchmark yang sangat umum 
 Prosedur pemuatan dan transformasi data dilaksanakan melalui algoritma berikut:
 
 1. **Pemuatan data**, Seluruh file CSV dari dataset CSE-CIC-IDS2018 yang terdapat pada direktori sumber (`cse-cic-ids2018`) dimuat ke dalam lingkungan pemrosesan.
-2. **Penyusunan skema acuan**, Skema atau struktur acuan kolom dibangun sebagai standar bersama, sehingga data dari setiap file CSV dimuat dengan struktur yang seragam.
-3. **Normalisasi nama kolom**, Nama setiap kolom dinormalisasi ke format yang konsisten agar kolom yang sama antar dokumen dapat dipetakan dengan benar.
-4. **Penghapusan kolom yang tidak relevan**, Kolom yang tidak berkontribusi pada proses pemodelan, yaitu pengenal (id), penanda waktu (timestamp), serta kolom yang tidak konsisten antar dokumen dihapus.
-5. **Konversi tipe data**, Seluruh fitur numerik dikonversi ke tipe `float32` untuk menekan penggunaan memori tanpa mengorbankan presisi yang diperlukan.
-6. **Pembersihan baris tidak valid**. Baris yang tidak sesuai dihapus, terutama baris header yang muncul berulang di dataset.
+2. **Penyusunan skema acuan**, Skema atau struktur acuan kolom dibangun sebagai standar bersama dari gabungan nama kolom pada *header* seluruh file CSV setelah dinormalisasi, kemudian diurutkan secara alfabetis. Kolom label bertipe teks, sedangkan seluruh kolom lainnya bertipe `float32`, sehingga data dari setiap file CSV dimuat dengan struktur yang seragam.
+3. **Penghapusan *header* berulang**, Baris yang seluruh nilainya sama dengan nama kolom, yaitu baris *header* yang muncul berulang di tengah file CSV, dihapus. Langkah ini dijalankan sebelum konversi tipe data, karena setelah konversi baris tersebut tidak lagi dapat dikenali.
+4. **Normalisasi nama kolom**, Nama setiap kolom dinormalisasi ke format yang konsisten, yaitu huruf kecil dengan setiap rangkaian karakter selain huruf dan angka diganti garis bawah, agar kolom yang sama antar dokumen dapat dipetakan dengan benar.
+5. **Penghapusan kolom yang tidak relevan**, Kolom yang tidak berkontribusi pada proses pemodelan dihapus, yaitu pengenal aliran (*flow id*), alamat IP sumber dan tujuan, *port* sumber, serta penanda waktu (*timestamp*). Kolom pengenal dan alamat tersebut hanya terdapat pada sebagian file, sehingga penghapusannya juga menyeragamkan susunan kolom antar dokumen. Kolom pada skema yang tidak terdapat pada suatu file diisi dengan nilai kosong.
+6. **Konversi tipe data**, Seluruh fitur numerik dikonversi ke tipe `float32` untuk menekan penggunaan memori tanpa mengorbankan presisi yang diperlukan. Nilai yang tidak dapat dikonversi menjadi bilangan diubah menjadi NaN.
 
 ```mermaid
 flowchart TD
     mulai(["Mulai"])
     mulai --> input_csv[/"Membaca daftar file CSV<br>dari folder sumber<br>(n = jumlah file)"/]
     input_csv --> skema[["Membangun skema kolom S<br>dari header seluruh file CSV"]]
-    skema --> buat_folder["Membuat folder tujuan<br>data-raw"]
+    skema --> buat_folder["Membuat folder tujuan<br>01-raw-parquet"]
     buat_folder --> init_i["Inisialisasi i = 1"]
     init_i --> cek_i{"i ≤ n?"}
 
@@ -30,12 +30,12 @@ flowchart TD
     inc_i --> cek_i
 
     cek_j -->|"Ya"| baca_chunk[/"Membaca chunk ke-j<br>(maks. 100.000 baris)<br>ke pandas.DataFrame"/]
-    baca_chunk --> norm_kolom["Menormalisasi nama kolom"]
+    baca_chunk --> hapus_header["Menghapus baris yang berupa<br>header berulang"]
+    hapus_header --> norm_kolom["Menormalisasi nama kolom"]
     norm_kolom --> selaras["Menyelaraskan kolom dengan skema S<br>(menghapus kolom yang tidak diperlukan)"]
     selaras --> cast_float[["Mengonversi seluruh fitur menjadi float32<br>(nilai tidak valid menjadi NaN)"]]
-    cast_float --> hapus_label["Menghapus baris dengan label kosong<br>atau berupa header berulang"]
-    hapus_label --> tulis[/"Menulis chunk ke format Parquet"/]
-    tulis --> simpan[("Penyimpanan<br>data-raw")]
+    cast_float --> tulis[/"Menulis chunk ke format Parquet"/]
+    tulis --> simpan[("Penyimpanan<br>01-raw-parquet")]
     simpan --> inc_j["j = j + 1"]
     inc_j --> cek_j
 ```

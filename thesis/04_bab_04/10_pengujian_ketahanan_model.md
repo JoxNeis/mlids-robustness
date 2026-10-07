@@ -4,7 +4,7 @@ Setelah 12 skenario gangguan terbentuk (Subbab 4.9), setiap model akhir diuji pa
 
 ### **4.10.1 Prediksi pada Setiap Skenario**
 
-Setiap model memprediksi data uji per kelompok 250.000 baris, sehingga 2.289.191 baris data uji terbagi menjadi sepuluh kelompok. Pada setiap kelompok, baris skenario dan baris data uji bersih yang bersesuaian dibaca bersamaan, kemudian keduanya dilewatkan melalui tahap praproses dari *pipeline* model, yaitu konversi tipe data, standardisasi, dan proyeksi PCA, tanpa tahap SMOTE. Data skenario kemudian diprediksi oleh model. Apabila model menyediakan peluang kelas, satu kali perhitungan peluang menghasilkan kelas prediksi, yaitu kelas dengan peluang terbesar, tingkat kepercayaan (*confidence*), yaitu peluang terbesar tersebut, dan peluang kelas sebenarnya. Apabila model tidak menyediakan peluang, yaitu SVM, hanya kelas prediksi yang dicatat. Perpindahan (*displacement*) setiap baris akibat gangguan diukur pada ruang komponen utama.
+Setiap model memprediksi data uji per kelompok 250.000 baris, sehingga 2.289.191 baris data uji terbagi menjadi sepuluh kelompok. Pada setiap kelompok, baris skenario dan baris data uji bersih yang bersesuaian dibaca bersamaan, kemudian keduanya dilewatkan melalui tahap praproses dari *pipeline* model, yaitu konversi tipe data, standardisasi, dan proyeksi PCA, tanpa tahap SMOTE. Tahap praproses tersebut adalah tahap-tahap *PCA transformer* (Subbab 4.7), sehingga seluruh model memproyeksikan data uji ke ruang komponen utama yang sama. Data skenario kemudian diprediksi oleh model. Apabila model menyediakan peluang kelas, satu kali perhitungan peluang menghasilkan kelas prediksi, yaitu kelas dengan peluang terbesar, tingkat kepercayaan (*confidence*), yaitu peluang terbesar tersebut, dan peluang kelas sebenarnya. Apabila model tidak menyediakan peluang, yaitu SVM, hanya kelas prediksi yang dicatat. Perpindahan (*displacement*) setiap baris akibat gangguan diukur pada ruang komponen utama.
 
 ${d}_{i}={\left\Vert {\mathbf{z}}_{i}^{s}-{\mathbf{z}}_{i}^{clean}\right\Vert }_{2}$ (4.15)
 
@@ -14,7 +14,9 @@ Setiap pengujian menghasilkan satu file prediksi yang memuat, untuk setiap baris
 
 file prediksi disimpan dalam format Parquet pada folder `scikit-learn/predictions`, dengan subfolder menurut pengaturan SMOTE, model, dan skenario. Bersama prediksi disimpan pula ringkasan pengujian, yaitu jumlah baris, jumlah baris terganggu, waktu praproses dan waktu prediksi, keberadaan tingkat kepercayaan, sidik jari file data skenario, ukuran kelompok, serta pengaturan *pipeline*, yaitu nama algoritma, jumlah komponen utama, varians yang dipertahankan, dan jumlah tetangga SMOTE. file ditulis terlebih dahulu dengan nama sementara kemudian diganti namanya, sehingga pengujian yang terputus tidak pernah meninggalkan file yang tampak lengkap.
 
-Pengujian pada seluruh skenario memerlukan waktu yang lama, sehingga dirancang agar dapat dilanjutkan apabila terputus. Sebuah pengujian dilewati apabila file prediksinya sudah ada, model belum dilatih ulang sejak prediksi dibuat, ukuran kelompoknya sama, dan sidik jari data skenarionya sama, yaitu hasil *hash* BLAKE2b atas isi file data. Apabila pengujian pada data uji bersih harus diulang, seluruh skenario model tersebut juga diulang, karena prediksi bersih menjadi pembanding bagi seluruh skenario. Data uji bersih selalu diprediksi lebih dahulu daripada skenario gangguan.
+Sebelum memprediksi, tahap-tahap praproses pada *pipeline* setiap model dibandingkan dengan *PCA transformer* yang tersimpan pada file `cache/pca-transformer.pkl` melalui nilai *hash* atas isi objeknya. Model yang tidak memuat *PCA transformer* yang identik, misalnya model yang dilatih sebelum *PCA transformer* dibentuk ulang, dilewati dengan pemberitahuan dan harus dilatih ulang. Dengan pemeriksaan ini, seluruh model yang diuji dijamin dilatih dan diuji pada ruang komponen utama yang sama.
+
+Pengujian pada seluruh skenario memerlukan waktu yang lama, sehingga dirancang agar dapat dilanjutkan apabila terputus. Sebuah pengujian dilewati apabila file prediksinya sudah ada, model dan *PCA transformer* belum dibentuk ulang sejak prediksi dibuat, ukuran kelompoknya sama, dan sidik jari data skenarionya sama, yaitu hasil *hash* BLAKE2b atas isi file data. Apabila pengujian pada data uji bersih harus diulang, seluruh skenario model tersebut juga diulang, karena prediksi bersih menjadi pembanding bagi seluruh skenario. Data uji bersih selalu diprediksi lebih dahulu daripada skenario gangguan.
 
 ### **4.10.2 Populasi dan Metrik Evaluasi**
 
@@ -54,8 +56,8 @@ Persamaan 4.18 adalah rata-rata retensi model *m*, yang memberikan bobot yang sa
 Prosedur pengujian dan pengukuran ketahanan dilaksanakan melalui algoritma berikut:
 
 1. **Penetapan skenario dan model**, Data uji bersih dan 12 skenario gangguan, lima algoritma, serta dua pengaturan SMOTE ditetapkan.
-2. **Pemeriksaan skenario yang perlu diprediksi**, Untuk setiap model, skenario yang belum memiliki file prediksi yang sah ditentukan berdasarkan keberadaan file, waktu pelatihan model, ukuran kelompok, dan sidik jari data.
-3. **Pemuatan model**, *Pipeline* model dimuat dari folder `scikit-learn/trained-models` dan dipisahkan menjadi tahap praproses tanpa SMOTE dan model klasifikasi. Model yang belum dilatih dilewati dengan pemberitahuan.
+2. **Pemeriksaan skenario yang perlu diprediksi**, Untuk setiap model, skenario yang belum memiliki file prediksi yang sah ditentukan berdasarkan keberadaan file, waktu pelatihan model, waktu pembentukan *PCA transformer*, ukuran kelompok, dan sidik jari data.
+3. **Pemuatan model**, *Pipeline* model dimuat dari folder `scikit-learn/trained-models`, tahap praprosesnya diperiksa harus identik dengan *PCA transformer*, kemudian dipisahkan menjadi tahap praproses tanpa SMOTE dan model klasifikasi. Model yang belum dilatih atau tidak memuat *PCA transformer* yang identik dilewati dengan pemberitahuan.
 4. **Prediksi per kelompok**, Data skenario dan data uji bersih dibaca per kelompok 250.000 baris, ditransformasikan dengan tahap praproses yang sama, kemudian diprediksi, dan perpindahan setiap baris dihitung dengan Persamaan 4.15.
 5. **Penyimpanan prediksi**, Prediksi seluruh kelompok digabung bersama label, prediksi bersih, penanda baris terganggu, dan ringkasan pengujian, kemudian disimpan pada folder `scikit-learn/predictions`. Langkah 4 dan 5 diulang untuk setiap skenario, dan langkah 2 hingga 5 diulang untuk kesepuluh model.
 6. **Peringkasan hasil prediksi**, Setiap file prediksi diringkas menjadi tabel hasil dan desil perpindahan.
@@ -71,8 +73,10 @@ flowchart TD
     init_m --> cek_m{"m ≤ 10?"}
 
     cek_m -->|"Ya"| pending[["Menentukan skenario yang<br>belum memiliki prediksi sah"]]
-    pending --> muat[["Memuat pipeline model ke-m dan<br>memisahkan praproses dan model"]]
-    muat --> init_s["Inisialisasi s = 1<br>(clean lebih dahulu)"]
+    pending --> muat[["Memuat pipeline model ke-m"]]
+    muat --> cek_pca{"Praproses identik dengan<br>PCA transformer?"}
+    cek_pca -->|"Tidak"| inc_m
+    cek_pca -->|"Ya"| init_s["Inisialisasi s = 1<br>(clean lebih dahulu)"]
     init_s --> cek_s{"Skenario ke-s<br>tersedia?"}
     cek_s -->|"Ya"| prediksi[["Memprediksi per 250.000 baris dan<br>menghitung perpindahan terhadap<br>data uji bersih"]]
     prediksi --> simpan_pred[/"Menyimpan prediksi dan<br>ringkasan pengujian"/]

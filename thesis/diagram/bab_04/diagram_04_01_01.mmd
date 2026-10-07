@@ -5,7 +5,7 @@ flowchart LR
         mulai(["Mulai"])
         input_csv[/"Membaca daftar file CSV<br>dari folder sumber<br>(n = jumlah file)"/]
         skema[["Membangun skema kolom S<br>dari header seluruh file CSV"]]
-        buat_folder["Membuat folder tujuan<br>data-raw"]
+        buat_folder["Membuat folder tujuan<br>01-raw-parquet"]
         init_i["Inisialisasi i = 1"]
     end
 
@@ -17,16 +17,16 @@ flowchart LR
         cek_j{"Chunk ke-j pada<br>file ke-i tersedia?"}
         inc_i["i = i + 1"]
         baca_chunk[/"Membaca chunk ke-j<br>(maks. 100.000 baris)<br>ke pandas.DataFrame"/]
-        norm_kolom["Menormalisasi nama kolom"]
+        hapus_header["Menghapus baris yang berupa<br>header berulang"]
     end
 
     subgraph r3[" "]
         direction TD
+        norm_kolom["Menormalisasi nama kolom"]
         selaras["Menyelaraskan kolom dengan skema S<br>(menghapus kolom yang tidak diperlukan)"]
         cast_float[["Mengonversi seluruh fitur menjadi float32<br>(nilai tidak valid menjadi NaN)"]]
-        hapus_label["Menghapus baris dengan label kosong<br>atau berupa header berulang"]
         tulis[/"Menulis chunk ke format Parquet"/]
-        simpan[("Penyimpanan<br>data-raw")]
+        simpan[("Penyimpanan<br>01-raw-parquet")]
         inc_j["j = j + 1"]
     end
 
@@ -44,11 +44,11 @@ flowchart LR
     inc_i --> cek_i
 
     cek_j -->|"Ya"| baca_chunk
-    baca_chunk --> norm_kolom
+    baca_chunk --> hapus_header
+    hapus_header --> norm_kolom
     norm_kolom --> selaras
     selaras --> cast_float
-    cast_float --> hapus_label
-    hapus_label --> tulis
+    cast_float --> tulis
     tulis --> simpan
     simpan --> inc_j
     inc_j --> cek_j

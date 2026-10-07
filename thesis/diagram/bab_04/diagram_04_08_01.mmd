@@ -1,19 +1,19 @@
 flowchart TD
     mulai(["Mulai"])
-    mulai --> muat[/"Membaca data latih per 500.000 baris<br>ke satu matriks float32"/]
+    mulai --> muat_pca[/"Memuat PCA transformer dari<br>cache/pca-transformer.pkl"/]
+    muat_pca --> muat[["Memproyeksikan data latih<br>per 500.000 baris ke komponen utama"]]
     muat --> cek_baris{"Jumlah baris fitur<br>sama dengan label?"}
     cek_baris -->|"Tidak"| galat(["Galat: proses dihentikan"])
-    cek_baris -->|"Ya"| periksa_pca[["Memeriksa jumlah komponen PCA<br>pada seluruh data latih"]]
-    periksa_pca --> init_a["Inisialisasi a = 1"]
+    cek_baris -->|"Ya"| init_a["Inisialisasi a = 1"]
     init_a --> cek_a{"a ≤ 5?<br>(KNN, SVM, Random Forest,<br>Logistic Regression, XGBoost)"}
 
     cek_a -->|"Ya"| grid["Menyusun grid hyperparamater<br>(ditambah k SMOTE apabila<br>pengaturan dengan SMOTE)"]
-    grid --> cari[["GridSearchCV: melatih dan menilai<br>setiap kombinasi pada 5 pembagian<br>berstrata (80% latih, 20% validasi)"]]
+    grid --> sampel[["Mengambil data latih model dan<br>sampel pencarian secara berstrata"]]
+    sampel --> cari[["GridSearchCV: melatih dan menilai<br>setiap kombinasi pada 5 pembagian<br>berstrata (80% latih, 20% validasi)"]]
     cari --> simpan_cari[/"Menyimpan hasil pencarian<br>ke grid-search"/]
-    simpan_cari --> pilih["Memilih kombinasi dengan rata-rata<br>F1-score makro tertinggi dan<br>pembagian terbaiknya"]
-    pilih --> latih[["Melatih pipeline akhir pada<br>bagian latih pembagian terbaik"]]
-    latih --> nilai["Menilai pipeline akhir pada<br>bagian validasi pembagian terbaik"]
-    nilai --> simpan_model[/"Menyimpan pipeline ke<br>trained-models"/]
+    simpan_cari --> latih[["Melatih pipeline dengan kombinasi<br>terbaik pada data latih model"]]
+    latih --> gabung["Menempatkan PCA transformer<br>di depan pipeline model"]
+    gabung --> simpan_model[/"Menyimpan pipeline ke<br>trained-models"/]
     simpan_model --> inc_a["a = a + 1"]
     inc_a --> cek_a
 

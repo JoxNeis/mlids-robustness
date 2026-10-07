@@ -1,6 +1,6 @@
 flowchart TD
     mulai(["Mulai"])
-    mulai --> statistik[["Menghitung simpangan baku σ dan<br>median setiap fitur pada data latih"]]
+    mulai --> statistik[["Mengambil σ dari PCA transformer dan<br>menghitung median setiap fitur<br>pada data latih"]]
     statistik --> skenario[/"Menetapkan 12 skenario:<br>4 jenis gangguan × 3 intensitas"/]
     skenario --> init_i["Inisialisasi i = 1"]
     init_i --> cek_i{"i ≤ 12?"}

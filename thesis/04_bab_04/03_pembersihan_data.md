@@ -35,4 +35,4 @@ flowchart TD
     laporan --> selesai(["Selesai"])
 ```
 
-Setiap file dibersihkan secara independen, sehingga iterasi file pada diagram di atas dijalankan secara paralel menggunakan `joblib` dengan backend `loky` dan delapan proses. Setiap proses hanya memuat satu file, yaitu maksimum 100.000 baris, sehingga kebutuhan memori tetap terkendali. Data pada folder yang dimuat tidak diubah, sehingga data sebelum dan sesudah pembersihan dapat dibandingkan dan proses pembersihan dapat diulang apabila diperlukan.
+Setiap file dibersihkan secara independen, sehingga iterasi file pada diagram di atas dijalankan secara paralel menggunakan `joblib` dengan backend `loky` dan jumlah proses sebanyak inti CPU yang tersedia. Setiap proses hanya memuat satu file, yaitu maksimum 100.000 baris, sehingga kebutuhan memori tetap terkendali. Data pada folder yang dimuat tidak diubah, sehingga data sebelum dan sesudah pembersihan dapat dibandingkan dan proses pembersihan dapat diulang apabila diperlukan.
