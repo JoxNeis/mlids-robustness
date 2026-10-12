@@ -1,0 +1,8 @@
+{
+    "sample_size": 1000000,
+    "params": {
+        "rf__max_depth": 24,
+        "rf__max_features": "sqrt",
+        "rf__n_estimators": 300
+    }
+}

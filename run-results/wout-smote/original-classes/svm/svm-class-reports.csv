@@ -1,0 +1,793 @@
+candidate,param_svm__C,param_svm__gamma,param_svm__kernel,param_svm,split,class,precision,recall,f1,support
+0,10.0,0.1,rbf,,0,Benign,0.9857462895547465,0.9982417831721635,0.9919546869936454,35263
+0,10.0,0.1,rbf,,0,Bot,0.998,0.9881188118811881,0.9930348258706467,505
+0,10.0,0.1,rbf,,0,Brute Force -Web,0.0,0.0,0.0,4
+0,10.0,0.1,rbf,,0,Brute Force -XSS,1.0,0.5,0.6666666666666666,4
+0,10.0,0.1,rbf,,0,DDOS attack-HOIC,0.9971305595408895,1.0,0.9985632183908046,695
+0,10.0,0.1,rbf,,0,DDOS attack-LOIC-UDP,1.0,0.6666666666666666,0.8,6
+0,10.0,0.1,rbf,,0,DDoS attacks-LOIC-HTTP,0.9788385826771654,0.9900447984071677,0.9844097995545658,2009
+0,10.0,0.1,rbf,,0,DoS attacks-GoldenEye,1.0,0.8206896551724138,0.9015151515151515,145
+0,10.0,0.1,rbf,,0,DoS attacks-Hulk,0.9530075187969925,1.0,0.9759384023099134,507
+0,10.0,0.1,rbf,,0,DoS attacks-SlowHTTPTest,0.4,0.5,0.4444444444444444,4
+0,10.0,0.1,rbf,,0,DoS attacks-Slowloris,1.0,0.7352941176470589,0.847457627118644,34
+0,10.0,0.1,rbf,,0,FTP-BruteForce,0.3333333333333333,0.25,0.2857142857142857,4
+0,10.0,0.1,rbf,,0,Infilteration,0.5675675675675675,0.043121149897330596,0.08015267175572519,487
+0,10.0,0.1,rbf,,0,SQL Injection,1.0,0.75,0.8571428571428571,4
+0,10.0,0.1,rbf,,0,SSH-Bruteforce,0.9939577039274925,1.0,0.996969696969697,329
+0,10.0,0.1,rbf,,0,accuracy,,,0.984925,40000
+0,10.0,0.1,rbf,,0,macro avg,0.8138387703598793,0.682811798856266,0.7215976222964698,40000
+0,10.0,0.1,rbf,,0,weighted avg,0.9801594873852335,0.984925,0.979691217983378,40000
+0,10.0,0.1,rbf,,1,Benign,0.9852797134301626,0.9984119331877606,0.991802355062257,35263
+0,10.0,0.1,rbf,,1,Bot,1.0,0.9841584158415841,0.9920159680638723,505
+0,10.0,0.1,rbf,,1,Brute Force -Web,1.0,0.25,0.4,4
+0,10.0,0.1,rbf,,1,Brute Force -XSS,1.0,0.75,0.8571428571428571,4
+0,10.0,0.1,rbf,,1,DDOS attack-HOIC,0.9971305595408895,1.0,0.9985632183908046,695
+0,10.0,0.1,rbf,,1,DDOS attack-LOIC-UDP,0.75,0.5,0.6,6
+0,10.0,0.1,rbf,,1,DDoS attacks-LOIC-HTTP,0.980246913580247,0.9880537580886013,0.984134853743183,2009
+0,10.0,0.1,rbf,,1,DoS attacks-GoldenEye,1.0,0.7862068965517242,0.8803088803088803,145
+0,10.0,0.1,rbf,,1,DoS attacks-Hulk,0.9441340782122905,1.0,0.9712643678160919,507
+0,10.0,0.1,rbf,,1,DoS attacks-SlowHTTPTest,1.0,0.25,0.4,4
+0,10.0,0.1,rbf,,1,DoS attacks-Slowloris,1.0,0.7941176470588235,0.8852459016393442,34
+0,10.0,0.1,rbf,,1,FTP-BruteForce,0.5,0.75,0.6,4
+0,10.0,0.1,rbf,,1,Infilteration,0.391304347826087,0.018480492813141684,0.03529411764705882,487
+0,10.0,0.1,rbf,,1,SQL Injection,1.0,0.5,0.6666666666666666,4
+0,10.0,0.1,rbf,,1,SSH-Bruteforce,0.996969696969697,1.0,0.9984825493171472,329
+0,10.0,0.1,rbf,,1,accuracy,,,0.984575,40000
+0,10.0,0.1,rbf,,1,macro avg,0.9030043539706248,0.7046286095694424,0.7507281157198774,40000
+0,10.0,0.1,rbf,,1,weighted avg,0.9777496137074857,0.984575,0.9789295320820567,40000
+0,10.0,0.1,rbf,,2,Benign,0.9852784774699133,0.998326858179962,0.9917597509613624,35263
+0,10.0,0.1,rbf,,2,Bot,0.9979879275653923,0.9821782178217822,0.9900199600798403,505
+0,10.0,0.1,rbf,,2,Brute Force -Web,1.0,0.5,0.6666666666666666,4
+0,10.0,0.1,rbf,,2,Brute Force -XSS,1.0,0.75,0.8571428571428571,4
+0,10.0,0.1,rbf,,2,DDOS attack-HOIC,0.995702005730659,1.0,0.9978463747307968,695
+0,10.0,0.1,rbf,,2,DDOS attack-LOIC-UDP,1.0,0.3333333333333333,0.5,6
+0,10.0,0.1,rbf,,2,DDoS attacks-LOIC-HTTP,0.9797830374753451,0.9890492782478845,0.9843943522417636,2009
+0,10.0,0.1,rbf,,2,DoS attacks-GoldenEye,0.992,0.8551724137931035,0.9185185185185185,145
+0,10.0,0.1,rbf,,2,DoS attacks-Hulk,0.9566037735849057,1.0,0.9778206364513018,507
+0,10.0,0.1,rbf,,2,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+0,10.0,0.1,rbf,,2,DoS attacks-Slowloris,1.0,0.7647058823529411,0.8666666666666667,34
+0,10.0,0.1,rbf,,2,FTP-BruteForce,0.3333333333333333,0.5,0.4,4
+0,10.0,0.1,rbf,,2,Infilteration,0.3333333333333333,0.014373716632443531,0.027559055118110236,487
+0,10.0,0.1,rbf,,2,SQL Injection,1.0,0.5,0.6666666666666666,4
+0,10.0,0.1,rbf,,2,SSH-Bruteforce,1.0,1.0,1.0,329
+0,10.0,0.1,rbf,,2,accuracy,,,0.98465,40000
+0,10.0,0.1,rbf,,2,macro avg,0.8382681258995255,0.6791426466907634,0.7230041003496368,40000
+0,10.0,0.1,rbf,,2,weighted avg,0.9770440162646766,0.98465,0.9789431435304882,40000
+0,10.0,0.1,rbf,,3,Benign,0.9856127190281587,0.9985537248674248,0.9920410204397865,35263
+0,10.0,0.1,rbf,,3,Bot,1.0,0.9762376237623762,0.9879759519038076,505
+0,10.0,0.1,rbf,,3,Brute Force -Web,1.0,0.25,0.4,4
+0,10.0,0.1,rbf,,3,Brute Force -XSS,1.0,0.25,0.4,4
+0,10.0,0.1,rbf,,3,DDOS attack-HOIC,1.0,1.0,1.0,695
+0,10.0,0.1,rbf,,3,DDOS attack-LOIC-UDP,1.0,0.5,0.6666666666666666,6
+0,10.0,0.1,rbf,,3,DDoS attacks-LOIC-HTTP,0.984228684080828,0.9940268790443006,0.9891035165923725,2009
+0,10.0,0.1,rbf,,3,DoS attacks-GoldenEye,0.9827586206896551,0.7862068965517242,0.8735632183908046,145
+0,10.0,0.1,rbf,,3,DoS attacks-Hulk,0.9371534195933456,1.0,0.9675572519083969,507
+0,10.0,0.1,rbf,,3,DoS attacks-SlowHTTPTest,0.4,0.5,0.4444444444444444,4
+0,10.0,0.1,rbf,,3,DoS attacks-Slowloris,1.0,0.8235294117647058,0.9032258064516129,34
+0,10.0,0.1,rbf,,3,FTP-BruteForce,0.25,0.25,0.25,4
+0,10.0,0.1,rbf,,3,Infilteration,0.48148148148148145,0.026694045174537988,0.05058365758754864,487
+0,10.0,0.1,rbf,,3,SQL Injection,1.0,0.75,0.8571428571428571,4
+0,10.0,0.1,rbf,,3,SSH-Bruteforce,1.0,0.9969604863221885,0.9984779299847792,329
+0,10.0,0.1,rbf,,3,accuracy,,,0.98495,40000
+0,10.0,0.1,rbf,,3,macro avg,0.8680823283248978,0.6734806044991507,0.7187188214342051,40000
+0,10.0,0.1,rbf,,3,weighted avg,0.9792173750655913,0.98495,0.9794461756133436,40000
+0,10.0,0.1,rbf,,4,Benign,0.9854715449430339,0.998326858179962,0.9918575493759333,35263
+0,10.0,0.1,rbf,,4,Bot,1.0,0.9801980198019802,0.99,505
+0,10.0,0.1,rbf,,4,Brute Force -Web,0.0,0.0,0.0,4
+0,10.0,0.1,rbf,,4,Brute Force -XSS,1.0,0.5,0.6666666666666666,4
+0,10.0,0.1,rbf,,4,DDOS attack-HOIC,0.9971305595408895,1.0,0.9985632183908046,695
+0,10.0,0.1,rbf,,4,DDOS attack-LOIC-UDP,1.0,0.16666666666666666,0.2857142857142857,6
+0,10.0,0.1,rbf,,4,DDoS attacks-LOIC-HTTP,0.9774730656219393,0.993529118964659,0.9854356948901506,2009
+0,10.0,0.1,rbf,,4,DoS attacks-GoldenEye,0.9838709677419355,0.8413793103448276,0.9070631970260223,145
+0,10.0,0.1,rbf,,4,DoS attacks-Hulk,0.9547169811320755,0.9980276134122288,0.9758919961427194,507
+0,10.0,0.1,rbf,,4,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+0,10.0,0.1,rbf,,4,DoS attacks-Slowloris,1.0,0.7647058823529411,0.8666666666666667,34
+0,10.0,0.1,rbf,,4,FTP-BruteForce,0.5,1.0,0.6666666666666666,4
+0,10.0,0.1,rbf,,4,Infilteration,0.5555555555555556,0.02053388090349076,0.039603960396039604,487
+0,10.0,0.1,rbf,,4,SQL Injection,1.0,0.75,0.8571428571428571,4
+0,10.0,0.1,rbf,,4,SSH-Bruteforce,0.9939577039274925,1.0,0.996969696969697,329
+0,10.0,0.1,rbf,,4,accuracy,,,0.984825,40000
+0,10.0,0.1,rbf,,4,macro avg,0.796545091897528,0.6675578233751172,0.6818828304032339,40000
+0,10.0,0.1,rbf,,4,weighted avg,0.9796675664236459,0.984825,0.9790774733307835,40000
+1,1.0,0.1,rbf,,0,Benign,0.9852167095979393,0.9978731248050364,0.9915045295087279,35263
+1,1.0,0.1,rbf,,0,Bot,0.9881188118811881,0.9881188118811881,0.9881188118811881,505
+1,1.0,0.1,rbf,,0,Brute Force -Web,0.0,0.0,0.0,4
+1,1.0,0.1,rbf,,0,Brute Force -XSS,1.0,0.5,0.6666666666666666,4
+1,1.0,0.1,rbf,,0,DDOS attack-HOIC,0.9971305595408895,1.0,0.9985632183908046,695
+1,1.0,0.1,rbf,,0,DDOS attack-LOIC-UDP,1.0,0.6666666666666666,0.8,6
+1,1.0,0.1,rbf,,0,DDoS attacks-LOIC-HTTP,0.9764821166095051,0.9920358387257342,0.9841975308641975,2009
+1,1.0,0.1,rbf,,0,DoS attacks-GoldenEye,0.944954128440367,0.7103448275862069,0.8110236220472441,145
+1,1.0,0.1,rbf,,0,DoS attacks-Hulk,0.9302752293577982,1.0,0.9638783269961977,507
+1,1.0,0.1,rbf,,0,DoS attacks-SlowHTTPTest,1.0,0.25,0.4,4
+1,1.0,0.1,rbf,,0,DoS attacks-Slowloris,1.0,0.7352941176470589,0.847457627118644,34
+1,1.0,0.1,rbf,,0,FTP-BruteForce,0.5714285714285714,1.0,0.7272727272727273,4
+1,1.0,0.1,rbf,,0,Infilteration,0.4444444444444444,0.01642710472279261,0.031683168316831684,487
+1,1.0,0.1,rbf,,0,SQL Injection,0.0,0.0,0.0,4
+1,1.0,0.1,rbf,,0,SSH-Bruteforce,0.9939393939393939,0.9969604863221885,0.9954476479514416,329
+1,1.0,0.1,rbf,,0,accuracy,,,0.983925,40000
+1,1.0,0.1,rbf,,0,macro avg,0.7887993310160065,0.6569147318904581,0.6803875918009781,40000
+1,1.0,0.1,rbf,,0,weighted avg,0.9774464812736505,0.983925,0.978092113334552,40000
+1,1.0,0.1,rbf,,1,Benign,0.9853064651553316,0.9983552165158949,0.9917879227529475,35263
+1,1.0,0.1,rbf,,1,Bot,0.9900398406374502,0.9841584158415841,0.9870903674280039,505
+1,1.0,0.1,rbf,,1,Brute Force -Web,1.0,0.25,0.4,4
+1,1.0,0.1,rbf,,1,Brute Force -XSS,1.0,0.75,0.8571428571428571,4
+1,1.0,0.1,rbf,,1,DDOS attack-HOIC,0.995702005730659,1.0,0.9978463747307968,695
+1,1.0,0.1,rbf,,1,DDOS attack-LOIC-UDP,0.75,0.5,0.6,6
+1,1.0,0.1,rbf,,1,DDoS attacks-LOIC-HTTP,0.9783889980353635,0.9915380786460926,0.984919653893696,2009
+1,1.0,0.1,rbf,,1,DoS attacks-GoldenEye,1.0,0.7172413793103448,0.8353413654618473,145
+1,1.0,0.1,rbf,,1,DoS attacks-Hulk,0.9285714285714286,1.0,0.9629629629629629,507
+1,1.0,0.1,rbf,,1,DoS attacks-SlowHTTPTest,1.0,0.25,0.4,4
+1,1.0,0.1,rbf,,1,DoS attacks-Slowloris,1.0,0.7941176470588235,0.8852459016393442,34
+1,1.0,0.1,rbf,,1,FTP-BruteForce,0.5,0.75,0.6,4
+1,1.0,0.1,rbf,,1,Infilteration,0.36363636363636365,0.008213552361396304,0.01606425702811245,487
+1,1.0,0.1,rbf,,1,SQL Injection,0.0,0.0,0.0,4
+1,1.0,0.1,rbf,,1,SSH-Bruteforce,0.9939577039274925,1.0,0.996969696969697,329
+1,1.0,0.1,rbf,,1,accuracy,,,0.984275,40000
+1,1.0,0.1,rbf,,1,macro avg,0.832373520379606,0.6662416193156092,0.7010247573340176,40000
+1,1.0,0.1,rbf,,1,weighted avg,0.976870427482475,0.984275,0.978300123661822,40000
+1,1.0,0.1,rbf,,2,Benign,0.9851891256264524,0.9978731248050364,0.9914905607213299,35263
+1,1.0,0.1,rbf,,2,Bot,0.9841269841269841,0.9821782178217822,0.9831516352824579,505
+1,1.0,0.1,rbf,,2,Brute Force -Web,0.0,0.0,0.0,4
+1,1.0,0.1,rbf,,2,Brute Force -XSS,1.0,0.75,0.8571428571428571,4
+1,1.0,0.1,rbf,,2,DDOS attack-HOIC,0.995702005730659,1.0,0.9978463747307968,695
+1,1.0,0.1,rbf,,2,DDOS attack-LOIC-UDP,1.0,0.3333333333333333,0.5,6
+1,1.0,0.1,rbf,,2,DDoS attacks-LOIC-HTTP,0.9769720725134737,0.9925335988053758,0.9846913580246913,2009
+1,1.0,0.1,rbf,,2,DoS attacks-GoldenEye,0.9557522123893806,0.7448275862068966,0.8372093023255814,145
+1,1.0,0.1,rbf,,2,DoS attacks-Hulk,0.9251824817518248,1.0,0.9611374407582939,507
+1,1.0,0.1,rbf,,2,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+1,1.0,0.1,rbf,,2,DoS attacks-Slowloris,1.0,0.6764705882352942,0.8070175438596491,34
+1,1.0,0.1,rbf,,2,FTP-BruteForce,0.3333333333333333,0.5,0.4,4
+1,1.0,0.1,rbf,,2,Infilteration,0.23076923076923078,0.006160164271047228,0.012,487
+1,1.0,0.1,rbf,,2,SQL Injection,0.0,0.0,0.0,4
+1,1.0,0.1,rbf,,2,SSH-Bruteforce,0.9939577039274925,1.0,0.996969696969697,329
+1,1.0,0.1,rbf,,2,accuracy,,,0.98375,40000
+1,1.0,0.1,rbf,,2,macro avg,0.6920656766779221,0.5988917742319178,0.6219104513210235,40000
+1,1.0,0.1,rbf,,2,weighted avg,0.9746209918491706,0.98375,0.9777294404191974,40000
+1,1.0,0.1,rbf,,3,Benign,0.9853603918824353,0.9982701415080963,0.9917732574519638,35263
+1,1.0,0.1,rbf,,3,Bot,0.9919678714859438,0.9782178217821782,0.9850448654037887,505
+1,1.0,0.1,rbf,,3,Brute Force -Web,1.0,0.25,0.4,4
+1,1.0,0.1,rbf,,3,Brute Force -XSS,1.0,0.25,0.4,4
+1,1.0,0.1,rbf,,3,DDOS attack-HOIC,1.0,1.0,1.0,695
+1,1.0,0.1,rbf,,3,DDOS attack-LOIC-UDP,1.0,0.5,0.6666666666666666,6
+1,1.0,0.1,rbf,,3,DDoS attacks-LOIC-HTTP,0.9780058651026393,0.9960179193628671,0.9869297163995068,2009
+1,1.0,0.1,rbf,,3,DoS attacks-GoldenEye,0.9801980198019802,0.6827586206896552,0.8048780487804879,145
+1,1.0,0.1,rbf,,3,DoS attacks-Hulk,0.9168173598553345,1.0,0.9566037735849057,507
+1,1.0,0.1,rbf,,3,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+1,1.0,0.1,rbf,,3,DoS attacks-Slowloris,1.0,0.7941176470588235,0.8852459016393442,34
+1,1.0,0.1,rbf,,3,FTP-BruteForce,0.4444444444444444,1.0,0.6153846153846154,4
+1,1.0,0.1,rbf,,3,Infilteration,0.5384615384615384,0.014373716632443531,0.028,487
+1,1.0,0.1,rbf,,3,SQL Injection,0.0,0.0,0.0,4
+1,1.0,0.1,rbf,,3,SSH-Bruteforce,1.0,0.9969604863221885,0.9984779299847792,329
+1,1.0,0.1,rbf,,3,accuracy,,,0.984225,40000
+1,1.0,0.1,rbf,,3,macro avg,0.7890170327356211,0.6307144235570836,0.647933651686404,40000
+1,1.0,0.1,rbf,,3,weighted avg,0.9788871179592101,0.984225,0.9782922600791775,40000
+1,1.0,0.1,rbf,,4,Benign,0.9851924422673198,0.9980999914924992,0.9916042147968671,35263
+1,1.0,0.1,rbf,,4,Bot,0.9939759036144579,0.9801980198019802,0.9870388833499502,505
+1,1.0,0.1,rbf,,4,Brute Force -Web,0.0,0.0,0.0,4
+1,1.0,0.1,rbf,,4,Brute Force -XSS,1.0,0.5,0.6666666666666666,4
+1,1.0,0.1,rbf,,4,DDOS attack-HOIC,0.9971305595408895,1.0,0.9985632183908046,695
+1,1.0,0.1,rbf,,4,DDOS attack-LOIC-UDP,1.0,0.3333333333333333,0.5,6
+1,1.0,0.1,rbf,,4,DDoS attacks-LOIC-HTTP,0.9722897423432183,0.9955201592832255,0.9837678307919331,2009
+1,1.0,0.1,rbf,,4,DoS attacks-GoldenEye,0.9813084112149533,0.7241379310344828,0.8333333333333334,145
+1,1.0,0.1,rbf,,4,DoS attacks-Hulk,0.9267399267399268,0.9980276134122288,0.9610636277302944,507
+1,1.0,0.1,rbf,,4,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+1,1.0,0.1,rbf,,4,DoS attacks-Slowloris,1.0,0.7058823529411765,0.8275862068965517,34
+1,1.0,0.1,rbf,,4,FTP-BruteForce,0.5,1.0,0.6666666666666666,4
+1,1.0,0.1,rbf,,4,Infilteration,0.3333333333333333,0.002053388090349076,0.004081632653061225,487
+1,1.0,0.1,rbf,,4,SQL Injection,0.0,0.0,0.0,4
+1,1.0,0.1,rbf,,4,SSH-Bruteforce,0.9939577039274925,1.0,0.996969696969697,329
+1,1.0,0.1,rbf,,4,accuracy,,,0.983975,40000
+1,1.0,0.1,rbf,,4,macro avg,0.7122618681987728,0.6158168526259516,0.6278227985497218,40000
+1,1.0,0.1,rbf,,4,weighted avg,0.975915675866376,0.983975,0.9777584928420432,40000
+2,1.0,scale,rbf,,0,Benign,0.9856212467224901,0.9913790658764143,0.9884917717581858,35263
+2,1.0,scale,rbf,,0,Bot,0.9881188118811881,0.9881188118811881,0.9881188118811881,505
+2,1.0,scale,rbf,,0,Brute Force -Web,0.0,0.0,0.0,4
+2,1.0,scale,rbf,,0,Brute Force -XSS,1.0,0.5,0.6666666666666666,4
+2,1.0,scale,rbf,,0,DDOS attack-HOIC,0.9971305595408895,1.0,0.9985632183908046,695
+2,1.0,scale,rbf,,0,DDOS attack-LOIC-UDP,0.8333333333333334,0.8333333333333334,0.8333333333333334,6
+2,1.0,scale,rbf,,0,DDoS attacks-LOIC-HTTP,0.883362676056338,0.9990044798407167,0.9376313945339874,2009
+2,1.0,scale,rbf,,0,DoS attacks-GoldenEye,0.8907563025210085,0.7310344827586207,0.803030303030303,145
+2,1.0,scale,rbf,,0,DoS attacks-Hulk,0.9118705035971223,1.0,0.9539040451552211,507
+2,1.0,scale,rbf,,0,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+2,1.0,scale,rbf,,0,DoS attacks-Slowloris,1.0,0.7352941176470589,0.847457627118644,34
+2,1.0,scale,rbf,,0,FTP-BruteForce,0.0,0.0,0.0,4
+2,1.0,scale,rbf,,0,Infilteration,0.4444444444444444,0.01642710472279261,0.031683168316831684,487
+2,1.0,scale,rbf,,0,SQL Injection,0.0,0.0,0.0,4
+2,1.0,scale,rbf,,0,SSH-Bruteforce,0.9909365558912386,0.9969604863221885,0.9939393939393939,329
+2,1.0,scale,rbf,,0,accuracy,,,0.978525,40000
+2,1.0,scale,rbf,,0,macro avg,0.6617049622658702,0.5861034588254875,0.6028546489416373,40000
+2,1.0,scale,rbf,,0,weighted avg,0.9724895989693805,0.978525,0.9728218247576859,40000
+2,1.0,scale,rbf,,1,Benign,0.9854154348621786,0.9925133993137283,0.9889516812658943,35263
+2,1.0,scale,rbf,,1,Bot,0.9900398406374502,0.9841584158415841,0.9870903674280039,505
+2,1.0,scale,rbf,,1,Brute Force -Web,0.0,0.0,0.0,4
+2,1.0,scale,rbf,,1,Brute Force -XSS,1.0,0.75,0.8571428571428571,4
+2,1.0,scale,rbf,,1,DDOS attack-HOIC,0.995702005730659,1.0,0.9978463747307968,695
+2,1.0,scale,rbf,,1,DDOS attack-LOIC-UDP,0.8333333333333334,0.8333333333333334,0.8333333333333334,6
+2,1.0,scale,rbf,,1,DDoS attacks-LOIC-HTTP,0.8924444444444445,0.9995022399203584,0.9429443531345386,2009
+2,1.0,scale,rbf,,1,DoS attacks-GoldenEye,0.9272727272727272,0.7034482758620689,0.8,145
+2,1.0,scale,rbf,,1,DoS attacks-Hulk,0.9168173598553345,1.0,0.9566037735849057,507
+2,1.0,scale,rbf,,1,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+2,1.0,scale,rbf,,1,DoS attacks-Slowloris,0.9615384615384616,0.7352941176470589,0.8333333333333334,34
+2,1.0,scale,rbf,,1,FTP-BruteForce,0.0,0.0,0.0,4
+2,1.0,scale,rbf,,1,Infilteration,1.0,0.002053388090349076,0.004098360655737705,487
+2,1.0,scale,rbf,,1,SQL Injection,0.0,0.0,0.0,4
+2,1.0,scale,rbf,,1,SSH-Bruteforce,0.9850299401197605,1.0,0.9924585218702866,329
+2,1.0,scale,rbf,,1,accuracy,,,0.979275,40000
+2,1.0,scale,rbf,,1,macro avg,0.6991729031862899,0.6000202113338987,0.6129201970986459,40000
+2,1.0,scale,rbf,,1,weighted avg,0.9796414121707879,0.979275,0.9731509245304922,40000
+2,1.0,scale,rbf,,2,Benign,0.9847356140893374,0.9933925077276465,0.9890451183014286,35263
+2,1.0,scale,rbf,,2,Bot,0.9860834990059643,0.9821782178217822,0.9841269841269841,505
+2,1.0,scale,rbf,,2,Brute Force -Web,0.0,0.0,0.0,4
+2,1.0,scale,rbf,,2,Brute Force -XSS,1.0,0.75,0.8571428571428571,4
+2,1.0,scale,rbf,,2,DDOS attack-HOIC,0.995702005730659,1.0,0.9978463747307968,695
+2,1.0,scale,rbf,,2,DDOS attack-LOIC-UDP,1.0,0.8333333333333334,0.9090909090909091,6
+2,1.0,scale,rbf,,2,DDoS attacks-LOIC-HTTP,0.9146285186894324,0.9865604778496765,0.9492337164750958,2009
+2,1.0,scale,rbf,,2,DoS attacks-GoldenEye,0.8455284552845529,0.7172413793103448,0.7761194029850746,145
+2,1.0,scale,rbf,,2,DoS attacks-Hulk,0.902135231316726,1.0,0.9485500467726847,507
+2,1.0,scale,rbf,,2,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+2,1.0,scale,rbf,,2,DoS attacks-Slowloris,1.0,0.6764705882352942,0.8070175438596491,34
+2,1.0,scale,rbf,,2,FTP-BruteForce,0.0,0.0,0.0,4
+2,1.0,scale,rbf,,2,Infilteration,0.25,0.006160164271047228,0.012024048096192385,487
+2,1.0,scale,rbf,,2,SQL Injection,0.0,0.0,0.0,4
+2,1.0,scale,rbf,,2,SSH-Bruteforce,0.9939577039274925,1.0,0.996969696969697,329
+2,1.0,scale,rbf,,2,accuracy,,,0.979425,40000
+2,1.0,scale,rbf,,2,macro avg,0.6581847352029443,0.596355777903275,0.6151444465700913,40000
+2,1.0,scale,rbf,,2,weighted avg,0.9706237996886546,0.979425,0.9734457135682646,40000
+2,1.0,scale,rbf,,3,Benign,0.9853942702763551,0.9929671326886538,0.9891662076076669,35263
+2,1.0,scale,rbf,,3,Bot,0.9919678714859438,0.9782178217821782,0.9850448654037887,505
+2,1.0,scale,rbf,,3,Brute Force -Web,0.0,0.0,0.0,4
+2,1.0,scale,rbf,,3,Brute Force -XSS,1.0,0.25,0.4,4
+2,1.0,scale,rbf,,3,DDOS attack-HOIC,1.0,1.0,1.0,695
+2,1.0,scale,rbf,,3,DDOS attack-LOIC-UDP,1.0,1.0,1.0,6
+2,1.0,scale,rbf,,3,DDoS attacks-LOIC-HTTP,0.9004484304932735,0.9995022399203584,0.9473932531257372,2009
+2,1.0,scale,rbf,,3,DoS attacks-GoldenEye,0.8938053097345132,0.696551724137931,0.7829457364341085,145
+2,1.0,scale,rbf,,3,DoS attacks-Hulk,0.9053571428571429,1.0,0.950328022492971,507
+2,1.0,scale,rbf,,3,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+2,1.0,scale,rbf,,3,DoS attacks-Slowloris,1.0,0.7941176470588235,0.8852459016393442,34
+2,1.0,scale,rbf,,3,FTP-BruteForce,0.0,0.0,0.0,4
+2,1.0,scale,rbf,,3,Infilteration,0.6,0.006160164271047228,0.012195121951219513,487
+2,1.0,scale,rbf,,3,SQL Injection,0.0,0.0,0.0,4
+2,1.0,scale,rbf,,3,SSH-Bruteforce,0.9909365558912386,0.9969604863221885,0.9939393939393939,329
+2,1.0,scale,rbf,,3,accuracy,,,0.979625,40000
+2,1.0,scale,rbf,,3,macro avg,0.6845273053825645,0.580965147745412,0.5964172335062818,40000
+2,1.0,scale,rbf,,3,weighted avg,0.9750934698236197,0.979625,0.9735678891566647,40000
+2,1.0,scale,rbf,,4,Benign,0.9852659454586432,0.9917760825794742,0.9885102955101118,35263
+2,1.0,scale,rbf,,4,Bot,0.9939759036144579,0.9801980198019802,0.9870388833499502,505
+2,1.0,scale,rbf,,4,Brute Force -Web,0.0,0.0,0.0,4
+2,1.0,scale,rbf,,4,Brute Force -XSS,1.0,0.5,0.6666666666666666,4
+2,1.0,scale,rbf,,4,DDOS attack-HOIC,0.9971305595408895,1.0,0.9985632183908046,695
+2,1.0,scale,rbf,,4,DDOS attack-LOIC-UDP,1.0,0.6666666666666666,0.8,6
+2,1.0,scale,rbf,,4,DDoS attacks-LOIC-HTTP,0.8814749780509219,0.9995022399203584,0.9367856309773734,2009
+2,1.0,scale,rbf,,4,DoS attacks-GoldenEye,0.9122807017543859,0.7172413793103448,0.803088803088803,145
+2,1.0,scale,rbf,,4,DoS attacks-Hulk,0.9133574007220217,0.9980276134122288,0.9538171536286523,507
+2,1.0,scale,rbf,,4,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+2,1.0,scale,rbf,,4,DoS attacks-Slowloris,0.96,0.7058823529411765,0.8135593220338984,34
+2,1.0,scale,rbf,,4,FTP-BruteForce,0.0,0.0,0.0,4
+2,1.0,scale,rbf,,4,Infilteration,0.0,0.0,0.0,487
+2,1.0,scale,rbf,,4,SQL Injection,0.0,0.0,0.0,4
+2,1.0,scale,rbf,,4,SSH-Bruteforce,0.9909638554216867,1.0,0.9954614220877458,329
+2,1.0,scale,rbf,,4,accuracy,,,0.9785,40000
+2,1.0,scale,rbf,,4,macro avg,0.6422966229708671,0.5706196236421486,0.5962327597156002,40000
+2,1.0,scale,rbf,,4,weighted avg,0.9668324962043209,0.9785,0.972374115522506,40000
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,Benign,0.9756879057871216,0.9844312735728667,0.980040089212614,35263
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,Bot,0.970873786407767,0.9900990099009901,0.9803921568627451,505
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,Brute Force -Web,0.0,0.0,0.0,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,Brute Force -XSS,0.0,0.0,0.0,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,DDOS attack-HOIC,0.9948453608247423,0.8330935251798561,0.9068128425998434,695
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,DDOS attack-LOIC-UDP,0.7142857142857143,0.8333333333333334,0.7692307692307693,6
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,DDoS attacks-LOIC-HTTP,0.8951828724353256,0.9990044798407167,0.9442484121383204,2009
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,DoS attacks-GoldenEye,0.0,0.0,0.0,145
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,DoS attacks-Hulk,0.8867256637168142,0.9881656804733728,0.9347014925373134,507
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,DoS attacks-Slowloris,1.0,0.20588235294117646,0.34146341463414637,34
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,FTP-BruteForce,0.5,1.0,0.6666666666666666,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,Infilteration,0.0695364238410596,0.043121149897330596,0.053231939163498096,487
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,SQL Injection,0.0,0.0,0.0,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,SSH-Bruteforce,0.9943181818181818,0.5319148936170213,0.693069306930693,329
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,accuracy,,,0.962825,40000
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,macro avg,0.5334303939411151,0.4939363799171109,0.48465713933177407,40000
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,weighted avg,0.9559166086605468,0.962825,0.9582052727790429,40000
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,Benign,0.9787264018033249,0.9850267986274566,0.9818664932935706,35263
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,Bot,0.9557692307692308,0.9841584158415841,0.9697560975609756,505
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,Brute Force -Web,0.0,0.0,0.0,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,Brute Force -XSS,0.0,0.0,0.0,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,DDOS attack-HOIC,0.9932318104906938,0.8446043165467626,0.9129082426127527,695
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,DDOS attack-LOIC-UDP,0.8333333333333334,0.8333333333333334,0.8333333333333334,6
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,DDoS attacks-LOIC-HTTP,0.9008524001794527,0.9995022399203584,0.9476168003775366,2009
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,DoS attacks-GoldenEye,0.926605504587156,0.696551724137931,0.7952755905511811,145
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,DoS attacks-Hulk,0.9100917431192661,0.9783037475345168,0.9429657794676806,507
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,DoS attacks-SlowHTTPTest,0.5,0.75,0.6,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,DoS attacks-Slowloris,1.0,0.17647058823529413,0.3,34
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,FTP-BruteForce,0.0,0.0,0.0,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,Infilteration,0.028368794326241134,0.01642710472279261,0.02080624187256177,487
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,SQL Injection,0.0,0.0,0.0,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,SSH-Bruteforce,0.9953703703703703,0.6534954407294833,0.7889908256880734,329
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,accuracy,,,0.966525,40000
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,macro avg,0.6014899725986047,0.5278582473086342,0.5395679603171776,40000
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,weighted avg,0.9618416978799001,0.966525,0.9633056898779289,40000
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,Benign,0.9743711970389479,0.9854238153305164,0.9798663395651807,35263
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,Bot,0.9783464566929134,0.9841584158415841,0.981243830207305,505
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,Brute Force -Web,0.0,0.0,0.0,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,Brute Force -XSS,0.0,0.0,0.0,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,DDOS attack-HOIC,0.9154557463672391,0.9971223021582734,0.9545454545454546,695
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,DDOS attack-LOIC-UDP,1.0,1.0,1.0,6
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,DDoS attacks-LOIC-HTTP,0.9160966712266302,1.0,0.9562113279390766,2009
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,DoS attacks-GoldenEye,0.9459459459459459,0.7241379310344828,0.8203125,145
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,DoS attacks-Hulk,0.886,0.873767258382643,0.8798411122144985,507
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,DoS attacks-Slowloris,0.0,0.0,0.0,34
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,FTP-BruteForce,0.3333333333333333,0.5,0.4,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,Infilteration,0.032388663967611336,0.01642710472279261,0.021798365122615803,487
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,SQL Injection,0.0,0.0,0.0,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,SSH-Bruteforce,0.0,0.0,0.0,329
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,accuracy,,,0.9628,40000
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,macro avg,0.46546253430484147,0.47206912183135274,0.46625459530627544,40000
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,weighted avg,0.9484866803220401,0.9628,0.9554058268821953,40000
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,Benign,0.9755165144061841,0.9841476902135383,0.9798130946667043,35263
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,Bot,0.9667318982387475,0.9782178217821782,0.9724409448818898,505
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,Brute Force -Web,0.0,0.0,0.0,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,Brute Force -XSS,0.0,0.0,0.0,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,DDOS attack-HOIC,0.9552238805970149,0.8287769784172662,0.8875192604006163,695
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,DDOS attack-LOIC-UDP,0.8571428571428571,1.0,0.9230769230769231,6
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,DDoS attacks-LOIC-HTTP,0.8952296032099867,0.9995022399203584,0.9444967074317968,2009
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,DoS attacks-GoldenEye,0.9333333333333333,0.6758620689655173,0.784,145
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,DoS attacks-Hulk,0.9051383399209486,0.903353057199211,0.9042448173741362,507
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,DoS attacks-SlowHTTPTest,1.0,0.25,0.4,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,DoS attacks-Slowloris,0.0,0.0,0.0,34
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,FTP-BruteForce,0.5714285714285714,1.0,0.7272727272727273,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,Infilteration,0.017857142857142856,0.01026694045174538,0.01303780964797914,487
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,SQL Injection,0.0,0.0,0.0,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,SSH-Bruteforce,0.9938271604938271,0.48936170212765956,0.6558044806517311,329
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,accuracy,,,0.962875,40000
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,macro avg,0.6047619534419076,0.5412992332718317,0.5461137843603004,40000
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,weighted avg,0.9572891983363839,0.962875,0.9590210091973868,40000
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,Benign,0.98062681271647,0.9875790488614128,0.9840906521984853,35263
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,Bot,0.974559686888454,0.9861386138613861,0.9803149606299213,505
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,Brute Force -Web,0.0,0.0,0.0,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,Brute Force -XSS,0.0,0.0,0.0,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,DDOS attack-HOIC,0.9014454664914586,0.9870503597122302,0.9423076923076923,695
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,DDOS attack-LOIC-UDP,0.8333333333333334,0.8333333333333334,0.8333333333333334,6
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,DDoS attacks-LOIC-HTTP,0.8845814977973568,0.9995022399203584,0.9385370413648049,2009
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,DoS attacks-GoldenEye,1.0,0.7448275862068966,0.8537549407114624,145
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,DoS attacks-Hulk,0.9236499068901304,0.9783037475345168,0.9501915708812261,507
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,DoS attacks-SlowHTTPTest,0.5,0.75,0.6,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,DoS attacks-Slowloris,0.0,0.0,0.0,34
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,FTP-BruteForce,0.3333333333333333,0.25,0.2857142857142857,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,Infilteration,0.01098901098901099,0.002053388090349076,0.0034602076124567475,487
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,SQL Injection,0.0,0.0,0.0,4
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,SSH-Bruteforce,1.0,0.5896656534954408,0.7418738049713193,329
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,accuracy,,,0.970625,40000
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,macro avg,0.5561679365626365,0.5405635980677282,0.5409052326483325,40000
+3,10.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,weighted avg,0.960790006286607,0.970625,0.9649329634693667,40000
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,Benign,0.9761951714229371,0.9826730567450302,0.979423403052572,35263
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,Bot,0.9009009009009009,0.9900990099009901,0.9433962264150944,505
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,Brute Force -Web,0.0,0.0,0.0,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,Brute Force -XSS,0.0,0.0,0.0,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,DDOS attack-HOIC,0.9982758620689656,0.8330935251798561,0.908235294117647,695
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,DDOS attack-LOIC-UDP,0.75,1.0,0.8571428571428571,6
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,DDoS attacks-LOIC-HTTP,0.8912078152753108,0.9990044798407167,0.9420323867636705,2009
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,DoS attacks-GoldenEye,0.0,0.0,0.0,145
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,DoS attacks-Hulk,0.8867562380038387,0.9112426035502958,0.8988326848249028,507
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,DoS attacks-Slowloris,1.0,0.20588235294117646,0.34146341463414637,34
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,FTP-BruteForce,0.5,0.75,0.6,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,Infilteration,0.059190031152647975,0.039014373716632446,0.04702970297029703,487
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,SQL Injection,0.0,0.0,0.0,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,SSH-Bruteforce,1.0,0.7203647416413373,0.8374558303886925,329
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,accuracy,,,0.9618,40000
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,macro avg,0.53083506792164,0.49542494290106903,0.49033412002065874,40000
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,weighted avg,0.9552668616926825,0.9618,0.957771909214838,40000
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,Benign,0.9743200719262756,0.9834103734792843,0.9788441182697057,35263
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,Bot,0.875,0.9841584158415841,0.9263746505125815,505
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,Brute Force -Web,0.0,0.0,0.0,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,Brute Force -XSS,0.0,0.0,0.0,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,DDOS attack-HOIC,0.983249581239531,0.8446043165467626,0.9086687306501547,695
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,DDOS attack-LOIC-UDP,0.8333333333333334,0.8333333333333334,0.8333333333333334,6
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,DDoS attacks-LOIC-HTTP,0.8908606921029282,0.9995022399203584,0.9420595824536712,2009
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,DoS attacks-GoldenEye,0.9166666666666666,0.22758620689655173,0.36464088397790057,145
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,DoS attacks-Hulk,0.884313725490196,0.8895463510848126,0.8869223205506391,507
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,DoS attacks-Slowloris,1.0,0.3235294117647059,0.4888888888888889,34
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,FTP-BruteForce,0.4,0.5,0.4444444444444444,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,Infilteration,0.03137254901960784,0.01642710472279261,0.0215633423180593,487
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,SQL Injection,0.0,0.0,0.0,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,SSH-Bruteforce,1.0,0.49848024316109424,0.665314401622718,329
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,accuracy,,,0.9611,40000
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,macro avg,0.585941107985236,0.47337186645008533,0.4974036464681398,40000
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,weighted avg,0.9559640860648815,0.9611,0.9566063535135878,40000
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,Benign,0.9722813304961362,0.9847715736040609,0.9784865946265797,35263
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,Bot,0.9019963702359347,0.9841584158415841,0.9412878787878788,505
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,Brute Force -Web,0.0,0.0,0.0,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,Brute Force -XSS,0.0,0.0,0.0,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,DDOS attack-HOIC,0.9382911392405063,0.8532374100719424,0.8937452901281085,695
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,DDOS attack-LOIC-UDP,1.0,1.0,1.0,6
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,DDoS attacks-LOIC-HTTP,0.9061795218764096,1.0,0.950780880265026,2009
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,DoS attacks-GoldenEye,0.6148148148148148,0.5724137931034483,0.5928571428571429,145
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,DoS attacks-Hulk,0.8772277227722772,0.873767258382643,0.8754940711462451,507
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,DoS attacks-Slowloris,0.0,0.0,0.0,34
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,FTP-BruteForce,0.3333333333333333,0.5,0.4,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,Infilteration,0.034782608695652174,0.01642710472279261,0.022315202231520222,487
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,SQL Injection,0.0,0.0,0.0,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,SSH-Bruteforce,0.0,0.0,0.0,329
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,accuracy,,,0.959175,40000
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,macro avg,0.43859378943100424,0.45231837038176476,0.4436644706695001,40000
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,weighted avg,0.9442966698209517,0.959175,0.9514825553367152,40000
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,Benign,0.9762478292532631,0.9884014406034654,0.982287042908476,35263
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,Bot,0.9099264705882353,0.9801980198019802,0.9437559580552908,505
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,Brute Force -Web,0.0,0.0,0.0,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,Brute Force -XSS,0.0,0.0,0.0,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,DDOS attack-HOIC,0.9948186528497409,0.8287769784172662,0.9042386185243328,695
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,DDOS attack-LOIC-UDP,0.8571428571428571,1.0,0.9230769230769231,6
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,DDoS attacks-LOIC-HTTP,0.8896765618077094,0.9995022399203584,0.9413970932958274,2009
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,DoS attacks-GoldenEye,0.6532258064516129,0.5586206896551724,0.6022304832713755,145
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,DoS attacks-Hulk,0.8805394990366089,0.9013806706114399,0.8908382066276803,507
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,DoS attacks-SlowHTTPTest,1.0,0.25,0.4,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,DoS attacks-Slowloris,0.0,0.0,0.0,34
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,FTP-BruteForce,0.5714285714285714,1.0,0.7272727272727273,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,Infilteration,0.050505050505050504,0.01026694045174538,0.017064846416382253,487
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,SQL Injection,0.0,0.0,0.0,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,SSH-Bruteforce,0.9937888198757764,0.48632218844984804,0.6530612244897959,329
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,accuracy,,,0.966175,40000
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,macro avg,0.5851533412626284,0.533564611194085,0.5323482082625873,40000
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,weighted avg,0.956695789192946,0.966175,0.9601722754887323,40000
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,Benign,0.9761898052917806,0.9824461900575674,0.9793080054274084,35263
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,Bot,0.8940754039497307,0.9861386138613861,0.9378531073446328,505
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,Brute Force -Web,0.0,0.0,0.0,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,Brute Force -XSS,0.0,0.0,0.0,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,DDOS attack-HOIC,0.9831081081081081,0.837410071942446,0.9044289044289044,695
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,DDOS attack-LOIC-UDP,0.8333333333333334,0.8333333333333334,0.8333333333333334,6
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,DDoS attacks-LOIC-HTTP,0.8810881965774463,0.9995022399203584,0.9365671641791045,2009
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,DoS attacks-GoldenEye,0.574468085106383,0.3724137931034483,0.45188284518828453,145
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,DoS attacks-Hulk,0.8805394990366089,0.9013806706114399,0.8908382066276803,507
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,DoS attacks-SlowHTTPTest,0.5,1.0,0.6666666666666666,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,DoS attacks-Slowloris,0.0,0.0,0.0,34
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,FTP-BruteForce,1.0,0.25,0.4,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,Infilteration,0.011538461538461539,0.006160164271047228,0.008032128514056224,487
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,SQL Injection,0.0,0.0,0.0,4
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,SSH-Bruteforce,1.0,0.5896656534954408,0.7418738049713193,329
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,accuracy,,,0.96125,40000
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,macro avg,0.5689560595294568,0.5172300487064312,0.5167189444454261,40000
+4,1.0,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,weighted avg,0.955090153354478,0.96125,0.957288207860269,40000
+5,0.1,0.1,rbf,,0,Benign,0.9818161535029005,0.998326858179962,0.9900026715786218,35263
+5,0.1,0.1,rbf,,0,Bot,0.9861660079051383,0.9881188118811881,0.9871414441147379,505
+5,0.1,0.1,rbf,,0,Brute Force -Web,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,0,Brute Force -XSS,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,0,DDOS attack-HOIC,0.9971305595408895,1.0,0.9985632183908046,695
+5,0.1,0.1,rbf,,0,DDOS attack-LOIC-UDP,0.0,0.0,0.0,6
+5,0.1,0.1,rbf,,0,DDoS attacks-LOIC-HTTP,0.985952133194589,0.9432553509208561,0.964131264309336,2009
+5,0.1,0.1,rbf,,0,DoS attacks-GoldenEye,0.9634146341463414,0.5448275862068965,0.6960352422907489,145
+5,0.1,0.1,rbf,,0,DoS attacks-Hulk,0.8890845070422535,0.9960552268244576,0.9395348837209302,507
+5,0.1,0.1,rbf,,0,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,0,DoS attacks-Slowloris,1.0,0.7058823529411765,0.8275862068965517,34
+5,0.1,0.1,rbf,,0,FTP-BruteForce,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,0,Infilteration,0.0,0.0,0.0,487
+5,0.1,0.1,rbf,,0,SQL Injection,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,0,SSH-Bruteforce,0.9507246376811594,0.9969604863221885,0.973293768545994,329
+5,0.1,0.1,rbf,,0,accuracy,,,0.980725,40000
+5,0.1,0.1,rbf,,0,macro avg,0.5169525755342181,0.47822844488511507,0.49175257998984834,40000
+5,0.1,0.1,rbf,,0,weighted avg,0.9682707450563119,0.980725,0.9741383165249683,40000
+5,0.1,0.1,rbf,,1,Benign,0.9813912026074603,0.9990358165782832,0.9901349072512647,35263
+5,0.1,0.1,rbf,,1,Bot,0.9899799599198397,0.9782178217821782,0.9840637450199203,505
+5,0.1,0.1,rbf,,1,Brute Force -Web,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,1,Brute Force -XSS,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,1,DDOS attack-HOIC,0.995702005730659,1.0,0.9978463747307968,695
+5,0.1,0.1,rbf,,1,DDOS attack-LOIC-UDP,0.0,0.0,0.0,6
+5,0.1,0.1,rbf,,1,DDoS attacks-LOIC-HTTP,0.9941798941798942,0.9352911896465903,0.9638368812516029,2009
+5,0.1,0.1,rbf,,1,DoS attacks-GoldenEye,1.0,0.5793103448275863,0.7336244541484717,145
+5,0.1,0.1,rbf,,1,DoS attacks-Hulk,0.898936170212766,1.0,0.9467787114845938,507
+5,0.1,0.1,rbf,,1,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,1,DoS attacks-Slowloris,1.0,0.7352941176470589,0.847457627118644,34
+5,0.1,0.1,rbf,,1,FTP-BruteForce,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,1,Infilteration,0.0,0.0,0.0,487
+5,0.1,0.1,rbf,,1,SQL Injection,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,1,SSH-Bruteforce,0.9591836734693877,1.0,0.9791666666666666,329
+5,0.1,0.1,rbf,,1,accuracy,,,0.98105,40000
+5,0.1,0.1,rbf,,1,macro avg,0.5212915270746671,0.4818099526987798,0.4961939578447974,40000
+5,0.1,0.1,rbf,,1,weighted avg,0.9686597556391476,0.98105,0.9744820673934593,40000
+5,0.1,0.1,rbf,,2,Benign,0.9815171029522456,0.9984402915236934,0.9899063738859055,35263
+5,0.1,0.1,rbf,,2,Bot,0.9840954274353877,0.9801980198019802,0.9821428571428571,505
+5,0.1,0.1,rbf,,2,Brute Force -Web,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,2,Brute Force -XSS,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,2,DDOS attack-HOIC,0.995702005730659,1.0,0.9978463747307968,695
+5,0.1,0.1,rbf,,2,DDOS attack-LOIC-UDP,0.0,0.0,0.0,6
+5,0.1,0.1,rbf,,2,DDoS attacks-LOIC-HTTP,0.9931289640591966,0.9352911896465903,0.9633427326326582,2009
+5,0.1,0.1,rbf,,2,DoS attacks-GoldenEye,0.978021978021978,0.6137931034482759,0.7542372881355932,145
+5,0.1,0.1,rbf,,2,DoS attacks-Hulk,0.8863636363636364,1.0,0.9397590361445783,507
+5,0.1,0.1,rbf,,2,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,2,DoS attacks-Slowloris,1.0,0.6764705882352942,0.8070175438596491,34
+5,0.1,0.1,rbf,,2,FTP-BruteForce,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,2,Infilteration,0.0,0.0,0.0,487
+5,0.1,0.1,rbf,,2,SQL Injection,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,2,SSH-Bruteforce,0.94,1.0,0.9690721649484536,329
+5,0.1,0.1,rbf,,2,accuracy,,,0.980625,40000
+5,0.1,0.1,rbf,,2,macro avg,0.5172552743042069,0.48027954617705565,0.4935549580986995,40000
+5,0.1,0.1,rbf,,2,weighted avg,0.9682468581371799,0.980625,0.9740998740589244,40000
+5,0.1,0.1,rbf,,3,Benign,0.981662114709325,0.998894024898619,0.9902031063321386,35263
+5,0.1,0.1,rbf,,3,Bot,0.9919191919191919,0.9722772277227723,0.982,505
+5,0.1,0.1,rbf,,3,Brute Force -Web,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,3,Brute Force -XSS,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,3,DDOS attack-HOIC,1.0,1.0,1.0,695
+5,0.1,0.1,rbf,,3,DDOS attack-LOIC-UDP,0.0,0.0,0.0,6
+5,0.1,0.1,rbf,,3,DDoS attacks-LOIC-HTTP,0.9921383647798742,0.9422598307615729,0.9665560377840183,2009
+5,0.1,0.1,rbf,,3,DoS attacks-GoldenEye,0.9886363636363636,0.6,0.7467811158798283,145
+5,0.1,0.1,rbf,,3,DoS attacks-Hulk,0.8900709219858156,0.9901380670611439,0.9374416433239963,507
+5,0.1,0.1,rbf,,3,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,3,DoS attacks-Slowloris,1.0,0.7352941176470589,0.847457627118644,34
+5,0.1,0.1,rbf,,3,FTP-BruteForce,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,3,Infilteration,0.0,0.0,0.0,487
+5,0.1,0.1,rbf,,3,SQL Injection,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,3,SSH-Bruteforce,0.956268221574344,0.9969604863221885,0.9761904761904762,329
+5,0.1,0.1,rbf,,3,accuracy,,,0.981125,40000
+5,0.1,0.1,rbf,,3,macro avg,0.5200463452403276,0.4823882502942237,0.4964420004419401,40000
+5,0.1,0.1,rbf,,3,weighted avg,0.9687176698207232,0.981125,0.9745949904863712,40000
+5,0.1,0.1,rbf,,4,Benign,0.9817319760145029,0.9982134248362307,0.989904103040018,35263
+5,0.1,0.1,rbf,,4,Bot,0.9939516129032258,0.9762376237623762,0.985014985014985,505
+5,0.1,0.1,rbf,,4,Brute Force -Web,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,4,Brute Force -XSS,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,4,DDOS attack-HOIC,0.9971305595408895,1.0,0.9985632183908046,695
+5,0.1,0.1,rbf,,4,DDOS attack-LOIC-UDP,0.0,0.0,0.0,6
+5,0.1,0.1,rbf,,4,DDoS attacks-LOIC-HTTP,0.9778236204228984,0.9437531110004977,0.9604863221884499,2009
+5,0.1,0.1,rbf,,4,DoS attacks-GoldenEye,0.9883720930232558,0.5862068965517241,0.7359307359307359,145
+5,0.1,0.1,rbf,,4,DoS attacks-Hulk,0.8969804618117229,0.9960552268244576,0.9439252336448598,507
+5,0.1,0.1,rbf,,4,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,4,DoS attacks-Slowloris,1.0,0.6470588235294118,0.7857142857142857,34
+5,0.1,0.1,rbf,,4,FTP-BruteForce,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,4,Infilteration,0.0,0.0,0.0,487
+5,0.1,0.1,rbf,,4,SQL Injection,0.0,0.0,0.0,4
+5,0.1,0.1,rbf,,4,SSH-Bruteforce,0.9619883040935673,1.0,0.9806259314456036,329
+5,0.1,0.1,rbf,,4,accuracy,,,0.980625,40000
+5,0.1,0.1,rbf,,4,macro avg,0.5198652418540042,0.47650167376697994,0.4920109876913161,40000
+5,0.1,0.1,rbf,,4,weighted avg,0.9681697706674942,0.980625,0.9740664919579678,40000
+6,0.1,scale,rbf,,0,Benign,0.9648540386303776,0.9972775997504466,0.9807979250045321,35263
+6,0.1,scale,rbf,,0,Bot,0.9075471698113208,0.9524752475247524,0.9294685990338164,505
+6,0.1,scale,rbf,,0,Brute Force -Web,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,0,Brute Force -XSS,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,0,DDOS attack-HOIC,1.0,0.8330935251798561,0.9089481946624803,695
+6,0.1,scale,rbf,,0,DDOS attack-LOIC-UDP,0.0,0.0,0.0,6
+6,0.1,scale,rbf,,0,DDoS attacks-LOIC-HTTP,0.9880197322057788,0.6978596316575411,0.8179696616102684,2009
+6,0.1,scale,rbf,,0,DoS attacks-GoldenEye,0.9629629629629629,0.5379310344827586,0.6902654867256637,145
+6,0.1,scale,rbf,,0,DoS attacks-Hulk,0.8809106830122592,0.9921104536489151,0.9332096474953617,507
+6,0.1,scale,rbf,,0,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,0,DoS attacks-Slowloris,1.0,0.7058823529411765,0.8275862068965517,34
+6,0.1,scale,rbf,,0,FTP-BruteForce,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,0,Infilteration,0.0,0.0,0.0,487
+6,0.1,scale,rbf,,0,SQL Injection,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,0,SSH-Bruteforce,0.9425287356321839,0.9969604863221885,0.9689807976366323,329
+6,0.1,scale,rbf,,0,accuracy,,,0.96405,40000
+6,0.1,scale,rbf,,0,macro avg,0.5097882214836589,0.44757268876717565,0.47048176793768715,40000
+6,0.1,scale,rbf,,0,weighted avg,0.952305855672974,0.96405,0.9562609329431161,40000
+6,0.1,scale,rbf,,1,Benign,0.9642191270015354,0.9972775997504466,0.9804697846239632,35263
+6,0.1,scale,rbf,,1,Bot,0.8651079136690647,0.9524752475247524,0.9066918001885014,505
+6,0.1,scale,rbf,,1,Brute Force -Web,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,1,Brute Force -XSS,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,1,DDOS attack-HOIC,1.0,0.8446043165467626,0.9157566302652106,695
+6,0.1,scale,rbf,,1,DDOS attack-LOIC-UDP,0.0,0.0,0.0,6
+6,0.1,scale,rbf,,1,DDoS attacks-LOIC-HTTP,0.9941902687000727,0.6814335490293678,0.8086237448316598,2009
+6,0.1,scale,rbf,,1,DoS attacks-GoldenEye,1.0,0.593103448275862,0.7445887445887446,145
+6,0.1,scale,rbf,,1,DoS attacks-Hulk,0.8985507246376812,0.9783037475345168,0.9367327667610954,507
+6,0.1,scale,rbf,,1,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,1,DoS attacks-Slowloris,0.9615384615384616,0.7352941176470589,0.8333333333333334,34
+6,0.1,scale,rbf,,1,FTP-BruteForce,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,1,Infilteration,0.0,0.0,0.0,487
+6,0.1,scale,rbf,,1,SQL Injection,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,1,SSH-Bruteforce,0.9563953488372093,1.0,0.9777117384843982,329
+6,0.1,scale,rbf,,1,accuracy,,,0.9635,40000
+6,0.1,scale,rbf,,1,macro avg,0.5093334562922683,0.4521661350872511,0.47359390287179376,40000
+6,0.1,scale,rbf,,1,weighted avg,0.951959460413188,0.9635,0.9556512677924769,40000
+6,0.1,scale,rbf,,2,Benign,0.9649445481497749,0.9968238663755211,0.9806251830773737,35263
+6,0.1,scale,rbf,,2,Bot,0.8795620437956204,0.9544554455445544,0.9154795821462488,505
+6,0.1,scale,rbf,,2,Brute Force -Web,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,2,Brute Force -XSS,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,2,DDOS attack-HOIC,1.0,0.8532374100719424,0.9208074534161491,695
+6,0.1,scale,rbf,,2,DDOS attack-LOIC-UDP,0.0,0.0,0.0,6
+6,0.1,scale,rbf,,2,DDoS attacks-LOIC-HTTP,0.9914407988587732,0.6918865107018417,0.8150102609205512,2009
+6,0.1,scale,rbf,,2,DoS attacks-GoldenEye,0.967741935483871,0.6206896551724138,0.7563025210084033,145
+6,0.1,scale,rbf,,2,DoS attacks-Hulk,0.8855098389982111,0.9763313609467456,0.9287054409005628,507
+6,0.1,scale,rbf,,2,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,2,DoS attacks-Slowloris,1.0,0.6764705882352942,0.8070175438596491,34
+6,0.1,scale,rbf,,2,FTP-BruteForce,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,2,Infilteration,0.0,0.0,0.0,487
+6,0.1,scale,rbf,,2,SQL Injection,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,2,SSH-Bruteforce,0.9293785310734464,1.0,0.9633967789165446,329
+6,0.1,scale,rbf,,2,accuracy,,,0.963825,40000
+6,0.1,scale,rbf,,2,macro avg,0.5079051797573132,0.45132632246988763,0.47248965094969886,40000
+6,0.1,scale,rbf,,2,weighted avg,0.95217161510425,0.963825,0.9561083368748119,40000
+6,0.1,scale,rbf,,3,Benign,0.9620121517324429,0.9967955080395883,0.9790949986768986,35263
+6,0.1,scale,rbf,,3,Bot,0.8558558558558559,0.9405940594059405,0.8962264150943396,505
+6,0.1,scale,rbf,,3,Brute Force -Web,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,3,Brute Force -XSS,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,3,DDOS attack-HOIC,1.0,0.8287769784172662,0.9063729346970889,695
+6,0.1,scale,rbf,,3,DDOS attack-LOIC-UDP,0.0,0.0,0.0,6
+6,0.1,scale,rbf,,3,DDoS attacks-LOIC-HTTP,0.9900763358778626,0.6455948232951717,0.7815607110575474,2009
+6,0.1,scale,rbf,,3,DoS attacks-GoldenEye,0.9886363636363636,0.6,0.7467811158798283,145
+6,0.1,scale,rbf,,3,DoS attacks-Hulk,0.8877005347593583,0.9822485207100592,0.9325842696629213,507
+6,0.1,scale,rbf,,3,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,3,DoS attacks-Slowloris,1.0,0.7941176470588235,0.8852459016393442,34
+6,0.1,scale,rbf,,3,FTP-BruteForce,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,3,Infilteration,0.0,0.0,0.0,487
+6,0.1,scale,rbf,,3,SQL Injection,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,3,SSH-Bruteforce,0.9507246376811594,0.9969604863221885,0.973293768545994,329
+6,0.1,scale,rbf,,3,accuracy,,,0.96095,40000
+6,0.1,scale,rbf,,3,macro avg,0.5090003919695362,0.45233920154993584,0.4734106743502641,40000
+6,0.1,scale,rbf,,3,weighted avg,0.9494977480543585,0.96095,0.9527480358281064,40000
+6,0.1,scale,rbf,,4,Benign,0.9641320728866968,0.9978164081331707,0.980685080409153,35263
+6,0.1,scale,rbf,,4,Bot,0.9077212806026366,0.9544554455445544,0.9305019305019305,505
+6,0.1,scale,rbf,,4,Brute Force -Web,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,4,Brute Force -XSS,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,4,DDOS attack-HOIC,1.0,0.837410071942446,0.9115113547376664,695
+6,0.1,scale,rbf,,4,DDOS attack-LOIC-UDP,0.0,0.0,0.0,6
+6,0.1,scale,rbf,,4,DDoS attacks-LOIC-HTTP,0.9920347574221579,0.6819313091090095,0.8082595870206489,2009
+6,0.1,scale,rbf,,4,DoS attacks-GoldenEye,0.9887640449438202,0.6068965517241379,0.7521367521367521,145
+6,0.1,scale,rbf,,4,DoS attacks-Hulk,0.9007220216606499,0.9842209072978304,0.94062205466541,507
+6,0.1,scale,rbf,,4,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,4,DoS attacks-Slowloris,0.9583333333333334,0.6764705882352942,0.7931034482758621,34
+6,0.1,scale,rbf,,4,FTP-BruteForce,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,4,Infilteration,0.0,0.0,0.0,487
+6,0.1,scale,rbf,,4,SQL Injection,0.0,0.0,0.0,4
+6,0.1,scale,rbf,,4,SSH-Bruteforce,0.9563953488372093,1.0,0.9777117384843982,329
+6,0.1,scale,rbf,,4,accuracy,,,0.963975,40000
+6,0.1,scale,rbf,,4,macro avg,0.5112068573124336,0.4492800854657629,0.4729687964154548,40000
+6,0.1,scale,rbf,,4,weighted avg,0.9522965153792152,0.963975,0.9560920814304135,40000
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,Benign,0.9684635743139713,0.9858208320335763,0.9770651226847298,35263
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,Bot,0.7407407407407407,0.9900990099009901,0.847457627118644,505
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,Brute Force -Web,0.0,0.0,0.0,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,Brute Force -XSS,0.0,0.0,0.0,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,DDOS attack-HOIC,0.9982758620689656,0.8330935251798561,0.908235294117647,695
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,DDOS attack-LOIC-UDP,0.7142857142857143,0.8333333333333334,0.7692307692307693,6
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,DDoS attacks-LOIC-HTTP,0.9810538780343399,0.8247884519661524,0.8961600865332612,2009
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,DoS attacks-GoldenEye,0.0,0.0,0.0,145
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,DoS attacks-Hulk,0.8598130841121495,0.9072978303747534,0.8829174664107485,507
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,DoS attacks-Slowloris,1.0,0.20588235294117646,0.34146341463414637,34
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,FTP-BruteForce,0.42857142857142855,0.75,0.5454545454545454,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,Infilteration,0.06810035842293907,0.039014373716632446,0.04960835509138381,487
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,SQL Injection,0.0,0.0,0.0,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,SSH-Bruteforce,0.9294478527607362,0.9209726443768997,0.9251908396946565,329
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,accuracy,,,0.9574,40000
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,macro avg,0.5125834995540657,0.4860201569215581,0.47618556806470214,40000
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",0,weighted avg,0.9501155627992919,0.9574,0.9527103958934422,40000
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,Benign,0.9663704526520411,0.9868417321271588,0.976498814417802,35263
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,Bot,0.7107913669064748,0.9782178217821782,0.8233333333333334,505
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,Brute Force -Web,0.0,0.0,0.0,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,Brute Force -XSS,0.0,0.0,0.0,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,DDOS attack-HOIC,0.9949152542372881,0.8446043165467626,0.9136186770428015,695
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,DDOS attack-LOIC-UDP,0.8333333333333334,0.8333333333333334,0.8333333333333334,6
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,DDoS attacks-LOIC-HTTP,0.9874786568013659,0.8636137381781981,0.9214020180562932,2009
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,DoS attacks-GoldenEye,0.0,0.0,0.0,145
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,DoS attacks-Hulk,0.877431906614786,0.8895463510848126,0.8834476003917727,507
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,DoS attacks-SlowHTTPTest,0.3333333333333333,0.25,0.2857142857142857,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,DoS attacks-Slowloris,1.0,0.17647058823529413,0.3,34
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,FTP-BruteForce,1.0,0.25,0.4,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,Infilteration,0.03125,0.014373716632443531,0.01969057665260197,487
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,SQL Injection,0.0,0.0,0.0,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,SSH-Bruteforce,0.8704663212435233,0.5106382978723404,0.6436781609195402,329
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,accuracy,,,0.95635,40000
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,macro avg,0.5736913750081432,0.4398426597195015,0.4667144533241176,40000
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",1,weighted avg,0.9475543778760426,0.95635,0.9505833219320486,40000
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,Benign,0.9635925690080013,0.986983523806823,0.9751477963632288,35263
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,Bot,0.7384843982169391,0.9841584158415841,0.8438030560271647,505
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,Brute Force -Web,0.0,0.0,0.0,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,Brute Force -XSS,0.0,0.0,0.0,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,DDOS attack-HOIC,0.9983164983164983,0.8532374100719424,0.9200930954228084,695
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,DDOS attack-LOIC-UDP,1.0,1.0,1.0,6
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,DDoS attacks-LOIC-HTTP,0.9864559819413092,0.8700846192135391,0.9246231155778895,2009
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,DoS attacks-GoldenEye,0.0,0.0,0.0,145
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,DoS attacks-Hulk,0.8700787401574803,0.8717948717948718,0.870935960591133,507
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,DoS attacks-SlowHTTPTest,0.3333333333333333,0.25,0.2857142857142857,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,DoS attacks-Slowloris,1.0,0.08823529411764706,0.16216216216216217,34
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,FTP-BruteForce,0.0,0.0,0.0,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,Infilteration,0.049586776859504134,0.024640657084188913,0.03292181069958848,487
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,SQL Injection,0.0,0.0,0.0,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,SSH-Bruteforce,0.625,0.1519756838905775,0.24449877750611246,329
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,accuracy,,,0.9539,40000
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,macro avg,0.5043232198555377,0.4054073650547449,0.4173266706709582,40000
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",2,weighted avg,0.9434989107750631,0.9539,0.9465120937312844,40000
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,Benign,0.9648045779049418,0.984941723619658,0.9747691616850496,35263
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,Bot,0.7235294117647059,0.9742574257425742,0.830379746835443,505
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,Brute Force -Web,0.0,0.0,0.0,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,Brute Force -XSS,0.0,0.0,0.0,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,DDOS attack-HOIC,0.9746192893401016,0.8287769784172662,0.895800933125972,695
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,DDOS attack-LOIC-UDP,0.8571428571428571,1.0,0.9230769230769231,6
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,DDoS attacks-LOIC-HTTP,0.9825479930191972,0.840716774514684,0.9061158798283262,2009
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,DoS attacks-GoldenEye,0.0,0.0,0.0,145
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,DoS attacks-Hulk,0.8759541984732825,0.9053254437869822,0.8903976721629486,507
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,DoS attacks-SlowHTTPTest,0.4,0.5,0.4444444444444444,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,DoS attacks-Slowloris,1.0,0.23529411764705882,0.38095238095238093,34
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,FTP-BruteForce,0.0,0.0,0.0,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,Infilteration,0.013937282229965157,0.008213552361396304,0.0103359173126615,487
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,SQL Injection,0.0,0.0,0.0,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,SSH-Bruteforce,0.8888888888888888,0.48632218844984804,0.6286836935166994,329
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,accuracy,,,0.9532,40000
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,macro avg,0.5120949665842627,0.45092321363596455,0.4589971168627233,40000
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",3,weighted avg,0.945566726108233,0.9532,0.9479791484675741,40000
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,Benign,0.969088831284667,0.9859626237132405,0.9774529097554119,35263
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,Bot,0.7545454545454545,0.9861386138613861,0.8549356223175966,505
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,Brute Force -Web,0.0,0.0,0.0,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,Brute Force -XSS,0.0,0.0,0.0,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,DDOS attack-HOIC,1.0,0.837410071942446,0.9115113547376664,695
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,DDOS attack-LOIC-UDP,0.8333333333333334,0.8333333333333334,0.8333333333333334,6
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,DDoS attacks-LOIC-HTTP,0.9848975188781014,0.9089099054255849,0.9453792389334714,2009
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,DoS attacks-GoldenEye,0.0,0.0,0.0,145
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,DoS attacks-Hulk,0.8754789272030651,0.9013806706114399,0.8882410106899903,507
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,DoS attacks-SlowHTTPTest,0.5,0.25,0.3333333333333333,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,DoS attacks-Slowloris,1.0,0.14705882352941177,0.2564102564102564,34
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,FTP-BruteForce,0.0,0.0,0.0,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,Infilteration,0.01773049645390071,0.01026694045174538,0.013003901170351105,487
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,SQL Injection,0.0,0.0,0.0,4
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,SSH-Bruteforce,0.861904761904762,0.5501519756838906,0.6716141001855288,329
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,accuracy,,,0.9582,40000
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,macro avg,0.5197986215735522,0.4273741972368319,0.445681004057796,40000
+7,0.1,,,"LinearSVC(loss='hinge', output_type='numpy', verbose=3)",4,weighted avg,0.950118831552361,0.9582,0.95312787854594,40000
+8,10.0,scale,rbf,,0,Benign,0.9854678837430699,0.9980716331565663,0.991729715259873,35263
+8,10.0,scale,rbf,,0,Bot,0.9900793650793651,0.9881188118811881,0.9890981169474727,505
+8,10.0,scale,rbf,,0,Brute Force -Web,0.0,0.0,0.0,4
+8,10.0,scale,rbf,,0,Brute Force -XSS,1.0,0.5,0.6666666666666666,4
+8,10.0,scale,rbf,,0,DDOS attack-HOIC,0.9971305595408895,1.0,0.9985632183908046,695
+8,10.0,scale,rbf,,0,DDOS attack-LOIC-UDP,1.0,0.8333333333333334,0.9090909090909091,6
+8,10.0,scale,rbf,,0,DDoS attacks-LOIC-HTTP,0.9784419402253797,0.9940268790443006,0.9861728395061728,2009
+8,10.0,scale,rbf,,0,DoS attacks-GoldenEye,0.9719626168224299,0.7172413793103448,0.8253968253968254,145
+8,10.0,scale,rbf,,0,DoS attacks-Hulk,0.9319852941176471,1.0,0.9647954329210275,507
+8,10.0,scale,rbf,,0,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+8,10.0,scale,rbf,,0,DoS attacks-Slowloris,1.0,0.7352941176470589,0.847457627118644,34
+8,10.0,scale,rbf,,0,FTP-BruteForce,0.5,1.0,0.6666666666666666,4
+8,10.0,scale,rbf,,0,Infilteration,0.5,0.022587268993839837,0.043222003929273084,487
+8,10.0,scale,rbf,,0,SQL Injection,1.0,0.25,0.4,4
+8,10.0,scale,rbf,,0,SSH-Bruteforce,0.9939393939393939,0.9969604863221885,0.9954476479514416,329
+8,10.0,scale,rbf,,0,accuracy,,,0.984325,40000
+8,10.0,scale,rbf,,0,macro avg,0.789933803564545,0.6690422606459215,0.6856205113230518,40000
+8,10.0,scale,rbf,,0,weighted avg,0.9785799211188407,0.984325,0.9786167205997468,40000
+8,10.0,scale,rbf,,1,Benign,0.9855267209764564,0.998326858179962,0.9918854953228896,35263
+8,10.0,scale,rbf,,1,Bot,0.9920159680638723,0.9841584158415841,0.9880715705765407,505
+8,10.0,scale,rbf,,1,Brute Force -Web,1.0,0.25,0.4,4
+8,10.0,scale,rbf,,1,Brute Force -XSS,1.0,0.75,0.8571428571428571,4
+8,10.0,scale,rbf,,1,DDOS attack-HOIC,0.995702005730659,1.0,0.9978463747307968,695
+8,10.0,scale,rbf,,1,DDOS attack-LOIC-UDP,0.8333333333333334,0.8333333333333334,0.8333333333333334,6
+8,10.0,scale,rbf,,1,DDoS attacks-LOIC-HTTP,0.9794117647058823,0.9945246391239423,0.9869103482341319,2009
+8,10.0,scale,rbf,,1,DoS attacks-GoldenEye,1.0,0.7172413793103448,0.8353413654618473,145
+8,10.0,scale,rbf,,1,DoS attacks-Hulk,0.9302752293577982,1.0,0.9638783269961977,507
+8,10.0,scale,rbf,,1,DoS attacks-SlowHTTPTest,1.0,0.25,0.4,4
+8,10.0,scale,rbf,,1,DoS attacks-Slowloris,0.9642857142857143,0.7941176470588235,0.8709677419354839,34
+8,10.0,scale,rbf,,1,FTP-BruteForce,0.42857142857142855,0.75,0.5454545454545454,4
+8,10.0,scale,rbf,,1,Infilteration,0.35714285714285715,0.01026694045174538,0.01996007984031936,487
+8,10.0,scale,rbf,,1,SQL Injection,0.0,0.0,0.0,4
+8,10.0,scale,rbf,,1,SSH-Bruteforce,0.9939577039274925,1.0,0.996969696969697,329
+8,10.0,scale,rbf,,1,accuracy,,,0.984475,40000
+8,10.0,scale,rbf,,1,macro avg,0.8306815150730329,0.6887979475533157,0.7125174490665759,40000
+8,10.0,scale,rbf,,1,weighted avg,0.9770584538061772,0.984475,0.9785749544138244,40000
+8,10.0,scale,rbf,,3,Benign,0.9855831140473658,0.9984119331877606,0.9919560470521941,35263
+8,10.0,scale,rbf,,3,Bot,0.9919678714859438,0.9782178217821782,0.9850448654037887,505
+8,10.0,scale,rbf,,3,Brute Force -Web,1.0,0.25,0.4,4
+8,10.0,scale,rbf,,3,Brute Force -XSS,1.0,0.25,0.4,4
+8,10.0,scale,rbf,,3,DDOS attack-HOIC,1.0,1.0,1.0,695
+8,10.0,scale,rbf,,3,DDOS attack-LOIC-UDP,0.8571428571428571,1.0,0.9230769230769231,6
+8,10.0,scale,rbf,,3,DDoS attacks-LOIC-HTTP,0.9804305283757339,0.9975111996017919,0.9888971132494448,2009
+8,10.0,scale,rbf,,3,DoS attacks-GoldenEye,0.9805825242718447,0.696551724137931,0.8145161290322581,145
+8,10.0,scale,rbf,,3,DoS attacks-Hulk,0.9201451905626135,1.0,0.9584120982986768,507
+8,10.0,scale,rbf,,3,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+8,10.0,scale,rbf,,3,DoS attacks-Slowloris,1.0,0.7941176470588235,0.8852459016393442,34
+8,10.0,scale,rbf,,3,FTP-BruteForce,0.4444444444444444,1.0,0.6153846153846154,4
+8,10.0,scale,rbf,,3,Infilteration,0.5714285714285714,0.01642710472279261,0.031936127744510975,487
+8,10.0,scale,rbf,,3,SQL Injection,0.0,0.0,0.0,4
+8,10.0,scale,rbf,,3,SSH-Bruteforce,1.0,0.9969604863221885,0.9984779299847792,329
+8,10.0,scale,rbf,,3,accuracy,,,0.984575,40000
+8,10.0,scale,rbf,,3,macro avg,0.7821150067839582,0.6652131944542312,0.6661965167244358,40000
+8,10.0,scale,rbf,,3,weighted avg,0.9796287621025133,0.984575,0.9786964577781994,40000
+8,10.0,scale,rbf,,4,Benign,0.9854686228855163,0.9961999829849985,0.9908052460865886,35263
+8,10.0,scale,rbf,,4,Bot,0.9959758551307847,0.9801980198019802,0.9880239520958084,505
+8,10.0,scale,rbf,,4,Brute Force -Web,0.0,0.0,0.0,4
+8,10.0,scale,rbf,,4,Brute Force -XSS,1.0,0.5,0.6666666666666666,4
+8,10.0,scale,rbf,,4,DDOS attack-HOIC,0.9985632183908046,1.0,0.9992810927390366,695
+8,10.0,scale,rbf,,4,DDOS attack-LOIC-UDP,1.0,0.6666666666666666,0.8,6
+8,10.0,scale,rbf,,4,DDoS attacks-LOIC-HTTP,0.941286989196806,0.9975111996017919,0.9685838569357177,2009
+8,10.0,scale,rbf,,4,DoS attacks-GoldenEye,0.9818181818181818,0.7448275862068966,0.8470588235294118,145
+8,10.0,scale,rbf,,4,DoS attacks-Hulk,0.9318600368324125,0.9980276134122288,0.9638095238095238,507
+8,10.0,scale,rbf,,4,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,4
+8,10.0,scale,rbf,,4,DoS attacks-Slowloris,1.0,0.7352941176470589,0.847457627118644,34
+8,10.0,scale,rbf,,4,FTP-BruteForce,0.5,1.0,0.6666666666666666,4
+8,10.0,scale,rbf,,4,Infilteration,0.375,0.006160164271047228,0.012121212121212121,487
+8,10.0,scale,rbf,,4,SQL Injection,0.0,0.0,0.0,4
+8,10.0,scale,rbf,,4,SSH-Bruteforce,0.9939577039274925,1.0,0.996969696969697,329
+8,10.0,scale,rbf,,4,accuracy,,,0.9826,40000
+8,10.0,scale,rbf,,4,macro avg,0.7135953738787999,0.6416590233728446,0.6498296243159314,40000
+8,10.0,scale,rbf,,4,weighted avg,0.9752262153340203,0.9826,0.9765607681960466,40000
