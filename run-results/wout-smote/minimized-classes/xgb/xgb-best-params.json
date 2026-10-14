@@ -1,0 +1,9 @@
+{
+    "sample_size": 1000000,
+    "params": {
+        "xgb__colsample_bytree": 0.6,
+        "xgb__learning_rate": 0.3,
+        "xgb__max_depth": 10,
+        "xgb__n_estimators": 400
+    }
+}

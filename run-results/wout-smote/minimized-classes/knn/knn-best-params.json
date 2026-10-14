@@ -1,0 +1,7 @@
+{
+    "sample_size": 250000,
+    "params": {
+        "knn__metric": "manhattan",
+        "knn__n_neighbors": 1
+    }
+}
