@@ -1,0 +1,676 @@
+candidate,param_svm__C,param_svm__gamma,param_svm__kernel,param_svm,split,true_class,Benign,Bot,Brute Force -Web,Brute Force -XSS,DDOS attack-HOIC,DDOS attack-LOIC-UDP,DDoS attacks-LOIC-HTTP,DoS attacks-GoldenEye,DoS attacks-Hulk,DoS attacks-SlowHTTPTest,DoS attacks-Slowloris,FTP-BruteForce,Infilteration,SQL Injection,SSH-Bruteforce
+0,10.0,0.1,rbf,,0,Benign,35201,1,0,0,2,0,40,0,1,0,0,0,16,0,2
+0,10.0,0.1,rbf,,0,Bot,6,499,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,0,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,0,Brute Force -XSS,0,0,0,2,0,0,2,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,0,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,0,DDOS attack-LOIC-UDP,2,0,0,0,0,4,0,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,0,DDoS attacks-LOIC-HTTP,20,0,0,0,0,0,1989,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,0,DoS attacks-GoldenEye,2,0,0,0,0,0,0,119,24,0,0,0,0,0,0
+0,10.0,0.1,rbf,,0,DoS attacks-Hulk,0,0,0,0,0,0,0,0,507,0,0,0,0,0,0
+0,10.0,0.1,rbf,,0,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,2,0,2,0,0,0
+0,10.0,0.1,rbf,,0,DoS attacks-Slowloris,9,0,0,0,0,0,0,0,0,0,25,0,0,0,0
+0,10.0,0.1,rbf,,0,FTP-BruteForce,0,0,0,0,0,0,0,0,0,3,0,1,0,0,0
+0,10.0,0.1,rbf,,0,Infilteration,465,0,0,0,0,0,1,0,0,0,0,0,21,0,0
+0,10.0,0.1,rbf,,0,SQL Injection,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+0,10.0,0.1,rbf,,0,SSH-Bruteforce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,329
+0,10.0,0.1,rbf,,1,Benign,35207,0,0,0,2,0,40,0,0,0,0,0,13,0,1
+0,10.0,0.1,rbf,,1,Bot,8,497,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,1,Brute Force -Web,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,1,Brute Force -XSS,1,0,0,3,0,0,0,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,1,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,1,DDOS attack-LOIC-UDP,3,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,1,DDoS attacks-LOIC-HTTP,23,0,0,0,0,1,1985,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,1,DoS attacks-GoldenEye,1,0,0,0,0,0,0,114,30,0,0,0,0,0,0
+0,10.0,0.1,rbf,,1,DoS attacks-Hulk,0,0,0,0,0,0,0,0,507,0,0,0,0,0,0
+0,10.0,0.1,rbf,,1,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,1,0,3,0,0,0
+0,10.0,0.1,rbf,,1,DoS attacks-Slowloris,7,0,0,0,0,0,0,0,0,0,27,0,0,0,0
+0,10.0,0.1,rbf,,1,FTP-BruteForce,0,0,0,0,0,0,0,0,0,0,0,3,1,0,0
+0,10.0,0.1,rbf,,1,Infilteration,478,0,0,0,0,0,0,0,0,0,0,0,9,0,0
+0,10.0,0.1,rbf,,1,SQL Injection,2,0,0,0,0,0,0,0,0,0,0,0,0,2,0
+0,10.0,0.1,rbf,,1,SSH-Bruteforce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,329
+0,10.0,0.1,rbf,,2,Benign,35204,1,0,0,3,0,38,1,2,0,0,0,14,0,0
+0,10.0,0.1,rbf,,2,Bot,9,496,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,2,Brute Force -Web,2,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,2,Brute Force -XSS,0,0,0,3,0,0,1,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,2,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,2,DDOS attack-LOIC-UDP,3,0,0,0,0,2,1,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,2,DDoS attacks-LOIC-HTTP,22,0,0,0,0,0,1987,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,2,DoS attacks-GoldenEye,1,0,0,0,0,0,0,124,20,0,0,0,0,0,0
+0,10.0,0.1,rbf,,2,DoS attacks-Hulk,0,0,0,0,0,0,0,0,507,0,0,0,0,0,0
+0,10.0,0.1,rbf,,2,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+0,10.0,0.1,rbf,,2,DoS attacks-Slowloris,8,0,0,0,0,0,0,0,0,0,26,0,0,0,0
+0,10.0,0.1,rbf,,2,FTP-BruteForce,1,0,0,0,0,0,0,0,0,1,0,2,0,0,0
+0,10.0,0.1,rbf,,2,Infilteration,478,0,0,0,0,0,1,0,1,0,0,0,7,0,0
+0,10.0,0.1,rbf,,2,SQL Injection,2,0,0,0,0,0,0,0,0,0,0,0,0,2,0
+0,10.0,0.1,rbf,,2,SSH-Bruteforce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,329
+0,10.0,0.1,rbf,,3,Benign,35212,0,0,0,0,0,31,2,3,0,0,1,14,0,0
+0,10.0,0.1,rbf,,3,Bot,12,493,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,3,Brute Force -Web,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,3,Brute Force -XSS,2,0,0,1,0,0,1,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,3,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,3,DDOS attack-LOIC-UDP,3,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,3,DDoS attacks-LOIC-HTTP,12,0,0,0,0,0,1997,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,3,DoS attacks-GoldenEye,1,0,0,0,0,0,0,114,30,0,0,0,0,0,0
+0,10.0,0.1,rbf,,3,DoS attacks-Hulk,0,0,0,0,0,0,0,0,507,0,0,0,0,0,0
+0,10.0,0.1,rbf,,3,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,2,0,2,0,0,0
+0,10.0,0.1,rbf,,3,DoS attacks-Slowloris,6,0,0,0,0,0,0,0,0,0,28,0,0,0,0
+0,10.0,0.1,rbf,,3,FTP-BruteForce,0,0,0,0,0,0,0,0,0,3,0,1,0,0,0
+0,10.0,0.1,rbf,,3,Infilteration,473,0,0,0,0,0,0,0,1,0,0,0,13,0,0
+0,10.0,0.1,rbf,,3,SQL Injection,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+0,10.0,0.1,rbf,,3,SSH-Bruteforce,1,0,0,0,0,0,0,0,0,0,0,0,0,0,328
+0,10.0,0.1,rbf,,4,Benign,35204,0,0,0,2,0,45,1,1,0,0,0,8,0,2
+0,10.0,0.1,rbf,,4,Bot,10,495,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,4,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,4,Brute Force -XSS,2,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,4,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,4,DDOS attack-LOIC-UDP,5,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,4,DDoS attacks-LOIC-HTTP,13,0,0,0,0,0,1996,0,0,0,0,0,0,0,0
+0,10.0,0.1,rbf,,4,DoS attacks-GoldenEye,0,0,0,0,0,0,0,122,23,0,0,0,0,0,0
+0,10.0,0.1,rbf,,4,DoS attacks-Hulk,0,0,0,0,0,0,0,1,506,0,0,0,0,0,0
+0,10.0,0.1,rbf,,4,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+0,10.0,0.1,rbf,,4,DoS attacks-Slowloris,8,0,0,0,0,0,0,0,0,0,26,0,0,0,0
+0,10.0,0.1,rbf,,4,FTP-BruteForce,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+0,10.0,0.1,rbf,,4,Infilteration,476,0,0,0,0,0,1,0,0,0,0,0,10,0,0
+0,10.0,0.1,rbf,,4,SQL Injection,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0
+0,10.0,0.1,rbf,,4,SSH-Bruteforce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,329
+1,10.0,scale,rbf,,0,Benign,35195,4,0,0,2,0,43,3,3,0,0,0,11,0,2
+1,10.0,scale,rbf,,0,Bot,6,499,0,0,0,0,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,0,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,0,Brute Force -XSS,1,0,0,2,0,0,1,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,0,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,0,DDOS attack-LOIC-UDP,1,0,0,0,0,5,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,0,DDoS attacks-LOIC-HTTP,12,0,0,0,0,0,1997,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,0,DoS attacks-GoldenEye,8,0,0,0,0,0,0,104,33,0,0,0,0,0,0
+1,10.0,scale,rbf,,0,DoS attacks-Hulk,0,0,0,0,0,0,0,0,507,0,0,0,0,0,0
+1,10.0,scale,rbf,,0,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+1,10.0,scale,rbf,,0,DoS attacks-Slowloris,9,0,0,0,0,0,0,0,0,0,25,0,0,0,0
+1,10.0,scale,rbf,,0,FTP-BruteForce,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+1,10.0,scale,rbf,,0,Infilteration,474,1,0,0,0,0,0,0,1,0,0,0,11,0,0
+1,10.0,scale,rbf,,0,SQL Injection,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+1,10.0,scale,rbf,,0,SSH-Bruteforce,1,0,0,0,0,0,0,0,0,0,0,0,0,0,328
+1,10.0,scale,rbf,,1,Benign,35204,3,0,0,3,0,42,0,0,0,0,1,8,0,2
+1,10.0,scale,rbf,,1,Bot,8,497,0,0,0,0,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,1,Brute Force -Web,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,1,Brute Force -XSS,1,0,0,3,0,0,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,1,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,1,DDOS attack-LOIC-UDP,1,0,0,0,0,5,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,1,DDoS attacks-LOIC-HTTP,10,0,0,0,0,1,1998,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,1,DoS attacks-GoldenEye,3,0,0,0,0,0,0,104,37,0,1,0,0,0,0
+1,10.0,scale,rbf,,1,DoS attacks-Hulk,0,0,0,0,0,0,0,0,507,0,0,0,0,0,0
+1,10.0,scale,rbf,,1,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,1,0,3,0,0,0
+1,10.0,scale,rbf,,1,DoS attacks-Slowloris,7,0,0,0,0,0,0,0,0,0,27,0,0,0,0
+1,10.0,scale,rbf,,1,FTP-BruteForce,0,0,0,0,0,0,0,0,0,0,0,3,1,0,0
+1,10.0,scale,rbf,,1,Infilteration,480,1,0,0,0,0,0,0,1,0,0,0,5,0,0
+1,10.0,scale,rbf,,1,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,1,SSH-Bruteforce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,329
+1,10.0,scale,rbf,,2,Benign,35194,6,0,0,3,0,41,2,4,0,0,1,9,0,3
+1,10.0,scale,rbf,,2,Bot,9,496,0,0,0,0,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,2,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,2,Brute Force -XSS,0,0,0,3,0,0,1,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,2,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,2,DDOS attack-LOIC-UDP,0,0,0,0,0,5,1,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,2,DDoS attacks-LOIC-HTTP,9,0,0,0,0,0,2000,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,2,DoS attacks-GoldenEye,3,0,0,0,0,0,0,108,34,0,0,0,0,0,0
+1,10.0,scale,rbf,,2,DoS attacks-Hulk,0,0,0,0,0,0,0,0,507,0,0,0,0,0,0
+1,10.0,scale,rbf,,2,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+1,10.0,scale,rbf,,2,DoS attacks-Slowloris,9,0,0,0,0,0,0,0,1,0,24,0,0,0,0
+1,10.0,scale,rbf,,2,FTP-BruteForce,1,0,0,0,0,0,0,0,0,1,0,2,0,0,0
+1,10.0,scale,rbf,,2,Infilteration,480,1,0,0,0,0,1,0,1,0,0,0,4,0,0
+1,10.0,scale,rbf,,2,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,2,SSH-Bruteforce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,329
+1,10.0,scale,rbf,,3,Benign,35207,4,0,0,0,0,39,2,4,0,0,1,6,0,0
+1,10.0,scale,rbf,,3,Bot,11,494,0,0,0,0,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,3,Brute Force -Web,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,3,Brute Force -XSS,2,0,0,1,0,0,1,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,3,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,3,DDOS attack-LOIC-UDP,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,3,DDoS attacks-LOIC-HTTP,4,0,0,0,0,1,2004,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,3,DoS attacks-GoldenEye,5,0,0,0,0,0,0,101,39,0,0,0,0,0,0
+1,10.0,scale,rbf,,3,DoS attacks-Hulk,0,0,0,0,0,0,0,0,507,0,0,0,0,0,0
+1,10.0,scale,rbf,,3,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+1,10.0,scale,rbf,,3,DoS attacks-Slowloris,7,0,0,0,0,0,0,0,0,0,27,0,0,0,0
+1,10.0,scale,rbf,,3,FTP-BruteForce,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+1,10.0,scale,rbf,,3,Infilteration,478,0,0,0,0,0,0,0,1,0,0,0,8,0,0
+1,10.0,scale,rbf,,3,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,3,SSH-Bruteforce,1,0,0,0,0,0,0,0,0,0,0,0,0,0,328
+1,10.0,scale,rbf,,4,Benign,35128,2,0,0,1,0,121,1,3,0,0,0,5,0,2
+1,10.0,scale,rbf,,4,Bot,8,495,0,0,0,0,2,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,4,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,4,Brute Force -XSS,2,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,4,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,4,DDOS attack-LOIC-UDP,2,0,0,0,0,4,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,4,DDoS attacks-LOIC-HTTP,5,0,0,0,0,0,2004,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,4,DoS attacks-GoldenEye,4,0,0,0,0,0,0,108,33,0,0,0,0,0,0
+1,10.0,scale,rbf,,4,DoS attacks-Hulk,0,0,0,0,0,0,0,1,506,0,0,0,0,0,0
+1,10.0,scale,rbf,,4,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+1,10.0,scale,rbf,,4,DoS attacks-Slowloris,9,0,0,0,0,0,0,0,0,0,25,0,0,0,0
+1,10.0,scale,rbf,,4,FTP-BruteForce,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+1,10.0,scale,rbf,,4,Infilteration,480,0,0,0,0,0,3,0,1,0,0,0,3,0,0
+1,10.0,scale,rbf,,4,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+1,10.0,scale,rbf,,4,SSH-Bruteforce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,329
+2,1.0,0.1,rbf,,0,Benign,35188,5,0,0,2,0,47,6,3,0,0,0,10,0,2
+2,1.0,0.1,rbf,,0,Bot,6,499,0,0,0,0,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,0,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,0,Brute Force -XSS,1,0,0,2,0,0,1,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,0,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,0,DDOS attack-LOIC-UDP,2,0,0,0,0,4,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,0,DDoS attacks-LOIC-HTTP,16,0,0,0,0,0,1993,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,0,DoS attacks-GoldenEye,8,0,0,0,0,0,0,103,34,0,0,0,0,0,0
+2,1.0,0.1,rbf,,0,DoS attacks-Hulk,0,0,0,0,0,0,0,0,507,0,0,0,0,0,0
+2,1.0,0.1,rbf,,0,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,1,0,3,0,0,0
+2,1.0,0.1,rbf,,0,DoS attacks-Slowloris,9,0,0,0,0,0,0,0,0,0,25,0,0,0,0
+2,1.0,0.1,rbf,,0,FTP-BruteForce,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+2,1.0,0.1,rbf,,0,Infilteration,477,1,0,0,0,0,0,0,1,0,0,0,8,0,0
+2,1.0,0.1,rbf,,0,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,0,SSH-Bruteforce,1,0,0,0,0,0,0,0,0,0,0,0,0,0,328
+2,1.0,0.1,rbf,,1,Benign,35205,4,0,0,3,0,42,0,0,0,0,0,7,0,2
+2,1.0,0.1,rbf,,1,Bot,6,497,0,0,0,0,2,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,1,Brute Force -Web,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,1,Brute Force -XSS,1,0,0,3,0,0,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,1,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,1,DDOS attack-LOIC-UDP,3,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,1,DDoS attacks-LOIC-HTTP,16,0,0,0,0,1,1992,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,1,DoS attacks-GoldenEye,3,0,0,0,0,0,0,104,38,0,0,0,0,0,0
+2,1.0,0.1,rbf,,1,DoS attacks-Hulk,0,0,0,0,0,0,0,0,507,0,0,0,0,0,0
+2,1.0,0.1,rbf,,1,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,1,0,3,0,0,0
+2,1.0,0.1,rbf,,1,DoS attacks-Slowloris,7,0,0,0,0,0,0,0,0,0,27,0,0,0,0
+2,1.0,0.1,rbf,,1,FTP-BruteForce,1,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+2,1.0,0.1,rbf,,1,Infilteration,481,1,0,0,0,0,0,0,1,0,0,0,4,0,0
+2,1.0,0.1,rbf,,1,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,1,SSH-Bruteforce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,329
+2,1.0,0.1,rbf,,2,Benign,35188,7,0,0,3,0,44,5,4,0,0,0,10,0,2
+2,1.0,0.1,rbf,,2,Bot,8,496,0,0,0,0,1,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,2,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,2,Brute Force -XSS,0,0,0,3,0,0,1,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,2,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,2,DDOS attack-LOIC-UDP,4,0,0,0,0,2,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,2,DDoS attacks-LOIC-HTTP,15,0,0,0,0,0,1994,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,2,DoS attacks-GoldenEye,1,0,0,0,0,0,0,108,36,0,0,0,0,0,0
+2,1.0,0.1,rbf,,2,DoS attacks-Hulk,0,0,0,0,0,0,0,0,507,0,0,0,0,0,0
+2,1.0,0.1,rbf,,2,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+2,1.0,0.1,rbf,,2,DoS attacks-Slowloris,11,0,0,0,0,0,0,0,0,0,23,0,0,0,0
+2,1.0,0.1,rbf,,2,FTP-BruteForce,1,0,0,0,0,0,0,0,0,1,0,2,0,0,0
+2,1.0,0.1,rbf,,2,Infilteration,481,1,0,0,0,0,1,0,1,0,0,0,3,0,0
+2,1.0,0.1,rbf,,2,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,2,SSH-Bruteforce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,329
+2,1.0,0.1,rbf,,3,Benign,35202,4,0,0,0,0,44,2,4,0,0,1,6,0,0
+2,1.0,0.1,rbf,,3,Bot,11,494,0,0,0,0,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,3,Brute Force -Web,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,3,Brute Force -XSS,2,0,0,1,0,0,1,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,3,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,3,DDOS attack-LOIC-UDP,3,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,3,DDoS attacks-LOIC-HTTP,8,0,0,0,0,0,2001,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,3,DoS attacks-GoldenEye,5,0,0,0,0,0,0,99,41,0,0,0,0,0,0
+2,1.0,0.1,rbf,,3,DoS attacks-Hulk,0,0,0,0,0,0,0,0,507,0,0,0,0,0,0
+2,1.0,0.1,rbf,,3,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+2,1.0,0.1,rbf,,3,DoS attacks-Slowloris,7,0,0,0,0,0,0,0,0,0,27,0,0,0,0
+2,1.0,0.1,rbf,,3,FTP-BruteForce,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+2,1.0,0.1,rbf,,3,Infilteration,479,0,0,0,0,0,0,0,1,0,0,0,7,0,0
+2,1.0,0.1,rbf,,3,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,3,SSH-Bruteforce,1,0,0,0,0,0,0,0,0,0,0,0,0,0,328
+2,1.0,0.1,rbf,,4,Benign,35196,3,0,0,2,0,54,1,3,0,0,0,2,0,2
+2,1.0,0.1,rbf,,4,Bot,8,495,0,0,0,0,2,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,4,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,4,Brute Force -XSS,2,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,4,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,4,DDOS attack-LOIC-UDP,4,0,0,0,0,2,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,4,DDoS attacks-LOIC-HTTP,9,0,0,0,0,0,2000,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,4,DoS attacks-GoldenEye,4,0,0,0,0,0,0,105,36,0,0,0,0,0,0
+2,1.0,0.1,rbf,,4,DoS attacks-Hulk,0,0,0,0,0,0,0,1,506,0,0,0,0,0,0
+2,1.0,0.1,rbf,,4,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+2,1.0,0.1,rbf,,4,DoS attacks-Slowloris,10,0,0,0,0,0,0,0,0,0,24,0,0,0,0
+2,1.0,0.1,rbf,,4,FTP-BruteForce,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+2,1.0,0.1,rbf,,4,Infilteration,484,0,0,0,0,0,1,0,1,0,0,0,1,0,0
+2,1.0,0.1,rbf,,4,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2,1.0,0.1,rbf,,4,SSH-Bruteforce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,329
+3,1.0,scale,rbf,,0,Benign,34959,5,0,0,2,0,260,13,11,0,0,0,10,0,3
+3,1.0,scale,rbf,,0,Bot,6,499,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,0,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,0,Brute Force -XSS,1,0,0,2,0,0,1,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,0,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,0,DDOS attack-LOIC-UDP,1,0,0,0,0,5,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,0,DDoS attacks-LOIC-HTTP,1,0,0,0,0,1,2007,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,0,DoS attacks-GoldenEye,2,0,0,0,0,0,0,106,37,0,0,0,0,0,0
+3,1.0,scale,rbf,,0,DoS attacks-Hulk,0,0,0,0,0,0,0,0,507,0,0,0,0,0,0
+3,1.0,scale,rbf,,0,DoS attacks-SlowHTTPTest,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,0,DoS attacks-Slowloris,9,0,0,0,0,0,0,0,0,0,25,0,0,0,0
+3,1.0,scale,rbf,,0,FTP-BruteForce,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,0,Infilteration,473,1,0,0,0,0,4,0,1,0,0,0,8,0,0
+3,1.0,scale,rbf,,0,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,0,SSH-Bruteforce,1,0,0,0,0,0,0,0,0,0,0,0,0,0,328
+3,1.0,scale,rbf,,1,Benign,34999,4,0,0,3,0,241,8,3,0,0,0,0,0,5
+3,1.0,scale,rbf,,1,Bot,8,497,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,1,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,1,Brute Force -XSS,1,0,0,3,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,1,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,1,DDOS attack-LOIC-UDP,1,0,0,0,0,5,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,1,DDoS attacks-LOIC-HTTP,0,0,0,0,0,1,2008,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,1,DoS attacks-GoldenEye,0,0,0,0,0,0,0,102,42,0,1,0,0,0,0
+3,1.0,scale,rbf,,1,DoS attacks-Hulk,0,0,0,0,0,0,0,0,507,0,0,0,0,0,0
+3,1.0,scale,rbf,,1,DoS attacks-SlowHTTPTest,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,1,DoS attacks-Slowloris,9,0,0,0,0,0,0,0,0,0,25,0,0,0,0
+3,1.0,scale,rbf,,1,FTP-BruteForce,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,1,Infilteration,484,1,0,0,0,0,1,0,1,0,0,0,0,0,0
+3,1.0,scale,rbf,,1,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,1,SSH-Bruteforce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,329
+3,1.0,scale,rbf,,2,Benign,35029,6,0,0,3,0,183,19,12,0,0,0,9,0,2
+3,1.0,scale,rbf,,2,Bot,9,496,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,2,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,2,Brute Force -XSS,0,0,0,3,0,0,1,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,2,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,2,DDOS attack-LOIC-UDP,1,0,0,0,0,5,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,2,DDoS attacks-LOIC-HTTP,26,0,0,0,0,0,1983,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,2,DoS attacks-GoldenEye,0,0,0,0,0,0,0,104,41,0,0,0,0,0,0
+3,1.0,scale,rbf,,2,DoS attacks-Hulk,0,0,0,0,0,0,0,0,507,0,0,0,0,0,0
+3,1.0,scale,rbf,,2,DoS attacks-SlowHTTPTest,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,2,DoS attacks-Slowloris,10,0,0,0,0,0,0,0,1,0,23,0,0,0,0
+3,1.0,scale,rbf,,2,FTP-BruteForce,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,2,Infilteration,480,1,0,0,0,0,2,0,1,0,0,0,3,0,0
+3,1.0,scale,rbf,,2,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,2,SSH-Bruteforce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,329
+3,1.0,scale,rbf,,3,Benign,35015,4,0,0,0,0,219,12,8,0,0,0,2,0,3
+3,1.0,scale,rbf,,3,Bot,11,494,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,3,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,3,Brute Force -XSS,2,0,0,1,0,0,1,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,3,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,3,DDOS attack-LOIC-UDP,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,3,DDoS attacks-LOIC-HTTP,1,0,0,0,0,0,2008,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,3,DoS attacks-GoldenEye,0,0,0,0,0,0,0,101,44,0,0,0,0,0,0
+3,1.0,scale,rbf,,3,DoS attacks-Hulk,0,0,0,0,0,0,0,0,507,0,0,0,0,0,0
+3,1.0,scale,rbf,,3,DoS attacks-SlowHTTPTest,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,3,DoS attacks-Slowloris,7,0,0,0,0,0,0,0,0,0,27,0,0,0,0
+3,1.0,scale,rbf,,3,FTP-BruteForce,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,3,Infilteration,481,0,0,0,0,0,2,0,1,0,0,0,3,0,0
+3,1.0,scale,rbf,,3,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,3,SSH-Bruteforce,1,0,0,0,0,0,0,0,0,0,0,0,0,0,328
+3,1.0,scale,rbf,,4,Benign,34973,3,0,0,2,0,266,9,6,0,1,0,0,0,3
+3,1.0,scale,rbf,,4,Bot,10,495,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,4,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,4,Brute Force -XSS,2,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,4,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,4,DDOS attack-LOIC-UDP,2,0,0,0,0,4,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,4,DDoS attacks-LOIC-HTTP,1,0,0,0,0,0,2008,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,4,DoS attacks-GoldenEye,0,0,0,0,0,0,0,104,41,0,0,0,0,0,0
+3,1.0,scale,rbf,,4,DoS attacks-Hulk,0,0,0,0,0,0,0,1,506,0,0,0,0,0,0
+3,1.0,scale,rbf,,4,DoS attacks-SlowHTTPTest,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,4,DoS attacks-Slowloris,10,0,0,0,0,0,0,0,0,0,24,0,0,0,0
+3,1.0,scale,rbf,,4,FTP-BruteForce,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,4,Infilteration,482,0,0,0,0,0,4,0,1,0,0,0,0,0,0
+3,1.0,scale,rbf,,4,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1.0,scale,rbf,,4,SSH-Bruteforce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,329
+4,10.0,,,LinearSVC(),0,Benign,34728,14,0,0,1,0,218,2,19,0,1,1,279,0,0
+4,10.0,,,LinearSVC(),0,Bot,5,500,0,0,0,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),0,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),0,Brute Force -XSS,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),0,DDOS attack-HOIC,116,0,0,0,579,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),0,DDOS attack-LOIC-UDP,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),0,DDoS attacks-LOIC-HTTP,0,0,0,0,0,2,2007,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),0,DoS attacks-GoldenEye,110,0,0,0,0,0,0,0,35,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),0,DoS attacks-Hulk,15,0,0,0,0,0,0,0,492,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),0,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+4,10.0,,,LinearSVC(),0,DoS attacks-Slowloris,18,0,0,0,0,0,0,9,0,0,7,0,0,0,0
+4,10.0,,,LinearSVC(),0,FTP-BruteForce,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+4,10.0,,,LinearSVC(),0,Infilteration,461,2,0,0,0,0,3,0,1,0,3,0,17,0,0
+4,10.0,,,LinearSVC(),0,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),0,SSH-Bruteforce,153,0,0,0,0,0,0,0,0,0,0,0,0,0,176
+4,10.0,,,LinearSVC(),1,Benign,34742,16,0,0,4,0,222,7,3,1,0,0,268,0,0
+4,10.0,,,LinearSVC(),1,Bot,8,497,0,0,0,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),1,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),1,Brute Force -XSS,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),1,DDOS attack-HOIC,108,0,0,0,587,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),1,DDOS attack-LOIC-UDP,0,0,0,0,0,5,1,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),1,DDoS attacks-LOIC-HTTP,0,0,0,0,0,1,2008,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),1,DoS attacks-GoldenEye,4,0,0,0,0,0,0,103,38,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),1,DoS attacks-Hulk,11,0,0,0,0,0,0,0,496,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),1,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,2,0,2,0,0,0
+4,10.0,,,LinearSVC(),1,DoS attacks-Slowloris,28,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+4,10.0,,,LinearSVC(),1,FTP-BruteForce,1,0,0,0,0,0,0,0,0,3,0,0,0,0,0
+4,10.0,,,LinearSVC(),1,Infilteration,475,2,0,0,0,0,1,1,1,0,0,0,7,0,0
+4,10.0,,,LinearSVC(),1,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),1,SSH-Bruteforce,166,0,0,0,0,0,0,0,0,0,0,0,0,0,163
+4,10.0,,,LinearSVC(),2,Benign,34859,12,0,0,89,0,193,3,6,0,0,0,100,1,0
+4,10.0,,,LinearSVC(),2,Bot,8,497,0,0,0,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),2,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),2,Brute Force -XSS,3,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),2,DDOS attack-HOIC,9,0,0,0,686,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),2,DDOS attack-LOIC-UDP,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),2,DDoS attacks-LOIC-HTTP,0,0,0,0,0,0,2009,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),2,DoS attacks-GoldenEye,2,0,0,0,0,0,0,107,36,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),2,DoS attacks-Hulk,15,0,0,0,0,0,0,1,491,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),2,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+4,10.0,,,LinearSVC(),2,DoS attacks-Slowloris,33,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),2,FTP-BruteForce,1,0,0,0,0,0,0,0,0,1,0,2,0,0,0
+4,10.0,,,LinearSVC(),2,Infilteration,473,0,0,0,1,0,3,1,1,0,0,0,8,0,0
+4,10.0,,,LinearSVC(),2,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),2,SSH-Bruteforce,329,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),3,Benign,34677,13,0,0,6,0,234,3,16,0,0,0,313,0,1
+4,10.0,,,LinearSVC(),3,Bot,11,494,0,0,0,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),3,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),3,Brute Force -XSS,3,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),3,DDOS attack-HOIC,119,0,0,0,576,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),3,DDOS attack-LOIC-UDP,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),3,DDoS attacks-LOIC-HTTP,0,0,0,0,0,1,2008,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),3,DoS attacks-GoldenEye,4,0,0,0,0,0,0,100,41,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),3,DoS attacks-Hulk,47,0,0,0,0,0,0,3,457,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),3,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,2,0,2,0,0,0
+4,10.0,,,LinearSVC(),3,DoS attacks-Slowloris,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),3,FTP-BruteForce,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+4,10.0,,,LinearSVC(),3,Infilteration,476,0,0,0,0,0,5,1,0,0,0,0,5,0,0
+4,10.0,,,LinearSVC(),3,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),3,SSH-Bruteforce,162,0,0,0,0,0,0,0,0,0,0,0,0,0,167
+4,10.0,,,LinearSVC(),4,Benign,34756,20,0,0,15,0,258,2,9,0,0,0,203,0,0
+4,10.0,,,LinearSVC(),4,Bot,7,498,0,0,0,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),4,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),4,Brute Force -XSS,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),4,DDOS attack-HOIC,113,0,0,0,582,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),4,DDOS attack-LOIC-UDP,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),4,DDoS attacks-LOIC-HTTP,0,0,0,0,0,1,2008,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),4,DoS attacks-GoldenEye,61,0,0,0,0,0,0,48,36,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),4,DoS attacks-Hulk,50,0,0,0,0,0,0,0,457,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),4,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,2,0,2,0,0,0
+4,10.0,,,LinearSVC(),4,DoS attacks-Slowloris,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),4,FTP-BruteForce,0,0,0,0,0,0,0,0,0,3,0,1,0,0,0
+4,10.0,,,LinearSVC(),4,Infilteration,479,1,0,0,0,0,3,0,1,0,0,0,3,0,0
+4,10.0,,,LinearSVC(),4,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+4,10.0,,,LinearSVC(),4,SSH-Bruteforce,329,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,0,Benign,35204,6,0,0,2,0,27,3,10,0,0,0,0,0,11
+5,0.1,0.1,rbf,,0,Bot,6,499,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,0,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,0,Brute Force -XSS,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,0,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,0,DDOS attack-LOIC-UDP,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,0,DDoS attacks-LOIC-HTTP,114,0,0,0,0,0,1895,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,0,DoS attacks-GoldenEye,8,0,0,0,0,0,0,79,52,0,0,0,0,0,6
+5,0.1,0.1,rbf,,0,DoS attacks-Hulk,2,0,0,0,0,0,0,0,505,0,0,0,0,0,0
+5,0.1,0.1,rbf,,0,DoS attacks-SlowHTTPTest,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,0,DoS attacks-Slowloris,10,0,0,0,0,0,0,0,0,0,24,0,0,0,0
+5,0.1,0.1,rbf,,0,FTP-BruteForce,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,0,Infilteration,485,1,0,0,0,0,0,0,1,0,0,0,0,0,0
+5,0.1,0.1,rbf,,0,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,0,SSH-Bruteforce,1,0,0,0,0,0,0,0,0,0,0,0,0,0,328
+5,0.1,0.1,rbf,,1,Benign,35230,4,0,0,3,0,10,0,4,0,0,0,0,0,12
+5,0.1,0.1,rbf,,1,Bot,11,494,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,1,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,1,Brute Force -XSS,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,1,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,1,DDOS attack-LOIC-UDP,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,1,DDoS attacks-LOIC-HTTP,130,0,0,0,0,0,1879,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,1,DoS attacks-GoldenEye,7,0,0,0,0,0,0,84,52,0,0,0,0,0,2
+5,0.1,0.1,rbf,,1,DoS attacks-Hulk,0,0,0,0,0,0,0,0,507,0,0,0,0,0,0
+5,0.1,0.1,rbf,,1,DoS attacks-SlowHTTPTest,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,1,DoS attacks-Slowloris,9,0,0,0,0,0,0,0,0,0,25,0,0,0,0
+5,0.1,0.1,rbf,,1,FTP-BruteForce,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,1,Infilteration,485,1,0,0,0,0,0,0,1,0,0,0,0,0,0
+5,0.1,0.1,rbf,,1,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,1,SSH-Bruteforce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,329
+5,0.1,0.1,rbf,,2,Benign,35208,7,0,0,3,0,13,2,14,0,0,0,0,0,16
+5,0.1,0.1,rbf,,2,Bot,10,495,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,2,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,2,Brute Force -XSS,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,2,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,2,DDOS attack-LOIC-UDP,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,2,DDoS attacks-LOIC-HTTP,130,0,0,0,0,0,1879,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,2,DoS attacks-GoldenEye,1,0,0,0,0,0,0,89,50,0,0,0,0,0,5
+5,0.1,0.1,rbf,,2,DoS attacks-Hulk,0,0,0,0,0,0,0,0,507,0,0,0,0,0,0
+5,0.1,0.1,rbf,,2,DoS attacks-SlowHTTPTest,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,2,DoS attacks-Slowloris,11,0,0,0,0,0,0,0,0,0,23,0,0,0,0
+5,0.1,0.1,rbf,,2,FTP-BruteForce,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,2,Infilteration,485,1,0,0,0,0,0,0,1,0,0,0,0,0,0
+5,0.1,0.1,rbf,,2,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,2,SSH-Bruteforce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,329
+5,0.1,0.1,rbf,,3,Benign,35224,4,0,0,0,0,15,1,8,0,0,0,0,0,11
+5,0.1,0.1,rbf,,3,Bot,14,491,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,3,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,3,Brute Force -XSS,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,3,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,3,DDOS attack-LOIC-UDP,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,3,DDoS attacks-LOIC-HTTP,116,0,0,0,0,0,1893,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,3,DoS attacks-GoldenEye,1,0,0,0,0,0,0,87,53,0,0,0,0,0,4
+5,0.1,0.1,rbf,,3,DoS attacks-Hulk,5,0,0,0,0,0,0,0,502,0,0,0,0,0,0
+5,0.1,0.1,rbf,,3,DoS attacks-SlowHTTPTest,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,3,DoS attacks-Slowloris,9,0,0,0,0,0,0,0,0,0,25,0,0,0,0
+5,0.1,0.1,rbf,,3,FTP-BruteForce,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,3,Infilteration,486,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+5,0.1,0.1,rbf,,3,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,3,SSH-Bruteforce,1,0,0,0,0,0,0,0,0,0,0,0,0,0,328
+5,0.1,0.1,rbf,,4,Benign,35200,3,0,0,2,0,42,1,6,0,0,0,0,0,9
+5,0.1,0.1,rbf,,4,Bot,12,493,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,4,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,4,Brute Force -XSS,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,4,DDOS attack-HOIC,0,0,0,0,695,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,4,DDOS attack-LOIC-UDP,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,4,DDoS attacks-LOIC-HTTP,113,0,0,0,0,0,1896,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,4,DoS attacks-GoldenEye,5,0,0,0,0,0,0,85,51,0,0,0,0,0,4
+5,0.1,0.1,rbf,,4,DoS attacks-Hulk,2,0,0,0,0,0,0,0,505,0,0,0,0,0,0
+5,0.1,0.1,rbf,,4,DoS attacks-SlowHTTPTest,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,4,DoS attacks-Slowloris,12,0,0,0,0,0,0,0,0,0,22,0,0,0,0
+5,0.1,0.1,rbf,,4,FTP-BruteForce,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,4,Infilteration,485,0,0,0,0,0,1,0,1,0,0,0,0,0,0
+5,0.1,0.1,rbf,,4,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,0.1,0.1,rbf,,4,SSH-Bruteforce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,329
+6,1.0,,,LinearSVC(),0,Benign,34673,53,0,0,15,0,240,3,20,0,0,0,258,0,1
+6,1.0,,,LinearSVC(),0,Bot,5,500,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),0,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),0,Brute Force -XSS,3,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),0,DDOS attack-HOIC,116,0,0,0,579,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),0,DDOS attack-LOIC-UDP,0,0,0,0,0,5,1,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),0,DDoS attacks-LOIC-HTTP,0,0,0,0,0,2,2007,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),0,DoS attacks-GoldenEye,100,0,0,0,0,0,7,0,38,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),0,DoS attacks-Hulk,45,0,0,0,0,0,0,0,462,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),0,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+6,1.0,,,LinearSVC(),0,DoS attacks-Slowloris,18,0,0,0,0,0,0,9,0,0,7,0,0,0,0
+6,1.0,,,LinearSVC(),0,FTP-BruteForce,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+6,1.0,,,LinearSVC(),0,Infilteration,458,6,0,0,1,0,3,0,1,0,0,0,18,0,0
+6,1.0,,,LinearSVC(),0,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),0,SSH-Bruteforce,170,0,0,0,0,0,0,0,0,0,0,0,0,0,159
+6,1.0,,,LinearSVC(),1,Benign,34680,58,1,0,5,0,243,5,17,0,0,3,251,0,0
+6,1.0,,,LinearSVC(),1,Bot,8,497,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),1,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),1,Brute Force -XSS,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),1,DDOS attack-HOIC,108,0,0,0,587,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),1,DDOS attack-LOIC-UDP,0,0,0,0,0,5,1,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),1,DDoS attacks-LOIC-HTTP,0,0,0,0,0,1,2008,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),1,DoS attacks-GoldenEye,17,0,0,0,0,0,0,86,42,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),1,DoS attacks-Hulk,13,0,0,0,0,0,0,43,451,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),1,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,1,0,3,0,0,0
+6,1.0,,,LinearSVC(),1,DoS attacks-Slowloris,22,0,0,0,0,0,0,5,0,0,6,0,0,0,1
+6,1.0,,,LinearSVC(),1,FTP-BruteForce,1,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+6,1.0,,,LinearSVC(),1,Infilteration,472,4,0,0,0,0,1,1,1,0,0,0,8,0,0
+6,1.0,,,LinearSVC(),1,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),1,SSH-Bruteforce,162,0,0,0,0,0,0,0,0,0,0,0,0,0,167
+6,1.0,,,LinearSVC(),2,Benign,34769,42,0,0,14,0,206,0,20,0,0,0,211,1,0
+6,1.0,,,LinearSVC(),2,Bot,8,497,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),2,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),2,Brute Force -XSS,3,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),2,DDOS attack-HOIC,102,0,0,0,593,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),2,DDOS attack-LOIC-UDP,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),2,DDoS attacks-LOIC-HTTP,0,0,0,0,0,0,2009,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),2,DoS attacks-GoldenEye,66,0,0,0,0,0,0,38,41,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),2,DoS attacks-Hulk,55,0,0,0,0,0,0,9,443,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),2,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+6,1.0,,,LinearSVC(),2,DoS attacks-Slowloris,33,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),2,FTP-BruteForce,2,0,0,0,0,0,0,0,0,0,0,2,0,0,0
+6,1.0,,,LinearSVC(),2,Infilteration,471,1,0,0,0,0,3,1,1,0,0,0,10,0,0
+6,1.0,,,LinearSVC(),2,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),2,SSH-Bruteforce,329,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),3,Benign,34642,61,0,0,2,0,244,3,18,0,0,0,292,0,1
+6,1.0,,,LinearSVC(),3,Bot,10,495,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),3,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),3,Brute Force -XSS,3,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),3,DDOS attack-HOIC,119,0,0,0,576,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),3,DDOS attack-LOIC-UDP,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),3,DDoS attacks-LOIC-HTTP,0,0,0,0,0,1,2008,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),3,DoS attacks-GoldenEye,58,0,0,0,0,0,0,43,44,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),3,DoS attacks-Hulk,47,0,0,0,0,0,0,3,457,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),3,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,2,0,2,0,0,0
+6,1.0,,,LinearSVC(),3,DoS attacks-Slowloris,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),3,FTP-BruteForce,0,0,0,0,0,0,0,0,0,2,0,2,0,0,0
+6,1.0,,,LinearSVC(),3,Infilteration,475,1,0,0,0,0,5,0,1,0,0,0,5,0,0
+6,1.0,,,LinearSVC(),3,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),3,SSH-Bruteforce,169,0,0,0,0,0,0,0,0,0,0,0,0,0,160
+6,1.0,,,LinearSVC(),4,Benign,34676,63,1,0,7,0,268,2,20,0,0,0,226,0,0
+6,1.0,,,LinearSVC(),4,Bot,7,498,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),4,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),4,Brute Force -XSS,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),4,DDOS attack-HOIC,113,0,0,0,582,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),4,DDOS attack-LOIC-UDP,0,0,0,0,0,5,1,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),4,DDoS attacks-LOIC-HTTP,0,0,0,0,0,1,2008,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),4,DoS attacks-GoldenEye,73,0,0,0,0,0,0,31,41,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),4,DoS attacks-Hulk,50,0,0,0,0,0,0,0,457,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),4,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0
+6,1.0,,,LinearSVC(),4,DoS attacks-Slowloris,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),4,FTP-BruteForce,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0
+6,1.0,,,LinearSVC(),4,Infilteration,476,3,0,0,0,0,4,0,1,0,0,0,3,0,0
+6,1.0,,,LinearSVC(),4,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,1.0,,,LinearSVC(),4,SSH-Bruteforce,151,0,0,0,0,0,0,0,0,0,0,0,0,0,178
+7,0.1,,,LinearSVC(),0,Benign,34766,160,0,0,1,0,23,0,41,0,0,0,255,0,17
+7,0.1,,,LinearSVC(),0,Bot,5,500,0,0,0,0,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),0,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),0,Brute Force -XSS,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),0,DDOS attack-HOIC,116,0,0,0,579,0,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),0,DDOS attack-LOIC-UDP,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),0,DDoS attacks-LOIC-HTTP,301,0,0,0,0,2,1706,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),0,DoS attacks-GoldenEye,100,0,0,0,0,0,7,0,38,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),0,DoS attacks-Hulk,47,0,0,0,0,0,0,0,460,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),0,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,1,0,3,0,0,0
+7,0.1,,,LinearSVC(),0,DoS attacks-Slowloris,18,0,0,0,0,0,0,0,0,0,7,0,0,0,9
+7,0.1,,,LinearSVC(),0,FTP-BruteForce,0,0,0,0,0,0,0,0,0,3,0,1,0,0,0
+7,0.1,,,LinearSVC(),0,Infilteration,460,8,0,0,0,0,1,0,1,0,0,0,17,0,0
+7,0.1,,,LinearSVC(),0,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),0,SSH-Bruteforce,17,0,0,0,0,0,0,0,0,0,0,0,0,0,312
+7,0.1,,,LinearSVC(),1,Benign,34750,200,1,0,3,0,23,0,30,0,0,0,233,0,23
+7,0.1,,,LinearSVC(),1,Bot,8,494,0,0,0,0,3,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),1,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),1,Brute Force -XSS,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),1,DDOS attack-HOIC,108,0,0,0,587,0,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),1,DDOS attack-LOIC-UDP,0,0,0,0,0,5,1,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),1,DDoS attacks-LOIC-HTTP,300,0,0,0,0,1,1708,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),1,DoS attacks-GoldenEye,100,0,0,0,0,0,3,0,42,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),1,DoS attacks-Hulk,56,0,0,0,0,0,0,0,451,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),1,DoS attacks-SlowHTTPTest,1,0,0,0,0,0,0,0,0,1,0,0,0,0,2
+7,0.1,,,LinearSVC(),1,DoS attacks-Slowloris,22,0,0,0,0,0,0,0,0,0,6,0,0,0,6
+7,0.1,,,LinearSVC(),1,FTP-BruteForce,1,0,0,0,0,0,0,0,0,3,0,0,0,0,0
+7,0.1,,,LinearSVC(),1,Infilteration,466,10,0,0,0,0,0,0,1,0,0,0,9,0,1
+7,0.1,,,LinearSVC(),1,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),1,SSH-Bruteforce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,329
+7,0.1,,,LinearSVC(),2,Benign,34789,176,0,0,0,0,15,0,24,0,0,0,236,0,23
+7,0.1,,,LinearSVC(),2,Bot,8,497,0,0,0,0,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),2,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),2,Brute Force -XSS,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),2,DDOS attack-HOIC,102,0,0,0,593,0,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),2,DDOS attack-LOIC-UDP,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),2,DDoS attacks-LOIC-HTTP,353,0,0,0,0,0,1656,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),2,DoS attacks-GoldenEye,96,0,0,0,0,0,8,0,41,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),2,DoS attacks-Hulk,65,0,0,0,0,0,0,0,442,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),2,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,0,0,2,0,0,2
+7,0.1,,,LinearSVC(),2,DoS attacks-Slowloris,24,0,0,0,0,0,0,0,1,0,3,0,0,0,6
+7,0.1,,,LinearSVC(),2,FTP-BruteForce,1,0,0,0,0,0,0,0,0,1,0,2,0,0,0
+7,0.1,,,LinearSVC(),2,Infilteration,464,6,0,0,0,0,1,0,1,0,0,0,14,0,1
+7,0.1,,,LinearSVC(),2,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),2,SSH-Bruteforce,91,0,0,0,0,0,0,0,0,0,0,0,0,0,238
+7,0.1,,,LinearSVC(),3,Benign,34735,179,0,0,1,0,17,1,20,0,0,0,295,0,15
+7,0.1,,,LinearSVC(),3,Bot,10,492,0,0,0,0,3,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),3,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),3,Brute Force -XSS,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),3,DDOS attack-HOIC,119,0,0,0,576,0,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),3,DDOS attack-LOIC-UDP,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),3,DDoS attacks-LOIC-HTTP,303,0,0,0,0,1,1705,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),3,DoS attacks-GoldenEye,94,0,0,0,0,0,7,0,44,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),3,DoS attacks-Hulk,48,0,0,0,0,0,0,0,459,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),3,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,2,0,0,0,0,2
+7,0.1,,,LinearSVC(),3,DoS attacks-Slowloris,21,0,0,0,0,0,0,0,0,0,8,0,0,0,5
+7,0.1,,,LinearSVC(),3,FTP-BruteForce,0,0,0,0,0,0,0,0,0,1,0,1,0,0,2
+7,0.1,,,LinearSVC(),3,Infilteration,474,5,0,0,0,0,3,0,1,0,0,0,4,0,0
+7,0.1,,,LinearSVC(),3,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),3,SSH-Bruteforce,1,0,0,0,0,0,0,0,0,0,0,0,0,0,328
+7,0.1,,,LinearSVC(),4,Benign,34769,155,0,0,0,0,17,0,23,0,0,0,281,0,18
+7,0.1,,,LinearSVC(),4,Bot,7,497,0,0,0,0,1,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),4,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),4,Brute Force -XSS,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),4,DDOS attack-HOIC,113,0,0,0,582,0,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),4,DDOS attack-LOIC-UDP,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),4,DDoS attacks-LOIC-HTTP,331,0,0,0,0,1,1677,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),4,DoS attacks-GoldenEye,100,0,0,0,0,0,4,0,41,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),4,DoS attacks-Hulk,50,0,0,0,0,0,0,0,457,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),4,DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,0,1,0,0,0,0,3
+7,0.1,,,LinearSVC(),4,DoS attacks-Slowloris,23,0,0,0,0,0,0,0,0,0,5,0,0,0,6
+7,0.1,,,LinearSVC(),4,FTP-BruteForce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4
+7,0.1,,,LinearSVC(),4,Infilteration,472,6,0,0,0,0,1,0,1,0,0,0,7,0,0
+7,0.1,,,LinearSVC(),4,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+7,0.1,,,LinearSVC(),4,SSH-Bruteforce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,329
+8,0.1,scale,rbf,,0,Benign,35167,48,0,0,0,0,17,3,14,0,0,0,0,0,14
+8,0.1,scale,rbf,,0,Bot,24,481,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,0,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,0,Brute Force -XSS,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,0,DDOS attack-HOIC,116,0,0,0,579,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,0,DDOS attack-LOIC-UDP,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,0,DDoS attacks-LOIC-HTTP,607,0,0,0,0,0,1402,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,0,DoS attacks-GoldenEye,8,0,0,0,0,0,0,78,53,0,0,0,0,0,6
+8,0.1,scale,rbf,,0,DoS attacks-Hulk,4,0,0,0,0,0,0,0,503,0,0,0,0,0,0
+8,0.1,scale,rbf,,0,DoS attacks-SlowHTTPTest,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,0,DoS attacks-Slowloris,10,0,0,0,0,0,0,0,0,0,24,0,0,0,0
+8,0.1,scale,rbf,,0,FTP-BruteForce,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,0,Infilteration,485,1,0,0,0,0,0,0,1,0,0,0,0,0,0
+8,0.1,scale,rbf,,0,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,0,SSH-Bruteforce,1,0,0,0,0,0,0,0,0,0,0,0,0,0,328
+8,0.1,scale,rbf,,1,Benign,35167,70,0,0,0,0,8,0,5,0,0,0,0,0,13
+8,0.1,scale,rbf,,1,Bot,24,481,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,1,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,1,Brute Force -XSS,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,1,DDOS attack-HOIC,108,0,0,0,587,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,1,DDOS attack-LOIC-UDP,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,1,DDoS attacks-LOIC-HTTP,640,0,0,0,0,0,1369,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,1,DoS attacks-GoldenEye,6,0,0,0,0,0,0,86,50,0,1,0,0,0,2
+8,0.1,scale,rbf,,1,DoS attacks-Hulk,11,0,0,0,0,0,0,0,496,0,0,0,0,0,0
+8,0.1,scale,rbf,,1,DoS attacks-SlowHTTPTest,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,1,DoS attacks-Slowloris,9,0,0,0,0,0,0,0,0,0,25,0,0,0,0
+8,0.1,scale,rbf,,1,FTP-BruteForce,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,1,Infilteration,481,5,0,0,0,0,0,0,1,0,0,0,0,0,0
+8,0.1,scale,rbf,,1,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,1,SSH-Bruteforce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,329
+8,0.1,scale,rbf,,2,Benign,35151,65,0,0,0,0,12,2,13,0,0,0,0,0,20
+8,0.1,scale,rbf,,2,Bot,23,482,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,2,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,2,Brute Force -XSS,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,2,DDOS attack-HOIC,102,0,0,0,593,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,2,DDOS attack-LOIC-UDP,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,2,DDoS attacks-LOIC-HTTP,619,0,0,0,0,0,1390,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,2,DoS attacks-GoldenEye,1,0,0,0,0,0,0,90,49,0,0,0,0,0,5
+8,0.1,scale,rbf,,2,DoS attacks-Hulk,11,0,0,0,0,0,0,1,495,0,0,0,0,0,0
+8,0.1,scale,rbf,,2,DoS attacks-SlowHTTPTest,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,2,DoS attacks-Slowloris,10,0,0,0,0,0,0,0,1,0,23,0,0,0,0
+8,0.1,scale,rbf,,2,FTP-BruteForce,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,2,Infilteration,485,1,0,0,0,0,0,0,1,0,0,0,0,0,0
+8,0.1,scale,rbf,,2,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,2,SSH-Bruteforce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,329
+8,0.1,scale,rbf,,3,Benign,35150,77,0,0,0,0,13,1,9,0,0,0,0,0,13
+8,0.1,scale,rbf,,3,Bot,30,475,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,3,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,3,Brute Force -XSS,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,3,DDOS attack-HOIC,119,0,0,0,576,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,3,DDOS attack-LOIC-UDP,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,3,DDoS attacks-LOIC-HTTP,712,0,0,0,0,0,1297,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,3,DoS attacks-GoldenEye,1,0,0,0,0,0,0,87,53,0,0,0,0,0,4
+8,0.1,scale,rbf,,3,DoS attacks-Hulk,9,0,0,0,0,0,0,0,498,0,0,0,0,0,0
+8,0.1,scale,rbf,,3,DoS attacks-SlowHTTPTest,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,3,DoS attacks-Slowloris,7,0,0,0,0,0,0,0,0,0,27,0,0,0,0
+8,0.1,scale,rbf,,3,FTP-BruteForce,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,3,Infilteration,483,3,0,0,0,0,0,0,1,0,0,0,0,0,0
+8,0.1,scale,rbf,,3,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,3,SSH-Bruteforce,1,0,0,0,0,0,0,0,0,0,0,0,0,0,328
+8,0.1,scale,rbf,,4,Benign,35186,47,0,0,0,0,11,1,6,0,1,0,0,0,11
+8,0.1,scale,rbf,,4,Bot,23,482,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,4,Brute Force -Web,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,4,Brute Force -XSS,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,4,DDOS attack-HOIC,113,0,0,0,582,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,4,DDOS attack-LOIC-UDP,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,4,DDoS attacks-LOIC-HTTP,639,0,0,0,0,0,1370,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,4,DoS attacks-GoldenEye,5,0,0,0,0,0,0,88,48,0,0,0,0,0,4
+8,0.1,scale,rbf,,4,DoS attacks-Hulk,8,0,0,0,0,0,0,0,499,0,0,0,0,0,0
+8,0.1,scale,rbf,,4,DoS attacks-SlowHTTPTest,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,4,DoS attacks-Slowloris,11,0,0,0,0,0,0,0,0,0,23,0,0,0,0
+8,0.1,scale,rbf,,4,FTP-BruteForce,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,4,Infilteration,484,2,0,0,0,0,0,0,1,0,0,0,0,0,0
+8,0.1,scale,rbf,,4,SQL Injection,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,0.1,scale,rbf,,4,SSH-Bruteforce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,329

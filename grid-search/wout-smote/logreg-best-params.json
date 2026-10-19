@@ -1,0 +1,7 @@
+{
+    "sample_size": 1000000,
+    "params": {
+        "logreg__C": 10.0,
+        "logreg__penalty": "l1"
+    }
+}
