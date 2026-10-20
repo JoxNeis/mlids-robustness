@@ -1,0 +1,18 @@
+finding,answer,value
+Highest clean F1-score (macro),Random Forest,0.7417395714454688
+"Most robust model, all rows (mean retention)",Random Forest,0.8831436579021495
+"Least robust model, all rows (mean retention)",Logistic Regression,0.6384947073168955
+"Hardest scenario, all rows (mean retention)",gaussian-30,0.6536611335422274
+"Most damaging noise type, all rows (mean retention)",gaussian,0.7223874902508877
+"Most robust model, noisy rows (mean retention)",KNN,0.22484391819206503
+"Least robust model, noisy rows (mean retention)",XGBoost,0.11694246647613109
+"Hardest scenario, noisy rows (mean retention)",missing-30,0.08827549073396819
+"Most damaging noise type, noisy rows (mean retention)",missing,0.09088156243918061
+Most unstable model on the noisy rows (mean flip rate),Logistic Regression,0.4708644518124072
+Model whose detected attacks turn Benign most often (mean evasion rate),Random Forest,0.9758815141789657
+Model with the most false alarms on the noisy rows (mean false alarm rate),Logistic Regression,0.43723078951723315
+Model with the most confident errors on the noisy rows,KNN,1.0
+Attack most often predicted as Benign on the noisy rows,DoS attacks-SlowHTTPTest,0.8957575757575758
+Attack with the largest F1-score drop on the noisy rows,SSH-Bruteforce,0.9564335912892652
+Largest flip rate on the intact rows (0 means the clean baseline is valid),,0.0
+Largest accuracy mixture residual (0 means the populations add up),,2.220446049250313e-16

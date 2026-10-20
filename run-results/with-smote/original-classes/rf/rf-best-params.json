@@ -1,0 +1,26 @@
+{
+    "sample_size": 800000,
+    "params": {
+        "rf__max_depth": 24,
+        "rf__max_features": "log2",
+        "rf__n_estimators": 300,
+        "smote__k_neighbors": 7
+    },
+    "smote_class_ratios": {
+        "Benign": null,
+        "DDoS attacks-LOIC-HTTP": 0.071,
+        "DDOS attack-HOIC": 0.025,
+        "DoS attacks-Hulk": 0.018,
+        "Bot": 0.018,
+        "Infilteration": 0.041,
+        "SSH-Bruteforce": 0.012,
+        "DoS attacks-GoldenEye": 0.0082,
+        "DoS attacks-Slowloris": 0.004,
+        "DDOS attack-LOIC-UDP": 0.002,
+        "Brute Force -Web": 0.002,
+        "Brute Force -XSS": 0.002,
+        "SQL Injection": 0.002,
+        "DoS attacks-SlowHTTPTest": 0.002,
+        "FTP-BruteForce": 0.002
+    }
+}
