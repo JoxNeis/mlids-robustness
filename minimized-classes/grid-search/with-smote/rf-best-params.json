@@ -1,0 +1,17 @@
+{
+    "sample_size": 80000,
+    "params": {
+        "rf__max_depth": 12,
+        "rf__max_features": "log2",
+        "rf__n_estimators": 100,
+        "smote__k_neighbors": 5
+    },
+    "smote_class_ratios": {
+        "Benign": null,
+        "DOS/DDOS": 0.12,
+        "Botnet": 0.018,
+        "Infiltration": 0.041,
+        "Brute Force": 0.012,
+        "Web Attacks": 0.002
+    }
+}

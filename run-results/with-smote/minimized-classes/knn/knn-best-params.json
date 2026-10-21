@@ -1,0 +1,16 @@
+{
+    "sample_size": 250000,
+    "params": {
+        "knn__metric": "cosine",
+        "knn__n_neighbors": 1,
+        "smote__k_neighbors": 5
+    },
+    "smote_class_ratios": {
+        "Benign": null,
+        "DOS/DDOS": 0.12,
+        "Botnet": 0.018,
+        "Infiltration": 0.041,
+        "Brute Force": 0.012,
+        "Web Attacks": 0.002
+    }
+}

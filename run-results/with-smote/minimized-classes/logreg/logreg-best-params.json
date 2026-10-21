@@ -1,0 +1,16 @@
+{
+    "sample_size": 1000000,
+    "params": {
+        "logreg__C": 10.0,
+        "logreg__penalty": "l2",
+        "smote__k_neighbors": 3
+    },
+    "smote_class_ratios": {
+        "Benign": null,
+        "DOS/DDOS": 0.12,
+        "Botnet": 0.018,
+        "Infiltration": 0.041,
+        "Brute Force": 0.012,
+        "Web Attacks": 0.002
+    }
+}

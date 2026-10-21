@@ -1,0 +1,805 @@
+candidate,param_smote__k_neighbors,param_svm__C,param_svm__gamma,param_svm__kernel,param_svm,split,true_class,Benign,Botnet,Brute Force,DOS/DDOS,Infiltration,Web Attacks
+0,7,10.0,0.1,rbf,,0,Benign,35106,3,0,46,119,4
+0,7,10.0,0.1,rbf,,0,Botnet,10,495,0,0,0,0
+0,7,10.0,0.1,rbf,,0,Brute Force,1,0,328,0,0,0
+0,7,10.0,0.1,rbf,,0,DOS/DDOS,24,0,0,3373,0,0
+0,7,10.0,0.1,rbf,,0,Infiltration,408,0,0,0,79,0
+0,7,10.0,0.1,rbf,,0,Web Attacks,1,0,0,1,0,2
+0,7,10.0,0.1,rbf,,1,Benign,35127,1,0,34,116,0
+0,7,10.0,0.1,rbf,,1,Botnet,10,495,0,0,0,0
+0,7,10.0,0.1,rbf,,1,Brute Force,0,0,329,0,0,0
+0,7,10.0,0.1,rbf,,1,DOS/DDOS,39,0,0,3358,0,0
+0,7,10.0,0.1,rbf,,1,Infiltration,417,0,0,1,69,0
+0,7,10.0,0.1,rbf,,1,Web Attacks,3,0,0,0,0,1
+0,7,10.0,0.1,rbf,,2,Benign,35135,1,0,39,103,0
+0,7,10.0,0.1,rbf,,2,Botnet,7,498,0,0,0,0
+0,7,10.0,0.1,rbf,,2,Brute Force,0,0,329,0,0,0
+0,7,10.0,0.1,rbf,,2,DOS/DDOS,39,0,0,3358,0,0
+0,7,10.0,0.1,rbf,,2,Infiltration,412,0,0,3,72,0
+0,7,10.0,0.1,rbf,,2,Web Attacks,1,0,0,1,0,2
+0,7,10.0,0.1,rbf,,3,Benign,35125,1,0,42,110,0
+0,7,10.0,0.1,rbf,,3,Botnet,7,498,0,0,0,0
+0,7,10.0,0.1,rbf,,3,Brute Force,0,0,329,0,0,0
+0,7,10.0,0.1,rbf,,3,DOS/DDOS,24,0,0,3373,0,0
+0,7,10.0,0.1,rbf,,3,Infiltration,411,0,0,2,74,0
+0,7,10.0,0.1,rbf,,3,Web Attacks,2,0,0,0,0,2
+0,7,10.0,0.1,rbf,,4,Benign,35120,2,0,53,102,1
+0,7,10.0,0.1,rbf,,4,Botnet,10,495,0,0,0,0
+0,7,10.0,0.1,rbf,,4,Brute Force,0,0,329,0,0,0
+0,7,10.0,0.1,rbf,,4,DOS/DDOS,21,0,0,3376,0,0
+0,7,10.0,0.1,rbf,,4,Infiltration,409,0,0,2,76,0
+0,7,10.0,0.1,rbf,,4,Web Attacks,1,0,0,0,0,3
+1,3,10.0,0.1,rbf,,0,Benign,35109,3,0,46,120,0
+1,3,10.0,0.1,rbf,,0,Botnet,10,495,0,0,0,0
+1,3,10.0,0.1,rbf,,0,Brute Force,1,0,328,0,0,0
+1,3,10.0,0.1,rbf,,0,DOS/DDOS,25,0,0,3372,0,0
+1,3,10.0,0.1,rbf,,0,Infiltration,408,0,0,0,79,0
+1,3,10.0,0.1,rbf,,0,Web Attacks,1,0,0,1,0,2
+1,3,10.0,0.1,rbf,,1,Benign,35127,1,0,38,111,1
+1,3,10.0,0.1,rbf,,1,Botnet,10,495,0,0,0,0
+1,3,10.0,0.1,rbf,,1,Brute Force,0,0,329,0,0,0
+1,3,10.0,0.1,rbf,,1,DOS/DDOS,39,0,0,3358,0,0
+1,3,10.0,0.1,rbf,,1,Infiltration,411,0,0,2,74,0
+1,3,10.0,0.1,rbf,,1,Web Attacks,2,0,0,1,0,1
+1,3,10.0,0.1,rbf,,2,Benign,35130,1,0,40,107,0
+1,3,10.0,0.1,rbf,,2,Botnet,7,498,0,0,0,0
+1,3,10.0,0.1,rbf,,2,Brute Force,0,0,329,0,0,0
+1,3,10.0,0.1,rbf,,2,DOS/DDOS,39,0,0,3358,0,0
+1,3,10.0,0.1,rbf,,2,Infiltration,412,0,0,3,72,0
+1,3,10.0,0.1,rbf,,2,Web Attacks,2,0,0,1,0,1
+1,3,10.0,0.1,rbf,,3,Benign,35123,1,0,42,112,0
+1,3,10.0,0.1,rbf,,3,Botnet,7,498,0,0,0,0
+1,3,10.0,0.1,rbf,,3,Brute Force,0,0,329,0,0,0
+1,3,10.0,0.1,rbf,,3,DOS/DDOS,25,0,0,3372,0,0
+1,3,10.0,0.1,rbf,,3,Infiltration,408,0,0,2,77,0
+1,3,10.0,0.1,rbf,,3,Web Attacks,2,0,0,0,0,2
+1,3,10.0,0.1,rbf,,4,Benign,35111,2,1,53,110,1
+1,3,10.0,0.1,rbf,,4,Botnet,10,495,0,0,0,0
+1,3,10.0,0.1,rbf,,4,Brute Force,0,0,329,0,0,0
+1,3,10.0,0.1,rbf,,4,DOS/DDOS,20,0,0,3377,0,0
+1,3,10.0,0.1,rbf,,4,Infiltration,403,0,0,2,82,0
+1,3,10.0,0.1,rbf,,4,Web Attacks,1,0,0,0,0,3
+2,5,10.0,0.1,rbf,,0,Benign,35107,3,0,46,118,4
+2,5,10.0,0.1,rbf,,0,Botnet,10,495,0,0,0,0
+2,5,10.0,0.1,rbf,,0,Brute Force,1,0,328,0,0,0
+2,5,10.0,0.1,rbf,,0,DOS/DDOS,25,0,0,3372,0,0
+2,5,10.0,0.1,rbf,,0,Infiltration,411,0,0,0,76,0
+2,5,10.0,0.1,rbf,,0,Web Attacks,1,0,0,1,0,2
+2,5,10.0,0.1,rbf,,1,Benign,35123,1,0,36,116,2
+2,5,10.0,0.1,rbf,,1,Botnet,10,495,0,0,0,0
+2,5,10.0,0.1,rbf,,1,Brute Force,0,0,329,0,0,0
+2,5,10.0,0.1,rbf,,1,DOS/DDOS,36,0,0,3361,0,0
+2,5,10.0,0.1,rbf,,1,Infiltration,411,0,0,2,74,0
+2,5,10.0,0.1,rbf,,1,Web Attacks,3,0,0,0,0,1
+2,5,10.0,0.1,rbf,,2,Benign,35130,1,0,39,108,0
+2,5,10.0,0.1,rbf,,2,Botnet,7,498,0,0,0,0
+2,5,10.0,0.1,rbf,,2,Brute Force,0,0,329,0,0,0
+2,5,10.0,0.1,rbf,,2,DOS/DDOS,38,0,0,3359,0,0
+2,5,10.0,0.1,rbf,,2,Infiltration,411,0,0,3,73,0
+2,5,10.0,0.1,rbf,,2,Web Attacks,1,0,0,1,0,2
+2,5,10.0,0.1,rbf,,3,Benign,35122,1,0,42,111,2
+2,5,10.0,0.1,rbf,,3,Botnet,7,498,0,0,0,0
+2,5,10.0,0.1,rbf,,3,Brute Force,0,0,329,0,0,0
+2,5,10.0,0.1,rbf,,3,DOS/DDOS,25,0,0,3372,0,0
+2,5,10.0,0.1,rbf,,3,Infiltration,411,0,0,2,74,0
+2,5,10.0,0.1,rbf,,3,Web Attacks,2,0,0,0,0,2
+2,5,10.0,0.1,rbf,,4,Benign,35115,2,0,54,106,1
+2,5,10.0,0.1,rbf,,4,Botnet,10,495,0,0,0,0
+2,5,10.0,0.1,rbf,,4,Brute Force,0,0,329,0,0,0
+2,5,10.0,0.1,rbf,,4,DOS/DDOS,20,0,0,3377,0,0
+2,5,10.0,0.1,rbf,,4,Infiltration,404,0,0,2,81,0
+2,5,10.0,0.1,rbf,,4,Web Attacks,1,0,0,0,0,3
+3,7,10.0,scale,rbf,,0,Benign,34862,7,3,264,142,0
+3,7,10.0,scale,rbf,,0,Botnet,8,495,0,2,0,0
+3,7,10.0,scale,rbf,,0,Brute Force,1,0,328,0,0,0
+3,7,10.0,scale,rbf,,0,DOS/DDOS,14,0,0,3383,0,0
+3,7,10.0,scale,rbf,,0,Infiltration,403,0,0,3,81,0
+3,7,10.0,scale,rbf,,0,Web Attacks,2,0,0,1,0,1
+3,7,10.0,scale,rbf,,1,Benign,34904,6,2,243,123,0
+3,7,10.0,scale,rbf,,1,Botnet,9,495,0,1,0,0
+3,7,10.0,scale,rbf,,1,Brute Force,1,0,328,0,0,0
+3,7,10.0,scale,rbf,,1,DOS/DDOS,24,0,0,3373,0,0
+3,7,10.0,scale,rbf,,1,Infiltration,415,0,0,2,70,0
+3,7,10.0,scale,rbf,,1,Web Attacks,2,0,0,1,0,1
+3,7,10.0,scale,rbf,,2,Benign,34936,4,5,224,109,0
+3,7,10.0,scale,rbf,,2,Botnet,6,498,0,1,0,0
+3,7,10.0,scale,rbf,,2,Brute Force,0,0,329,0,0,0
+3,7,10.0,scale,rbf,,2,DOS/DDOS,23,0,0,3374,0,0
+3,7,10.0,scale,rbf,,2,Infiltration,410,1,0,8,68,0
+3,7,10.0,scale,rbf,,2,Web Attacks,2,0,0,1,0,1
+3,7,10.0,scale,rbf,,3,Benign,34895,6,1,240,136,0
+3,7,10.0,scale,rbf,,3,Botnet,4,498,0,3,0,0
+3,7,10.0,scale,rbf,,3,Brute Force,2,0,327,0,0,0
+3,7,10.0,scale,rbf,,3,DOS/DDOS,13,0,0,3384,0,0
+3,7,10.0,scale,rbf,,3,Infiltration,410,1,0,4,72,0
+3,7,10.0,scale,rbf,,3,Web Attacks,2,0,0,0,0,2
+3,7,10.0,scale,rbf,,4,Benign,34900,4,1,262,111,0
+3,7,10.0,scale,rbf,,4,Botnet,8,495,0,2,0,0
+3,7,10.0,scale,rbf,,4,Brute Force,1,0,328,0,0,0
+3,7,10.0,scale,rbf,,4,DOS/DDOS,10,0,0,3387,0,0
+3,7,10.0,scale,rbf,,4,Infiltration,406,1,0,3,77,0
+3,7,10.0,scale,rbf,,4,Web Attacks,2,0,0,0,0,2
+4,7,1.0,0.1,rbf,,0,Benign,34913,7,1,248,109,0
+4,7,1.0,0.1,rbf,,0,Botnet,6,495,0,4,0,0
+4,7,1.0,0.1,rbf,,0,Brute Force,1,0,328,0,0,0
+4,7,1.0,0.1,rbf,,0,DOS/DDOS,17,0,0,3380,0,0
+4,7,1.0,0.1,rbf,,0,Infiltration,409,0,0,3,75,0
+4,7,1.0,0.1,rbf,,0,Web Attacks,2,0,0,1,0,1
+4,7,1.0,0.1,rbf,,1,Benign,35053,6,2,112,103,2
+4,7,1.0,0.1,rbf,,1,Botnet,8,495,0,2,0,0
+4,7,1.0,0.1,rbf,,1,Brute Force,1,0,328,0,0,0
+4,7,1.0,0.1,rbf,,1,DOS/DDOS,27,0,0,3370,0,0
+4,7,1.0,0.1,rbf,,1,Infiltration,418,0,0,2,67,0
+4,7,1.0,0.1,rbf,,1,Web Attacks,2,0,0,1,0,1
+4,7,1.0,0.1,rbf,,2,Benign,35115,4,3,60,96,0
+4,7,1.0,0.1,rbf,,2,Botnet,7,497,0,1,0,0
+4,7,1.0,0.1,rbf,,2,Brute Force,0,0,329,0,0,0
+4,7,1.0,0.1,rbf,,2,DOS/DDOS,33,0,0,3364,0,0
+4,7,1.0,0.1,rbf,,2,Infiltration,416,1,0,3,67,0
+4,7,1.0,0.1,rbf,,2,Web Attacks,2,0,0,1,0,1
+4,7,1.0,0.1,rbf,,3,Benign,34938,6,0,232,102,0
+4,7,1.0,0.1,rbf,,3,Botnet,4,498,0,3,0,0
+4,7,1.0,0.1,rbf,,3,Brute Force,2,0,327,0,0,0
+4,7,1.0,0.1,rbf,,3,DOS/DDOS,14,0,0,3383,0,0
+4,7,1.0,0.1,rbf,,3,Infiltration,409,1,0,5,72,0
+4,7,1.0,0.1,rbf,,3,Web Attacks,2,0,0,0,0,2
+4,7,1.0,0.1,rbf,,4,Benign,34948,3,1,238,88,0
+4,7,1.0,0.1,rbf,,4,Botnet,8,494,0,3,0,0
+4,7,1.0,0.1,rbf,,4,Brute Force,1,0,328,0,0,0
+4,7,1.0,0.1,rbf,,4,DOS/DDOS,11,0,0,3386,0,0
+4,7,1.0,0.1,rbf,,4,Infiltration,405,1,0,2,79,0
+4,7,1.0,0.1,rbf,,4,Web Attacks,2,0,0,0,0,2
+5,3,1.0,0.1,rbf,,0,Benign,34919,7,0,241,111,0
+5,3,1.0,0.1,rbf,,0,Botnet,6,495,0,4,0,0
+5,3,1.0,0.1,rbf,,0,Brute Force,1,0,328,0,0,0
+5,3,1.0,0.1,rbf,,0,DOS/DDOS,17,0,0,3380,0,0
+5,3,1.0,0.1,rbf,,0,Infiltration,408,0,0,3,76,0
+5,3,1.0,0.1,rbf,,0,Web Attacks,2,0,0,1,0,1
+5,3,1.0,0.1,rbf,,1,Benign,35055,6,2,113,100,2
+5,3,1.0,0.1,rbf,,1,Botnet,8,495,0,2,0,0
+5,3,1.0,0.1,rbf,,1,Brute Force,1,0,328,0,0,0
+5,3,1.0,0.1,rbf,,1,DOS/DDOS,27,0,0,3370,0,0
+5,3,1.0,0.1,rbf,,1,Infiltration,416,0,0,2,69,0
+5,3,1.0,0.1,rbf,,1,Web Attacks,2,0,0,1,0,1
+5,3,1.0,0.1,rbf,,2,Benign,35130,4,3,41,100,0
+5,3,1.0,0.1,rbf,,2,Botnet,7,497,0,1,0,0
+5,3,1.0,0.1,rbf,,2,Brute Force,0,0,329,0,0,0
+5,3,1.0,0.1,rbf,,2,DOS/DDOS,33,0,0,3364,0,0
+5,3,1.0,0.1,rbf,,2,Infiltration,417,1,0,3,66,0
+5,3,1.0,0.1,rbf,,2,Web Attacks,2,0,0,1,0,1
+5,3,1.0,0.1,rbf,,3,Benign,34937,6,0,227,105,3
+5,3,1.0,0.1,rbf,,3,Botnet,4,498,0,3,0,0
+5,3,1.0,0.1,rbf,,3,Brute Force,2,0,327,0,0,0
+5,3,1.0,0.1,rbf,,3,DOS/DDOS,14,0,0,3383,0,0
+5,3,1.0,0.1,rbf,,3,Infiltration,412,1,0,5,69,0
+5,3,1.0,0.1,rbf,,3,Web Attacks,2,0,0,0,0,2
+5,3,1.0,0.1,rbf,,4,Benign,34956,3,1,230,88,0
+5,3,1.0,0.1,rbf,,4,Botnet,8,494,0,3,0,0
+5,3,1.0,0.1,rbf,,4,Brute Force,1,0,328,0,0,0
+5,3,1.0,0.1,rbf,,4,DOS/DDOS,11,0,0,3386,0,0
+5,3,1.0,0.1,rbf,,4,Infiltration,406,1,0,2,78,0
+5,3,1.0,0.1,rbf,,4,Web Attacks,2,0,0,0,0,2
+6,3,10.0,scale,rbf,,0,Benign,34872,7,2,264,133,0
+6,3,10.0,scale,rbf,,0,Botnet,8,495,0,2,0,0
+6,3,10.0,scale,rbf,,0,Brute Force,1,0,328,0,0,0
+6,3,10.0,scale,rbf,,0,DOS/DDOS,14,0,0,3383,0,0
+6,3,10.0,scale,rbf,,0,Infiltration,405,0,0,3,79,0
+6,3,10.0,scale,rbf,,0,Web Attacks,2,0,0,1,0,1
+6,3,10.0,scale,rbf,,1,Benign,34900,6,2,244,124,2
+6,3,10.0,scale,rbf,,1,Botnet,9,495,0,1,0,0
+6,3,10.0,scale,rbf,,1,Brute Force,0,0,329,0,0,0
+6,3,10.0,scale,rbf,,1,DOS/DDOS,23,0,0,3374,0,0
+6,3,10.0,scale,rbf,,1,Infiltration,414,0,0,2,71,0
+6,3,10.0,scale,rbf,,1,Web Attacks,2,0,0,1,0,1
+6,3,10.0,scale,rbf,,2,Benign,34942,4,6,221,105,0
+6,3,10.0,scale,rbf,,2,Botnet,6,498,0,1,0,0
+6,3,10.0,scale,rbf,,2,Brute Force,0,0,329,0,0,0
+6,3,10.0,scale,rbf,,2,DOS/DDOS,24,0,0,3373,0,0
+6,3,10.0,scale,rbf,,2,Infiltration,414,1,0,8,64,0
+6,3,10.0,scale,rbf,,2,Web Attacks,2,0,0,1,0,1
+6,3,10.0,scale,rbf,,3,Benign,34901,6,1,241,127,2
+6,3,10.0,scale,rbf,,3,Botnet,4,498,0,3,0,0
+6,3,10.0,scale,rbf,,3,Brute Force,2,0,327,0,0,0
+6,3,10.0,scale,rbf,,3,DOS/DDOS,13,0,0,3384,0,0
+6,3,10.0,scale,rbf,,3,Infiltration,413,1,0,4,69,0
+6,3,10.0,scale,rbf,,3,Web Attacks,2,0,0,0,0,2
+6,3,10.0,scale,rbf,,4,Benign,34908,4,1,262,103,0
+6,3,10.0,scale,rbf,,4,Botnet,8,495,0,2,0,0
+6,3,10.0,scale,rbf,,4,Brute Force,0,0,329,0,0,0
+6,3,10.0,scale,rbf,,4,DOS/DDOS,10,0,0,3387,0,0
+6,3,10.0,scale,rbf,,4,Infiltration,405,1,0,3,78,0
+6,3,10.0,scale,rbf,,4,Web Attacks,2,0,0,0,0,2
+7,5,1.0,0.1,rbf,,0,Benign,34919,7,1,241,106,4
+7,5,1.0,0.1,rbf,,0,Botnet,6,495,0,4,0,0
+7,5,1.0,0.1,rbf,,0,Brute Force,1,0,328,0,0,0
+7,5,1.0,0.1,rbf,,0,DOS/DDOS,18,0,0,3379,0,0
+7,5,1.0,0.1,rbf,,0,Infiltration,410,0,0,3,74,0
+7,5,1.0,0.1,rbf,,0,Web Attacks,1,0,0,1,0,2
+7,5,1.0,0.1,rbf,,1,Benign,35053,6,3,105,108,3
+7,5,1.0,0.1,rbf,,1,Botnet,8,495,0,2,0,0
+7,5,1.0,0.1,rbf,,1,Brute Force,1,0,328,0,0,0
+7,5,1.0,0.1,rbf,,1,DOS/DDOS,27,0,0,3370,0,0
+7,5,1.0,0.1,rbf,,1,Infiltration,415,0,0,2,70,0
+7,5,1.0,0.1,rbf,,1,Web Attacks,2,0,0,1,0,1
+7,5,1.0,0.1,rbf,,2,Benign,35128,4,3,42,101,0
+7,5,1.0,0.1,rbf,,2,Botnet,7,497,0,1,0,0
+7,5,1.0,0.1,rbf,,2,Brute Force,0,0,329,0,0,0
+7,5,1.0,0.1,rbf,,2,DOS/DDOS,32,0,0,3365,0,0
+7,5,1.0,0.1,rbf,,2,Infiltration,414,1,0,3,69,0
+7,5,1.0,0.1,rbf,,2,Web Attacks,2,0,0,1,0,1
+7,5,1.0,0.1,rbf,,3,Benign,34928,6,0,229,112,3
+7,5,1.0,0.1,rbf,,3,Botnet,4,498,0,3,0,0
+7,5,1.0,0.1,rbf,,3,Brute Force,2,0,327,0,0,0
+7,5,1.0,0.1,rbf,,3,DOS/DDOS,14,0,0,3383,0,0
+7,5,1.0,0.1,rbf,,3,Infiltration,407,1,0,5,74,0
+7,5,1.0,0.1,rbf,,3,Web Attacks,2,0,0,0,0,2
+7,5,1.0,0.1,rbf,,4,Benign,34951,3,1,236,87,0
+7,5,1.0,0.1,rbf,,4,Botnet,8,494,0,3,0,0
+7,5,1.0,0.1,rbf,,4,Brute Force,1,0,328,0,0,0
+7,5,1.0,0.1,rbf,,4,DOS/DDOS,11,0,0,3386,0,0
+7,5,1.0,0.1,rbf,,4,Infiltration,409,1,0,2,75,0
+7,5,1.0,0.1,rbf,,4,Web Attacks,2,0,0,0,0,2
+8,3,1.0,scale,rbf,,0,Benign,34920,8,10,310,30,0
+8,3,1.0,scale,rbf,,0,Botnet,5,495,0,5,0,0
+8,3,1.0,scale,rbf,,0,Brute Force,1,0,328,0,0,0
+8,3,1.0,scale,rbf,,0,DOS/DDOS,21,0,0,3376,0,0
+8,3,1.0,scale,rbf,,0,Infiltration,457,0,1,8,21,0
+8,3,1.0,scale,rbf,,0,Web Attacks,2,0,0,1,0,1
+8,3,1.0,scale,rbf,,1,Benign,34955,6,7,286,24,0
+8,3,1.0,scale,rbf,,1,Botnet,4,495,0,6,0,0
+8,3,1.0,scale,rbf,,1,Brute Force,1,0,328,0,0,0
+8,3,1.0,scale,rbf,,1,DOS/DDOS,22,0,0,3375,0,0
+8,3,1.0,scale,rbf,,1,Infiltration,460,0,1,9,17,0
+8,3,1.0,scale,rbf,,1,Web Attacks,1,0,0,2,0,1
+8,3,1.0,scale,rbf,,2,Benign,34994,4,9,254,17,0
+8,3,1.0,scale,rbf,,2,Botnet,4,497,0,4,0,0
+8,3,1.0,scale,rbf,,2,Brute Force,0,0,329,0,0,0
+8,3,1.0,scale,rbf,,2,DOS/DDOS,26,0,0,3371,0,0
+8,3,1.0,scale,rbf,,2,Infiltration,462,1,0,12,12,0
+8,3,1.0,scale,rbf,,2,Web Attacks,2,0,0,1,0,1
+8,3,1.0,scale,rbf,,3,Benign,34958,6,17,274,23,0
+8,3,1.0,scale,rbf,,3,Botnet,3,498,0,4,0,0
+8,3,1.0,scale,rbf,,3,Brute Force,2,0,327,0,0,0
+8,3,1.0,scale,rbf,,3,DOS/DDOS,15,0,0,3382,0,0
+8,3,1.0,scale,rbf,,3,Infiltration,454,1,1,13,18,0
+8,3,1.0,scale,rbf,,3,Web Attacks,2,0,0,0,0,2
+8,3,1.0,scale,rbf,,4,Benign,34951,4,13,293,17,0
+8,3,1.0,scale,rbf,,4,Botnet,5,494,0,6,0,0
+8,3,1.0,scale,rbf,,4,Brute Force,1,0,328,0,0,0
+8,3,1.0,scale,rbf,,4,DOS/DDOS,12,0,0,3385,0,0
+8,3,1.0,scale,rbf,,4,Infiltration,461,1,0,8,17,0
+8,3,1.0,scale,rbf,,4,Web Attacks,2,0,0,0,0,2
+9,5,1.0,scale,rbf,,0,Benign,34922,8,10,308,30,0
+9,5,1.0,scale,rbf,,0,Botnet,5,495,0,5,0,0
+9,5,1.0,scale,rbf,,0,Brute Force,1,0,328,0,0,0
+9,5,1.0,scale,rbf,,0,DOS/DDOS,21,0,0,3376,0,0
+9,5,1.0,scale,rbf,,0,Infiltration,457,0,1,8,21,0
+9,5,1.0,scale,rbf,,0,Web Attacks,2,0,0,1,0,1
+9,5,1.0,scale,rbf,,1,Benign,34956,6,7,289,20,0
+9,5,1.0,scale,rbf,,1,Botnet,4,495,0,6,0,0
+9,5,1.0,scale,rbf,,1,Brute Force,1,0,328,0,0,0
+9,5,1.0,scale,rbf,,1,DOS/DDOS,23,0,0,3374,0,0
+9,5,1.0,scale,rbf,,1,Infiltration,460,0,1,9,17,0
+9,5,1.0,scale,rbf,,1,Web Attacks,1,0,0,2,0,1
+9,5,1.0,scale,rbf,,2,Benign,34991,4,11,254,18,0
+9,5,1.0,scale,rbf,,2,Botnet,4,497,0,4,0,0
+9,5,1.0,scale,rbf,,2,Brute Force,0,0,329,0,0,0
+9,5,1.0,scale,rbf,,2,DOS/DDOS,24,0,0,3373,0,0
+9,5,1.0,scale,rbf,,2,Infiltration,462,1,0,12,12,0
+9,5,1.0,scale,rbf,,2,Web Attacks,2,0,0,1,0,1
+9,5,1.0,scale,rbf,,3,Benign,34960,6,17,273,22,0
+9,5,1.0,scale,rbf,,3,Botnet,3,498,0,4,0,0
+9,5,1.0,scale,rbf,,3,Brute Force,2,0,327,0,0,0
+9,5,1.0,scale,rbf,,3,DOS/DDOS,13,0,0,3384,0,0
+9,5,1.0,scale,rbf,,3,Infiltration,454,1,1,13,18,0
+9,5,1.0,scale,rbf,,3,Web Attacks,2,0,0,0,0,2
+9,5,1.0,scale,rbf,,4,Benign,34949,4,13,293,19,0
+9,5,1.0,scale,rbf,,4,Botnet,5,494,0,6,0,0
+9,5,1.0,scale,rbf,,4,Brute Force,1,0,328,0,0,0
+9,5,1.0,scale,rbf,,4,DOS/DDOS,13,0,0,3384,0,0
+9,5,1.0,scale,rbf,,4,Infiltration,461,1,0,8,17,0
+9,5,1.0,scale,rbf,,4,Web Attacks,2,0,0,0,0,2
+10,7,1.0,scale,rbf,,0,Benign,34920,9,10,309,30,0
+10,7,1.0,scale,rbf,,0,Botnet,5,495,0,5,0,0
+10,7,1.0,scale,rbf,,0,Brute Force,1,0,328,0,0,0
+10,7,1.0,scale,rbf,,0,DOS/DDOS,20,0,0,3377,0,0
+10,7,1.0,scale,rbf,,0,Infiltration,457,0,1,8,21,0
+10,7,1.0,scale,rbf,,0,Web Attacks,2,0,0,1,0,1
+10,7,1.0,scale,rbf,,1,Benign,34957,6,4,285,26,0
+10,7,1.0,scale,rbf,,1,Botnet,4,495,0,6,0,0
+10,7,1.0,scale,rbf,,1,Brute Force,1,0,328,0,0,0
+10,7,1.0,scale,rbf,,1,DOS/DDOS,22,0,0,3375,0,0
+10,7,1.0,scale,rbf,,1,Infiltration,461,0,1,9,16,0
+10,7,1.0,scale,rbf,,1,Web Attacks,1,0,0,2,0,1
+10,7,1.0,scale,rbf,,2,Benign,34989,4,11,257,17,0
+10,7,1.0,scale,rbf,,2,Botnet,4,497,0,4,0,0
+10,7,1.0,scale,rbf,,2,Brute Force,0,0,329,0,0,0
+10,7,1.0,scale,rbf,,2,DOS/DDOS,27,0,0,3370,0,0
+10,7,1.0,scale,rbf,,2,Infiltration,461,1,0,13,12,0
+10,7,1.0,scale,rbf,,2,Web Attacks,2,0,0,1,0,1
+10,7,1.0,scale,rbf,,3,Benign,34957,6,17,276,22,0
+10,7,1.0,scale,rbf,,3,Botnet,3,498,0,4,0,0
+10,7,1.0,scale,rbf,,3,Brute Force,2,0,327,0,0,0
+10,7,1.0,scale,rbf,,3,DOS/DDOS,13,0,0,3384,0,0
+10,7,1.0,scale,rbf,,3,Infiltration,455,1,1,13,17,0
+10,7,1.0,scale,rbf,,3,Web Attacks,2,0,0,0,0,2
+10,7,1.0,scale,rbf,,4,Benign,34954,4,13,293,14,0
+10,7,1.0,scale,rbf,,4,Botnet,5,494,0,6,0,0
+10,7,1.0,scale,rbf,,4,Brute Force,1,0,328,0,0,0
+10,7,1.0,scale,rbf,,4,DOS/DDOS,13,0,0,3384,0,0
+10,7,1.0,scale,rbf,,4,Infiltration,463,1,0,8,15,0
+10,7,1.0,scale,rbf,,4,Web Attacks,2,0,0,0,0,2
+11,5,0.1,0.1,rbf,,0,Benign,34890,7,15,291,75,0
+11,5,0.1,0.1,rbf,,0,Botnet,6,495,0,4,0,0
+11,5,0.1,0.1,rbf,,0,Brute Force,1,0,328,0,0,0
+11,5,0.1,0.1,rbf,,0,DOS/DDOS,35,0,1,3361,0,0
+11,5,0.1,0.1,rbf,,0,Infiltration,419,0,1,6,61,0
+11,5,0.1,0.1,rbf,,0,Web Attacks,2,0,0,1,0,1
+11,5,0.1,0.1,rbf,,1,Benign,34888,10,8,269,103,0
+11,5,0.1,0.1,rbf,,1,Botnet,8,495,0,2,0,0
+11,5,0.1,0.1,rbf,,1,Brute Force,1,0,328,0,0,0
+11,5,0.1,0.1,rbf,,1,DOS/DDOS,31,0,2,3364,0,0
+11,5,0.1,0.1,rbf,,1,Infiltration,424,0,1,6,56,0
+11,5,0.1,0.1,rbf,,1,Web Attacks,2,0,0,2,0,0
+11,5,0.1,0.1,rbf,,2,Benign,34951,5,10,238,74,0
+11,5,0.1,0.1,rbf,,2,Botnet,7,497,0,1,0,0
+11,5,0.1,0.1,rbf,,2,Brute Force,0,0,329,0,0,0
+11,5,0.1,0.1,rbf,,2,DOS/DDOS,34,0,2,3361,0,0
+11,5,0.1,0.1,rbf,,2,Infiltration,423,1,0,10,53,0
+11,5,0.1,0.1,rbf,,2,Web Attacks,2,0,0,1,0,1
+11,5,0.1,0.1,rbf,,3,Benign,34898,6,13,258,103,0
+11,5,0.1,0.1,rbf,,3,Botnet,4,498,0,3,0,0
+11,5,0.1,0.1,rbf,,3,Brute Force,2,0,327,0,0,0
+11,5,0.1,0.1,rbf,,3,DOS/DDOS,18,0,2,3377,0,0
+11,5,0.1,0.1,rbf,,3,Infiltration,412,1,1,11,62,0
+11,5,0.1,0.1,rbf,,3,Web Attacks,3,0,0,0,0,1
+11,5,0.1,0.1,rbf,,4,Benign,34917,9,11,276,65,0
+11,5,0.1,0.1,rbf,,4,Botnet,8,494,0,3,0,0
+11,5,0.1,0.1,rbf,,4,Brute Force,1,0,328,0,0,0
+11,5,0.1,0.1,rbf,,4,DOS/DDOS,18,0,1,3378,0,0
+11,5,0.1,0.1,rbf,,4,Infiltration,425,1,0,8,53,0
+11,5,0.1,0.1,rbf,,4,Web Attacks,4,0,0,0,0,0
+12,7,0.1,0.1,rbf,,0,Benign,34862,7,15,291,103,0
+12,7,0.1,0.1,rbf,,0,Botnet,6,495,0,4,0,0
+12,7,0.1,0.1,rbf,,0,Brute Force,1,0,328,0,0,0
+12,7,0.1,0.1,rbf,,0,DOS/DDOS,35,0,1,3361,0,0
+12,7,0.1,0.1,rbf,,0,Infiltration,415,0,1,6,65,0
+12,7,0.1,0.1,rbf,,0,Web Attacks,2,0,0,1,0,1
+12,7,0.1,0.1,rbf,,1,Benign,34891,10,8,269,100,0
+12,7,0.1,0.1,rbf,,1,Botnet,8,495,0,2,0,0
+12,7,0.1,0.1,rbf,,1,Brute Force,1,0,328,0,0,0
+12,7,0.1,0.1,rbf,,1,DOS/DDOS,29,0,2,3366,0,0
+12,7,0.1,0.1,rbf,,1,Infiltration,425,0,1,6,55,0
+12,7,0.1,0.1,rbf,,1,Web Attacks,2,0,0,2,0,0
+12,7,0.1,0.1,rbf,,2,Benign,34924,5,10,240,99,0
+12,7,0.1,0.1,rbf,,2,Botnet,7,497,0,1,0,0
+12,7,0.1,0.1,rbf,,2,Brute Force,0,0,329,0,0,0
+12,7,0.1,0.1,rbf,,2,DOS/DDOS,34,0,2,3361,0,0
+12,7,0.1,0.1,rbf,,2,Infiltration,419,1,0,10,57,0
+12,7,0.1,0.1,rbf,,2,Web Attacks,2,0,0,1,0,1
+12,7,0.1,0.1,rbf,,3,Benign,34922,6,15,260,75,0
+12,7,0.1,0.1,rbf,,3,Botnet,4,498,0,3,0,0
+12,7,0.1,0.1,rbf,,3,Brute Force,2,0,327,0,0,0
+12,7,0.1,0.1,rbf,,3,DOS/DDOS,20,0,2,3375,0,0
+12,7,0.1,0.1,rbf,,3,Infiltration,414,1,1,12,59,0
+12,7,0.1,0.1,rbf,,3,Web Attacks,3,0,0,0,0,1
+12,7,0.1,0.1,rbf,,4,Benign,34917,9,11,276,65,0
+12,7,0.1,0.1,rbf,,4,Botnet,8,494,0,3,0,0
+12,7,0.1,0.1,rbf,,4,Brute Force,1,0,328,0,0,0
+12,7,0.1,0.1,rbf,,4,DOS/DDOS,18,0,1,3378,0,0
+12,7,0.1,0.1,rbf,,4,Infiltration,426,1,0,8,52,0
+12,7,0.1,0.1,rbf,,4,Web Attacks,4,0,0,0,0,0
+13,3,0.1,0.1,rbf,,0,Benign,34889,7,15,291,76,0
+13,3,0.1,0.1,rbf,,0,Botnet,6,495,0,4,0,0
+13,3,0.1,0.1,rbf,,0,Brute Force,1,0,328,0,0,0
+13,3,0.1,0.1,rbf,,0,DOS/DDOS,35,0,1,3361,0,0
+13,3,0.1,0.1,rbf,,0,Infiltration,419,0,1,6,61,0
+13,3,0.1,0.1,rbf,,0,Web Attacks,2,0,0,1,0,1
+13,3,0.1,0.1,rbf,,1,Benign,34891,10,8,269,100,0
+13,3,0.1,0.1,rbf,,1,Botnet,9,495,0,1,0,0
+13,3,0.1,0.1,rbf,,1,Brute Force,1,0,328,0,0,0
+13,3,0.1,0.1,rbf,,1,DOS/DDOS,29,0,2,3366,0,0
+13,3,0.1,0.1,rbf,,1,Infiltration,421,0,1,6,59,0
+13,3,0.1,0.1,rbf,,1,Web Attacks,2,0,0,2,0,0
+13,3,0.1,0.1,rbf,,2,Benign,34969,5,10,238,56,0
+13,3,0.1,0.1,rbf,,2,Botnet,7,497,0,1,0,0
+13,3,0.1,0.1,rbf,,2,Brute Force,0,0,329,0,0,0
+13,3,0.1,0.1,rbf,,2,DOS/DDOS,33,0,2,3362,0,0
+13,3,0.1,0.1,rbf,,2,Infiltration,435,1,0,10,41,0
+13,3,0.1,0.1,rbf,,2,Web Attacks,2,0,0,1,0,1
+13,3,0.1,0.1,rbf,,3,Benign,34906,6,15,255,96,0
+13,3,0.1,0.1,rbf,,3,Botnet,4,498,0,3,0,0
+13,3,0.1,0.1,rbf,,3,Brute Force,2,0,327,0,0,0
+13,3,0.1,0.1,rbf,,3,DOS/DDOS,22,0,2,3373,0,0
+13,3,0.1,0.1,rbf,,3,Infiltration,416,1,1,11,58,0
+13,3,0.1,0.1,rbf,,3,Web Attacks,3,0,0,0,0,1
+13,3,0.1,0.1,rbf,,4,Benign,34898,9,11,273,87,0
+13,3,0.1,0.1,rbf,,4,Botnet,8,494,0,3,0,0
+13,3,0.1,0.1,rbf,,4,Brute Force,1,0,328,0,0,0
+13,3,0.1,0.1,rbf,,4,DOS/DDOS,18,0,1,3378,0,0
+13,3,0.1,0.1,rbf,,4,Infiltration,424,1,0,6,56,0
+13,3,0.1,0.1,rbf,,4,Web Attacks,4,0,0,0,0,0
+14,7,10.0,,,LinearSVC(),0,Benign,34501,17,0,524,236,0
+14,7,10.0,,,LinearSVC(),0,Botnet,7,498,0,0,0,0
+14,7,10.0,,,LinearSVC(),0,Brute Force,1,0,328,0,0,0
+14,7,10.0,,,LinearSVC(),0,DOS/DDOS,183,0,0,3214,0,0
+14,7,10.0,,,LinearSVC(),0,Infiltration,461,2,0,12,12,0
+14,7,10.0,,,LinearSVC(),0,Web Attacks,3,0,0,1,0,0
+14,7,10.0,,,LinearSVC(),1,Benign,34336,36,0,778,128,0
+14,7,10.0,,,LinearSVC(),1,Botnet,8,497,0,0,0,0
+14,7,10.0,,,LinearSVC(),1,Brute Force,1,0,328,0,0,0
+14,7,10.0,,,LinearSVC(),1,DOS/DDOS,131,0,0,3263,3,0
+14,7,10.0,,,LinearSVC(),1,Infiltration,464,1,0,4,18,0
+14,7,10.0,,,LinearSVC(),1,Web Attacks,3,0,0,1,0,0
+14,7,10.0,,,LinearSVC(),2,Benign,34590,15,0,454,219,0
+14,7,10.0,,,LinearSVC(),2,Botnet,7,498,0,0,0,0
+14,7,10.0,,,LinearSVC(),2,Brute Force,0,0,329,0,0,0
+14,7,10.0,,,LinearSVC(),2,DOS/DDOS,151,0,0,3245,1,0
+14,7,10.0,,,LinearSVC(),2,Infiltration,458,1,0,16,11,1
+14,7,10.0,,,LinearSVC(),2,Web Attacks,4,0,0,0,0,0
+14,7,10.0,,,LinearSVC(),3,Benign,34429,36,0,532,281,0
+14,7,10.0,,,LinearSVC(),3,Botnet,5,500,0,0,0,0
+14,7,10.0,,,LinearSVC(),3,Brute Force,2,0,327,0,0,0
+14,7,10.0,,,LinearSVC(),3,DOS/DDOS,154,0,0,3243,0,0
+14,7,10.0,,,LinearSVC(),3,Infiltration,460,2,0,7,18,0
+14,7,10.0,,,LinearSVC(),3,Web Attacks,4,0,0,0,0,0
+14,7,10.0,,,LinearSVC(),4,Benign,34271,11,0,494,501,1
+14,7,10.0,,,LinearSVC(),4,Botnet,9,495,0,0,1,0
+14,7,10.0,,,LinearSVC(),4,Brute Force,1,0,328,0,0,0
+14,7,10.0,,,LinearSVC(),4,DOS/DDOS,139,0,0,3258,0,0
+14,7,10.0,,,LinearSVC(),4,Infiltration,462,3,0,7,15,0
+14,7,10.0,,,LinearSVC(),4,Web Attacks,4,0,0,0,0,0
+15,3,10.0,,,LinearSVC(),0,Benign,34538,43,0,556,140,1
+15,3,10.0,,,LinearSVC(),0,Botnet,7,498,0,0,0,0
+15,3,10.0,,,LinearSVC(),0,Brute Force,14,0,315,0,0,0
+15,3,10.0,,,LinearSVC(),0,DOS/DDOS,166,0,0,3231,0,0
+15,3,10.0,,,LinearSVC(),0,Infiltration,458,2,0,13,14,0
+15,3,10.0,,,LinearSVC(),0,Web Attacks,3,0,0,1,0,0
+15,3,10.0,,,LinearSVC(),1,Benign,34458,10,0,567,243,0
+15,3,10.0,,,LinearSVC(),1,Botnet,8,497,0,0,0,0
+15,3,10.0,,,LinearSVC(),1,Brute Force,5,0,324,0,0,0
+15,3,10.0,,,LinearSVC(),1,DOS/DDOS,143,0,0,3251,3,0
+15,3,10.0,,,LinearSVC(),1,Infiltration,469,1,0,4,13,0
+15,3,10.0,,,LinearSVC(),1,Web Attacks,4,0,0,0,0,0
+15,3,10.0,,,LinearSVC(),2,Benign,34302,16,0,555,405,0
+15,3,10.0,,,LinearSVC(),2,Botnet,7,498,0,0,0,0
+15,3,10.0,,,LinearSVC(),2,Brute Force,0,0,329,0,0,0
+15,3,10.0,,,LinearSVC(),2,DOS/DDOS,126,0,0,3270,1,0
+15,3,10.0,,,LinearSVC(),2,Infiltration,455,1,0,16,14,1
+15,3,10.0,,,LinearSVC(),2,Web Attacks,4,0,0,0,0,0
+15,3,10.0,,,LinearSVC(),3,Benign,34459,38,0,500,279,2
+15,3,10.0,,,LinearSVC(),3,Botnet,5,500,0,0,0,0
+15,3,10.0,,,LinearSVC(),3,Brute Force,2,0,327,0,0,0
+15,3,10.0,,,LinearSVC(),3,DOS/DDOS,157,0,0,3240,0,0
+15,3,10.0,,,LinearSVC(),3,Infiltration,461,2,0,7,17,0
+15,3,10.0,,,LinearSVC(),3,Web Attacks,4,0,0,0,0,0
+15,3,10.0,,,LinearSVC(),4,Benign,34429,31,0,501,316,1
+15,3,10.0,,,LinearSVC(),4,Botnet,9,496,0,0,0,0
+15,3,10.0,,,LinearSVC(),4,Brute Force,5,0,324,0,0,0
+15,3,10.0,,,LinearSVC(),4,DOS/DDOS,124,0,0,3273,0,0
+15,3,10.0,,,LinearSVC(),4,Infiltration,461,2,0,6,18,0
+15,3,10.0,,,LinearSVC(),4,Web Attacks,4,0,0,0,0,0
+16,5,10.0,,,LinearSVC(),0,Benign,34480,22,0,530,246,0
+16,5,10.0,,,LinearSVC(),0,Botnet,8,497,0,0,0,0
+16,5,10.0,,,LinearSVC(),0,Brute Force,1,0,328,0,0,0
+16,5,10.0,,,LinearSVC(),0,DOS/DDOS,161,0,0,3236,0,0
+16,5,10.0,,,LinearSVC(),0,Infiltration,460,2,0,12,13,0
+16,5,10.0,,,LinearSVC(),0,Web Attacks,3,0,0,1,0,0
+16,5,10.0,,,LinearSVC(),1,Benign,34407,14,1,760,96,0
+16,5,10.0,,,LinearSVC(),1,Botnet,8,497,0,0,0,0
+16,5,10.0,,,LinearSVC(),1,Brute Force,1,0,328,0,0,0
+16,5,10.0,,,LinearSVC(),1,DOS/DDOS,141,0,2,3253,1,0
+16,5,10.0,,,LinearSVC(),1,Infiltration,473,1,0,5,8,0
+16,5,10.0,,,LinearSVC(),1,Web Attacks,2,0,0,1,0,1
+16,5,10.0,,,LinearSVC(),2,Benign,34659,10,0,479,128,2
+16,5,10.0,,,LinearSVC(),2,Botnet,7,498,0,0,0,0
+16,5,10.0,,,LinearSVC(),2,Brute Force,162,0,167,0,0,0
+16,5,10.0,,,LinearSVC(),2,DOS/DDOS,144,0,0,3253,0,0
+16,5,10.0,,,LinearSVC(),2,Infiltration,463,1,0,17,5,1
+16,5,10.0,,,LinearSVC(),2,Web Attacks,4,0,0,0,0,0
+16,5,10.0,,,LinearSVC(),3,Benign,34401,34,1,708,134,0
+16,5,10.0,,,LinearSVC(),3,Botnet,5,499,0,0,1,0
+16,5,10.0,,,LinearSVC(),3,Brute Force,2,0,327,0,0,0
+16,5,10.0,,,LinearSVC(),3,DOS/DDOS,159,0,0,3238,0,0
+16,5,10.0,,,LinearSVC(),3,Infiltration,457,2,0,10,18,0
+16,5,10.0,,,LinearSVC(),3,Web Attacks,4,0,0,0,0,0
+16,5,10.0,,,LinearSVC(),4,Benign,34511,9,0,645,111,2
+16,5,10.0,,,LinearSVC(),4,Botnet,9,495,0,0,1,0
+16,5,10.0,,,LinearSVC(),4,Brute Force,103,0,226,0,0,0
+16,5,10.0,,,LinearSVC(),4,DOS/DDOS,181,0,0,3216,0,0
+16,5,10.0,,,LinearSVC(),4,Infiltration,462,2,0,8,15,0
+16,5,10.0,,,LinearSVC(),4,Web Attacks,3,0,0,1,0,0
+17,7,0.1,scale,rbf,,0,Benign,34886,75,17,283,17,0
+17,7,0.1,scale,rbf,,0,Botnet,24,481,0,0,0,0
+17,7,0.1,scale,rbf,,0,Brute Force,1,0,328,0,0,0
+17,7,0.1,scale,rbf,,0,DOS/DDOS,139,0,13,3245,0,0
+17,7,0.1,scale,rbf,,0,Infiltration,457,4,1,7,18,0
+17,7,0.1,scale,rbf,,0,Web Attacks,3,0,0,1,0,0
+17,7,0.1,scale,rbf,,1,Benign,34946,53,8,254,17,0
+17,7,0.1,scale,rbf,,1,Botnet,25,480,0,0,0,0
+17,7,0.1,scale,rbf,,1,Brute Force,1,0,328,0,0,0
+17,7,0.1,scale,rbf,,1,DOS/DDOS,156,0,14,3227,0,0
+17,7,0.1,scale,rbf,,1,Infiltration,470,1,1,2,13,0
+17,7,0.1,scale,rbf,,1,Web Attacks,3,0,0,1,0,0
+17,7,0.1,scale,rbf,,2,Benign,34962,53,12,235,16,0
+17,7,0.1,scale,rbf,,2,Botnet,18,487,0,0,0,0
+17,7,0.1,scale,rbf,,2,Brute Force,0,0,329,0,0,0
+17,7,0.1,scale,rbf,,2,DOS/DDOS,161,0,21,3215,0,0
+17,7,0.1,scale,rbf,,2,Infiltration,465,3,0,8,11,0
+17,7,0.1,scale,rbf,,2,Web Attacks,4,0,0,0,0,0
+17,7,0.1,scale,rbf,,3,Benign,34944,54,17,251,12,0
+17,7,0.1,scale,rbf,,3,Botnet,21,484,0,0,0,0
+17,7,0.1,scale,rbf,,3,Brute Force,2,0,327,0,0,0
+17,7,0.1,scale,rbf,,3,DOS/DDOS,132,0,15,3250,0,0
+17,7,0.1,scale,rbf,,3,Infiltration,461,3,1,10,12,0
+17,7,0.1,scale,rbf,,3,Web Attacks,4,0,0,0,0,0
+17,7,0.1,scale,rbf,,4,Benign,34934,51,14,271,8,0
+17,7,0.1,scale,rbf,,4,Botnet,22,483,0,0,0,0
+17,7,0.1,scale,rbf,,4,Brute Force,1,0,328,0,0,0
+17,7,0.1,scale,rbf,,4,DOS/DDOS,154,0,19,3224,0,0
+17,7,0.1,scale,rbf,,4,Infiltration,472,2,0,5,8,0
+17,7,0.1,scale,rbf,,4,Web Attacks,4,0,0,0,0,0
+18,5,0.1,scale,rbf,,0,Benign,34881,74,17,289,17,0
+18,5,0.1,scale,rbf,,0,Botnet,24,481,0,0,0,0
+18,5,0.1,scale,rbf,,0,Brute Force,1,0,328,0,0,0
+18,5,0.1,scale,rbf,,0,DOS/DDOS,138,0,13,3246,0,0
+18,5,0.1,scale,rbf,,0,Infiltration,457,4,1,7,18,0
+18,5,0.1,scale,rbf,,0,Web Attacks,3,0,0,1,0,0
+18,5,0.1,scale,rbf,,1,Benign,34947,53,8,257,13,0
+18,5,0.1,scale,rbf,,1,Botnet,25,480,0,0,0,0
+18,5,0.1,scale,rbf,,1,Brute Force,1,0,328,0,0,0
+18,5,0.1,scale,rbf,,1,DOS/DDOS,160,0,15,3222,0,0
+18,5,0.1,scale,rbf,,1,Infiltration,474,1,1,2,9,0
+18,5,0.1,scale,rbf,,1,Web Attacks,3,0,0,1,0,0
+18,5,0.1,scale,rbf,,2,Benign,34966,58,12,226,16,0
+18,5,0.1,scale,rbf,,2,Botnet,18,487,0,0,0,0
+18,5,0.1,scale,rbf,,2,Brute Force,0,0,329,0,0,0
+18,5,0.1,scale,rbf,,2,DOS/DDOS,192,0,20,3185,0,0
+18,5,0.1,scale,rbf,,2,Infiltration,464,4,0,8,11,0
+18,5,0.1,scale,rbf,,2,Web Attacks,3,1,0,0,0,0
+18,5,0.1,scale,rbf,,3,Benign,34945,54,17,245,17,0
+18,5,0.1,scale,rbf,,3,Botnet,21,484,0,0,0,0
+18,5,0.1,scale,rbf,,3,Brute Force,2,0,327,0,0,0
+18,5,0.1,scale,rbf,,3,DOS/DDOS,131,0,15,3251,0,0
+18,5,0.1,scale,rbf,,3,Infiltration,461,3,1,7,15,0
+18,5,0.1,scale,rbf,,3,Web Attacks,4,0,0,0,0,0
+18,5,0.1,scale,rbf,,4,Benign,34933,51,15,270,9,0
+18,5,0.1,scale,rbf,,4,Botnet,22,483,0,0,0,0
+18,5,0.1,scale,rbf,,4,Brute Force,1,0,328,0,0,0
+18,5,0.1,scale,rbf,,4,DOS/DDOS,153,0,19,3225,0,0
+18,5,0.1,scale,rbf,,4,Infiltration,470,2,0,4,11,0
+18,5,0.1,scale,rbf,,4,Web Attacks,4,0,0,0,0,0
+19,3,0.1,scale,rbf,,0,Benign,34883,76,17,283,19,0
+19,3,0.1,scale,rbf,,0,Botnet,24,481,0,0,0,0
+19,3,0.1,scale,rbf,,0,Brute Force,1,0,328,0,0,0
+19,3,0.1,scale,rbf,,0,DOS/DDOS,138,0,13,3246,0,0
+19,3,0.1,scale,rbf,,0,Infiltration,457,4,1,7,18,0
+19,3,0.1,scale,rbf,,0,Web Attacks,3,0,0,1,0,0
+19,3,0.1,scale,rbf,,1,Benign,34944,53,8,256,17,0
+19,3,0.1,scale,rbf,,1,Botnet,25,480,0,0,0,0
+19,3,0.1,scale,rbf,,1,Brute Force,1,0,328,0,0,0
+19,3,0.1,scale,rbf,,1,DOS/DDOS,160,0,15,3222,0,0
+19,3,0.1,scale,rbf,,1,Infiltration,470,1,1,2,13,0
+19,3,0.1,scale,rbf,,1,Web Attacks,3,0,0,1,0,0
+19,3,0.1,scale,rbf,,2,Benign,34967,58,12,224,17,0
+19,3,0.1,scale,rbf,,2,Botnet,18,487,0,0,0,0
+19,3,0.1,scale,rbf,,2,Brute Force,0,0,329,0,0,0
+19,3,0.1,scale,rbf,,2,DOS/DDOS,211,0,22,3164,0,0
+19,3,0.1,scale,rbf,,2,Infiltration,464,4,0,8,11,0
+19,3,0.1,scale,rbf,,2,Web Attacks,3,1,0,0,0,0
+19,3,0.1,scale,rbf,,3,Benign,34941,54,17,248,18,0
+19,3,0.1,scale,rbf,,3,Botnet,21,484,0,0,0,0
+19,3,0.1,scale,rbf,,3,Brute Force,2,0,327,0,0,0
+19,3,0.1,scale,rbf,,3,DOS/DDOS,131,0,16,3250,0,0
+19,3,0.1,scale,rbf,,3,Infiltration,460,3,1,8,15,0
+19,3,0.1,scale,rbf,,3,Web Attacks,4,0,0,0,0,0
+19,3,0.1,scale,rbf,,4,Benign,34936,51,15,266,10,0
+19,3,0.1,scale,rbf,,4,Botnet,22,483,0,0,0,0
+19,3,0.1,scale,rbf,,4,Brute Force,1,0,328,0,0,0
+19,3,0.1,scale,rbf,,4,DOS/DDOS,154,0,23,3220,0,0
+19,3,0.1,scale,rbf,,4,Infiltration,473,2,0,2,10,0
+19,3,0.1,scale,rbf,,4,Web Attacks,4,0,0,0,0,0
+20,7,1.0,,,LinearSVC(),0,Benign,34547,16,1,627,87,0
+20,7,1.0,,,LinearSVC(),0,Botnet,7,498,0,0,0,0
+20,7,1.0,,,LinearSVC(),0,Brute Force,155,0,174,0,0,0
+20,7,1.0,,,LinearSVC(),0,DOS/DDOS,213,0,0,3184,0,0
+20,7,1.0,,,LinearSVC(),0,Infiltration,462,2,0,13,10,0
+20,7,1.0,,,LinearSVC(),0,Web Attacks,3,0,0,1,0,0
+20,7,1.0,,,LinearSVC(),1,Benign,34238,48,1,739,252,0
+20,7,1.0,,,LinearSVC(),1,Botnet,7,498,0,0,0,0
+20,7,1.0,,,LinearSVC(),1,Brute Force,1,0,328,0,0,0
+20,7,1.0,,,LinearSVC(),1,DOS/DDOS,140,0,1,3254,2,0
+20,7,1.0,,,LinearSVC(),1,Infiltration,462,2,0,3,20,0
+20,7,1.0,,,LinearSVC(),1,Web Attacks,3,0,0,1,0,0
+20,7,1.0,,,LinearSVC(),2,Benign,34529,16,1,621,111,0
+20,7,1.0,,,LinearSVC(),2,Botnet,7,498,0,0,0,0
+20,7,1.0,,,LinearSVC(),2,Brute Force,0,0,329,0,0,0
+20,7,1.0,,,LinearSVC(),2,DOS/DDOS,161,0,0,3235,1,0
+20,7,1.0,,,LinearSVC(),2,Infiltration,456,3,1,16,11,0
+20,7,1.0,,,LinearSVC(),2,Web Attacks,4,0,0,0,0,0
+20,7,1.0,,,LinearSVC(),3,Benign,34434,39,1,685,119,0
+20,7,1.0,,,LinearSVC(),3,Botnet,5,500,0,0,0,0
+20,7,1.0,,,LinearSVC(),3,Brute Force,2,0,327,0,0,0
+20,7,1.0,,,LinearSVC(),3,DOS/DDOS,153,0,0,3244,0,0
+20,7,1.0,,,LinearSVC(),3,Infiltration,458,3,0,10,16,0
+20,7,1.0,,,LinearSVC(),3,Web Attacks,4,0,0,0,0,0
+20,7,1.0,,,LinearSVC(),4,Benign,34278,17,5,610,368,0
+20,7,1.0,,,LinearSVC(),4,Botnet,9,496,0,0,0,0
+20,7,1.0,,,LinearSVC(),4,Brute Force,1,0,328,0,0,0
+20,7,1.0,,,LinearSVC(),4,DOS/DDOS,141,0,0,3256,0,0
+20,7,1.0,,,LinearSVC(),4,Infiltration,464,3,0,8,12,0
+20,7,1.0,,,LinearSVC(),4,Web Attacks,4,0,0,0,0,0
+21,3,1.0,,,LinearSVC(),0,Benign,34448,49,3,691,87,0
+21,3,1.0,,,LinearSVC(),0,Botnet,7,498,0,0,0,0
+21,3,1.0,,,LinearSVC(),0,Brute Force,1,0,328,0,0,0
+21,3,1.0,,,LinearSVC(),0,DOS/DDOS,205,0,0,3192,0,0
+21,3,1.0,,,LinearSVC(),0,Infiltration,459,4,0,13,11,0
+21,3,1.0,,,LinearSVC(),0,Web Attacks,3,0,0,1,0,0
+21,3,1.0,,,LinearSVC(),1,Benign,34435,16,0,742,85,0
+21,3,1.0,,,LinearSVC(),1,Botnet,7,498,0,0,0,0
+21,3,1.0,,,LinearSVC(),1,Brute Force,161,0,168,0,0,0
+21,3,1.0,,,LinearSVC(),1,DOS/DDOS,190,0,0,3206,1,0
+21,3,1.0,,,LinearSVC(),1,Infiltration,476,1,0,4,6,0
+21,3,1.0,,,LinearSVC(),1,Web Attacks,3,0,0,1,0,0
+21,3,1.0,,,LinearSVC(),2,Benign,34437,56,1,604,179,1
+21,3,1.0,,,LinearSVC(),2,Botnet,7,498,0,0,0,0
+21,3,1.0,,,LinearSVC(),2,Brute Force,0,0,329,0,0,0
+21,3,1.0,,,LinearSVC(),2,DOS/DDOS,150,0,0,3246,1,0
+21,3,1.0,,,LinearSVC(),2,Infiltration,454,4,0,17,11,1
+21,3,1.0,,,LinearSVC(),2,Web Attacks,4,0,0,0,0,0
+21,3,1.0,,,LinearSVC(),3,Benign,34303,42,0,710,223,0
+21,3,1.0,,,LinearSVC(),3,Botnet,5,500,0,0,0,0
+21,3,1.0,,,LinearSVC(),3,Brute Force,2,0,327,0,0,0
+21,3,1.0,,,LinearSVC(),3,DOS/DDOS,149,0,0,3248,0,0
+21,3,1.0,,,LinearSVC(),3,Infiltration,456,3,0,11,17,0
+21,3,1.0,,,LinearSVC(),3,Web Attacks,4,0,0,0,0,0
+21,3,1.0,,,LinearSVC(),4,Benign,34240,15,0,729,294,0
+21,3,1.0,,,LinearSVC(),4,Botnet,9,496,0,0,0,0
+21,3,1.0,,,LinearSVC(),4,Brute Force,1,0,328,0,0,0
+21,3,1.0,,,LinearSVC(),4,DOS/DDOS,152,0,0,3245,0,0
+21,3,1.0,,,LinearSVC(),4,Infiltration,459,3,0,11,14,0
+21,3,1.0,,,LinearSVC(),4,Web Attacks,4,0,0,0,0,0
+22,5,1.0,,,LinearSVC(),0,Benign,34357,51,1,716,153,0
+22,5,1.0,,,LinearSVC(),0,Botnet,7,498,0,0,0,0
+22,5,1.0,,,LinearSVC(),0,Brute Force,1,0,328,0,0,0
+22,5,1.0,,,LinearSVC(),0,DOS/DDOS,164,0,0,3233,0,0
+22,5,1.0,,,LinearSVC(),0,Infiltration,456,4,0,15,12,0
+22,5,1.0,,,LinearSVC(),0,Web Attacks,3,0,0,1,0,0
+22,5,1.0,,,LinearSVC(),1,Benign,34370,49,1,721,137,0
+22,5,1.0,,,LinearSVC(),1,Botnet,7,498,0,0,0,0
+22,5,1.0,,,LinearSVC(),1,Brute Force,1,0,328,0,0,0
+22,5,1.0,,,LinearSVC(),1,DOS/DDOS,181,0,2,3213,1,0
+22,5,1.0,,,LinearSVC(),1,Infiltration,466,2,0,5,14,0
+22,5,1.0,,,LinearSVC(),1,Web Attacks,3,0,0,1,0,0
+22,5,1.0,,,LinearSVC(),2,Benign,34525,53,1,598,101,0
+22,5,1.0,,,LinearSVC(),2,Botnet,7,498,0,0,0,0
+22,5,1.0,,,LinearSVC(),2,Brute Force,162,0,167,0,0,0
+22,5,1.0,,,LinearSVC(),2,DOS/DDOS,157,0,0,3239,1,0
+22,5,1.0,,,LinearSVC(),2,Infiltration,458,3,0,17,8,1
+22,5,1.0,,,LinearSVC(),2,Web Attacks,4,0,0,0,0,0
+22,5,1.0,,,LinearSVC(),3,Benign,34383,37,0,712,146,0
+22,5,1.0,,,LinearSVC(),3,Botnet,5,500,0,0,0,0
+22,5,1.0,,,LinearSVC(),3,Brute Force,120,0,209,0,0,0
+22,5,1.0,,,LinearSVC(),3,DOS/DDOS,158,0,0,3239,0,0
+22,5,1.0,,,LinearSVC(),3,Infiltration,465,3,0,8,11,0
+22,5,1.0,,,LinearSVC(),3,Web Attacks,4,0,0,0,0,0
+22,5,1.0,,,LinearSVC(),4,Benign,34326,19,0,706,226,1
+22,5,1.0,,,LinearSVC(),4,Botnet,9,496,0,0,0,0
+22,5,1.0,,,LinearSVC(),4,Brute Force,94,0,235,0,0,0
+22,5,1.0,,,LinearSVC(),4,DOS/DDOS,149,0,0,3248,0,0
+22,5,1.0,,,LinearSVC(),4,Infiltration,462,3,0,11,11,0
+22,5,1.0,,,LinearSVC(),4,Web Attacks,4,0,0,0,0,0
+23,7,0.1,,,LinearSVC(),0,Benign,34311,132,4,733,98,0
+23,7,0.1,,,LinearSVC(),0,Botnet,7,496,0,2,0,0
+23,7,0.1,,,LinearSVC(),0,Brute Force,1,0,328,0,0,0
+23,7,0.1,,,LinearSVC(),0,DOS/DDOS,673,0,0,2724,0,0
+23,7,0.1,,,LinearSVC(),0,Infiltration,451,7,0,16,13,0
+23,7,0.1,,,LinearSVC(),0,Web Attacks,3,0,0,1,0,0
+23,7,0.1,,,LinearSVC(),1,Benign,34221,126,1,786,144,0
+23,7,0.1,,,LinearSVC(),1,Botnet,7,498,0,0,0,0
+23,7,0.1,,,LinearSVC(),1,Brute Force,1,0,328,0,0,0
+23,7,0.1,,,LinearSVC(),1,DOS/DDOS,330,0,2,3064,1,0
+23,7,0.1,,,LinearSVC(),1,Infiltration,458,5,0,15,9,0
+23,7,0.1,,,LinearSVC(),1,Web Attacks,3,0,0,1,0,0
+23,7,0.1,,,LinearSVC(),2,Benign,34490,120,1,555,112,0
+23,7,0.1,,,LinearSVC(),2,Botnet,7,497,0,1,0,0
+23,7,0.1,,,LinearSVC(),2,Brute Force,0,0,329,0,0,0
+23,7,0.1,,,LinearSVC(),2,DOS/DDOS,1035,0,1,2361,0,0
+23,7,0.1,,,LinearSVC(),2,Infiltration,452,8,0,20,7,0
+23,7,0.1,,,LinearSVC(),2,Web Attacks,4,0,0,0,0,0
+23,7,0.1,,,LinearSVC(),3,Benign,34329,109,1,728,111,0
+23,7,0.1,,,LinearSVC(),3,Botnet,5,499,0,1,0,0
+23,7,0.1,,,LinearSVC(),3,Brute Force,2,0,327,0,0,0
+23,7,0.1,,,LinearSVC(),3,DOS/DDOS,533,0,0,2864,0,0
+23,7,0.1,,,LinearSVC(),3,Infiltration,456,5,0,18,8,0
+23,7,0.1,,,LinearSVC(),3,Web Attacks,4,0,0,0,0,0
+23,7,0.1,,,LinearSVC(),4,Benign,34327,104,4,697,146,0
+23,7,0.1,,,LinearSVC(),4,Botnet,9,494,0,2,0,0
+23,7,0.1,,,LinearSVC(),4,Brute Force,1,0,328,0,0,0
+23,7,0.1,,,LinearSVC(),4,DOS/DDOS,718,0,0,2679,0,0
+23,7,0.1,,,LinearSVC(),4,Infiltration,458,7,0,15,7,0
+23,7,0.1,,,LinearSVC(),4,Web Attacks,4,0,0,0,0,0
+24,3,0.1,,,LinearSVC(),0,Benign,34335,132,2,725,84,0
+24,3,0.1,,,LinearSVC(),0,Botnet,7,496,0,2,0,0
+24,3,0.1,,,LinearSVC(),0,Brute Force,1,0,328,0,0,0
+24,3,0.1,,,LinearSVC(),0,DOS/DDOS,717,0,0,2680,0,0
+24,3,0.1,,,LinearSVC(),0,Infiltration,452,6,0,15,14,0
+24,3,0.1,,,LinearSVC(),0,Web Attacks,3,0,0,1,0,0
+24,3,0.1,,,LinearSVC(),1,Benign,34279,121,0,752,126,0
+24,3,0.1,,,LinearSVC(),1,Botnet,7,498,0,0,0,0
+24,3,0.1,,,LinearSVC(),1,Brute Force,80,0,249,0,0,0
+24,3,0.1,,,LinearSVC(),1,DOS/DDOS,431,0,2,2963,1,0
+24,3,0.1,,,LinearSVC(),1,Infiltration,458,5,0,15,9,0
+24,3,0.1,,,LinearSVC(),1,Web Attacks,3,0,0,1,0,0
+24,3,0.1,,,LinearSVC(),2,Benign,34295,117,1,643,222,0
+24,3,0.1,,,LinearSVC(),2,Botnet,7,497,0,1,0,0
+24,3,0.1,,,LinearSVC(),2,Brute Force,0,0,329,0,0,0
+24,3,0.1,,,LinearSVC(),2,DOS/DDOS,816,0,1,2580,0,0
+24,3,0.1,,,LinearSVC(),2,Infiltration,451,9,0,21,6,0
+24,3,0.1,,,LinearSVC(),2,Web Attacks,4,0,0,0,0,0
+24,3,0.1,,,LinearSVC(),3,Benign,34407,109,1,667,94,0
+24,3,0.1,,,LinearSVC(),3,Botnet,5,499,0,1,0,0
+24,3,0.1,,,LinearSVC(),3,Brute Force,2,0,327,0,0,0
+24,3,0.1,,,LinearSVC(),3,DOS/DDOS,743,0,0,2654,0,0
+24,3,0.1,,,LinearSVC(),3,Infiltration,455,5,0,18,9,0
+24,3,0.1,,,LinearSVC(),3,Web Attacks,4,0,0,0,0,0
+24,3,0.1,,,LinearSVC(),4,Benign,34145,105,0,766,262,0
+24,3,0.1,,,LinearSVC(),4,Botnet,9,494,0,2,0,0
+24,3,0.1,,,LinearSVC(),4,Brute Force,1,0,328,0,0,0
+24,3,0.1,,,LinearSVC(),4,DOS/DDOS,420,0,0,2977,0,0
+24,3,0.1,,,LinearSVC(),4,Infiltration,454,7,0,18,8,0
+24,3,0.1,,,LinearSVC(),4,Web Attacks,4,0,0,0,0,0
+25,5,0.1,,,LinearSVC(),0,Benign,34138,138,2,756,244,0
+25,5,0.1,,,LinearSVC(),0,Botnet,7,496,0,2,0,0
+25,5,0.1,,,LinearSVC(),0,Brute Force,1,0,328,0,0,0
+25,5,0.1,,,LinearSVC(),0,DOS/DDOS,583,0,0,2814,0,0
+25,5,0.1,,,LinearSVC(),0,Infiltration,451,7,0,17,12,0
+25,5,0.1,,,LinearSVC(),0,Web Attacks,3,0,0,1,0,0
+25,5,0.1,,,LinearSVC(),1,Benign,34291,118,1,786,82,0
+25,5,0.1,,,LinearSVC(),1,Botnet,7,498,0,0,0,0
+25,5,0.1,,,LinearSVC(),1,Brute Force,1,0,328,0,0,0
+25,5,0.1,,,LinearSVC(),1,DOS/DDOS,294,0,2,3100,1,0
+25,5,0.1,,,LinearSVC(),1,Infiltration,461,5,0,14,7,0
+25,5,0.1,,,LinearSVC(),1,Web Attacks,3,0,0,1,0,0
+25,5,0.1,,,LinearSVC(),2,Benign,34434,118,0,639,87,0
+25,5,0.1,,,LinearSVC(),2,Botnet,7,497,0,1,0,0
+25,5,0.1,,,LinearSVC(),2,Brute Force,158,0,171,0,0,0
+25,5,0.1,,,LinearSVC(),2,DOS/DDOS,677,0,1,2719,0,0
+25,5,0.1,,,LinearSVC(),2,Infiltration,454,8,0,21,4,0
+25,5,0.1,,,LinearSVC(),2,Web Attacks,4,0,0,0,0,0
+25,5,0.1,,,LinearSVC(),3,Benign,34303,113,0,743,119,0
+25,5,0.1,,,LinearSVC(),3,Botnet,4,499,0,2,0,0
+25,5,0.1,,,LinearSVC(),3,Brute Force,2,0,327,0,0,0
+25,5,0.1,,,LinearSVC(),3,DOS/DDOS,359,0,0,3038,0,0
+25,5,0.1,,,LinearSVC(),3,Infiltration,454,5,0,18,10,0
+25,5,0.1,,,LinearSVC(),3,Web Attacks,4,0,0,0,0,0
+25,5,0.1,,,LinearSVC(),4,Benign,34394,105,0,684,94,1
+25,5,0.1,,,LinearSVC(),4,Botnet,9,494,0,2,0,0
+25,5,0.1,,,LinearSVC(),4,Brute Force,143,0,186,0,0,0
+25,5,0.1,,,LinearSVC(),4,DOS/DDOS,733,0,0,2664,0,0
+25,5,0.1,,,LinearSVC(),4,Infiltration,455,7,0,16,9,0
+25,5,0.1,,,LinearSVC(),4,Web Attacks,4,0,0,0,0,0
+26,5,10.0,scale,rbf,,0,Benign,34866,7,2,261,139,3
+26,5,10.0,scale,rbf,,0,Botnet,8,495,0,2,0,0
+26,5,10.0,scale,rbf,,0,Brute Force,1,0,328,0,0,0
+26,5,10.0,scale,rbf,,0,DOS/DDOS,13,0,0,3384,0,0
+26,5,10.0,scale,rbf,,0,Infiltration,405,0,0,3,79,0
+26,5,10.0,scale,rbf,,0,Web Attacks,2,0,0,1,0,1
+26,5,10.0,scale,rbf,,2,Benign,34939,4,6,223,106,0
+26,5,10.0,scale,rbf,,2,Botnet,6,498,0,1,0,0
+26,5,10.0,scale,rbf,,2,Brute Force,0,0,329,0,0,0
+26,5,10.0,scale,rbf,,2,DOS/DDOS,20,0,0,3377,0,0
+26,5,10.0,scale,rbf,,2,Infiltration,408,1,0,8,70,0
+26,5,10.0,scale,rbf,,2,Web Attacks,2,0,0,1,0,1
+26,5,10.0,scale,rbf,,3,Benign,34897,6,1,241,131,2
+26,5,10.0,scale,rbf,,3,Botnet,4,498,0,3,0,0
+26,5,10.0,scale,rbf,,3,Brute Force,2,0,327,0,0,0
+26,5,10.0,scale,rbf,,3,DOS/DDOS,13,0,0,3384,0,0
+26,5,10.0,scale,rbf,,3,Infiltration,407,1,0,4,75,0
+26,5,10.0,scale,rbf,,3,Web Attacks,2,0,0,0,0,2
+26,5,10.0,scale,rbf,,4,Benign,34898,4,1,262,113,0
+26,5,10.0,scale,rbf,,4,Botnet,8,495,0,2,0,0
+26,5,10.0,scale,rbf,,4,Brute Force,1,0,328,0,0,0
+26,5,10.0,scale,rbf,,4,DOS/DDOS,10,0,0,3387,0,0
+26,5,10.0,scale,rbf,,4,Infiltration,407,1,0,3,76,0
+26,5,10.0,scale,rbf,,4,Web Attacks,2,0,0,0,0,2

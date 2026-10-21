@@ -1,0 +1,17 @@
+{
+    "sample_size": 200000,
+    "params": {
+        "smote__k_neighbors": 7,
+        "svm__C": 10.0,
+        "svm__gamma": 0.1,
+        "svm__kernel": "rbf"
+    },
+    "smote_class_ratios": {
+        "Benign": null,
+        "DOS/DDOS": 0.12,
+        "Botnet": 0.018,
+        "Infiltration": 0.041,
+        "Brute Force": 0.012,
+        "Web Attacks": 0.002
+    }
+}
